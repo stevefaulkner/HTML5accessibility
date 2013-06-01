@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>html5 interactive controls</title>
+<style type="text/css">
+body
+
+{
+
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+
+	color: #333;
+
+	background: #fff;
+
+	padding: 0 1em;
+
+}
+
+caption {text-align:left;font-weight:bold;font-size:large}
+
+h1, h2
+
+{
+
+	color: #630;
+
+	background: #fff;
+
+	padding-bottom: 0.5em;
+
+	margin-bottom: 0;
+
+}
+
+
+
+table
+
+{
+
+	/*border-collapse: collapse;
+
+	border: 1px solid #630;*/
+	
+font: normal 90% arial, Verdana, helvetica, sans-serif;
+}
+
+
+
+th, td
+
+{
+
+	text-align: left;
+
+	vertical-align: top;
+
+	padding: 0.3em;
+	margin:2px;
+
+	/*border: 1px solid #630;*/
+	background-color:#f5f5f5;
+
+}
+
+td h1 {font-size:85%;margin:0 0 0 0;}
+
+thead th, thead td
+
+{
+
+	font-weight: bold;
+background-color:#f5f5f5;
+	text-align: center;
+
+}
+
+td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+
+caption {text-align:left}
+
+
+td.support {background:#90ee90;}
+	td.partial {background:#eee8aa;}
+	td.nosupport{background:#ffb6c1;}
+	
+
+	td p.note{border: 1px dashed red;padding: 5px;margin-top:5px;background:#FFFFFF}
+.new {
+	font-size: 1em;
+	background-color: #FF0;
+	
+}
+
+table {margin-left:150px}
+</style>
+</head>
+
+<body>
+<form action="">
+<table role="presentation">
+  <caption>
+    html interactive controls
+  </caption>
+  
+  <tbody>
+    <tr>
+      <th>Element</th>
+    </tr>
+    <tr>
+      <td><button>button element</button>		</td>
+    </tr>
+    <tr>
+      <td><input type="button" value="input button"></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" value="" id="ch">
+          <label for="ch">type=&quot;checkbox&quot;</label></td>
+    </tr>
+    <tr>
+      <td><label> file input <input type="file"></label></td>
+    </tr>
+    <tr>
+      <td>input type='image' <input name="" type="image" src="tick.png" alt="input type='image'"></td>
+    </tr>
+	<tr>
+	  <td><p><label for="text0">type=&quot;text&quot; required</label>
+	    <input type="text" id="text0" required> </p>
+		<p><label for="text01">type=&quot;text&quot; required 2</label>
+	    <input type="text" id="text01" required></p>
+	    
+	    <p><input type="submit" value="submit"></p></td>
+	  </tr>
+	<tr>
+      <td><label for="text1">type=&quot;text&quot; with placeholder</label>
+          <input type="text" id="text1" placeholder="some text">  
+          &nbsp;<span class="new">new</span></td>
+    </tr>
+	<tr><td> <label for="form-2">Text with Datalist</label>
+        <input id="form-2"   list="mylist" type="text">
+        <datalist id="mylist">
+		<option label="Miss" value="Miss">
+            <option label="Mr" value="Mr">
+            <option label="Ms" value="Ms">
+            <option label="Prof" value="Mad Professor"> 
+          </datalist>&nbsp;<span class="new">new</span> </td></tr>
+    <tr>
+      <td><label for="pass">type=&quot;password&quot;</label>
+          <input type="password" id="pass" placeholder="test"></td>
+    </tr>
+    <tr>
+      <td><input type="radio" id="radio" value="">
+          <label for="radio">type=&quot;radio&quot;</label></td>
+    </tr>
+    <tr>
+      <td><input type="reset" ></td>
+    </tr>
+    <tr>
+      <td><label>textarea element
+        <textarea name="textarea" cols="10" rows="2" placeholder="some text"></textarea>
+        &nbsp;<span class="new">new</span></label></td>
+    </tr>
+    <tr>
+      <td><label for="search">type="search"</label>
+        <input type="search" id="search" placeholder="some text">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="mail">type="email"</label>
+        <input type="email" id="mail" placeholder="some text">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="t">type="tel"</label>
+        <input type="tel" id="t" placeholder="some text">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="url">type=&quot;URL&quot;</label>
+       <input type="url" name="location" id="url" list="urls" placeholder="some text">
+<datalist id="urls">
+ <option label="MIME: Format of Internet Message Bodies" value="http://tools.ietf.org/html/rfc2045">
+ <option label="HTML 4.01 Specification" value="http://www.w3.org/TR/html4/">
+ <option label="Form Controls" value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">
+ <option label="Scalable Vector Graphics (SVG) 1.1 Specification" value="http://www.w3.org/TR/SVG/">
+ <option label="Feature Sets - SVG 1.1 - 20030114" value="http://www.w3.org/TR/SVG/feature.html">
+ <option label="The Single UNIX Specification, Version 3" value="http://www.unix-systems.org/version3/">
+</datalist>
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+	 <tr>
+      <td><label for="num">type=&quot;number&quot;</label> 
+        <input type="number" id="num" step="2" placeholder="some text">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="dt">type=&quot;date and time&quot;</label> 
+        <input type="datetime" id="dt">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="d">type=&quot;date&quot;</label>
+        <input type="date" id="d">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="mo">type=&quot;month&quot;</label>
+        <input type="month" id="mo">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="wk">type=&quot;week&quot;</label> 
+        <input type="week" id="wk">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="dtl">type=&quot;datetime-local&quot;</label>
+        <input type="datetime-local" id="dtl">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+	<tr>
+      <td><label for="ti">type=&quot;time&quot;</label>
+        <input type="time" id="ti">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="slid">type=&quot;range&quot;</label>
+        <input type="range" id="slid" value="10" min="1" max="11">  
+        &nbsp;<span class="new">new</span></td>
+    </tr>
+    <tr>
+      <td><label for="col">type=&quot;color&quot;</label>
+    <input type="color" id="col">  
+        &nbsp;<span class="new">new</span></td></tr>
+	<tr><td><label>select element <select name=""><option value="http://tools.ietf.org/html/rfc2045">
+ <option value="http://www.w3.org/TR/html4/">HTML 4.01 Specification
+ <option value="http://www.w3.org/TR/xforms/slice8.html#ui-commonelems-hint">Form Controls
+ <option  value="http://www.w3.org/TR/SVG/">Scalable Vector Graphics (SVG) 1.1 Specification
+ <option  value="http://www.w3.org/TR/SVG/feature.html">Feature Sets - SVG 1.1 - 20030114
+ <option value="http://www.unix-systems.org/version3/">The Single UNIX Specification, Version 3
+</select></label></td></tr>
+      <tr><td><fieldset>
+        <legend>legend</legend>
+        <label for="tex"> label
+          <input name="input" type="text" id="tex">
+        </label>
+      </fieldset></td>
+    </tr>
+    <tr>
+      <td><label for="textfield">label using for/id</label>
+          <input type="text" name="textfield" id="textfield">      </td>
+    </tr>
+    <tr>
+      <td><label>label wrapped
+        <input type="text">
+      </label></td>
+    </tr>
+    <tr>
+      <td>no label
+        <input type="text">      </td>
+    </tr>
+	<tr><td><p>Menu type="toolbar" with command elements type="radio" and type="command" &nbsp;<span class="new">new</span></p>
+	<menu type="toolbar">
+ <command type="radio" radiogroup="alignment" checked="checked"
+          label="Left" icon="icons/alL.png" onclick="setAlign('left')">
+ <command type="radio" radiogroup="alignment"
+          label="Center" icon="icons/alC.png" onclick="setAlign('center')">
+ <command type="radio" radiogroup="alignment"
+          label="Right" icon="icons/alR.png" onclick="setAlign('right')">
+ <command type="command" disabled
+          label="Publish" icon="icons/pub.png" onclick="publish()">
+</menu>	</td></tr>
+ <tr>
+      <td><p>image button with context menu</p><p><input name="" type="image" src="tick.png" alt="tick" contextmenu="descmenu"></p>
+	  <menu type="context" id="descmenu">
+  <menuitem label="Image Description" icon="tick.jpg"></menuitem>
+  </menu>&nbsp;<span class="new">new</span>
+	  </td>
+    </tr>
+ <tr>
+      <td><details><summary>details</summary><p>stuff inside the details container</p></details>&nbsp;<span class="new">new</span></td>
+    </tr>
+<tr><td>
+	<p>Progress: <progress id="p" max=100 value="30" tabindex="0"><span>50</span>%</progress> 
+      &nbsp;<span class="new">new</span></p></td></tr>
+	<tr><td><label for="kg">KeyGen</label>
+          
+<p><keygen name="key" id="kg"> &nbsp;<span class="new">new</span></p></td></tr>
+	<tr><td><p>An example of the <code>&lt;meter&gt;</code> element: <label id="label" for="meter">Your score is:</label>
+          <meter value="91" id="meter" min="0" max="100" low="40" high="90" optimum="100" tabindex="0"><span id="fallback1">A+</span></meter>  
+      &nbsp;&nbsp;<span class="new">new</span></td></tr>
+<!-- <tr><td><p>An example of the <code>&lt;meter&gt;</code> element with ARIA: <label id="label" for="meter1">Your score is:</label>
+          <meter value="91" id="meter1" min="0" max="100" low="40" high="90" optimum="100" tabindex="0" aria-labelledby="label fallback1"><span id="fallback1">A+</span></meter>
+</td></tr> -->
+  </tbody>
+</table></form>
+</body>
+</html>

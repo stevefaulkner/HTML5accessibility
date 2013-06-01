@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<title>context menu</title>
+	
+	<script>
+	
+	</script>
+	<style>
+	body
+
+{
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+	color: #333;
+	background: #fff;
+	padding: 0 1em;
+	
+	
+}
+iframe {width:100%;height:500px;}
+
+ul{width: 340px;
+margin:0;
+padding:0;}
+
+#incon {display:none}
+
+h1, h2
+
+{
+
+	color: #630;
+
+	background: #fff;
+
+	padding-bottom: 0.5em;
+
+	margin-bottom: 0;
+
+}
+	li {
+		list-style: none;
+	}
+	
+	 a, a:hover,  a:visited
+{
+position:relative;
+left:-1000px;
+top:-24px;
+background:white;
+padding:1px;
+border:1px solid #a9a9a9;
+}
+
+ a:active, a:focus, ul:hover a
+{
+position:relative;
+left:0px;
+top:-24px;
+} 
+</style>
+</head>
+
+<body>
+<h1>contextmenu</h1>
+
+<h2>Image description via a context menu</h2>
+
+<img tabindex=0 src="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg" id="i1"  alt="A painting inspired by Alfred Tennyson's poem The Lady of Shalott" width="338" height="234" contextmenu="descmenu">
+<menu type="context" id="descmenu">
+  <menuitem label="Image Description" onclick="window.location.assign('http://bit.ly/5HJvVZ');" icon="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
+<menuitem label="Image description - new window" onclick="window.open('http://bit.ly/5HJvVZ');" icon="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
+</menuitem>
+  </menu>
+
+
+</body>
+</html>
