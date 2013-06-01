@@ -1,0 +1,648 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>HTML5 accessibility support work arounds</title>
+<style type="text/css">
+	body
+
+	{
+		font: arial, Verdana, helvetica, sans-serif;
+		color: #333;
+		background: #ffffff;
+		padding: 0 1em;
+font-family:Arial, Helvetica, sans-serif;
+
+	}
+
+	caption {text-align:left;font-weight:bold;font-size:large}
+
+	h1 { 
+	color: #630;
+font-size: 300%;}
+
+
+
+	table
+
+	{
+
+		border-collapse: collapse;
+
+		border: 1px solid #630;
+
+		font: normal 90% arial, Verdana, helvetica, sans-serif;
+	}
+
+
+
+	th, td
+
+	{
+
+		text-align: left;
+
+		vertical-align: top;
+
+		padding: 0.3em;
+
+		border: 1px solid #630;
+
+	}
+
+	th {font-size:150%;}
+	td {font-size:130%;}
+	td p {margin:0 0 0 0;}
+	thead th, thead td
+
+	{
+
+		font-weight: bold;
+
+		text-align: center;
+
+	}
+
+	td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+	span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+	/*td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
+	caption {text-align:left}
+
+
+	td.support {background:#90ee90;}
+	td.partial {background:#eee8aa;}
+	td.nosupport{background:#ffb6c1;}
+
+
+	td p.note{border: 1px dashed red;padding: 5px;margin-top:5px;background:#FFFFFF}
+
+	td ul  {padding-left:12px}
+	/*	img {border: 1px solid #630;}*/
+	.test {border: 1px solid #666666;padding:4px;margin-top:15px;background:#FFFFCC}
+
+	h1{
+		font-family: "Cooper Black";
+	}
+	
+	h2 {
+		font-family: "Cooper Black";
+		color:#090;
+		font-size:200%;
+	}
+	
+	h1 span {font-size:100%}
+h2 {
+	color: #008000;
+}
+
+
+#float {float:right;}
+
+.nvda { border:1px #060 solid; font-size: 80%;padding:5px;}
+
+#banner {float:left; }
+
+#subheader {clear:both}
+</style>
+
+</head>
+
+<body>
+<header role="banner"><h1 id="banner">HTML5 accessibility</h1><div id="float">
+        <p class="nvda">Use and <a href="http://www.nvaccess.org/wiki/Donate">support</a> <a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a> the open source screen reader for Windows.</p>
+      <p class="nvda">HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner.</em></p>  </div>
+<h2 id="subheader">a work in progress:<br>
+  Example solutions
+</h2>
+ </header>
+<nav role="navigation"><p><a href="index.html">home</a></p></nav>
+<div role="main">
+  <h3>Table Legend &amp; notes:</h3>
+  <ul>
+    <li><img src="images/cross.png" width="16" height="16" alt=""> &quot;not supported&quot; means if a suggested work around is provided it is not supported by the browser.</li>
+    <li><img src="images/tick.png" width="16" height="16" alt=""><img src="images/cross.png" width="16" height="16" alt=""> &quot;partially supported&quot; means the work around will provide some accessibility support in the browser.</li>
+    <li><img src="images/ni.gif" width="25" height="25" alt=""> &quot;not implemented&quot; means the feature has not yet been implemented in the browser.</li>
+    <li><img src="images/tick.png" width="16" height="16" alt=""> &quot;supported&quot; means that when using a suggested solution the feature or an alternative for the feature is accessibility supported.</li>
+    <li>The 'work arounds' cell of each row provides suggested solutions or links to suggested solutions.</li>
+    <li>Please report any inaccuracies or links to solutions to <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a>.</li>
+    <li>The work arounds for Safari 5 are for the Mac OSX version, not the windows version.</li>
+    <li>An ? indicates information is yet to be provided.</li>
+  </ul>
+  <table width="96%" border="1">
+    <caption>
+    Example of solutions for HTML5 feature accessibility support in  Browsers
+</caption>
+    <tr>
+      <th width="185" scope="col">new HTML5 elements</th>
+      <th width="106" scope="col"><p><img src="images/chrome.png" alt="" width="62" height="61" border="0"></p>
+        <p>Chrome 10</p></th>
+      <th width="101" scope="col"><p><img src="images/firefox.png" alt="" width="62" height="61" border="0"></p>
+        <p>Firefox RC</p></th>
+      <th width="116" scope="col"><p><img src="images/ie.png" alt="" width="62" height="61" border="0"></p>
+        <p>IE 9 RC</p></th>
+      <th width="104" scope="col"><p><img src="images/opera.png" alt="" width="62" height="61" border="0"></p>
+        <p>Opera 11 </p></th>
+      <th width="98" scope="col"><p><img src="images/safari.png" alt="Safari" width="62" height="61" border="0"></p>
+      <p>Safari 5 (Mac)</p></th>
+      <th width="435" scope="col">work arounds</th>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-article-element">article</a></code> element </th>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><p>add  ARIA role=&quot;<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#article">article</a>&quot;.</p>
+      <p>&nbsp;</p></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-aside-element">aside</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>add  ARIA role=&quot;<A href="http://www.w3.org/WAI/PF/aria/roles#complementary">complementary</A>&quot;<br>
+      <strong>note:</strong> the screen reader <a href="http://www.accessibleculture.org/research/html5-aria/">Window Eyes has bugs</a> in relation to use of some HTML5 elements in combination with some ARIA <a href="http://www.w3.org/WAI/PF/aria/roles#landmark_roles">landmark roles</a>.</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/video.html#audio"><code>audio</code></a> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td>add <a href="http://www.terrillthompson.com/tests/html5-audio.html">scripted controls</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/the-canvas-element.html#the-canvas-element">canvas</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>various work arounds, usually involving providing a HTML alternative to canvas content, like: <a href="http://filamentgroup.com/lab/update_to_jquery_visualize_accessible_charts_with_html5_from_designing_with/">canvas charts</a></td>
+    </tr>
+    <!--<tr>
+    <td><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-command">command</a> element</td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td>not implemented, same functionality can be provided using menu or toolbar widgets.</td>
+  </tr>-->
+    <tr>
+      <th scope="row"><code><a href="http://www.w3.org/TR/html5/forms.html#the-datalist-element">datalist</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a widget like: <a href="http://developer.yahoo.com/yui/examples/autocomplete/ac_accessible.html">autocomplete</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-details-element"><code>details</code></a> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a widget like: <a href="http://filamentgroup.com/lab/expand_and_collapse_content_accessibly_with_progressive_enhancement_jquery/">collapsible content area</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/grouping-content.html#the-figcaption-element">figcaption</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"><img src="images/cross.png" width="16" height="16" alt=""></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><A href="http://dev.w3.org/html5/spec/grouping-content.html#the-figure-element">figure</A></code> element
+        </td>
+      
+      <td><img src="images/cross.png" alt="not supported" width="16" height="16" border="0"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"><img src="images/cross.png" width="16" height="16" alt=""></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-footer-element">footer</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>add  ARIA role=&quot;<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#article">contentinfo</a>&quot; only once per page. <br>
+      <strong>note:</strong> the screen reader <a href="http://www.accessibleculture.org/research/html5-aria/">Window Eyes has bugs</a> in relation to use of some HTML5 elements in combination with some ARIA <a href="http://www.w3.org/WAI/PF/aria/roles#landmark_roles">landmark roles</a>. <br></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-header-element">header</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>add  ARIA role=&quot;<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#article">banner</a>&quot; only once per page.<br>
+      <strong>note:</strong> the screen reader <a href="http://www.accessibleculture.org/research/html5-aria/">Window Eyes has bugs</a> in relation to use of some HTML5 elements in combination with some ARIA <a href="http://www.w3.org/WAI/PF/aria/roles#landmark_roles">landmark roles</a>.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-hgroup-element">hgroup</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td>if used you don't need to do anything as it's treated like a div element.</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/number-state.html#color-state">color</a><code> <a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use an accessible widget like: <a href="http://docs.dojocampus.org/dijit/ColorPalette">Dijit Colour pallette</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#date-state" title="attr-input-type-date">Date</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use an accessible widget like: <a href="http://docs.dojocampus.org/dijit/Calendar">Dijit date picker</a> or <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=datepicker">extjs date picker</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#date-and-time-state" title="attr-input-type-datetime">Date and Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use an accessible widget like: <a href="http://docs.dojocampus.org/dijit/Calendar">Dijit date picker</a> or <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=datepicker">extjs date picker</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#local-date-and-time-state" title="attr-input-type-datetime-local">Local Date and Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use an accessible widget like: <a href="http://docs.dojocampus.org/dijit/Calendar">Dijit date picker</a> or <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=datepicker">extjs date picker</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#e-mail-state" title="attr-input-type-email">E-mail</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td> degrades gracefully</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#month-state" title="attr-input-type-month">Month</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td>Use an accessible widget like: <a href="http://docs.dojocampus.org/dijit/Calendar">Dijit date picker</a> or <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=datepicker">extjs date picker</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#number-state" title="attr-input-type-number">Number</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a widget like: <a href="http://docs.dojocampus.org/dijit/form/NumberSpinner">dijit number spinner</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#range-state" title="attr-input-type-range">Range</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Usa a widget like: <a href="http://www.paciellogroup.com/blog/misc/samples/aria/slider/">slider</a> or <a href="http://www.paciellogroup.com/blog/misc/samples/aria/slider/doubleslider.html">double slider</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#text-state-and-search-state" title="attr-input-type-search">Search</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>degrades gracefully</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#telephone-state" title="attr-input-type-tel">Telephone</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>degrades gracefully</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#time-state" title="attr-input-type-time">Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a widget like: <a href="http://docs.dojocampus.org/dijit/form/NumberSpinner">dijit number spinner</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#url-state" title="attr-input-type-url">URL</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>degrades gracefully</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#week-state" title="attr-input-type-week">Week</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use an accessible widget like: <a href="http://docs.dojocampus.org/dijit/Calendar">Dijit date picker</a> or <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=datepicker">extjs date picker</a></td>
+    </tr>
+    <!--<tr>
+    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A></code></td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td>?</td>
+  </tr>-->
+    <tr>
+      <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#context-menu-state" title="context menu state">context menu</a>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a scripted context menu, include the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup">aria-haspopup="true"</a> attribute on an element that has a scripted context menu and don't forget to make the context menu navigable using the keyboard.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code>&gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#list-state" title="list state">list</a>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Usa a widget like: <a href="http://docs.dojocampus.org/dijit/Menu">dijit menu</a> or <a href="http://hanshillen.github.com/aegisdemo/">jQuery menu</a> or <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=menubar">extjs menu</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#toolbar-state" title="toolbar state">toolbar</a>
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a widget like: <a href="http://dev.sencha.com/playpen/gxt/aria2/test.html?id=toolbar">extjs toolbar</a> or <a href="http://docs.dojocampus.org/dijit/Toolbar">dijit toolbar</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/the-button-element.html#the-meter-element">meter</a> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a rating widget like: <a href="http://www.yuiblog.com/blog/2010/08/24/developing-an-accessible-star-ratings-widget/">rating widget</a> or <a href="http://mindtrove.info/articles/creating-an-accessible-internationalized-dojo-rating-widget/">dojo rating</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-nav-element">nav</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td>add  ARIA role=&quot;<a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#navigation">navigation</a>&quot;. <strong><br>
+      note:</strong> the screen reader <a href="http://www.accessibleculture.org/research/html5-aria/">Window Eyes has bugs</a> in relation to use of some HTML5 elements in combination with some ARIA <a href="http://www.w3.org/WAI/PF/aria/roles#landmark_roles">landmark roles</a>.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/the-button-element.html#the-output-element">output</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>add an <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-live">aria-live="polite"</a> attribute</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://www.w3.org/TR/html5/forms.html#the-progress-element">progress</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>use a progress bar widget lie: <a href="http://docs.dojocampus.org/dijit/ProgressBar">dijit progress</a><a href="http://hanshillen.github.com/aegisdemo/">jQuery progress bar</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-section-element">section</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>add ARIA role=&quot;<a href="http://www.w3.org/TR/wai-aria/roles#region">region</a>&quot;</td>
+    </tr>
+    <tr>
+      <th scope="row"><code><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-summary-element">summary</a></code> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="supported"></td>
+      <td>Use a widget like: <a href="http://filamentgroup.com/lab/expand_and_collapse_content_accessibly_with_progressive_enhancement_jquery/">collapsible content area</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/video.html"><code>video</code></a> element
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td>add <a href="http://www.terrillthompson.com/tests/html5-audio.html">scripted controls</a></td>
+    </tr>
+  </table>
+</div>
+<hr>
+<aside role="complementary">
+  <table width="96%" border="1">
+    <caption>
+    Example of solutions for HTML5 attribure accessibility support in  Browsers
+    </caption>
+    <tr>
+      <th width="223" scope="col">new HTML5 attributes (note: this is not all of them!)</th>
+      <th width="105" scope="col"><p><img src="images/chrome.png" alt="" width="62" height="61" border="0"></p>
+        <p>Chrome 10</p></th>
+      <th width="86" scope="col"><p><img src="images/firefox.png" alt="" width="62" height="61" border="0"></p>
+        <p>Firefox 4 RC</p></th>
+      <th width="108" scope="col"><p><img src="images/ie.png" alt="" width="62" height="61" border="0"></p>
+        <p>IE 9 beta</p></th>
+      <th width="85" scope="col"><p><img src="images/opera.png" alt="" width="62" height="61" border="0"></p>
+        <p>Opera 11 </p></th>
+      <th width="87" scope="col"><p><img src="images/safari.png" alt="" width="62" height="61" border="0"></p>
+        <p>Safari 5 (Mac)</p></th>
+      <th width="458" scope="col">work arounds</th>
+    </tr>
+    <!--<tr>
+    <td><code><a href="http://dev.w3.org/html5/spec/dnd.html#the-draggable-attribute">draggable</a></code> attribute</td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.gif" width="16" height="16" alt="not implemented"></td>
+    <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+    <td>&nbsp;</td>
+  </tr>-->
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/editing.html#the-hidden-attribute">hidden</a> attribute
+        </td>
+      
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><p><strong>Use CSS <code>display:none</code></strong>.<br>
+        </p></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/common-input-element-attributes.html#attr-input-required"><code>required</code></a> attribute
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td>Refer to the WebAIM article <a href="http://webaim.org/techniques/formvalidation/">Usable and Accessible Form Validation and Error Recovery</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/common-input-element-attributes.html#the-placeholder-attribute"><code>placeholder</code></a> attribute
+        </td>
+      
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="support"></td>
+      <td><img src="images/cross.png" width="16" height="16" alt="not supported"></td>
+      <td><img src="images/tick.png" width="16" height="16" alt="partial support"></td>
+      <td>Refer to the article    <a href="http://www.456bereastreet.com/archive/200710/autopopulating_text_input_fields_with_javascript/">Autopopulating text input fields with JavaScript</a> by Roger Johansson.</td>
+    </tr>
+    <tr>
+      <!--<td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>-->
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <H2>References</H2>
+<UL>
+  <LI><A href="http://www.w3.org/WAI/PF/aria-implementation/">WAI-ARIA 1.0 User   Agent Implementation Guide</A>
+  <LI><A href="http://www.w3.org/WAI/PF/aria/">Accessible Rich Internet   Applications (WAI-ARIA) 1.0</A></LI>
+</UL></aside>
+<footer role="contentinfo"><p><A href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license"><IMG alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png"></A><BR>
+This <SPAN rel="dc:type" href="http://purl.org/dc/dcmitype/Text" xmlns:dc="http://purl.org/dc/elements/1.1/">work</SPAN> is licenced under a <A href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">Creative   Commons Licence</A>.</p>
+<p>Updated: 11/03/2011</p></footer>
+</body>
+</html>

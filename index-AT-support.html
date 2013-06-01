@@ -1,0 +1,787 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>HTML5 accessibility</title>
+<style type="text/css">
+	body 
+
+	{
+		font-family: arial, Verdana, helvetica, sans-serif;
+		
+		color: #333;
+		background: #FC0;
+		padding: 0;
+font-size:90%
+
+	}
+
+	caption {text-align:left;font-weight:bold;font-size:large}
+
+	h1,h2 { font-family: Verdana,arial,  helvetica, sans-serif;
+	
+	font-size:larger;
+	}
+	header {border: 1px dashed #ffd700;
+	padding:1em;
+	margin:0px;}
+
+.navlist li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+
+	table
+
+	{
+
+		border-collapse: collapse;
+
+		border: 1px solid #630;
+
+		font: normal 80% arial, Verdana, helvetica, sans-serif;
+	}
+
+
+
+	th, td
+
+	{
+
+		text-align: left;
+
+		vertical-align: top;
+
+		padding: 0.3em;
+
+		border: 1px solid #630;
+
+	}
+
+	th {font-size:150%;}
+	td {font-size:130%;}
+	td p {margin:0 0 0 0;}
+	thead th, thead td
+
+	{
+
+		font-weight: bold;
+
+		text-align: center;
+
+	}
+
+	td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+	span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+	/*td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
+	caption {text-align:left}
+
+
+	td.support {background:#90ee90;}
+	td.partial {background:#eee8aa;}
+	td.nosupport{background:#ffb6c1;}
+
+
+	td p.note{border: 1px dashed red;padding: 5px;margin-top:5px;background:#FFFFFF}
+
+	td ul  {padding-left:12px}
+	/*	img {border: 1px solid #630;}*/
+	.test {border: 1px solid #666666;padding:4px;margin-top:15px;background:#FFFFCC}
+
+	
+	
+		
+	
+	h3 {
+		
+		
+		font-size:150%;
+	}
+	
+	p, li {font-family: arial}
+	
+	h2 {
+	color: #008000;
+}
+
+#float {float:right;}
+
+.nvda { border:1px #ff7f50 solid; font-size: 80%;padding:5px;}
+
+#banner {
+	float:left;
+	font-size: 250%;
+}
+
+#subheader {clear:both}
+
+span.cap {display:inline-block}
+
+ul.sumry li
+{
+display: inline;
+list-style-type: none;
+padding-right:1em;
+font-weight: bold;
+color:#C00;}
+
+span.hidden {
+	position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+header {
+	border: 1px dashed #ff8c00;
+	padding: 1em;
+}
+.float {
+	float: left;
+}
+#wrapper {
+	width: 90%;
+	background-color:#FFF;
+	padding: 1em ;
+}
+.style1 {color: #006600}
+.style2 {color: #CC3300}
+.style3 {font-size: large}
+.style4 {font-size: large; color: #006600; }
+.style5 {color: #FF00FF}
+</style>
+ 
+</head>
+
+<body>
+<div id="wrapper">
+  <header role="banner"> <div id="float">
+    <p class="nvda">Use and <a href="http://www.nvaccess.org/wiki/Donate">support</a> <a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a> the open source screen reader for Windows.</p>
+    
+    <p class="nvda">HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner.</em></p>  
+    </div><div><img src="http://www.html5accessibility.com/images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="http://www.html5accessibility.com/images/logo_reasonably_small.png" alt="Accessibility" width="128" height="128"></div>
+  </header>
+  <div role="main">
+    <div class=windows> </div>
+<h3>Table Legend &amp; notes:</h3>
+    <ul>
+      <li><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"> &quot;not supported&quot; means the feature is implemented by the browser, but required accessibility support is not implemented.</li>
+      <li><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> &quot;partially supported&quot; means the feature is implemented and accessibility support is partially implemented.</li>
+      <li><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""> &quot;not implemented&quot; means the feature has not yet been implemented in the browser, so accessibility support is unknown.</li>
+      <li><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> &quot;supported&quot; means that the browser exposes feature information via an accessibility API and if the feature is interactive it can be operated using a range of input device types.</li>
+      <li>The 'notes' cell of each row provides further information about browser support.</li>
+      <li>A <a href="http://www.html5accessibility.com/html5elements/">test page</a> was used to test the support in each browser.</li>
+      <li>The following tools were used to test the <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> feature information being exposed in browsers to accessibility APIs:
+        <ul>
+          <li><A href="http://www.paciellogroup.com/blog/?p=635">Aviewer</A> (free desktop   application for windows )
+          </li>
+          <li><A href="https://addons.mozilla.org/en-US/firefox/addon/6622/">Dom   Inspector</A> (free Firefox extension)   
+          </li>
+          <li><A href="http://msdn.microsoft.com/en-us/library/dd318521%28v=vs.85%29.aspx">Inspect.exe</A> (free desktop application for windows available as part of the Windows SDK)   
+          </li>
+          <li><A href="http://accessibility.linuxfoundation.org/a11yweb/util/accprobe/">Accprobe</A> (free   open source desktop application)   
+          </li>
+          <li><A href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTesting/OSXAXTestingApps.html">Accessibility   Inspector</A> (free Mac application) </li>
+        </ul>
+      </li>
+      <li>Keyboard support was tested by attempting to use interactive controls using the keyboard.</li>
+      <li>Please report any inaccuracies to <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a>.</li>
+    </ul>
+ 
+    <table width="96%" border="1">
+      <caption>
+      Practical Screen Reader Support 
+     </caption>
+      <tr>
+        <th width="185" scope="col">OS</th>
+        <th scope="col"><img src="http://www.html5accessibility.com/images/chrome.png" alt="" width="62" height="61" border="0"></th>
+        <th scope="col"><img src="http://www.html5accessibility.com/images/firefox.png" alt="" width="62" height="61" border="0"></th>
+        <th scope="col"><img src="http://www.html5accessibility.com/images/ie.png" alt="" width="62" height="61" border="0"></th>
+        <th scope="col"><img src="http://www.html5accessibility.com/images/opera.png" alt="" width="62" height="61" border="0"></th>
+        <th scope="col"><img src="http://www.html5accessibility.com/images/safari.png" alt="" width="62" height="61" border="0"></th>
+        <th width="627" scope="col">Notes</th>
+      </tr>
+      <tr>
+        <th scope="row">Windows</th>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <th scope="row">OSX</th>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden">Not supported</span></td>
+        <td><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <th scope="row">Linux</th>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"><span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <th scope="row">IOS</th>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"><span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"><span class="hidden">Partially supported</span></td>
+        <td><span class="hidden">Partially supported</span><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"></td>
+        <td><span class="hidden">Not supported</span><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"></td>
+        <td><p>&nbsp;</p>
+          <p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <th scope="row">Android</th>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th scope="row">Chrome OS</th>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"></td>
+        <td>&nbsp;</td>
+      </tr>
+      <!--<tr>
+    <td><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-command">command</a> element</td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented</td>
+  </tr>-->      <!--<tr>
+    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A></code></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td>Currently provides the same amount of semantic information to AT as a span element</td>
+  </tr>-->      <!--<tr>
+    <td>descendant element (type=&quot;checkbox&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code>  type=&quot;list&quot; </td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented </td>
+  </tr>
+  <tr>
+    <td>descendant element (type=&quot;command&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> type=&quot;list&quot; </td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented </td>
+  </tr>
+  <tr>
+    <td>descendant element (type=&quot;radio&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> type=&quot;list&quot; </td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented </td>
+  </tr>-->      <!--<tr>
+    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-time-element">time</A></code> element</td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td>Currently provides the same amount of semantic information to AT as a span element</td>
+  </tr>-->
+    </table>
+    <p>&nbsp;</p>
+  </div>
+  <hr><!--
+   <table width="96%" border="1">
+      <caption>
+     <img src="http://www.html5accessibility.com/images/mac-logo.png" alt="" width="64" height="64"> New HTML5 feature accessibility support in  Mac Browsers
+</caption>
+      <tr>
+        <th width="185" scope="col">new HTML5 elements</th>
+        <th scope="col"><p><img src="http://www.html5accessibility.com/images/chrome.png" alt="" width="62" height="61" border="0"></p>
+          <p>Chrome 10</p></th>
+        <th scope="col"><p><img src="http://www.html5accessibility.com/images/firefox.png" alt="" width="62" height="61" border="0"></p>
+          <p>Firefox 4.0 RC</p></th>
+        <th scope="col"><p><img src="http://www.html5accessibility.com/images/opera.png" alt="" width="62" height="61" border="0"></p>
+          <p>Opera 11 </p></th>
+        <th scope="col"><p><img src="http://www.html5accessibility.com/images/safari.png" alt="" width="62" height="61" border="0"></p>
+          <p>Safari/<br>
+            Webkit   r74232</p></th>
+        <th width="627" scope="col">Notes</th>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-article-element">article</a></code> element </th>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
+        <p><strong>Firefox:</strong> exposes element with a <code>document</code> role in MSAA/IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-aside-element">aside</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a div element</p>
+        <p><strong>Firefox:</strong> exposes  as ARIA  <code>role=&quot;note&quot;</code> via IA2 object attribute. This may change. Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://dev.w3.org/html5/spec/video.html#audio"><code>audio</code></a> element</td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p><strong>Firefox:</strong> </p>
+          <ul>
+            <li>has an issue with the inbuilt slider control values being announced by some AT as audio plays and the slider values update.</li>
+            <li>Exposes element name as an IA2 object attribute</li>
+            <li>role=application</li>
+            <li>accessible name=audio</li>
+          </ul>
+          <p><strong>Opera</strong>: has good keyboard support, but no AT support.</p>
+          <p>&nbsp;</p>
+          <p><strong>IE 9</strong>: has partial keyboard support (play/pause) and some information exposed via   accessibility APIs (accessible name=video and audio itself is a button). </p>
+        <p>Refer to: <a href="http://www.robwinters.co.uk/2010/08/31/keyboard-access-for-html5-video/" rel="bookmark" title="Permanent Link to Keyboard access for HTML5 video">Keyboard access for HTML5 video</a> for more information.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/the-canvas-element.html#the-canvas-element">canvas</a></code> element</td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p><strong>Internet Explorer 9: </strong>supports the accessible canvas element sub-DOM, but not  caret or focus exposure.</p></td>
+      </tr>
+    <tr>
+    <td><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-command">command</a> element</td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented</td>
+  </tr>
+      <tr>
+        <th scope="row"><code><a href="http://www.w3.org/TR/html5/forms.html#the-datalist-element">datalist</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p><strong>Opera</strong>: keyboard accessible. </p>
+          <p><strong>Firefox</strong>: keyboard accessible. list items exposed correctly, but presence of datalist   not indicated when focus is on the dit box, (suggest text field should be exposed as a <code>combobox</code> or presence of list indicated by <code>haspopup</code> property)</p>
+          <p>Exposes datalist as list, but does not convey </p>
+        <p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list, does not convey presence of data list from the edit box</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-details-element"><code>details</code></a> element</td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>Not implemented. Currently provides the same amount of semantic information to AT as a div element.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/grouping-content.html#the-figcaption-element">figcaption</a></code> element</td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+        <p><strong>Firefox:</strong> exposes element name as an IA2 object attribute, but does not expose the relation between the <code>figure</code> and <code>figcaption</code> elements as an accessible relation.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><A href="http://dev.w3.org/html5/spec/grouping-content.html#the-figure-element">figure</A></code> element</td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" alt="not supported" width="16" height="16" border="0"></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+        <p><strong>Firefox:</strong> exposes element name as an IA2 object attribute, but does not expose the relation between the <code>figure</code> and <code>figcaption</code> elements as an accessible relation.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-footer-element">footer</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+        <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;footer&quot;</code> via IA2 object attribute. This is likely to change soon. Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-header-element">header</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+        <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;banner&quot;</code> via IA2 object attribute. This is likely to change soon. Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-hgroup-element">hgroup</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p>not implemented</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/number-state.html#color-state">color</a><code> <a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><strong>Opera:</strong> keyboard accessible, but no information exposed to assistive technology.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#date-state" title="attr-input-type-date">Date</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><strong>Opera</strong>: has keyboard interaction but it's buggy: pressing enter when the input has focus displays the date picker, pressing tab moves the focus to the month field, but also causes the date picker to become disconnected from the input.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#date-and-time-state" title="attr-input-type-datetime">Date and Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p>Opera has keyboard interaction but it's buggy.</p>
+        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton<strong>.</strong></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#local-date-and-time-state" title="attr-input-type-datetime-local">Local Date and Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code> </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p>Opera has keyboard interaction but it's buggy.</p>
+        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#e-mail-state" title="attr-input-type-email">E-mail</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>? mostly not implemented.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#month-state" title="attr-input-type-month">Month</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p><strong>Opera</strong>: has keyboard interaction but it's buggy.</p>
+        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#number-state" title="attr-input-type-number">Number</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p><strong>Opera</strong>: keyboard accessible.</p>
+        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#range-state" title="attr-input-type-range">Range</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p><strong>Chrome:</strong> correct role, partial keyboard support, slider value not exposed.</p>
+          <p><strong>Opera:</strong> no role, partial keyboard support, slider value not exposed.</p>
+        <p>Webkit: no role, no keyboard support, slider value not exposed.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#text-state-and-search-state" title="attr-input-type-search">Search</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+        <td>The difference between <code>input type=&quot;search&quot;</code> and <code>type=&quot;text&quot;</code> is '<a href="http://dev.w3.org/html5/spec/states-of-the-type-attribute.html#text-state-and-search-state">primarily stylistic</a>'.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#telephone-state" title="attr-input-type-tel">Telephone</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code> </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>?</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#time-state" title="attr-input-type-time">Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p><strong>Opera</strong>: keyboard accessible.</p>
+        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#url-state" title="attr-input-type-url">URL</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code> </td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>?</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#week-state" title="attr-input-type-week">Week</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p><strong>Opera: </strong>has keyboard interaction but it's funky.</p>
+        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton</p></td>
+      </tr>
+   <tr>
+    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A></code></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td>Currently provides the same amount of semantic information to AT as a span element</td>
+  </tr>
+      <tr>
+        <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#context-menu-state" title="context menu state">context menu</a></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>not implemented </td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code>&gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#list-state" title="list state">list</a></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>not implemented </td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#toolbar-state" title="toolbar state">toolbar</a></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>not implemented </td>
+      </tr>
+   <tr>
+    <td>descendant element (type=&quot;checkbox&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code>  type=&quot;list&quot; </td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented </td>
+  </tr>
+  <tr>
+    <td>descendant element (type=&quot;command&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> type=&quot;list&quot; </td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented </td>
+  </tr>
+  <tr>
+    <td>descendant element (type=&quot;radio&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> type=&quot;list&quot; </td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td>not implemented </td>
+  </tr>
+      <tr>
+        <th scope="row"><a href="http://dev.w3.org/html5/spec/the-button-element.html#the-meter-element">meter</a> element</td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p><strong>Chrome &amp; Webkit:</strong> Fallback content not exposed.</p>
+        <p><strong>Opera:</strong> fallback, name, role and state content not exposed.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-nav-element">nav</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+        <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;navigation&quot;</code> via IA2 object attribute, but exposed as   a <code>section</code> role in IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/the-button-element.html#the-output-element">output</a></code> element</td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://www.w3.org/TR/html5/forms.html#the-progress-element">progress</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+          <p><strong>Chrome &amp; Webkit:</strong> Fallback content not exposed.</p>
+        <p>Opera: fallback, name, role and state content not exposed.</p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-section-element">section</a></code> element </td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p>Currently provides the same amount of semantic information to AT as a div element.</p>
+        <p><strong>Firefox:</strong> exposes element with a <code>paragraph</code> role in IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+      </tr>
+      <tr>
+        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-summary-element">summary</a></code> element</td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</td>
+      </tr>
+   <tr>
+    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-time-element">time</A></code> element</td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td>Currently provides the same amount of semantic information to AT as a span element</td>
+  </tr>
+      <tr>
+        <th scope="row"><a href="http://dev.w3.org/html5/spec/video.html"><code>video</code></a> element</td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+        <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+        <td><p><strong>Firefox:</strong> has an issue with the inbuilt slider control values being announced by some AT as audio plays and the slider values update.</p>
+          <p><strong>Opera</strong>: has good keyboard support, but no AT support.        </p>
+          <p><strong>IE 9</strong>: has partial keyboard support (play/pause) and some information exposed via   accessibility APIs (accessible name=video and video element  is exposed as a button). </p>
+        <p>Refer to: <a href="http://www.robwinters.co.uk/2010/08/31/keyboard-access-for-html5-video/" rel="bookmark" title="Permanent Link to Keyboard access for HTML5 video">Keyboard access for HTML5 video</a> for more information about keyboard access.</p></td>
+      </tr>
+  </table>
+-->
+  <!-- <hr>
+  <table width="96%" border="1">
+    <caption>
+    <img src="http://www.html5accessibility.com/images/mac-logo.png" alt="" width="64" height="64">New HTML5 attribute accessibility support in Mac Browsers
+</caption>
+    <tr>
+      <th width="223" scope="col">new HTML5 attributes (note: this is not all of them!)</th>
+      <th width="96" scope="col"><p><img src="http://www.html5accessibility.com/images/chrome.png" alt="" width="62" height="61" border="0"></p>
+        <p>Chrome 10</p></th>
+      <th width="93" scope="col"><p><img src="http://www.html5accessibility.com/images/firefox.png" alt="" width="62" height="61" border="0"></p>
+        <p>Firefox 4 RC</p></th>
+      <th width="101" scope="col"><p><img src="http://www.html5accessibility.com/images/opera.png" alt="" width="62" height="61" border="0"></p>
+        <p>Opera 11 </p></th>
+      <th width="86" scope="col"><p><img src="http://www.html5accessibility.com/images/safari.png" alt="" width="62" height="61" border="0"></p>
+        <p>Safari/<br>
+      Webkit   r74232</p></th>
+      <th width="530" scope="col">Notes</th>
+    </tr>
+   <tr>
+    <td><code><a href="http://dev.w3.org/html5/spec/dnd.html#the-draggable-attribute">draggable</a></code> attribute</td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+    <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+    <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/editing.html#the-hidden-attribute">hidden</a> attribute</td>
+      <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+      <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+      <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+      <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+      <td><p><strong>Firefox &amp; Safari: </strong>Content within elements that have a hidden attribute are not displayed or navigable. </p>
+        <p>Note: in Safari it appears that CSS <code>display:none</code> is applied to elements with the <code>hidden</code> attribute.<br>
+      </p></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/common-input-element-attributes.html#attr-input-required"><code>required</code></a> attribute</td>
+      <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+      <td><img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"><span class="hidden"> Supported</span></td>
+      <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+      <td><img src="http://www.html5accessibility.com/images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+      <td><strong>Firefox:</strong> announces popup message and identifies the field as invalid.</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="http://dev.w3.org/html5/spec/common-input-element-attributes.html#the-placeholder-attribute"><code>placeholder</code></a> attribute</td>
+      <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+      <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+      <td><img src="http://www.html5accessibility.com/images/cross.png" width="16" height="16" alt="not supported"><span class="hidden">Not supported</span></td>
+      <td><img src="http://www.html5accessibility.com/images/cross.gif" width="16" height="16" alt="not applicable"> <img src="http://www.html5accessibility.com/images/tick.png" width="16" height="16" alt="supported"> <span class="hidden">Partially supported</span></td>
+      <td><p><strong>Safari</strong>: <code>placeholder</code> content is exposed as an accessible name if the <code>input</code> does not have an explicitly associated text label, but explicit association using the HTML<code> label </code>element is not currently supported in Webkit based browsers on Windows. Only explicit association using the <code>title</code> attribute on the <code>input</code> overrides the use of the <code>placeholder</code> text as the accessible name.</p>
+        <p><strong>Firefox</strong>: <code>placeholder</code> content is exposed as an accessible name if the <code>input</code> does not have an explicitly associated text label using the<code> label</code> element. If there is a label associated using the <code>label</code> element using the <code>for/id</code> attributes, the accessible name is the label text. If the <code>label</code> element is wrapped around the control, the accessible name is the label text + the placeholder text. If the control has a <code>title</code> attribute the placeholder text is still used as the accessible name and the title text is used as the accessible description.</p>
+        <p><strong>Note:</strong> there are incompatibilities between the Firefox and Safari accessibility implementations of placeholder. </p>
+      <p>Refer to: <a href="http://www.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/">HTML5 accessibility Chops: the placeholder attribute</a></p></td>
+    </tr>
+  </table> -->
+  <footer role="contentinfo"><p><A href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license"><IMG alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png"></A><BR>
+    This <SPAN rel="dc:type" href="http://purl.org/dc/dcmitype/Text" xmlns:dc="http://purl.org/dc/elements/1.1/">work</SPAN> is licenced under a <A href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">Creative   Commons Licence</A>.</p>
+  <p>Updated: 13/07/2011</p>
+  </footer>
+  <!-- Begin Web-Stat hit counter code -->
+  <script type="text/javascript">
+<!--
+var page_name = 'HTML5 accessibility';
+var invisible = '';
+var framed = 'no';
+function sE(){return true;}window.onError=sE;var base=document;
+if(framed=='yes'){base=top.document;}var rn=Math.random();
+var ui='mpaciello';
+var qry=ui+':2::'+escape(base.referrer)+'::'+screen.width
++'x'+screen.height+'::'+screen.colorDepth+'::'+escape(page_name)
++'::'+invisible+'::'+rn+'::'+escape(base.URL);
+document.write('<a href="http://www.web-stat.com/stats/');
+document.write(ui+'.htm"><img src="http://server3.web-stat.com/count.pl?');
+document.write(qry+'" alt=""/><\/a>');
+//-->
+</script>
+  <noscript>
+  <p>
+  <a href="http://www.web-stat.com">
+  <img src="http://server3.web-stat.com/count.pl?mpaciello:2::NoJavaScript" alt="Web-Stat hit counter" border="0">
+  </a>
+  </p>
+  </noscript>
+</div>
+
+</body>
+</html>
