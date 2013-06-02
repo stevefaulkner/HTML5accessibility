@@ -306,7 +306,7 @@ header {
         <th scope="col">Notes results being updated!</th>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-article-element">article</a></code> element </th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element">article</a></code> element </th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -317,7 +317,7 @@ header {
         <p><strong>Firefox:</strong> exposes element with a <code>document</code> role in MSAA/IA2 </p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-aside-element">aside</a></code> element </th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-aside-element">aside</a></code> element </th>
          <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -371,22 +371,22 @@ header {
         <th scope="row"><code><a href="http://www.w3.org/TR/html5/forms.html#the-datalist-element">datalist</a></code> element </th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+         <td><img src="images/ni.png" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td class="partial"><img src="images/ni.png" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: keyboard accessible. </p>
-          <p><strong>Firefox</strong>: keyboard accessible. list items exposed correctly, but presence of datalist   not indicated when focus is on the edit box, (suggest text field should be exposed as a <code>combobox</code> or presence of list indicated by <code>haspopup</code> property)        </p>
-        <p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list, does not convey presence of data list from the edit box</p></td>
+        <td><p><strong>Opera</strong>: does not appear to be supported</p>
+          <p><strong>Firefox</strong>: keyboard accessible. list items exposed correctly, but presence of datalist   not indicated when focus is on the edit box, (suggest presence of list indicated by <code>haspopup</code> property)        </p>
+        <p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list.</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-details-element"><code>details</code></a> element</th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p>Currently provides the same amount of semantic information to AT as a div element.</p>
-          <p><strong>Chrome: </strong>keyboard support, does not expose semantics correctly.</p>
+          <p><strong>Chrome and Opera: </strong>keyboard support, does not expose semantics correctly.</p>
         <p>&nbsp;</p></td>
       </tr>
       <tr>
@@ -397,7 +397,7 @@ header {
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
-        <p><strong>Firefox:</strong> exposes element as Ia&quot; caption role and the element name as an IA2 object attribute, exposes the  <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
+        <p><strong>Firefox:</strong> exposes element as IA2 caption role and the element name as an IA2 object attribute, exposes the  <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
       </tr>
       <tr>
         <th scope="row"><code><A href="http://dev.w3.org/html5/spec/grouping-content.html#the-figure-element">figure</A></code> element</th>
@@ -411,34 +411,34 @@ header {
 <p><strong>Firefox:</strong> exposes element role=group with accessible name from figcaption.</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-footer-element">footer</a></code> element </th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-footer-element">footer</a></code> element </th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE/Opera/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
-          <p><strong>Chrome:</strong> exposes element with a <code>footer</code> role in IA2</p>
-<p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
+        <td><p><strong>IE/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
+          <p><strong>Chrome/Opera:</strong> exposes element with a <code>footer</code> role in IA2</p>
+<p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-header-element">header</a></code> element </th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">header</a></code> element </th>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE/Opera/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
-          <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
-<p><strong>Firefox:</strong> exposes element name<code></code> via IA2 object attribute. </p></td>
+        <td><p><strong>IE/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
+          <p><strong>Chrome/Opera:</strong> exposes element with a <code>section</code> role in IA2</p>
+<p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-hgroup-element">hgroup</a></code></th>
-        <td class="nosupport"><img src="images/cross.png" width="16" height="16" alt="">Not supported</td>
-        <td class="nosupport"><img src="images/cross.png" width="16" height="16" alt="">Not supported</td>
-       <td class="nosupport"><img src="images/cross.png" width="16" height="16" alt="">Not supported</td>
-       <td class="nosupport"><img src="images/cross.png" width="16" height="16" alt="">Not supported</td>
-       <td class="nosupport"><img src="images/cross.png" width="16" height="16" alt="">Not supported</td>
+        <th scope="row"><code>hgroup</code></th>
+        <td class="nosupport">&nbsp;</td>
+        <td class="nosupport">&nbsp;</td>
+       <td class="nosupport">&nbsp;</td>
+       <td class="nosupport">&nbsp;</td>
+       <td class="nosupport">&nbsp;</td>
         <td><p class="nosupport"><strong>Obsolete</strong></p></td>
       </tr>
       <tr>
@@ -580,12 +580,12 @@ header {
   </tr>-->
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element">main</a> element</th>
-        <td>&nbsp;</td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="partial">&nbsp;</td>
-        <td>&nbsp;</td>
+           <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+         <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><strong>Firefox:</strong> implements as <code>role=main.</code></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#context-menu-state" title="context menu state">context menu</a></th>
@@ -652,7 +652,7 @@ header {
         <p><strong>Opera:</strong>name, role, properties not exposed.</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-nav-element">nav</a></code> element </th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-nav-element">nav</a></code> element </th>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -683,7 +683,7 @@ header {
         <p><strong>Firefox: </strong>exposes name role, state and value correctly!</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-section-element">section</a></code> element </th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-section-element">section</a></code> element </th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -817,7 +817,7 @@ header {
     <th scope="col">Notes</th>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-article-element">article</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element">article</a></code> element </th>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -826,7 +826,7 @@ header {
       <p><strong>Safari: </strong>Exposed in Mac API as AXRole:  &quot;AXGroup&quot;, AXSubrole:  &quot;AXDocumentArticle&quot;, AXRoleDescription:  &quot;article&quot;.</p></td>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-aside-element">aside</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-aside-element">aside</a></code> element </th>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -899,7 +899,7 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
     <td><p><strong>Chrome,Firefox,Opera, Safari: </strong>provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p></td>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-footer-element">footer</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-footer-element">footer</a></code> element </th>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
     <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -908,7 +908,7 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
       <p><strong>Safari &amp; Firefox:</strong> exposes  as AXRole:  &quot;AXGroup&quot;, AXSubrole:  &quot;AXLandmarkContentInfo&quot;, </p></td>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-header-element">header</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">header</a></code> element </th>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -917,7 +917,7 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
       <p><strong>Safari:</strong> exposes  as AXRole:  &quot;AXGroup&quot;, AXSubrole:  &quot;AXLandmarkBanner&quot;, AXRoleDescription:  &quot;banner&quot; Note: is every header element announced as banner?</p></td>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-hgroup-element">hgroup</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-hgroup-element">hgroup</a></code> element </th>
     <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
     <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
     <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
@@ -1103,7 +1103,7 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
     <td><p><strong>Chrome, Safari, Opera: </strong>name, role, properties not exposed.</p></td>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-nav-element">nav</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-nav-element">nav</a></code> element </th>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -1128,7 +1128,7 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
     <td><p><strong>Chrome &amp; Safari:</strong> exposes as AXRole:  &quot;AXProgressIndicator&quot;, AXSubrole:  &quot;(null)&quot;, AXRoleDescription:  &quot;progress indicator&quot;, AXValue (W):  &quot;50&quot;.</p></td>
   </tr>
   <tr>
-    <th scope="row"><code><a href="http://dev.w3.org/html5/spec/sections.html#the-section-element">section</a></code> element </th>
+    <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-section-element">section</a></code> element </th>
     <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
