@@ -294,15 +294,13 @@ header {
       <tr>
         <th scope="col">new HTML5 elements</th>
         <th scope="col"><img src="images/chrome.png" alt="" width="62" height="61" border="0">
-          <span style="display:block">Chrome 27</span></th>
+          <span style="display:block">Chrome 29</span></th>
         <th scope="col"><img src="images/firefox.png" alt="" width="62" height="61" border="0">
-        <span style="display:block">Firefox 22</span></th>
+        <span style="display:block">Firefox 23</span></th>
         <th scope="col"><img src="images/ie.png" alt="" width="62" height="61" border="0">
         <span style="display:block">IE 10</span></th>
         <th scope="col"><img src="images/opera.png" alt="" width="62" height="61" border="0">
-        <span style="display:block">Opera 15</span></th>
-        <th class="partial" scope="col"><img src="images/safari.png" alt="" width="62" height="61" border="0">
-         <span style="display:block">Webkit <small>r105476</small> <sup><a href="#note">note</a></sup></span></th>
+        <span style="display:block">Opera 16</span></th>
         <th scope="col">Notes results being updated!</th>
       </tr>
       <tr>
@@ -311,8 +309,7 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE/Safari:</strong>  provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
+        <td><p><strong>IE:</strong>  provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
           <p><strong>Chrome/Opera:</strong> exposes element with a <code>section</code> role in IA2</p>
         <p><strong>Firefox:</strong> exposes element with a <code>document</code> role in MSAA/IA2 </p></td>
       </tr>
@@ -322,8 +319,7 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
          <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
+        <td><p><strong>IE:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
           <p><strong>Chrome/Opera:</strong> exposes element with a <code>section</code> role in IA2</p>
         <p><strong>Firefox:</strong> exposes  as ARIA  <code>role=&quot;complementary&quot;</code> via IA2 object attribute and IA2 <code>note</code> role. </p></td>
       </tr>
@@ -333,7 +329,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Firefox:</strong> </p>
           <ul>
             <li>Exposes controls via accessibility APIs, but individual controls cannot be interacted with via the keyboard.</li>
@@ -350,12 +345,13 @@ header {
       </tr>
       <tr>
         <th scope="row"><code><a href="http://dev.w3.org/html5/spec/the-canvas-element.html#the-canvas-element">canvas</a></code> element</th>
+        <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE, Chrome, Firefox, and Opera: </strong>supports the accessible canvas element sub-DOM</p>
+        <td><p><strong>IE, Chrome, Firefox, and Opera: </strong>supports the accessible canvas element sub-DOM.</p>
+          <p><strong>Chrome</strong> also supports drawfocus ring!</p>
+          <p>&nbsp;</p>
         <p>&nbsp;</p></td>
       </tr>
       <!--<tr>
@@ -370,13 +366,10 @@ header {
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/TR/html5/forms.html#the-datalist-element">datalist</a></code> element </th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+       <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
          <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-         <td><img src="images/ni.png" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td class="partial"><img src="images/ni.png" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: does not appear to be supported</p>
-          <p><strong>Firefox</strong>: keyboard accessible. list items exposed correctly, but presence of datalist   not indicated when focus is on the edit box, (suggest presence of list indicated by <code>haspopup</code> property)        </p>
-        <p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list.</p></td>
+          <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><p><strong>Chrome/Opera:</strong> keyboard accessible. Does not expose datalist as list.</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-details-element"><code>details</code></a> element</th>
@@ -384,9 +377,7 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p>Currently provides the same amount of semantic information to AT as a div element.</p>
-          <p><strong>Chrome and Opera: </strong>keyboard support, does not expose semantics correctly.</p>
+        <td><p><strong>Chrome and Opera: </strong>keyboard support, does not expose semantics correctly.Currently provides the same amount of semantic information to AT as a div element.</p>
         <p>&nbsp;</p></td>
       </tr>
       <tr>
@@ -395,8 +386,7 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p>Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
+        <td><p><strong>Chrom/Opera/IE:</strong> Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
         <p><strong>Firefox:</strong> exposes element as IA2 caption role and the element name as an IA2 object attribute, exposes the  <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
       </tr>
       <tr>
@@ -405,10 +395,9 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE/Opera/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
-          <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
-<p><strong>Firefox:</strong> exposes element role=group with accessible name from figcaption.</p></td>
+        <td><p><strong>IE/Opera/Chrome:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element
+</p>
+        <p><strong>Firefox:</strong> exposes element role=group with accessible name from figcaption.</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-footer-element">footer</a></code> element </th>
@@ -416,7 +405,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
           <p><strong>Chrome/Opera:</strong> exposes element with a <code>footer</code> role in IA2</p>
 <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
@@ -427,7 +415,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
           <p><strong>Chrome/Opera:</strong> exposes element with a <code>section</code> role in IA2</p>
 <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
@@ -438,48 +425,43 @@ header {
         <td class="nosupport">&nbsp;</td>
        <td class="nosupport">&nbsp;</td>
        <td class="nosupport">&nbsp;</td>
-       <td class="nosupport">&nbsp;</td>
-        <td><p class="nosupport"><strong>Obsolete</strong></p></td>
+       <td><p class="nosupport"><strong>Obsolete</strong></p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/number-state.html#color-state">color</a><code> <a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrome</strong>: has keyboad support, exposes button as role=text in MSAA and a role=section in IA2, does not expose color information on button.</p>
+        <td><p><strong>Chrome</strong>: has keyboad support, exposes button as IA2 color choosre exposes color information in RGB as accValue.</p>
         <p><strong>Opera:</strong> keyboard accessible, but no information exposed to assistive technology.</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#date-state" title="attr-input-type-date">Date</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><span class="hidden">Not supported</span><img src="images/cross.png" width="16" height="16" alt=""></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrome:</strong> keyboard operable, no role states and property informsation exposed for calendar interface. No indication that the control can expose a date picker control.</p>
-        <p><strong>Opera</strong>: date picker cannot be activated using the keybaord, no information exposed to assistive technology.</p></td>
+       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><p><strong>Chrome/Opera:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
+        <p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#date-and-time-state" title="attr-input-type-datetime">Date and Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: date picker cannot be activated using the keybaord, no information exposed to assistive technology.</p>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><p>&nbsp;</p>
         <p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#local-date-and-time-state" title="attr-input-type-datetime-local">Local Date and Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code> </th>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: date picker cannot be activated using the keybaord, no information exposed to assistive technology.</p>
-        <p>&nbsp;</p></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><p><strong>Chrome/Opera:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
+          <p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#e-mail-state" title="attr-input-type-email">E-mail</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
@@ -487,40 +469,32 @@ header {
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox: </strong>invalid state exposed in accessibility API. Error message (tooltip) not exposed via accessibility API. tootlip error message not keyboard accessible.</td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#month-state" title="attr-input-type-month">Month</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: date picker cannot be activated using the keybaord, no information exposed to assistive technology.</p>
-        <p>&nbsp;</p></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><p><strong>Chrome/Opera:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
+          <p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#number-state" title="attr-input-type-number">Number</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><p><strong>Opera</strong>: keyboard accessible.</p>
-        <p><strong>Chrome : </strong>keyboard accessible<strong>, </strong>role exposed as <code>progressbar</code> should be <code>spinbutton</code>.</p>
-        <p><strong>Safari:</strong>  keyboard support.</p></td>
+       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+        <td><p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#range-state" title="attr-input-type-range">Range</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><p><strong>Chrome:</strong> correct role, full keyboard support, slider value exposed.</p>
-          <p><strong>Opera:</strong> no role, partial keyboard support, slider value not exposed.</p>
-        <p><strong>Safari:</strong>   partial keyboard support.</p></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+        <td><p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#text-state-and-search-state" title="attr-input-type-search">Search</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
@@ -528,7 +502,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td class="partial"><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td>The difference between <code>input type=&quot;search&quot;</code> and <code>type=&quot;text&quot;</code> is '<a href="http://dev.w3.org/html5/spec/states-of-the-type-attribute.html#text-state-and-search-state">primarily stylistic</a>'.</td>
       </tr>
       <tr>
@@ -537,18 +510,15 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td>?</td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#time-state" title="attr-input-type-time">Time</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: keyboard accessible.</p>
-        <p><strong>Chrome: </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton</p></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+        <td><strong>Chrome/Opera:</strong> keyboard operable, spin buttons exposed correctly.</td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#url-state" title="attr-input-type-url">URL</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code> </th>
@@ -556,18 +526,16 @@ header {
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox: </strong>invalid state exposed in accessibility API. Error message (tooltip)not exposed via accessibility API. tootlip error message not keyboard accessible.</td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#week-state" title="attr-input-type-week">Week</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Opera</strong>: date picker cannot be activated using the keybaord, no information exposed to assistive technology.</p>
-        <p><strong>Chrome : </strong>keyboard accessible<strong>, </strong>role exposed as edit box should be spinbutton</p></td>
+        <td><p><strong>Chrome/Opera:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
+          <p>&nbsp;</p></td>
       </tr>
       <!--<tr>
     <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A></code></td>
@@ -582,9 +550,8 @@ header {
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element">main</a> element</th>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-           <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+           <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-         <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox:</strong> implements as <code>role=main.</code></td>
       </tr>
       <tr>
@@ -593,7 +560,6 @@ header {
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox:</strong> </td>
       </tr>
       <tr>
@@ -602,7 +568,6 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td>not implemented </td>
       </tr>
       <tr>
@@ -611,7 +576,6 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td>not implemented </td>
       </tr>
       <!--<tr>
@@ -647,7 +611,6 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Chrome: </strong>name, role, properties not exposed.</p>
         <p><strong>Opera:</strong>name, role, properties not exposed.</p></td>
       </tr>
@@ -657,7 +620,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE/Opera/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element.</p>
           <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
         <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;navigation&quot;</code> via IA2 object attribute, and as   a <code>section</code> role in IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
@@ -668,7 +630,6 @@ header {
         <td> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox:</strong> accessibility support implemented -  IA2 <code>section</code> role,  with <code>aria-live=polite</code> and hasIA2 <code>controlled_by relation</code> defined by <code>@for</code> attribute.</td>
       </tr>
       <tr>
@@ -677,9 +638,8 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td class="partial"><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><p><strong>Chrome: </strong>exposes name role, state and value correctly!</p>
-        <p><strong>Opera:</strong> name, role and state content not exposed.</p>
+          <p><strong>Opera:</strong> name, role and state content not exposed.</p>
         <p><strong>Firefox: </strong>exposes name role, state and value correctly!</p></td>
       </tr>
       <tr>
@@ -688,7 +648,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE/Opera/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
           <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
 <p><strong>Firefox:</strong> exposes element with a <code>paragraph</code> role in IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
@@ -700,9 +659,8 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td class="partial"><span class="hidden">Not supported</span><img src="images/cross.png" width="16" height="16" alt=""></td>
         <td><p><strong>IE/Opera/Safari:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
-        <p><strong>Chrome:</strong> keyboard support only</p>
+          <p><strong>Chrome:</strong> keyboard support only</p>
         <p><strong>Webkit:</strong> no keyboard access. No role/name/state information exposed.</p></td>
       </tr>
       <tr>
@@ -711,9 +669,8 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>IE:</strong> supports both WebVTT and TTML</p>
-        <p><strong>Chrome/Opera/Safari:</strong> only support WebVTT</p>
+          <p><strong>Chrome/Opera/Safari:</strong> only support WebVTT</p>
         <p>Refer to <a href="http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/">WebVTT support in browsers</a> for more details</p></td>
       </tr>
       <!--<tr>
@@ -731,7 +688,6 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td class="partial"><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Firefox:</strong> keyboard support suboptimal - cannot interact with individual controls.</p>
           <p><strong>Opera</strong>: has<strong> </strong>keyboard support, but no AT support.        </p>
           <p>&nbsp;</p>
