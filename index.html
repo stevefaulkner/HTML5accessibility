@@ -284,7 +284,7 @@ header {
     <p>It is not intended to dissuade developers from <strong>using new <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> features</strong>. Sometimes there are better choices, sometimes developers have to add a little extra to make the feature useful or usable, and other times features have simply not been implemented by any browser or only by browsers that do not yet support assistive technologies. As a consequence it may not yet be practical to use a particular <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> feature. Example <a href="index-aria.html">work arounds</a> for lack of implementation or lack of accessible implementation are linked from the <a href="index-aria.html">Solutions page</a>.</p>
     <p>The information in the support table is updated on a semi-regular basis, to keep up with support improvements made in browsers as new versions are released.</p>
     <p><a href="#legend">Support Tables - Legend & notes</a></p>
-    <p><strong id="note" tabindex="-1">NOTE: </strong>Support Scores for Opera on Windows and Mac and Safari on Windows are no longer being updated (scores as of February 2012) as there is no active effort to implement accessibility support in these browsers.</p>
+    <p><strong id="note" tabindex="-1">NOTE: </strong>Safari on Windows is no longer included as there is no active effort to implement accessibility support in this browser.</p>
 <h3><a name="wbdetails"></a>Windows browsers - Details</h3>
  
     <table width="96%" border="1">
@@ -386,8 +386,8 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrom/Opera/IE:</strong> Currently provides the same amount of semantic information to AT as a <code>div</code> element.</p>
-          <p><strong>Firefox:</strong> exposes element as IA2 caption role and the element name as an IA2 object attribute, exposes the <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
+        <td><p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state. Currently keyboard support is incomplete, does not move focus to modal dialog by default and does not move focus back to trigger control on dialog close.</p>
+          <p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://dev.w3.org/html5/spec/grouping-content.html#the-figcaption-element">figcaption</a></code> element</th>
@@ -424,7 +424,9 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p class="nosupport"><strong>Obsolete</strong></p></td>
+        <td><p><strong>IE:</strong> provides the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element</p>
+          <p><strong>Chrome/Opera:</strong> exposes element with a <code>section</code> role in IA2</p>
+          <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/number-state.html#color-state">color</a><code> <a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
@@ -432,7 +434,7 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><p><strong>Chrome</strong>: has keyboad support, exposes button as IA2 color choosre exposes color information in RGB as accValue.</p>
+        <td><p><strong>Chrome</strong>: has keyboad support, exposes button as IA2 color chooser exposes color information in RGB as accValue.</p>
           <p><strong>Opera:</strong> keyboard accessible, but no information exposed to assistive technology.</p></td>
       </tr>
       <tr>
