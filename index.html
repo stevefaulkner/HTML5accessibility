@@ -381,7 +381,9 @@ header {
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE/Chrome:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element </p>
+        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
+          <strong>Chrome:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element. <br>
+          <a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
           <p><strong>Firefox:</strong> exposes element <code>role=group</code> with accessible name from figcaption.</p></td>
       </tr>
       <tr>
@@ -390,7 +392,7 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.</p>
-          <p><strong>Chrome:</strong> exposes element with a <code>footer</code> role in IA2</p>
+          <p><strong>Chrome:</strong> exposes element with a <code>footer</code> role in IA2 <a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
           <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
       <tr>
