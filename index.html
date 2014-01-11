@@ -220,8 +220,8 @@ header {
     <p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br> 
       <a href="http://www.paciellogroup.com/about_7">Contact us</a> for  solutions to your accessibility issues.</strong></p>  
     </div><div><img src="images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="images/logo_reasonably_small.png" alt="Accessibility" width="128" height="128"></div>
-    <h1>A work in progress: November 2013</h1>
-    <p><strong>Editors Draft November 25, 2013</strong></p>
+    <h1>A work in progress: January 2014</h1>
+    <p><strong>Editors Draft January 11, 2014</strong></p>
     <p><strong>WARNING!</strong> the data below is being revised</p>
     
     
@@ -380,18 +380,18 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
-          <strong>Chrome:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a div element. <br>
-          <a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
-          <p><strong>Firefox:</strong> exposes element <code>role=group</code> with accessible name from figcaption.</p></td>
+          <strong>Chrome:</strong> Currently provides the same amount of semantic information to AT as a <code>div</code> element.<a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
+          <p><strong>Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2 object attribute, exposes the  <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
       </tr>
       <tr>
         <th scope="row"><code><A href="http://dev.w3.org/html5/spec/grouping-content.html#the-figure-element">figure</A></code> element</th>
         <td><img src="images/cross.png" alt="not supported" width="16" height="16" border="0"><span class="hidden">Not supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.</p>
-          <p><strong>Chrome:</strong> exposes element with a <code>footer</code> role in IA2 <a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
-          <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
+        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
+            <strong>Chrome:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a <code>div</code> element. <br>
+            <a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
+        <p><strong>Firefox:</strong> exposes element <code>role=group</code> with accessible name from <code>figcaption</code>.</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-footer-element">footer</a></code> element </th>
@@ -399,8 +399,8 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)</p>
-          <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
-          <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
+          <p><strong>Chrome:</strong> exposes element with a <code>footer</code> role in IA2</p>
+        <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element">header</a></code> element </th>
