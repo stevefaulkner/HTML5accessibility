@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>WAI ARIA Toggle Button Example</title>
+<script type="text/javascript" src="ToggleButton_files/toggle.js"></script>
+<style type="text/css">
+	body{
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	code strong {background-color:#ffff00}
+	p, #example {border:1px solid #000000; padding:1em;background-color:#f5f5f5}
+	th, caption {text-align:left}
+	table, th,td {border:1px solid #000000;border-collapse:collapse;padding:0.5em}
+	th {background-color:#f5f5f5}
+	hr {margin: 1.5em 0 0.5em 0}
+	span { font-size:1.5em;margin:15px;position:relative;top:-8px;}
+	input {border:2px solid transparent;}
+	input:focus{border:2px solid #00ff00;}
+</style>
+
+</head>
+
+<body>
+<h1><abbr title="accessible rich internet applications">ARIA</abbr> Toggle Button</h1>
+<h2>Working Example</h2>
+<div id="example"><span><input aria-pressed="false"  alt="highlight off" src="ToggleButton_files/nohighlight.gif" id="toggleTest" type="image"></span><span id="sample">sample text</span></div>
+<hr>
+
+
+<!--<h2>Screen Reader Behaviour</h2>
+<table><caption>Role and State Information</caption>
+<tbody><tr><th scope="col">ARIA role/state</th>
+<th scope="col">JAWS 15 (PC Cursor mode) announces</th>
+<th scope="col">Window Eyes 8.4 announces</th><th scope="col">MSAA role/state</th></tr>
+
+<tr>
+	<th scope="row">button/pressed [false]</th>
+	<td>
+		<ul>
+			<li>IE8: <em>alt content</em> "button, to activate press space bar"</li>
+			<li>Firefox: <em>alt content</em></li>
+		</ul></td>
+	<td> <ul>
+			<li>IE8: <em>alt content</em> "button"</li>
+			<li>Firefox: <em>alt content</em> "button"</li>
+		</ul></td>
+		<td>push button/(not pressed implied)</td>
+</tr>
+<tr>
+	<th scope="row">button/pressed [true]</th>
+	<td>
+		<ul>
+			<li>IE8: <em>alt content</em> "button pressed, to activate press space bar"</li>
+			<li>Firefox: <em>alt content</em> "pressed"</li>
+		</ul></td>
+	<td><ul>
+			<li>IE8: <em>alt content</em> "button"</li>
+			<li>Firefox: <em>alt content</em> "button"</li>
+		</ul></td>
+	<td>push button/pressed</td>
+</tr>
+</tbody></table>
+<h3>Requirements</h3>
+<ul>
+	<li>Internet Explorer 8 beta or Firefox 3 beta</li>
+	<li>Javascript Enabled</li>
+	<li>JAWS 7.1+</li>
+	<li>Window Eyes 5.5+</li>
+</ul>
+<h3>Notes:</h3>
+<ul>
+	<li>Button state can be changed using the <kbd>spacebar</kbd> or <kbd>enter</kbd> key.</li>
+	<li>Window Eyes does not announce button state.</li>
+	<li>Announcements were those produced using default verbosity settings.</li>
+</ul>-->
+<h2>ARIA 1.0 References:</h2>
+<ul>
+	<li><a href="http://www.w3.org/TR/wai-aria/roles#button">Role: Button</a>. Includes information about other states supported by this role.</li>
+	<li><a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-pressed">State: Pressed</a></li>
+</ul>
+<hr>
+<h2>State Examples</h2>
+<h2>Not pressed state</h2>
+<div><input alt="highlight off" src="ToggleButton_files/nohighlight.gif" role="button" aria-pressed="false" type="image"></div>
+<h3>Not pressed state - code</h3>
+<p><code>&lt;input type="image" alt="highlight off" src="nohighlight.gif"<strong> aria-pressed="false"</strong>&gt;</code></p>
+<h2>Pressed state</h2>
+<div><input alt="highlight on" src="ToggleButton_files/highlight.gif" role="button" aria-pressed="true" type="image"></div>
+<h3>Pressed state - code</h3>
+<p><code>&lt;input type="image" alt="highlight on" src="highlight.gif" <strong>aria-pressed="true"</strong>&gt;</code></p>
+<!-- Begin Web-Stat hit counter code -->
+<script type="text/javascript">
+<!--
+var page_name = document.title;
+var invisible = '';
+var framed = 'no';
+function sE(){return true;}window.onError=sE;var base=document;
+if(framed=='yes'){base=top.document;}var rn=Math.random();
+var ui='mpaciello';var al='Web-Stat hit counters';
+var qry=ui+':2::'+escape(base.referrer)+'::'+screen.width
++'x'+screen.height+'::'+screen.colorDepth+'::'+escape(page_name)
++'::'+invisible+'::'+rn+'::'+escape(base.URL);
+document.write('<a href="http://www.web-stat.com/stats/');
+document.write(ui+'.htm"><img src="http://server3.web-stat.com/count.pl?');
+document.write(qry+'" alt="'+al+'"/><\/a>');
+//-->
+</script><a href="http://www.web-stat.com/stats/mpaciello.htm"><img src="ToggleButton_files/count.gif" alt="Web-Stat hit counters"></a>
+<!-- End Web-Stat hit counter code -->
+
+
+
+
+</body></html>
