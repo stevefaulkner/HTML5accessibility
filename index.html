@@ -289,9 +289,9 @@ header {
       <tr>
         <th width="14%" scope="col">new HTML5 elements</th>
         <th width="13%" scope="col"><img src="images/chrome.png" alt="" width="62" height="61" border="0">
-          <span style="display:block">Chrome 31</span><img src="images/opera.png" alt="" width="16" height="15" border="0"><small>Opera 16</small></th>
+          <span style="display:block">Chrome 35</span><img src="images/opera.png" alt="" width="16" height="15" border="0"><small>Opera 20</small></th>
         <th width="11%" scope="col"><img src="images/firefox.png" alt="" width="62" height="61" border="0">
-        <span style="display:block">Firefox 25</span></th>
+        <span style="display:block">Firefox 31</span></th>
         <th width="13%" scope="col"><img src="images/ie.png" alt="" width="62" height="61" border="0">
         <span style="display:block">IE 11</span></th>
         <th width="49%" scope="col">Notes results being updated!</th>
@@ -327,7 +327,7 @@ header {
             <li>role=grouping</li>
           </ul>
           <p><strong>Chrome</strong>:Exposes controls via accessibility APIs, but individual controls cannot be interacted with via the keyboard.</p>
-          <strong>IE 10:</strong>
+          <strong>IE 11:</strong>
           <ul>
             <li>Exposes controls via accessibility APIs. Complete accessible role, name and description for all controls.</li>
             <li>Full keyboard support for visible controls</li>
@@ -335,12 +335,11 @@ header {
       </tr>
       <tr>
         <th scope="row"><code><a href="http://dev.w3.org/html5/spec/the-canvas-element.html#the-canvas-element">canvas</a></code> element</th>
-        <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td><td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>IE, Chrome, Firefox: </strong>supports the accessible canvas element sub-DOM.<strong><br>
-          Chrome</strong> also supports drawfocus ring!</p>
-          <p>Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=540456">focusRing() bug</a></p></td>
+          Firefox</strong> also supports drawfocus ring and hitregion() </p>
+          <p>&nbsp;</p></td>
       </tr>
       <!--<tr>
     <td><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-command">command</a> element</td>
@@ -368,10 +367,11 @@ header {
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-dialog-element"><code>dialog</code></a> element</th>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state. Currently keyboard support is incomplete, does not move focus to modal dialog by default and does not move focus back to trigger control on dialog close.</p>
+        <td><p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state. <br>
+            <strong>Note:</strong> Currently Chrome keyboard support is incomplete,  does not move focus back to trigger control on dialog close.</p>
           <p>&nbsp;</p></td>
       </tr>
       <tr>
@@ -384,7 +384,7 @@ header {
           <p><strong>Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2 object attribute, exposes the  <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><A href="http://dev.w3.org/html5/spec/grouping-content.html#the-figure-element">figure</A></code> element</th>
+        <th scope="row"><code><A href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">figure</A></code> element</th>
         <td><img src="images/cross.png" alt="not supported" width="16" height="16" border="0"><span class="hidden">Not supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -512,7 +512,7 @@ header {
         <td><p><strong>Chrome:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
           <p>&nbsp;</p></td>
       </tr>
-      <!--<tr>
+     <tr>
     <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A></code></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -520,7 +520,7 @@ header {
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td>Currently provides the same amount of semantic information to AT as a span element</td>
-  </tr>-->
+  </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element">main</a> element</th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
@@ -530,21 +530,21 @@ header {
         </code><strong>IE:</strong> provides no semantic information via accessibility APIs (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)        </td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#context-menu-state" title="context menu state">context menu</a></th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> &gt; <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#popup-menu-state">popup menu</a></th>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><strong>Firefox: </strong>does not indicate presence of context menu.</td>
+        <td><strong>Firefox: </strong>does not indicate presence of popup menu.</td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#toolbar-state" title="toolbar state">toolbar</a></th>
+        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element">menu</a></code> &gt; <a href="http://www.w3.org/TR/html5/interactive-elements.html#toolbar-state">toolbar</a></th>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td>not implemented </td>
       </tr>
-      <!--<tr>
-    <td>descendant element (type=&quot;checkbox&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code>  type=&quot;list&quot; </td>
+<tr>
+    <td><code><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element">menuitem</a></code> element</td>
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
@@ -552,24 +552,6 @@ header {
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
     <td>not implemented </td>
   </tr>
-  <tr>
-    <td>descendant element (type=&quot;command&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> type=&quot;list&quot; </td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-    <td>not implemented </td>
-  </tr>
-  <tr>
-    <td>descendant element (type=&quot;radio&quot;) of a <code><a href="http://www.w3.org/TR/html5/interactive-elements.html#menus">menu</a></code> type=&quot;list&quot; </td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-    <td>not implemented </td>
-  </tr>-->
       <tr>
         <th scope="row"><a href="http://dev.w3.org/html5/spec/the-button-element.html#the-meter-element">meter</a> element</th>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -624,12 +606,11 @@ header {
         <p>&nbsp;</p></td>
       </tr>
       <tr>
-        <th scope="row"><a href="http://dev.w3.org/html5/spec/the-track-element.html#the-track-element"><code>track</code></a> element</th> <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-       
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+        <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-track-element"><code>track</code></a> element</th> <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+      <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>IE:</strong> supports both WebVTT and TTML</p>
-          <p><strong>Chrome/Opera/Safari:</strong> only support WebVTT</p>
+          <p><strong>Chrome/Firefox:</strong> only support WebVTT</p>
           <p>Refer to <a href="http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/">WebVTT support in browsers</a> for more details</p></td>
       </tr>
       <!--<tr>
@@ -647,11 +628,9 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>Firefox:</strong> keyboard support suboptimal - cannot interact with individual controls.</p>
-          <p><strong>Opera</strong>: has<strong> </strong>keyboard support, but no AT support. </p>
-          <p>&nbsp;</p>
-          <p><strong>Chrome:</strong> exposes limited accessibility information for the  controls but no accessible names and has no keyboard support.</p>
-          <p>&nbsp;</p>
-          <p><strong>IE 10: </strong>Exposes controls via accessibility APIs. Complete accessible role, name and description for all controls. Full keyboard support for visible controls</p></td>
+          <p><strong>Opera</strong>: has<strong> </strong>keyboard support, but no AT support. <br>
+          <strong>Chrome:</strong>  no keyboard support.          </p>
+        <p><strong>IE 11: </strong>Exposes controls via accessibility APIs. Complete accessible role, name and description for all controls. Full keyboard support for visible controls</p></td>
       </tr>
     </table>
   </div>
@@ -662,10 +641,9 @@ header {
     </caption>
     <tr>
       <th width="13%" scope="col">new HTML5 attributes (note: this is not all of them!)</th>
-      <th width="13%" scope="col"><img src="images/chrome.png" alt="" width="62" height="61" border="0">
-          <span style="display:block">Chrome 31</span><img src="images/opera.png" alt="" width="16" height="15" border="0"><small>Opera 16</small></th>
-      <th width="11%" scope="col"><img src="images/firefox.png" alt="" width="62" height="61" border="0"> <span style="display:block">Firefox 25</span></th>
-      <th width="12%" scope="col"><img src="images/ie.png" alt="" width="62" height="61" border="0"> <span style="display:block">IE 11</span></th>
+      <th scope="col"><img src="images/chrome.png" alt="" width="62" height="61" border="0"> <span style="display:block">Chrome 35</span><img src="images/opera.png" alt="" width="16" height="15" border="0"><small>Opera 20</small></th>
+      <th scope="col"><img src="images/firefox.png" alt="" width="62" height="61" border="0"> <span style="display:block">Firefox 31</span></th>
+      <th scope="col"><img src="images/ie.png" alt="" width="62" height="61" border="0"> <span style="display:block">IE 11</span></th>
       <th width="51%" scope="col">Notes</th>
     </tr>
     <!--<tr>
