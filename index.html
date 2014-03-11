@@ -221,7 +221,7 @@ header {
       <a href="http://www.paciellogroup.com/about_7">Contact us</a> for  solutions to your accessibility issues.</strong></p>  
     </div><div><img src="images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="images/logo_reasonably_small.png" alt="Accessibility" width="128" height="128"></div>
     <h1>A work in progress: March 2014</h1>
-    <p><strong>Editors Draft March 7, 2014</strong></p>
+    <p><strong>Editors Draft March 11, 2014</strong></p>
     <p><strong>WARNING!</strong> the data below is being revised</p>
     
     
@@ -464,7 +464,7 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-       <td><p><strong>Chrome/Firefox</strong>: expsoed as spin button/editable text works with keyboard (aroow keys)</p></td>
+       <td><p><strong>Chrome/Firefox</strong>: exposed as spin button/editable text works with keyboard (arrow keys)</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/TR/html5/forms.html#range-state" title="attr-input-type-range">Range</a> <code><a href="http://www.w3.org/TR/html5/forms.html#the-input-element">input</a></code></th>
@@ -513,12 +513,14 @@ header {
           <p>&nbsp;</p></td>
       </tr>
      <tr>
-    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A></code></td>
+    <th><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-mark-element">mark</A> element</th>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
      <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
    
-    <td>Currently provides the same amount of semantic information to AT as a span element</td>
+    <td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug filed: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make
+        <mark> element accessible</mark>
+    </a></td>
   </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element">main</a> element</th>
@@ -545,9 +547,9 @@ header {
 <tr>
     <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element">menuitem</a> element</th>
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+   <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-    <td>not implemented </td>
+    <td><strong>Firefox:</strong> Supports menu item role and keyboard interaction.</td>
   </tr>
       <tr>
         <th scope="row"><a href="http://dev.w3.org/html5/spec/the-button-element.html#the-meter-element">meter</a> element</th>
@@ -656,8 +658,8 @@ header {
       <th scope="row"><a href="http://dev.w3.org/html5/spec/editing.html#the-hidden-attribute">hidden</a> attribute</th>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-      <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-      <td><p><strong>Chrome, Firefox: </strong>Content within elements that have a hidden attribute are not displayed or navigable. </p>
+       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+      <td><p><strong>Chrome, Firefox, IE: </strong>Content within elements that have a hidden attribute are not displayed or navigable. </p>
         <p><strong>Note:</strong> In all supporting browsers CSS <code>display:none</code> is applied to elements with the <code>hidden</code> attribute.<br>
       </p></td>
     </tr>
