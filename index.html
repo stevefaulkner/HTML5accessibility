@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<title>HTML5 accessibility - update in progress June 2013</title>
+<title>HTML5 accessibility - work in progress March 2014</title>
 <script>
 	function noimage()
 
@@ -221,8 +221,8 @@ header {
       <a href="http://www.paciellogroup.com/about_7">Contact us</a> for  solutions to your accessibility issues.</strong></p>  
     </div><div><img src="images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="images/logo_reasonably_small.png" alt="Accessibility" width="128" height="128"></div>
     <h1>A work in progress: March 2014</h1>
-    <p><strong>Editors Draft March 11, 2014</strong></p>
-    <p><strong>WARNING!</strong> the data below is being revised</p>
+    <p><strong>Editors Draft March 12, 2014</strong></p>
+    <p><strong>WARNING!</strong> the data below is under continued revision</p>
     
     
     <ul class=navlist>
@@ -239,13 +239,13 @@ header {
       <h3><img src="images/windows_logo.gif" width="47" height="48" alt=""> <a href="#wbdetails">Windows Browsers</a> Summary - Firefox has the best HTML5 Accessibility Support Score</h3>
       <p><strong>HTML5 Accessibility Support Score</strong></p>
       <ul class="sumry">
-        <li><img src="images/chrome.png" alt="Chrome" width="62" height="61" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="20" height="20" border="0" id="opera-img"><meter min="0" max="100" value=""></meter> 
-          <span class="style3">xx/100</span></li>
+        <li><img src="images/chrome.png" alt="Chrome" width="62" height="61" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="20" height="20" border="0" id="opera-img"><meter min="0" max="100" value="47"></meter> 
+          <span class="style3">47/100</span></li>
         <li><img src="images/firefox.png" alt="Firefox" width="62" height="61" border="0" id="FF-img">
-          <meter min="0" max="100" value=""></meter>
-        &nbsp; <span class="style1">xx/100</span></li>
-        <li><img src="images/ie.png" alt="Internet Explorer" width="62" height="61" border="0" id="ie-img"><meter min="0" max="100" value=""></meter>
-        &nbsp;<span class="style3" id="ie">xx</span><span class="style3">/100</span></li>
+          <meter min="0" max="100" value="88.5"></meter>
+        &nbsp; <span class="style1">88.5/100</span></li>
+        <li><img src="images/ie.png" alt="Internet Explorer" width="62" height="61" border="0" id="ie-img"><meter min="0" max="100" value="37"></meter>
+        &nbsp;<span class="style3" id="ie">37</span><span class="style3">/100</span></li>
       </ul>
     </div>   
    <!-- <div class=mac><h3><img src="images/mac-logo.png" width="64" height="64">  Mac Summary</h3>
@@ -294,7 +294,7 @@ header {
         <span style="display:block">Firefox 31</span></th>
         <th width="13%" scope="col"><img src="images/ie.png" alt="" width="62" height="61" border="0">
         <span style="display:block">IE 11</span></th>
-        <th width="49%" scope="col">Notes results being updated!</th>
+        <th width="49%" scope="col">Notes</th>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element">article</a></code> element </th>
@@ -327,9 +327,9 @@ header {
             <li>role=grouping</li>
           </ul>
           <p><strong>Chrome</strong>:Exposes controls via accessibility APIs, but individual controls cannot be interacted with via the keyboard.</p>
-          <strong>IE 11:</strong>
+          
           <ul>
-            <li>Exposes controls via accessibility APIs. Complete accessible role, name and description for all controls.</li>
+            <li><strong>IE 11:</strong> Exposes controls via accessibility APIs. Complete accessible role, name and description for all controls.</li>
             <li>Full keyboard support for visible controls</li>
           </ul></td>
       </tr>
@@ -518,15 +518,13 @@ header {
     <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
      <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
    
-    <td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug filed: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make
-        <mark> element accessible</mark>
-    </a></td>
+    <td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug filed: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make  &lt;mark&gt; element accessible</a></td>
   </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element">main</a> element</th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-           <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+       <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox and Chrome:</strong> implements as <code>role=main.<br>
         </code><strong>IE:</strong> provides no semantic information via accessibility APIs (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)        </td>
       </tr>
@@ -627,8 +625,7 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>Firefox:</strong> keyboard support suboptimal - cannot interact with individual controls.</p>
-          <p><strong>Opera</strong>: has<strong> </strong>keyboard support, but no AT support. <br>
-          <strong>Chrome:</strong>  no keyboard support.          </p>
+          <p><strong>Chrome:</strong>  no keyboard support.          </p>
         <p><strong>IE 11: </strong>Exposes controls via accessibility APIs. Complete accessible role, name and description for all controls. Full keyboard support for visible controls</p></td>
       </tr>
     </table>
@@ -658,7 +655,7 @@ header {
       <th scope="row"><a href="http://dev.w3.org/html5/spec/editing.html#the-hidden-attribute">hidden</a> attribute</th>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+      <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><p><strong>Chrome, Firefox, IE: </strong>Content within elements that have a hidden attribute are not displayed or navigable. </p>
         <p><strong>Note:</strong> In all supporting browsers CSS <code>display:none</code> is applied to elements with the <code>hidden</code> attribute.<br>
       </p></td>
@@ -688,8 +685,9 @@ CurrentIsRequiredForForm;True;) No MSAA.</p></td>
  
   </table>
 <hr>
-<!--<h3><a name="mbdetails">Mac browsers - Details</a></h3>
-<table width="96%" border="1">
+<h3><a name="mbdetails">Mac browsers - Details</a></h3>
+<p><strong><em>COMING SOON!</em></strong></p>
+<!--<table width="96%" border="1">
   <caption>
    <img src="images/mac-logo.png" width="64" height="64" alt=""> New HTML5 feature accessibility support in  Mac Browsers
 </caption>
@@ -1135,16 +1133,16 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
 </ul>
 <h4>HTML5 Accessibility Support Score calculation: </h4>
 <ul>
-  <li>38 new HTML5 features listed. </li>
+  <li>40 new HTML5 features listed. </li>
   <li>100/Total number of new features implemented  = X</li>
   <li>Each feature implemented without any accessibility support = - X points</li>
   <li>Each feature implemented with partial support = -1/2 X points</li>
   <li>Total = 100 - X's and 1/2 X's.</li>
 </ul>
-<p>Example: Chrome 17 (windows) has 21 new features implemented. X = 100/21 = 4.76</p>
-<p>15 features implemented without accessibility support = - 71.42</p>
-<p>2 features implemented with partial accessibility support - 4.76</p>
-<p>Total = 100 - 71.42 - 4.76 = <strong>24</strong></p>
+<p>Example: Chrome 35 (windows) has 36 new features implemented. X = 100/36 = 2.77</p>
+<p>12 features implemented without accessibility support = - 33.24</p>
+<p>14 features implemented with partial accessibility support =- 19.39</p>
+<p>Total = 100 - 33.24 - 19.39 = <strong>47.27</strong></p>
 <p>&nbsp;</p>
 
   <footer role="contentinfo"><p><A href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license"><IMG alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png"></A><BR>
