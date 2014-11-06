@@ -255,7 +255,7 @@ header {
         <li><img src="images/chrome.png" alt="Chrome" width="62" height="61" border="0" id="chrome-img"><meter min="0" max="370" value="145" aria-labelledby="chrome-img chrome"><span id="chrome">145/370</span></meter></li>
         <li><img src="images/firefox.png" alt="Firefox" width="62" height="61" border="0" id="FF-img"><meter min="0" max="100" value="40" aria-labelledby="FF-img FF">Getting better</meter></li>
         <li><img src="images/opera.png" alt="Opera" width="62" height="61" border="0" id="opera-img"><meter min="0" max="100" value="5" aria-labelledby="opera-img op"><span id="op">Poor -</span></meter></li>
-        <li><img src="images/safari.png" alt="Safari/Webkit" width="62" height="61" border="0" id="wk-img"><meter min="0" max="100" value="15" aria-labelledby="wk-img wk"><span id="wk">Poor</span></meter></li>
+        <li><img src="images/safari.png" alt="Safari/WebKit" width="62" height="61" border="0" id="wk-img"><meter min="0" max="100" value="15" aria-labelledby="wk-img wk"><span id="wk">Poor</span></meter></li>
       </ul>
     </div>-->
    <!-- <h3><img src="images/mac-logo.png" alt="" width="64" height="64"> <a href="#mbdetails">Mac Browsers</a> Summary - Safari has the best HTML5 Accessibility Support Score</h3>
@@ -271,7 +271,7 @@ header {
       <li><img src="images/opera.png" alt="Opera" width="62" height="61" border="0" id="opera-img2">
         <meter min="0" max="100" value=""></meter>
       <span class="style3">xx/100</span></li>
-      <li><img src="images/safari.png" alt="Safari/Webkit" width="62" height="61" border="0" id="wk-img2">
+      <li><img src="images/safari.png" alt="Safari/WebKit" width="62" height="61" border="0" id="wk-img2">
         <meter min="0" max="100" value=""></meter>
         &nbsp;<span class="style1">xx/100</span></li>
     </ul>-->
@@ -418,8 +418,8 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrome</strong>: has keyboad support, exposes button as IA2 color chooser exposes color information in RGB as accValue.</p>
-          <p><strong>Firefox:</strong> keyboard accessible, exapsed as a button but color value not exposed to AT. Refer to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a></p></td>
+        <td><p><strong>Chrome</strong>: has keyboard support, exposes button as IA2 color chooser exposes color information in RGB as accValue.</p>
+          <p><strong>Firefox:</strong> keyboard accessible, exposed as a button but color value not exposed to AT. Refer to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a></p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#date-state-(type=date)">Date</a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
@@ -677,9 +677,9 @@ CurrentIsRequiredForForm;True;) No MSAA.</p></td>
       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-      <td><p><strong>Chrome</strong>: <code>placeholder</code> content is exposed as an accessible name if the <code>input</code> does not have an explicitly associated text label, but explicit association using the HTML<code> label </code>element is not currently supported in Webkit based browsers on Windows. Only explicit association using the <code>title</code> attribute on the <code>input</code> overrides the use of the <code>placeholder</code> text as the accessible name.</p>
+      <td><p><strong>Chrome</strong>: <code>placeholder</code> content is exposed as an accessible name if the <code>input</code> does not have an explicitly associated text label, but explicit association using the HTML<code> label </code>element is not currently supported in WebKit based browsers on Windows. Only explicit association using the <code>title</code> attribute on the <code>input</code> overrides the use of the <code>placeholder</code> text as the accessible name.</p>
         <p><strong>Firefox</strong>: <code>placeholder</code> content is exposed as an accessible name if the <code>input</code> does not have an explicitly associated text label using the<code> label</code> element. If there is a label associated using the <code>label</code> element using the <code>for/id</code> attributes, the accessible name is the label text. If the <code>label</code> element is wrapped around the control, the accessible name is the label text + the placeholder text. If the control has a <code>title</code> attribute the placeholder text is still used as the accessible name and the title text is used as the accessible description.</p>
-        <p><strong>IE:</strong> Uses placeholder text as the accessible name for a control when there is no other accessible name provided. Otherewise placeholder text is not expsoed.</p>
+        <p><strong>IE:</strong> Uses placeholder text as the accessible name for a control when there is no other accessible name provided. Otherwise placeholder text is not exposed.</p>
         <p>&nbsp;</p>
         <p><strong>Note:</strong> there are incompatibilities between the IE, Firefox and Chrome accessibility implementations of placeholder. </p>
       <p>Refer to: <a href="http://www.html5accessibility.com/tests/placeholder-labelling.html">HTML5 accessibility Chops: the placeholder attribute</a></p></td>
