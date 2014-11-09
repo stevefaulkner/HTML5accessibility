@@ -337,10 +337,10 @@ header {
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-canvas-element">canvas</a></code> element</th>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td><td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td><td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>IE, Chrome, Firefox: </strong>supports the accessible canvas element sub-DOM.<strong><br>
-          Firefox</strong> also supports drawfocus ring and hitregion() </p>
+          Firefox, Chrome</strong>:  support drawfocus ring.</p>
           <p>&nbsp;</p></td>
       </tr>
       <!--<tr>
@@ -364,7 +364,7 @@ header {
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrome: </strong>keyboard support, exposes role=group. chrome bug: Issue <a href="https://code.google.com/p/chromium/issues/detail?id=282016">282016</a></p>
+        <td><p><strong>Chrome: </strong>keyboard support, exposes role=group. chrome bug: (bug <a href="https://code.google.com/p/chromium/issues/detail?id=282016">282016</a>)</p>
         <p>&nbsp;</p></td>
       </tr>
       <tr>
@@ -373,26 +373,26 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state. <br>
-            <strong>Note:</strong> Currently Chrome keyboard support is incomplete,  does not move focus back to trigger control on dialog close.</p>
-          <p>&nbsp;</p></td>
+        <strong>Note:</strong> Currently Chrome keyboard support is incomplete,  does not move focus back to trigger control on dialog close (<a href="https://code.google.com/p/chromium/issues/detail?id=298078">chrome dialog bug</a>) .</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figcaption-element">figcaption</a></code> element</th>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
-          <strong>Chrome:</strong> Currently provides the same amount of semantic information to AT as a <code>div</code> element.<a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
-          <p><strong>Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2 object attribute, exposes the  <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
+        </p>
+          <p><strong>Chrome, Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2 object attribute. </p>
+          <p><strong>Firefox: </strong>exposes the <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p></td>
       </tr>
       <tr>
         <th scope="row"><code><A href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">figure</A></code> element</th>
-        <td><img src="images/cross.png" alt="not supported" width="16" height="16" border="0"><span class="hidden">Not supported</span></td>
+       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
-            <strong>Chrome:</strong> provide the same amount of semantic information to <abbr title="assistive technology">AT</abbr> as a <code>div</code> element. <br>
-            <a href="https://code.google.com/p/chromium/issues/detail?id=103853">Chrome bug</a></p>
+            <strong>Chrome:</strong> exposes element as role=figure (not group), no accessible name<br>
+            <a href="https://code.google.com/p/chromium/issues/detail?id=282035">Chrome figure bug</a></p>
         <p><strong>Firefox:</strong> exposes element <code>role=group</code> with accessible name from <code>figcaption</code>.</p></td>
       </tr>
       <tr>
@@ -426,7 +426,7 @@ header {
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-       <td><p><strong>Chrome/Opera:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
+       <td><p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker interface. Datepicker can be opened using alt+down arrow keys.</p>
          <p>&nbsp;</p></td>
       </tr>
       <tr>
@@ -447,7 +447,7 @@ header {
       </tr>-->
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#e-mail-state-(type=email)">E-mail</a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
-       <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
          <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
@@ -477,7 +477,7 @@ header {
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)">Search</a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
@@ -485,7 +485,7 @@ header {
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#telephone-state-(type=tel)">Telephone</a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> </th>
-       <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+      <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
@@ -500,7 +500,7 @@ header {
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#url-state-(type=url)">URL</a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code> </th>
-        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a></p>
