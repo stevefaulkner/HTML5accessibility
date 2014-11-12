@@ -238,11 +238,11 @@ header {
   <div role="main">
     
     <div class=windows>
-      <h3><img src="images/windows_logo.gif" width="47" height="48" alt=""> <a href="#wbdetails">Windows Browsers</a> Summary - Firefox and Chrome are beating the pants of IE!</h3>
+      <h3><img src="images/windows_logo.gif" width="47" height="48" alt=""> <a href="#wbdetails">Windows Browsers</a> Summary - Firefox and Chrome are beating the pants off IE!</h3>
       <p><strong>HTML5 Accessibility Support Score</strong></p>
       <ul class="sumry">
-        <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="82"></meter> 
-          <span class="style1">82/100</span></li>
+        <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="83.5"></meter> 
+          <span class="style1">83.5/100</span></li>
         <li><img src="images/firefox.png" alt="Firefox" width="64" height="64" border="0" id="FF-img">
           <meter min="0" max="100" value="85.5"></meter>
         &nbsp; <span class="style1">85.5/100</span></li>
@@ -278,7 +278,7 @@ header {
     <h3>Overview</h3>
     <p>This site is  a resource to provide information about which <strong>new <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> user interface features</strong> are accessibility supported in browsers, making them usable by people who rely upon assistive technology (AT) to use the web.</p>
 <p><strong>Note:</strong> Browser's may not have practical accessibility support for HTML features on particular operating systems. Refer to <a href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">Rough Guide: browsers, operating systems and screen reader support</a> for details.</p>
-    <p>It is not intended to dissuade developers from <strong>using new <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> features</strong>. Sometimes there are better choices, sometimes developers have to add a little extra to make the feature useful or usable, and other times features have simply not been implemented by any browser or only by browsers that do not yet support assistive technologies. As a consequence it may not yet be practical to use a particular <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> feature. </p>
+    <p>It is not intended to dissuade developers from <strong>using new <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a> features</strong>. Sometimes there are better choices, sometimes developers have to add a little extra to make the feature useful or usable, and other times features have simply not been implemented by any browser or only by browsers that do not yet support assistive technologies. As a consequence it may not yet be practical to use a particular <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a> feature. </p>
     <p>The information in the support table is updated on a semi-regular basis, to keep up with support improvements made in browsers as new versions are released.</p>
     <p><a href="#legend">Support Tables - Legend & notes</a></p>
     <p><strong id="note" tabindex="-1">NOTE: </strong>Safari on Windows is no longer included as there is no active effort to implement accessibility support in this browser. Opera is now under Chrome as it uses Chrome's rendering engine and any accessibility support it may have is provided by Chrome's accessibility implementation.</p>
@@ -351,11 +351,10 @@ header {
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-details-element"><code>details</code></a></th>
-        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><p><strong>Chrome: </strong>keyboard support, exposes role=group. chrome bug: (bug <a href="https://code.google.com/p/chromium/issues/detail?id=282016">282016</a>)</p>
-        <p>&nbsp;</p></td>
+        <td><p>&nbsp;</p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-dialog-element"><code>dialog</code></a></th>
@@ -591,7 +590,7 @@ header {
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)</p>
-          <p><strong>Chrome:</strong> keyboard support only. chrome bug: Issue <a href="https://code.google.com/p/chromium/issues/detail?id=350435">350435</a></p>
+          <p><strong>Chrome:</strong> keyboard support, correct role, (implemented but not in release - expanded/collapsed state). chrome bug: Issue <a href="https://code.google.com/p/chromium/issues/detail?id=282016">282016</a></p>
           <p></p>
         <p>&nbsp;</p></td>
       </tr>
