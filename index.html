@@ -221,7 +221,7 @@ header {
       <a href="http://www.paciellogroup.com/contact/">Contact us</a> for  solutions to your accessibility issues.</strong></p>  
     </div><div><img src="images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="images/logo_reasonably_small.png" alt="Accessibility" width="128" height="128"></div>
     <h1>A work in progress: June 2015</h1>
-    <p><strong>Editors Draft June 11, 2015</strong></p>
+    <p><strong>Editors Draft June 15, 2015</strong></p>
     <p><strong>WARNING!</strong> the data below is under continued revision</p>
     
     
@@ -238,10 +238,13 @@ header {
   <div role="main">
     
     <div class=windows>
-      <h3><img src="images/windows_logo.gif" width="47" height="48" alt=""> <a href="#wbdetails">Windows Browsers</a> Summary - Chrome and Firefox   are beating the pants off IE! </h3>
+      <h3><img src="images/windows_logo.gif" width="47" height="48" alt=""> <a href="#wbdetails">Major Browsers</a> Summary - Chrome and Firefox   are beating the pants off IE! </h3>
       <p><strong>HTML5 Accessibility Support Score</strong></p>
       <ul class="sumry">
-        <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="94.5"></meter> 
+        <li><img src="images/safari_64x64.png" alt="Safari" width="64" height="64" border="0" id="chrome-img"> <meter min="0" max="100" value="50"></meter>  
+        <span class="style1">77/100</span>
+  </li>
+          <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="94.5"></meter> 
           <span class="style1">94.5/100</span></li>
         <li><img src="images/firefox.png" alt="Firefox" width="64" height="64" border="0" id="FF-img">
           <meter min="0" max="100" value="91"></meter>
@@ -282,22 +285,22 @@ header {
     <p>It is not intended to dissuade developers from <strong>using new <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a> features</strong>. Sometimes there are better choices, sometimes developers have to add a little extra to make the feature useful or usable, and other times features have simply not been implemented by any browser or only by browsers that do not yet support assistive technologies. As a consequence it may not yet be practical to use a particular <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a> feature. </p>
     <p>The information in the support table is updated on a semi-regular basis, to keep up with support improvements made in browsers as new versions are released.</p>
     <p><a href="#legend">Support Tables - Legend & notes</a></p>
-    <p><strong id="note" tabindex="-1">NOTE: </strong>Safari on Windows is no longer included as there is no active effort to implement accessibility support in this browser. Opera is now under Chrome as it uses Chrome's rendering engine and any accessibility support it may have is provided by Chrome's accessibility implementation.</p>
-<h3><a name="wbdetails"></a>Windows browsers - Details</h3>
+    <p><strong id="note" tabindex="-1">NOTE: </strong> Opera is now under Chrome as it uses Chrome's rendering engine and any accessibility support it may have is provided by Chrome's accessibility implementation.</p>
+<h3><a name="wbdetails"></a>Major browsers - Details</h3>
  
     <table width="96%" border="1">
       <caption>
-      <img src="images/windows_logo.gif" width="47" height="48" alt=""> HTML5 feature accessibility support in  Windows Browsers
-      </caption>
+      HTML5 feature accessibility support in  Major Browsers
+     </caption>
       <tr>
         <th width="14%" scope="col">HTML5 elements (links to test files)</th>
-        <th width="13%" scope="col"><img src="images/safari.png" width="62" alt="" height="61" border="0"> <span style="display:block">Safari 8</span></th>
+        <th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
         <th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
-          <span style="display:block">Chrome 43</span><img src="images/opera.png" width="24" height="24" border="0" alt=""><small>Opera </small></th>
+          <span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0" alt=""><small>Opera </small></th>
         <th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
-        <span style="display:block">Firefox 38</span></th>
+        <span style="display:block">Firefox 38 - windows</span></th>
         <th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
-        <span style="display:block">IE 11</span></th>
+        <span style="display:block">IE 11 - windows</span></th>
         <th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge</span></th>
         <th width="49%" scope="col">Notes</th>
       </tr>
@@ -472,8 +475,9 @@ header {
          <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-       <td><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a><br>
-        <a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></td>
+       <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a><br>
+        <a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
+        <p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-month.html"><code>Month</code></a> <code>input</code></th>
@@ -521,8 +525,9 @@ header {
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
-        </a><a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></td>
+        <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
+        </a><a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
+        <p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input--time.html"><code>Time</code></a> <code>input</code></th>
@@ -541,7 +546,8 @@ header {
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
         <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a></p>
-        <p><a href="https://code.google.com/p/chromium/issues/detail?id=323161">Chrome bug filed - resolved fixed!</a></p></td>
+        <p><a href="https://code.google.com/p/chromium/issues/detail?id=323161">Chrome bug filed - resolved fixed!</a></p>
+        <p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p></td>
       </tr>
       <tr>
         <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-week.html"><code>Week</code></a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
@@ -555,12 +561,12 @@ header {
       </tr>
      <tr>
     <th><A href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/mark.html"><code>mark</code></A></th>
-    <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+    <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
     <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
     <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
      <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
      <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-     <td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make  &lt;mark&gt; element accessible</a> <a href="https://code.google.com/p/chromium/issues/detail?id=494612">Chrome bug: 494612</a> </td>
+     <td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make  &lt;mark&gt; element accessible</a> <a href="https://code.google.com/p/chromium/issues/detail?id=494612">Chrome bug: 494612</a> , <a href="https://bugs.webkit.org/show_bug.cgi?id=145974">Safari Bug 145974</a></td>
   </tr>
       <tr>
         <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/main.html"><code>main</code></a></th>
@@ -624,7 +630,7 @@ header {
       </tr>
       <tr>
         <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-output-element">output</a></code></th>
-        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+       <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
@@ -714,15 +720,15 @@ header {
   <hr>
   <table width="96%" border="1">
     <caption>
-    <img src="images/windows_logo.gif" width="47" height="48" alt="">Selected HTML5 attribute accessibility support in Windows Browsers
+    Selected HTML5 attribute accessibility support in Major Browsers
     </caption>
     <tr>
       <th width="13%" scope="col">selected HTML5 attributes (note: this is not all of them!)</th>
-      <th width="10%" scope="col"><img src="images/safari.png" width="62" alt="" height="61" border="0"> <span style="display:block">Safari 8</span></th>
-      <th width="10%" scope="col"><img src="images/chrome.png" width="64" height="64" border="0" alt=""> <span style="display:block">Chrome 43</span><img src="images/opera.png" width="24" height="24" border="0" alt=""><small>Opera </small></th>
-      <th width="9%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt=""> <span style="display:block">Firefox 38</span></th>
-      <th width="9%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt=""> <span style="display:block">IE 11</span></th>
-      <th width="12%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"></th>
+      <th scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
+      <th scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0"> <span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0" alt=""><small>Opera </small></th>
+      <th scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt=""> <span style="display:block">Firefox 38 - windows</span></th>
+      <th scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt=""> <span style="display:block">IE 11 - windows</span></th>
+      <th scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge</span></th>
       <th width="47%" scope="col">Notes</th>
     </tr>
     <!--<tr>
@@ -772,9 +778,9 @@ CurrentIsRequiredForForm;True;) No MSAA.</p>
  
   </table>
   <hr>
-<h3><a name="mbdetails">Mac browsers - Details</a></h3>
-<p><strong><em>COMING SOON!</em></strong></p>
-<!--<table width="96%" border="1">
+
+<!--<h3><a name="mbdetails">Mac browsers - Details</a></h3>
+<p><strong><em>COMING SOON!</em></strong></p><table width="96%" border="1">
   <caption>
    <img src="images/mac-logo.png" width="64" height="64" alt=""> New HTML5 feature accessibility support in  Mac Browsers
 </caption>
