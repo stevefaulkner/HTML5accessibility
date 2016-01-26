@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+
+	<title>ARIA user input widget role tests- Firefox 3 + Assistive Technology</title>
+
+<style type="text/css">
+body
+
+{
+
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+
+	color: #333;
+
+	background: #fff;
+
+	padding: 0 1em;
+
+}
+
+
+
+h1, h2
+
+{
+
+	color: #630;
+
+	background: #fff;
+
+	padding-bottom: 0.5em;
+
+	margin-bottom: 0;
+
+}
+
+
+
+table
+
+{
+
+	border-collapse: collapse;
+
+	border: 1px solid #630;	
+	
+font: normal 90% arial, Verdana, helvetica, sans-serif;
+}
+
+
+
+th, td
+
+{
+
+	text-align: left;
+
+	vertical-align: top;
+
+	padding: 0.3em;
+
+	border: 1px solid #630;
+
+}
+
+td h1 {font-size:85%;margin:0 0 0 0;}
+td p {margin:0 0 0 0;}
+thead th, thead td
+
+{
+
+	font-weight: bold;
+
+	text-align: center;
+
+}
+
+span {border: 2px solid #9acd32;display:inline-block;padding:2px;width:20px;height:20px;display}
+span.rg {border: 2px solid #9acd32;display:inline-block;padding:2px;width:30px;height:30px;display}
+span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+td:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+caption {text-align:left}
+
+colgroup.expected {background:#f5f5f5}
+
+ul.notes {margin-top:0px}
+.fail {background:#fffacd; border:solid 2px #ff0000;}
+
+td.fail p{border: 1px dashed red;padding: 5px;margin-top:5px}
+
+</style>
+</head>
+<body>
+<h1>ARIA User Input Widget role tests - Firefox 30 + Assistive Technology</h1>
+<p>Results detail what is announced when each element with the role indicated in brackets receives focus. </p>
+<p>Testing  conducted July 2014.</p>
+<h2>Software used for testing</h2>
+<ul>
+	<li>Windows 8.1</li>
+	<li>Mac OSX ...</li>
+	<li>Firefox 30</li>
+	<li>Safari 7</li>
+	<li>aViewer (for MSAA information)</li>
+	<li>JAWS 15</li>
+	<li>Window Eyes 8.1</li>
+	<li>VoiceOver</li>
+	<li>NVDA latest</li>
+	
+</ul>
+
+<h2>Notes for Table 1</h2>
+<ul class="notes">
+	<li>JAWS 9 and 10 change to PC cursor mode (Insert+Z).</li>
+	<li>Jaws 10: Turn off 'auto forms mode' by unchecking it in Configuration Manager > Set Options > Forms Mode Options.</li>
+	<li>For Window eyes change out of browse mode (ctr+shift+A).</li>
+	<li>NVDA enable Virtual buffer pass through (NVDA key + spacebar)</li>
+	<li>For all Assistive software use the default verbosity settings</li>
+	<li>Tab to each focusable element in the table</li>
+	<li>For "radio group", tab to it, then use the arrow key to change the selection.</li>
+</ul>
+
+<!-- <p>Tab to each control and listen </p> -->
+<table>
+<caption><strong>Table 1. User Input Widget Role test results (in application mode for JAWS and Window Eyes)</strong></caption>
+<colgroup class="role" span="1">
+</colgroup>
+<colgroup class="expected" span="1">
+</colgroup>
+<colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup>
+<tbody><tr>
+	<th>ARIA Role</th>
+	<th>MSAA</th>
+	<th>JAWS 9 </th>
+	<th>JAWS 10</th>
+	<th>Window Eyes 7</th>
+	<th>ZoomText</th>
+	<th>NVDA</th>
+</tr>
+<tr>
+	<td><span title="label" tabindex="0" role="checkbox" aria-checked="true"></span> [checkbox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	check box</li>
+	<li>State:	focused,checked</li>
+</ul></td>
+	<td>label, checkbox, checked, to clear check mark press spacebar</td>
+	<td>label, checkbox, checked, to clear check mark press spacebar</td>
+	<td>label, checkbox, checked</td>
+	<td>label, checkbox, checked</td>
+	<td>label, checkbox, checked</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="combobox" title="label"></span> [combobox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	combo box</li>
+	<li>State:	focused,collapsed,focusable,has popup</li>
+</ul>
+</td>
+
+	<td>label, combobox, to change the selection use the arrow keys</td>
+	<td class="fail">label, combobox, <strong>ARIA User Input Widget role tests - Firefox 3... (reads from top of page.)</strong><p><strong>Issue:</strong> Announces unassociated text.</p></td>
+	<td>label, combobox</td>
+	<td>label, combobox</td>
+	<td>label, combo box collapsed, submenu</td>
+</tr>
+
+
+<tr>
+	<td><span tabindex="0" role="listbox" title="label"></span> [listbox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	list</li>
+	<li>State:	focused,focusable</li>
+</ul>
+</td>
+	<td>label, listbox, to move to an item use the arrow keys</td>
+	<td>label, listbox, to move to an item press the arrow keys</td>
+	<td>label, listbox</td>
+	<td>label, listbox</td>
+	<td>label, list</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="radio" title="label" aria-checked="true"></span> [radio button]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	radio button</li>
+	<li>State:	focused,checked,focusable</li>
+	<li>Description:	"1 of 1"</li>
+</ul></td>
+<td>label, radio button, checked,1 of 1, to change the selection use the up or down arrow</td>
+	<td>label, radio button, checked,1 of 1, to change the selection press up or down arrow</td>
+	<td>label, radio button,1 of 1, checked</td>
+	<td>label, radio button, checked</td>
+	<td>label, radio button, checked, 1 of 1</td>
+</tr>
+
+
+<tr>
+	<td><span class="rg" role="radiogroup" title="label"><input type="radio" name="1" value="1" checked title="radio 1"><input type="radio" name="1" value="2" title="radio 2"></span>  [radio group]</td>
+<td>
+<ul>
+	<li>Name:	"label"</li>
+	<li>Role:	grouping</li>
+	<li>State:	focusable</li>
+</ul>
+</td>
+<td>
+<ol>
+	<li>label, radio 1, radio button checked , 1 of 2, to change the selection press up or down arrow</li>
+	<li>label, radio 2,radio button checked , 2 of 2, to change the selection press up or down arrow</li>
+</ol>
+</td>
+	<td><ol>
+	<li>label, radio 1, radio button checked , 1 of 2, to change the selection press up or down arrow</li>
+	<li>label, radio 2, radio button checked , 2 of 2, to change the selection press up or down arrow</li>
+</ol></td>
+	<td><ol>
+	<li>label, radio 1, 1 of 2,  radio button checked,</li>
+	<li>label, radio 2, 2 of 2, radio button checked,</li>
+</ol></td>
+	<td>label, group box</td>
+	<td>
+	
+		<ol>
+			<li>label grouping, radio 1, radio button checked, 1 of 2</li>
+			<li>radio 2, radio button checked, 2 of 2</li>
+		</ol>
+	</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-valuetext="minimum" title="label"></span> [slider]</td>
+<td><ul>
+	<li>Name:	"label"</li>
+	<li>Value:	"minimum"</li>
+	<li>Role:	slider</li>
+	<li>State:	focused,focusable</li>
+</ul></td>
+<td class="fail">label, left right slider, <strong>0 percent</strong>, to increase or decrease use the arrow keys <p><strong>Issue:</strong> Incorrect value type.</p></td>
+	<td class="fail">label, left right slider, <strong>0 percent</strong><p><strong>Issue:</strong> Incorrect value type.</p></td>
+	<td>label, minimum, trackbar</td>
+	<td class="fail">label, <strong>custom control</strong>, minimum<p><strong>Issue:</strong> Incorrect role announced.</p></td>
+	<td>label, slider, minimum</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="spinbutton" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-valuetext="minimum" title="label"></span> [spin button]</td>
+<td>
+<ul>
+	<li>Name:	"label"</li>
+	<li>Value:	"minimum"</li>
+	<li>Role:	spin box</li>
+	<li>State:	focused,focusable</li>
+</ul>
+</td>
+	<td>label, edit spin box, value minimum, to set the value use the arrow keys or type the value</td>
+	<td>label, edit spin box, minimum</td>
+	<td class="fail">nothing announced <p><strong>Issue:</strong> Name, Role and Value information not announced</p></td>
+	<td>label, spin box, minimum</td>
+	<td>label spin box, minmum</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="textbox" title="label"></span> [textbox]</td>
+	<td>
+		<ul>
+			<li>Name:	"label"</li>		
+			<li>Role:	editable text</li>
+			<li>State:	focused,focusable</li>
+		</ul></td>
+	<td>label, edit, type in text</td>
+	<td class="fail">label, edit,<strong>left bracket text box right bracket</strong>, type in text <p><strong>Issue:</strong> Announces unassociated text.</p></td>
+	<td>label, edit box</td>
+	<td>label, edit box</td>
+	<td>label, edit, blank</td>
+</tr>
+</tbody></table>
+
+<hr>
+<h2>Notes for Table 2</h2>
+<ul class="notes">
+	<li>JAWS 9 and 10 change in Virtual PC cursdor mode.</li>
+	<li>Jaws 10: Turn off 'auto forms mode' by unchecking it in Configuration Manager > Set Options > Forms Mode Options.</li>
+	<li>Window eyes  browse mode (ctr+shift+A to toggle browse mode on/off).</li>
+	<li>NVDA disable Virtual buffer pass through (NVDA key + spacebar)</li>
+	<li>For all Assistive software use the default verbosity settings</li>
+	<li>Tab to each focusable element in the table. <strong>Note:</strong> initial focusable element is a link, it is there to overcome issue of AT announcing table information when first element in a table receives focus. It is not of the roles being tested.</li>
+<li>Tab to each focusable element in the table</li>
+	<li>For "radio group", tab to it, then use the arrow key to change the selection.</li>
+</ul>
+<table>
+<caption><strong>Table 2 - User Input Widget Role test results (Virtual PC - JAWS, Browse Mode - Window Eyes, NVDA - Virtual Buffer (no passthrough))</strong></caption>
+<colgroup class="role" span="1">
+</colgroup>
+<colgroup class="expected" span="1">
+</colgroup>
+<colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup>
+<colgroup span="1">
+</colgroup>
+<tbody><tr>
+	<th>ARIA Role</th>
+	<th>MSAA</th>
+	<th>JAWS 9 </th>
+	<th>JAWS 10</th>
+	<th>Window Eyes 7</th>
+	<th>NVDA</th>
+</tr>
+<tr>
+	<td>
+	<p><a href="#">initial focus</a></p>
+	<span title="label" tabindex="0" role="checkbox" aria-checked="true"></span> [checkbox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	check box</li>
+	<li>State:	focused,checked</li>
+</ul></td>
+	<td>label, checkbox checked</td>
+	<td>label, checkbox checked</td>
+	<td>checkbox checked,  label</td>
+	<td>label, checkbox checked</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="combobox" title="label"></span> [combobox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	<li>Role:	combo box</li>
+	<li>State:	focused,collapsed,focusable,has popup</li>
+</ul>
+</td>
+
+	<td>label, combobox, collapsed</td>
+<td>label, combobox, collapsed</td>
+	<td class="fail">combobox, label<p><strong>Issue:</strong> Role and name announced in reverse order.</p></td>
+	<td>label, combobox, collapsed</td>
+</tr>
+
+
+<tr>
+	<td><span tabindex="0" role="listbox" title="label"></span> [listbox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	list</li>
+	<li>State:	focused,focusable</li>
+</ul>
+</td>
+	<td>label, listbox</td>
+	<td>label, listbox</td>
+	<td class="fail">Nothing announced <p><strong>Issue:</strong> Name, Role and Value information not announced. Not in tab order.</p></td>
+	<td class="fail">list <p><strong>Issue:</strong> Name information not announced</p></td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="radio" title="label" aria-checked="true"></span> [radio button]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	radio button</li>
+	<li>State:	focused,checked,focusable</li>
+	<li>Description:	"1 of 1"</li>
+</ul></td>
+<td>label, radio button, checked</td>
+	<td>label, radio button, checked</td>
+	<td class="fail">radio button checked, label <p><strong>Issue:</strong> Role and name announced in reverse order.</p></td>
+	<td>label, radio button, checked</td>
+</tr>
+
+
+<tr>
+	<td><span class="rg" role="radiogroup" title="label"><input type="radio" name="1a" value="1" checked title="radio 1"><input type="radio" name="1a" value="2" title="radio 2"></span>  [radio group]</td>
+<td>
+<ul>
+	<li>Name:	"label"</li>
+	<li>Role:	grouping</li>
+	<li>State:	focusable</li>
+</ul>
+</td>
+<td class="fail">nothing announced<p><strong>Issue:</strong> Name information not announced. Radio buttons not in tab order</p></td>
+	<td class="fail">
+	
+		<ol>
+			<li>label, radio 1 radio button checked,</li>
+			<li>radio button not checked, radio 2</li>
+		</ol>
+		<p><strong>Issue:</strong>Role and name announced in reverse order. (second radio button)</p>
+		</td>
+	<td class="fail">
+	
+		<ol>
+			<li>radio button checked, radio 1</li>
+			<li>radio button unchecked, radio 2</li>
+		</ol>
+		<p><strong>Issue:</strong> Name information not announced (radio group). Role and name announced in reverse order. (radio buttons)</p>
+		</td>
+	<td class="fail">
+	
+		<ol>
+			<li>radio 1, radio button  checked</li>
+			<li>radio group</li>
+		</ol>
+		<p><strong>Issue:</strong> Name information not announced (radio group).</p>
+		</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-valuetext="minimum" title="label"></span> [slider]</td>
+<td><ul>
+	<li>Name:	"label"</li>
+	<li>Value:	"minimum"</li>
+	<li>Role:	slider</li>
+	<li>State:	focused,focusable</li>
+</ul></td>
+<td class="fail">nothing announced<p><strong>Issue:</strong> Name, Role and Value information not announced.</p></td>
+	<td class="fail">nothing announced<p><strong>Issue:</strong> Name, Role and Value information not announced.</p></td>
+	<td class="fail">nothing announced <p><strong>Issue:</strong> Name, Role and Value information not announced. Not in tab order.</p></td>
+	<td>label, slider, minimum</td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="spinbutton" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-valuetext="minimum" title="label"></span> [spin button]</td>
+<td>
+<ul>
+	<li>Name:	"label"</li>
+	<li>Value:	"minimum"</li>
+	<li>Role:	spin box</li>
+	<li>State:	focused,focusable</li>
+</ul>
+</td>
+	<td class="fail">nothing announced<p><strong>Issue:</strong> Name, Role and Value information not announced.</p></td>
+	<td class="fail">nothing announced<p><strong>Issue:</strong> Name, Role and Value information not announced.</p></td>
+	<td class="fail">nothing announced <p><strong>Issue:</strong> Name, Role and Value information not announced. Not in tab order</p></td>
+	<td class="fail">minimum <p><strong>Issue:</strong> Name and Role information not announced.</p></td>
+</tr>
+<tr>
+	<td><span tabindex="0" role="textbox" title="label"></span> [textbox]</td>
+	<td>
+		<ul>
+			<li>Name:	"label"</li>		
+			<li>Role:	editable text</li>
+			<li>State:	focused,focusable</li>
+		</ul></td>
+	<td>label, edit</td>
+	<td>label, edit</td>
+	<td class="fail">edit box, label<p><strong>Issue:</strong> Role and name announced in reverse order.</p></td>
+	<td>label, edit</td>
+</tr>
+</tbody></table>
+
+<hr>
+<h2>Notes for Table 3</h2>
+<ul class="notes">
+	<li>JAWS 9 and 10: first tab to the 'forms mode switcher' edit box and press enter to enable forms mode.</li>
+	<li>Jaws 10: Turn off 'auto forms mode' by unchecking it in Configuration Manager > Set Options > Forms Mode Options.</li>
+	<li>Tab to each focusable element in the table. <strong>Note:</strong> initial focusable element is a link, it is there to overcome issue of AT announcing table information when first element in a table receives focus. It is not of the roles being tested.</li>
+<li>Tab to each focusable element in the table</li>
+	<li>For "radio group", tab to it, then use the arrow key to change the selection.</li>
+</ul>
+<input type="text" title="forms mode switcher">
+<table>
+<caption><strong> Table 3 - User Input Widget Role test results (Forms Mode - JAWS)</strong></caption>
+<colgroup class="role" span="1">
+</colgroup>
+<colgroup class="expected" span="1">
+</colgroup>
+<colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup><colgroup span="1">
+</colgroup>
+<tbody><tr>
+	<th>ARIA Role</th>
+	<th>MSAA</th>
+	<th>JAWS 9 </th>
+	<th>JAWS 10</th>
+
+	
+</tr>
+<tr>
+	<td>
+	<p><a href="#">initial focus</a></p>
+	<span title="label" tabindex="0" role="checkbox" aria-checked="true"></span> [checkbox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	check box</li>
+	<li>State:	focused,checked</li>
+</ul></td>
+	<td>label, checkbox, checked, to clear check mark press spacebar</td>
+	<td>label, checkbox, checked, to clear check mark press spacebar</td>
+
+	
+</tr>
+<tr>
+	<td><span tabindex="0" role="combobox" title="label"></span> [combobox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	combo box</li>
+	<li>State:	focused,collapsed,focusable,has popup</li>
+</ul>
+</td>
+
+	<td>label, combobox, to change the selection use the arrow keys</td>
+	<td class="fail">label, combobox, Notes for table 3... (reads from heading prior to table).<p><strong>Issue:</strong> Announces unasscoiated text.</p></td>
+	
+	
+</tr>
+
+
+<tr>
+	<td><span tabindex="0" role="listbox" title="label"></span> [listbox]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	list</li>
+	<li>State:	focused,focusable</li>
+</ul>
+</td>
+	<td>label, listbox, to move to an item press the arrow keys</td>
+	<td>label, listbox, to move to an item press the arrow keys</td>
+
+	
+</tr>
+<tr>
+	<td><span tabindex="0" role="radio" title="label" aria-checked="true"></span> [radio button]</td>
+	<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	radio button</li>
+	<li>State:	focused,checked,focusable</li>
+	<li>Description:	"1 of 1"</li>
+</ul></td>
+<td>label, radio button, checked, to change the selection press up or down arrow</td>
+<td>label, radio button, checked, to change the selection press up or down arrow</td>
+
+	
+</tr>
+
+
+<tr>
+	<td><span class="rg" role="radiogroup" title="label"><input type="radio" name="1b" value="1" checked title="radio 1"><input type="radio" name="1b" value="2"  title="radio 2"></span>  [radio group]</td>
+<td>
+<ul>
+	<li>Name:	"label"</li>
+	
+	<li>Role:	grouping</li>
+	<li>State:	focusable</li>
+</ul>
+</td>
+<td> 
+<ol>
+	
+	<li>label, radio 1,radio button checked, to change the selection press up or down arrow</li>
+<li>radio 2, radio button checked , to change the selection press up or down arrow</li></ol>
+</td>
+<td> 
+<ol>
+	
+	<li>label, radio 1,radio button checked, to change the selection press up or down arrow</li>
+<li>radio 2, radio button checked , to change the selection press up or down arrow</li></ol>
+</td>
+
+	
+</tr>
+<tr>
+	<td><span tabindex="0" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-valuetext="minimum" title="label"></span> [slider]</td>
+<td><ul>
+	<li>Name:	"label"</li>
+	<li>Value:	"minimum"</li>
+	<li>Role:	slider</li>
+	<li>State:	focused,focusable</li>
+</ul></td>
+<td class="fail">left right slider, <strong>0 percent</strong>, to increase or decrease use the arrow keys <p><strong>Issue:</strong> Name not announced. Value information incorrect.</p></td>
+	<td class="fail">left right slider, <strong>0 percent</strong>, to increase or decrease use the arrow keys <p><strong>Issue:</strong> Name not announced. Value information incorrect.</p></td>
+	
+	
+</tr>
+<tr>
+	<td><span tabindex="0" role="spinbutton" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-valuetext="minimum" title="label"></span> [spin button]</td>
+<td>
+<ul>
+	<li>Name:	"label"</li>
+	<li>Value:	"minimum"</li>
+	<li>Role:	spin box</li>
+	<li>State:	focused,focusable</li>
+</ul>
+</td>
+	<td class="fail">edit spin box, minimum, to set the value use the arrow keys or type the value <p><strong>Issue:</strong> Name information not announced.</p></td>
+<td>label, edit spin box, minimum, to set the value use the arrow keys or type the value </td>
+	
+	
+</tr>
+<tr>
+	<td><span tabindex="0" role="textbox" title="label"></span> [textbox]</td>
+	<td>
+		<ul>
+			<li>Name:	"label"</li>		
+			<li>Role:	editable text</li>
+			<li>State:	focused,focusable</li>
+		</ul></td>
+	<td>label, edit, type in text</td>
+	<td class="fail">label, edit, <strong>left bracket text box right bracket</strong>, type in text <p><strong>Issue:</strong> Announces unasscoiated text.</p></td>
+
+	
+</tr>
+</tbody></table>
+<hr>
+  <p><strong>Author:</strong> steve faulkner <a href="http://www.paciellogroup.com">The Paciello Group</a><br />
+      <strong>contact:</strong> <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a></p>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png" /></a><br />This <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" rel="dc:type">work</span> is licenced under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/">Creative Commons Licence</a>.
+    
+    <!-- Begin Web-Stat hit counter code -->
+<script type="text/javascript">
+<!--
+var page_name = 'input widget role tests';
+var invisible = '';
+var framed = 'no';
+function sE(){return true;}window.onError=sE;var base=document;
+if(framed=='yes'){base=top.document;}var rn=Math.random();
+var ui='mpaciello';var al='Web-Stat hit counters';
+var qry=ui+':2::'+escape(base.referrer)+'::'+screen.width
++'x'+screen.height+'::'+screen.colorDepth+'::'+escape(page_name)
++'::'+invisible+'::'+rn+'::'+escape(base.URL);
+document.write('<a href="http://www.web-stat.com/stats/');
+document.write(ui+'.htm"><img src="http://server3.web-stat.com/count.pl?');
+document.write(qry+'" alt="'+al+'"/><\/a>');
+//-->
+</script>
+<noscript>
+<p>
+<a href="http://www.web-stat.com">
+<img src="http://server3.web-stat.com/count.pl?mpaciello:2::NoJavaScript" alt="" />
+</a>
+</p>
+</noscript>
+<!-- End Web-Stat hit counter code -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1816993-2";
+urchinTracker();
+</script>
+
+</body></html>

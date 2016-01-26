@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>svg test 4 - svg using image</title>
+<link href="test.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>SVG using img</h1>
+<ul>
+  <li>&lt;circle&gt; has focusable=true and onkeypress (changes fill from red to blue)</li>
+  <li>&lt;title&gt;circle</li>
+  <li>&lt;description&gt; big red circle</li>
+  <li>&lt;foreignObject&gt; with &lt;button&gt; has onclick (changes fill from red to blue)</li>
+  <li>img alt="circle"
+</ul>
+<p>&nbsp;</p>
+<p><img src="test.svg" alt="circle">
+</p>
+<table width="100%" border="1">
+  <caption>
+    results
+  </caption>
+  <tr>
+    <th width="23%" scope="col">result</th>
+    <th width="21%" scope="col">Internet Explorer 10 (windows)</th>
+    <th width="18%" scope="col">Firefox 24 (windows)</th>
+    <th width="13%" scope="col">Chrome 30 (windows)</th>
+    <th width="13%" scope="col">Chrome 30 (Mac) </th>
+    <th width="12%" scope="col">Safari 6 (Mac)</th>
+  </tr>
+  <tr>
+    <td>&lt;title&gt;</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No </td>
+    <td>No</td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td>&lt;description&gt;</td>
+    <td>No</td>
+    <td>No<sup><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=935935"></a></sup></td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>&lt;img alt&gt;</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>img role </td>
+    <td>graphic</td>
+    <td>graphic</td>
+    <td>graphic</td>
+    <td>image</td>
+    <td>image</td>
+  </tr>
+  <tr>
+    <td>foreign object content available</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No </td>
+    <td>No</td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td>interaction</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No </td>
+    <td>No</td>
+    <td>no</td>
+  </tr>
+  <tr>
+    <td>JAWS 15 announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>graphic - circle</td>
+    <td>graphic - circle</td>
+    <td>graphic - circle</td>
+    <td>image - circle</td>
+    <td>image - circle</td>
+  </tr>
+  <tr>
+    <td>NVDA 2013.1.1 announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>acc role/name only</td>
+    <td>acc role/name only</td>
+    <td>acc role/name only</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>VoiceOver on OSX announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>acc role/name only</td>
+    <td>acc role/name only</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<!--<p><iframe src="test.svg" scrolling="auto"></iframe>&nbsp;</p>-->
+</body>
+</html>

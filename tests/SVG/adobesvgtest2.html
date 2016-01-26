@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>svg test</title>
+<link href="test.css" rel="stylesheet" type="text/css">
+<style>button{background:transparent;border:transparent; font-size:1em; font-weight:bold}</style> 
+<script>
+function change(){
+ C= document.getElementById('poot');
+ if (C.getAttribute("fill")=='red') {
+ C.setAttributeNS(null,"fill","blue");
+ }
+ 
+else  {C.setAttributeNS(null,"fill","red")}
+ 
+}
+</script>
+</head>
+
+<body>
+<h1>svg inline</h1>
+<ul>
+  <li>&lt;circle&gt; has focusable=true and onkeypress (changes fill from red to blue)</li>
+  <li>&lt;title&gt;circle</li>
+  <li>&lt;foreignObject&gt; with &lt;button&gt; has onclick (changes fill from red to blue)</li>
+  <li>&lt;switch&gt; used to show alternat content for IE</li>
+</ul>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="60" r="55" stroke="black" id="poot"
+  stroke-width="2" fill="red" focusable="true" onkeypress="change()" onclick="change()" />
+  <title>circle</title>
+  <switch>
+<foreignObject x="115" y="50" width="70" height="30" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" xmlns="http://www.w3.org/1999/xhtml"><div>
+   <button id="test1" onclick="change()">change</button></div></foreignObject>
+   
+    <text x="115" y="50" fill="black">CHANGE</text>
+</switch>
+</svg> 
+<p>
+<h2>testing results</h2>
+<table width="100%" border="1">
+  <caption>
+    results
+  </caption>
+  <tr>
+    <th width="24%" scope="col">expected result</th>
+    <th width="22%" scope="col">Internet Explorer 10 (windows)</th>
+    <th width="19%" scope="col">Firefox 24 (windows)</th>
+    <th width="15%" scope="col">Chrome 29 (windows)</th>
+    <th width="13%" scope="col">Chrome 29 (Mac)</th>
+    <th width="7%" scope="col">Safari 6 (Mac)</th>
+  </tr>
+  <tr>
+    <td>&lt;alt&gt; = accessible name</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>&lt;desc&gt;= accessible description</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>&lt;img&gt; role = graphic/iamge</td>
+    <td>Yes </td>
+    <td>Yes </td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>Yes </td>
+  </tr>
+  <tr>
+    <td>JAWS 15 can navigate to the image, it is recognized as an image and the name/description are announced</td>
+    <td>Yes </td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td> N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>NVDA 2013.1.1 can navigate to the image, it is recognized as an image and the name/description are announced</td>
+    <td>Yes </td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>VoiceOver on OSX can navigate to the image, it is recognized as an image and the name/description are announced</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>VoiceOver on iOS can navigate to the image, it is recognized as an image and the name/description are announced</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p>
+</body>
+</html>

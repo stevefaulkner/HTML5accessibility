@@ -217,6 +217,7 @@ td.support {background:#90ee90;}
 	    <li>Window Eyes 9</li>
 
         <li>NVDA 2015.4</li>
+        <li>Narrator 10</li>
 
 	  </ul>
 
@@ -228,7 +229,7 @@ td.support {background:#90ee90;}
 
 	<li>ChromeVox 1.51.1 on Chrome OS 15.0.874</li>
 
-	<li>Orca 2.3.2 on Linux</li>
+	<li>Orca 3.16 on Linux</li>
 
 </ul>
 
@@ -270,7 +271,7 @@ td.support {background:#90ee90;}
 	<th>Orca 3.16, Firefox 43, Ubuntu 15.10</th>
 	<th>Talkback, Android 4.4, Chrome 31</th>
 	<th>Talkback, Android 4.4 + Firefox 25</th>
-
+	<th>Narrator 10 +IE 11</th>
 	</tr>
 
 <tr>
@@ -298,7 +299,7 @@ td.support {background:#90ee90;}
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
-
+	<td class="support">Pass</td>
 	</tr>
 
 <tr>
@@ -326,7 +327,7 @@ td.support {background:#90ee90;}
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
-
+	<td class="support">Pass</td>
 	</tr>
 
 <tr>
@@ -356,7 +357,7 @@ td.support {background:#90ee90;}
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
-
+	<td class="support">Pass</td>
 	</tr>
 
 <tr>
@@ -386,67 +387,59 @@ td.support {background:#90ee90;}
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
-
+	<td class="support">Pass</td>
 	</tr>
 
 <tr>
 
 	<th scope=row>5. HTML5 hidden aria-hidden=false</th>
 
-	<td>content hidden (in supporting browsers) </td>
-
-	<td>&nbsp;</td>
-
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-
-	<td>&nbsp;</td>
-
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
+	<td><p>content hidden (in supporting browsers) </p>
+    <p>and ignored by AT.</p></td>
 	<td class="support">Pass</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
 
+	<td class="nosupport">Fail</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="nosupport">Fail</td>
+	<td class="nosupport">Fail</td>
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="nosupport">Fail</td>
+	<td class="nosupport">Fail</td>
+	<td class="support">Pass</td>
 	</tr>
 
 <tr>
 
   <th scope=row>6. CSS display:none aria-hidden=false</th>
 
-  <td>content hidden (in supporting browsers) </td>
-
-  <td>&nbsp;</td>
-
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-
-  <td>&nbsp;</td>
-
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
+  <td><p>content hidden (in supporting browsers) </p>
+    <p>and ignored by AT.</p></td>
   <td class="support">Pass</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
 
+  <td class="nosupport">Fail</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="nosupport">Fail</td>
+  <td class="nosupport">Fail</td>
+  <td class=support>Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="nosupport">Fail</td>
+  <td class="nosupport">Fail</td>
+  <td class="support">Pass</td>
   </tr>
 
 <tr>
@@ -474,7 +467,7 @@ td.support {background:#90ee90;}
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
 	<td class="support">Pass</td>
-
+	<td class="support">Pass</td>
 	</tr>
 <tr>
   <th scope="row"> 8. HTML5 hidden aria-hidden=false on child element</th>
@@ -491,6 +484,7 @@ td.support {background:#90ee90;}
   <td class=support>Pass</td>
   <td class=support>Pass</td>
   <td class=support>Pass</td>
+  <td class="support">Pass</td>
   <td class="support">Pass</td>
   <td class="support">Pass</td>
   <td class="support">Pass</td>
@@ -574,7 +568,7 @@ td.support {background:#90ee90;}
 
 	  <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png"></a><br>This <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" rel="dc:type">work</span> is licenced under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/">Creative Commons Licence</a>.</p>
 
-<p>last modified 25/01/2016</p>
+<p>last modified 26/01/2016</p>
 
 </footer>
 

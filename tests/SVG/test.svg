@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"> 
+<title>circle</title>
+  <desc>big red circle</desc>
+<circle cx="150" cy="60" r="55" stroke="black" id="poot"
+  stroke-width="2" fill="red" focusable="true" onkeypress="change()" onclick="change()" />
+ 
+<foreignObject x="115" y="50" width="70" height="30" xmlns="http://www.w3.org/1999/xhtml">
+<script>
+function change(){
+ C= document.getElementById('poot');
+ if (C.getAttribute("fill")=='red') {
+ C.setAttributeNS(null,"fill","blue");
+ }
+ 
+else  {C.setAttributeNS(null,"fill","red")}
+ 
+}
+</script>
+<div>
+   <button id="test1" onclick="change()">change</button></div></foreignObject>
+</svg> 

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>svg test</title>
+<link href="test.css" rel="stylesheet" type="text/css">
+<style>button{background:transparent;border:transparent;}</style> 
+<script>
+function change(){
+ C= document.getElementById('poot');
+ if (C.getAttribute("fill")=='red') {
+ C.setAttributeNS(null,"fill","blue");
+ }
+ 
+else  {C.setAttributeNS(null,"fill","red")}
+ 
+}
+</script>
+</head>
+
+<body>
+<h1>svg in html</h1>
+<svg xmlns="http://www.w3.org/2000/svg" role="group">
+<title>circle</title>
+  <circle cx="100" cy="50" r="40" stroke="black" id="poot"
+  stroke-width="2" fill="red" focusable="true" onkeypress="change()" role="img" aria-label="circle" />
+</svg> 
+<h2>with foreignObject</h2>
+<svg xmlns="http://www.w3.org/2000/svg" role="group">
+<title>circle</title>
+  <circle cx="100" cy="50" r="40" stroke="black" id="poot"
+  stroke-width="2" fill="red" focusable="true" onkeypress="change()" onclick="change()" role="button" aria-label="circle" />
+  
+<foreignObject x="75" y="30" width="60" height="30">
+    <div xmlns="http://www.w3.org/1999/xhtml"><script>
+function change(){
+ C= document.getElementById('poot');
+ if (C.getAttribute("fill")=='red') {
+ C.setAttributeNS(null,"fill","blue");
+ }
+ 
+else  {C.setAttributeNS(null,"fill","red")}
+ 
+}
+</script><button id="test1" onclick="change()">focus</button></div></foreignObject>
+</svg> 
+</body>
+</html>

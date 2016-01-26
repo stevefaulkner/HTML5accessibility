@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>svg test - svg inline</title>
+<link href="test.css" rel="stylesheet" type="text/css">
+<style>button{background:transparent;border:transparent; font-size:1em; font-weight:bold}</style> 
+<script>
+function change(){
+ C= document.getElementById('poot');
+ if (C.getAttribute("fill")=='red') {
+ C.setAttributeNS(null,"fill","blue");
+ return false;
+ }
+ 
+else  {C.setAttributeNS(null,"fill","red");return false;}
+ 
+}
+</script>
+</head>
+
+<body>
+<h1>svg inline</h1>
+<ul>
+  <li>&lt;circle&gt; has focusable=true and onkeypress (changes fill from red to blue)</li>
+  <li>&lt;title&gt;circle</li>
+  <li>&lt;description&gt; big red circle</li>
+  <li>&lt;foreignObject&gt; with &lt;button&gt; has onclick (changes fill from red to blue)</li>
+</ul>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+   <title id="title">circle</title>
+   <desc id="desc">big red circle</desc> 
+   <circle role="presentation" cx="150" cy="60" r="55" stroke="black" id="poot" stroke-width="2" fill="red" />
+ <a xlink:href="#" onkeypress="change()" onclick="change()" role="button" aria-labelledby="txt"><text x="115" y="50" fill="black" id="txt">CHANGE</text></a>
+</svg> 
+<p>
+<h2>testing results</h2>
+<table width="100%" border="1">
+  <caption>
+    results
+  </caption>
+  <tr>
+    <th width="23%" scope="col">result</th>
+    <th width="21%" scope="col">Internet Explorer 10 (windows)</th>
+    <th width="18%" scope="col">Firefox 24 (windows)</th>
+    <th width="13%" scope="col">Chrome 30 (windows)</th>
+    <th width="13%" scope="col">Chrome 30 (Mac) </th>
+    <th width="12%" scope="col">Safari 6 (Mac)</th>
+  </tr>
+  <tr>
+    <td>&lt;title&gt; = accessible name</td>
+    <td>Yes</td>
+    <td>No (is acc desc)</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>&lt;desc&gt;= accessible description</td>
+    <td>Yes</td>
+    <td>No (is acc name)</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>&lt;svg&gt; role </td>
+    <td>graphic</td>
+    <td>Yes (diagram)</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No </td>
+  </tr>
+  <tr>
+    <td>foreign object content available</td>
+    <td>not visible (button is in acc tree)</td>
+    <td>NO (button not exposed)</td>
+    <td>yes</td>
+    <td>Yes - button announced and operable</td>
+    <td>Yes - button announced and operable</td>
+  </tr>
+  <tr>
+    <td>interaction</td>
+    <td>SVG in tab order - script activation via keyboard (spacebar)- script activation via mouse click. Button not visible (offscreen), in tab order can activate script.</td>
+    <td>SVG NOT in tab order - button is - activation via keyboard- SVG script activation via mouse click</td>
+    <td> SVG NOT in tab order - button is - activation via keyboard- SVG script activation via mouse click</td>
+    <td>SVG NOT in tab order - button is - activation via keyboard- SVG script activation via mouse click</td>
+    <td>SVG NOT in tab order - button is - activation via keyboard- SVG script activation via mouse click</td>
+  </tr>
+  <tr>
+    <td>JAWS 15 announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>No - object/SVG ignored</td>
+    <td>No - object identified as frame SVG ignored</td>
+    <td>No - object/SVG ignored</td>
+    <td> N/A</td>
+    <td> N/A</td>
+  </tr>
+  <tr>
+    <td>NVDA 2013.1.1 announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>button in focus order &quot;identified as button change graphic graphic&quot; SVG not in focus order, but cn be cursored to. Identified as graphic,graphic, circle,  circle, big red circle, clickable'</td>
+    <td> SVG identified as 'iframe graphic clickable' no acc name/desc. when iframe has focus pressing enter/space changes color of cirlce (script works)</td>
+    <td> SVG ignored, button in tab order and when has focus pressing enter/space changes color of cirlce (script works)</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>VoiceOver on OSX announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>No - SVG ignored, button is available</td>
+    <td>No - SVG ignored, button is available</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>
+</body>
+</html>
