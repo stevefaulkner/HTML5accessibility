@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+
+
+/* For ideas on creating a base CSS file try these links:
+
+
+
+HTML5 Reset Stylesheet
+
+http://html5doctor.com/html-5-reset-stylesheet/
+
+
+
+Setting rather than Resetting Default Styling
+
+http://carsonified.com/blog/design/setting-rather-than-resetting-default-styling/
+
+
+
+Eric Meyer: Reset Reloaded
+
+http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+
+
+
+*/
+
+
+
+html {
+
+	font-size:100%;
+
+}
+
+body {
+
+	color:#444;
+
+	font:1em/1.5 Georgia, "Times New Roman", Times, serif;
+
+}
+
+#wrap {
+
+	background:#eee;
+
+	border:1px solid #eee;
+
+	-moz-border-radius:10px;
+
+	-webkit-border-radius:10px;
+
+	margin:20px auto;
+
+	overflow:hidden;
+
+	padding:19px;
+
+	width:920px;
+
+}
+
+main {
+
+	background:#e7e7e7;
+
+	border:1px solid #e7e7e7;
+
+	-moz-border-radius:10px;
+
+	-webkit-border-radius:10px;
+
+	float:left;
+
+	margin:0 20px 0 0;
+
+	padding:19px;	
+
+	width:560px;
+
+}
+
+aside {
+
+	float:left;
+
+	width:300px;
+
+}
+
+article {
+
+	background:#f7f7f7;
+
+	border:1px solid #f7f7f7;
+
+	-moz-border-radius:10px;
+
+	-webkit-border-radius:10px;
+
+	padding:19px;
+
+}
+
+footer {
+
+	clear:left;
+
+	padding:20px 0 0;
+
+}
+
+span {
+
+	font-weight:bold;
+
+}
