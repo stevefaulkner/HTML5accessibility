@@ -1150,9 +1150,25 @@ menu {display:block}
       If you have suggestions on how to improve this page let him know: terry / at / ackernaut / dot / com<br>
 
       Feel free to borrow and share a link! <br></p>
+      <figure>
+      <figcaption>Canvas element: mouse over or tab or touch for sound of creation</figcaption>
+      <canvas id="myCanvas" width="400" height="462" role="group" aria-label="image and description" onMouseOver="document.getElementById('loo').play()" onMouseOut="document.getElementById('loo').pause();" ontouchend="document.getElementById('loo').play()"><h2>Feewheeling the porcelain bus</h2>
+    <img src="lauke-loo.jpg" width="400" height="462" alt="patrick on the toilet"> 
+    <p>Many have praised the genius of Patrick “Herb” Lauke, but few have witnessed such a great thinker in the act of creation:</p>  <audio aria-label="the sound of creation"controls id="loo" preload="auto" onfocus="document.getElementById('loo').play()" onblur="document.getElementById('loo').pause();"><source src="Toilet_Flushing.mp3" type="audio/mpeg" id="loo"></audio></canvas></figure>
 
   </footer>
+<script>
+    <!--  
+	var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
 
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 0, 0);
+      };
+      imageObj.src = 'lauke-loo.jpg';
+	  -->
+    </script>
 </div>
 
 </body>
