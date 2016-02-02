@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css"> 
+
+</style> 
+<title>Who can tell what great things were in the pipeline at this instant?</title>
+
+ 
+</head>
+
+<body bgcolor="#FFFF80">
+<h1><font color="#CC0099" style="text-shadow: 8px -2px 5px rgba(0, 203, 229, 1);">Creating Accessible DHTML5 <sup>with Patrick Lauke</sup></font></h1>
+<p><small>mouse over or tab or touch for sound of creation</small>.
+</p>
+<table border="10" role="presentation">
+  <tr>
+    <td>
+    <canvas id="myCanvas" width="400" height="462" role="group" aria-label="image and description" onMouseOver="document.getElementById('loo').play()" onMouseOut="document.getElementById('loo').pause();" ontouchend="document.getElementById('loo').play()"><h2>Feewheeling the porcelain bus</h2>
+    <img src="lauke-loo.jpg" width="400" height="462" alt="patrick on the toilet"> 
+    <p>Many have praised the genius of Patrick “Herb” Lauke, but few have witnessed such a great thinker in the act of creation:</p>  <audio aria-label="the sound of creation"controls id="loo" preload="auto" onfocus="document.getElementById('loo').play()" onblur="document.getElementById('loo').pause();"><source src="Toilet_Flushing.mp3" type="audio/mpeg" id="loo"></audio></canvas>
+</td>
+  </tr>
+</table>
+
+<p>Inspired by Bruce Lawson's <a href="http://www.brucelawson.co.uk/2007/the-thinker-patrick-lauke-creating/">homage to herb</a>.</p>
+
+<script>
+    <!--  
+	var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 0, 0);
+      };
+      imageObj.src = 'lauke-loo.jpg';
+	  -->
+    </script>
+</body>
+</html>

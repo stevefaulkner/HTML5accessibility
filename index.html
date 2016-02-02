@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+<meta charset="utf-8"/>
 <title>HTML5 accessibility - work in progress June 2015</title>
 <script>
 	function noimage()
@@ -56,162 +55,169 @@ function checkHC(){
 
 
 </script>
-<style type="text/css">
-	body 
-
-	{
+<style>
+	body {
 		font-family: arial, Verdana, helvetica, sans-serif;
-		
 		color: #333;
 		background: #D6D6AB;
 		padding: 0;
-font-size:90%
-
+		font-size: 90%
 	}
 
-	caption {text-align:left;font-weight:bold;font-size:large}
-
-	h1,h2 { font-family: Verdana,arial,  helvetica, sans-serif;
-	
-	font-size:larger;
+	caption {
+		text-align: left;
+		font-weight: bold;
+		font-size: large
 	}
-	header {border: 1px dashed #ffd700;
-	padding:1em;
-	margin:0px;}
 
-.navlist li
-{
-display: inline;
-list-style-type: none;
-padding-right: 20px;
-}
+	h1, h2 { 
+		font-family: Verdana, arial, helvetica, sans-serif;
+		font-size: larger;
+	}
 
-	table
+	header {
+		border: 1px dashed #ffd700;
+		padding:1em;
+		margin: 0;
+	}
 
-	{
+	.navlist li {
+		display: inline;
+		list-style-type: none;
+		padding-right: 20px;
+	}
 
+	table {
 		border-collapse: collapse;
-
 		border: 1px solid #630;
-
 		font: normal 80% arial, Verdana, helvetica, sans-serif;
 	}
 
-
-
-	th, td
-
-	{
-
+	th, td {
 		text-align: left;
-
 		vertical-align: top;
-
-		padding: 0.3em;
-
+		padding: .3em;
 		border: 1px solid #630;
-
 	}
 
-	th {font-size:150%;}
-	td {font-size:130%;}
-	th small {font-size:70%;}
-	td p {margin:0 0 0 0;}
-	thead th, thead td
+	th { font-size: 150%; }
 
-	{
+	td { font-size: 130%; }
 
+	th small { font-size: 70%; }
+
+	td p { margin: 0; }
+
+	thead th, thead td {
 		font-weight: bold;
-
 		text-align: center;
-
 	}
 
-	td span {display:inline-block;padding:2px;}
-	span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+	td span {
+		display: inline-block;
+		padding: 2px;
+	}
+	
+	span:focus {
+		background: #f5f5f5;
+		border: 2px solid #a0522d;
+	}
+
 	/*td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
-	caption {text-align:left}
+	caption { text-align: left }
 
+	.support { background: #90ee90; }
 
-	.support {background:#90ee90;}
-	.partial {background:#eee8aa;}
-	td.nosupport{background:#ffb6c1;}
+	.partial { background: #eee8aa;}
 
+	td.nosupport{ background: #ffb6c1;}
 
-	td p.note{border: 1px dashed red;padding: 5px;margin-top:5px;background:#FFFFFF}
+	td p.note{
+		border: 1px dashed red;
+		padding: 5px;
+		margin-top:5px;
+		background:#FFF;
+	}
 
-	td ul  {padding-left:12px}
+	td ul  { padding-left: 12px; }
 	/*	img {border: 1px solid #630;}*/
-	.test {border: 1px solid #666666;padding:4px;margin-top:15px;background:#FFFFCC}
+	.test {
+		border: 1px solid #666;
+		padding: 4px;
+		margin-top: 15px;
+		background: #FFFFCC;
+	}
 
+	h3 { font-size: 150%; }
 	
+	p, li { font-family: arial; }
 	
-		
-	
-	h3 {
-		
-		
-		font-size:150%;
+	h2 { color: #008000; }
+
+	#float { float: right; }
+
+	.float { float: left; }
+
+	.nvda { 
+		border:1px #ff7f50 solid;
+		font-size: 80%;
+		padding: 5px;
+	}
+
+	#banner {
+		float:left;
+		font-size: 250%;
+	}
+
+	#subheader { clear: both; }
+
+	span.cap { display: inline-block; }
+
+	ul.sumry li {
+		display: inline;
+		list-style-type: none;
+		padding-right: 1em;
+		font-weight: bold;
+		color:#C00;
+	}
+
+	span.hidden {
+		position: relative;
+		left: 0;
+		top: auto;
+		width: inherit;
+		height: inherit;
+		overflow: inherit;
+	}
+
+	header {
+		border: 1px dashed #ff8c00;
+		padding: 1em;
+	}
+
+	#wrapper {
+		width: 90%;
+		background-color:#FFF;
+		padding: 1em ;
+	}
+
+	.style1 {
+		color: #006600;
+		font-size: large;
 	}
 	
-	p, li {font-family: arial}
+	.style2 { color: #CC3300; }
 	
-	h2 {
-	color: #008000;
-}
-
-#float {float:right;}
-
-.nvda { border:1px #ff7f50 solid; font-size: 80%;padding:5px;}
-
-#banner {
-	float:left;
-	font-size: 250%;
-}
-
-#subheader {clear:both}
-
-span.cap {display:inline-block}
-
-ul.sumry li
-{
-display: inline;
-list-style-type: none;
-padding-right:1em;
-font-weight: bold;
-color:#C00;}
-
-span.hidden {
-position:relative;
-left:0;
-top:auto;
-width:inherit;
-height:inherit;
-overflow:inherit;
+	.style3 { font-size: large; }
 	
-}
-
-header {
-	border: 1px dashed #ff8c00;
-	padding: 1em;
-}
-.float {
-	float: left;
-}
-#wrapper {
-	width: 90%;
-	background-color:#FFF;
-	padding: 1em ;
-}
-.style1 {color: #006600;font-size: large;}
-.style2 {color: #CC3300}
-.style3 {font-size: large}
-.style4 {font-size: large; color: #006600; }
-.style5 {color: #FF00FF}
+	.style4 { 
+		font-size: large;
+		color: #006600;
+	}
+	
+	.style5 { color: #FF00FF; }
 </style>
- 
 </head>
-
 <body onload="noimage();checkHC();">
 <div id="wrapper">
   <header role="banner"> <div id="float">
@@ -349,15 +355,6 @@ header {
           <p><strong>Safari:</strong> supports the accessible canvas element sub-DOM. <strong>Note:</strong> VoiceOver does not appear to announce text in canvas sub-DOM.</p>
           <p>&nbsp;</p></td>
       </tr>
-      <!--<tr>
-    <td><a href="http://dev.w3.org/html5/spec/interactive-elements.html#the-command">command</a> element</td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-    <td>not implemented</td>
-  </tr>-->
       <tr>
         <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/datalist.html">datalist</a></code></th>
          <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
@@ -607,7 +604,7 @@ header {
    <td><strong>Firefox:</strong> Supports menu item role and keyboard interaction.</td>
   </tr>
       <tr>
-        <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/rendering.html#the-meter-element-0"><code>meter</code></a></th>
+        <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/meter.html"><code>meter</code></a></th>
          <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -619,7 +616,7 @@ header {
         <p>&nbsp;</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-nav-element">nav</a></code></th>
+        <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/nav.html">nav</a></code></th>
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
@@ -630,7 +627,7 @@ header {
           <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;navigation&quot;</code> via IA2 object attribute</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-output-element">output</a></code></th>
+        <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/output.html">output</a></code></th>
        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
@@ -642,7 +639,7 @@ header {
         <p><strong>Note:</strong> there is currently disagreement amongst implementers as to how the seamtnics of the output element should be exposed: <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=26135">bug 26135</a> - is <code>role=status</code> correct for output element?</p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-progress-element">progress</a></code></th>
+        <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/progress.html">progress</a></code></th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
@@ -651,7 +648,7 @@ header {
         <td><p><strong>all good</strong></p></td>
       </tr>
       <tr>
-        <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-section-element">section</a></code></th>
+        <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/section.html">section</a></code></th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
@@ -685,7 +682,7 @@ header {
         <td>Currently provides the same amount of semantic information to AT as a span element. Chrome bug filed: <a href="https://code.google.com/p/chromium/issues/detail?id=480861">Bug 480861</a> -<span id="summary_alias_container"> <span id="short_desc_nonedit_display">expose HTML time element semantics in acc layer, implementation in progress.</span></span></td>
       </tr>
       <tr>
-        <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-track-element"><code>track</code></a></th>
+        <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>track</code></a></th>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
@@ -695,15 +692,6 @@ header {
           <p><strong>Chrome/Firefox:</strong> only support WebVTT</p>
           <p>Refer to <a href="http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/">WebVTT support in browsers</a> for more details</p></td>
       </tr>
-      <!--<tr>
-    <td><code><A href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-time-element">time</A></code> element</td>
-    <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-    <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-    <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-    <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-    <td>Currently provides the same amount of semantic information to AT as a span element</td>
-  </tr>-->
       <tr>
         <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>video</code></a></th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
@@ -1243,14 +1231,6 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
     This <SPAN rel="dc:type" href="http://purl.org/dc/dcmitype/Text" xmlns:dc="http://purl.org/dc/elements/1.1/">work</SPAN> is licenced under a <A href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">Creative Commons Licence</A>.</p>
   <p>&nbsp;</p>
   </footer>
- 
- 
-  
-  
- 
-
-
 </div>
-
 </body>
 </html>

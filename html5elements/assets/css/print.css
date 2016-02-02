@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* Define print styles */
+
+html {
+	font-size:100%;
+}
+body {
+	color:#444;
+	font:12pt/1.5 Georgia, "Times New Roman", Times, serif;
+}
+#wrap {
+	margin:40px auto;
+	padding:40px;
+	width:678px;
+}
+
+/* Hide elements that you don't want to print */
+
+aside, audio, video, nav {
+	display:none;
+}

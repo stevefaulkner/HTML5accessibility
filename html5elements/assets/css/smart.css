@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* Define syles for smart phones such as the iPhone and those using Android */
+
+html {
+	font-size:100%;
+}
+body {
+	font-size:1em;
+}
+#wrap {
+	background:#DDD;
+	border:1px solid #DDD;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	margin:10px;
+	padding:10px;
+}
+/* Note: This will be one column, with the aside element following the section and article elements. */
