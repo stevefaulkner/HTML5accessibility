@@ -247,17 +247,17 @@ function checkHC(){
       <h3><a href="#wbdetails">Major Browsers</a> Summary - Chrome and Firefox   Rock! </h3>
       <p><strong>HTML5 Accessibility Support Score</strong></p>
       <ul class="sumry">
-        <li><img src="images/safari_64x64.png" alt="Safari" width="64" height="64" border="0" id="chrome-img"> <meter min="0" max="100" value="68"></meter>  
-        <span class="style1">68/100</span>
+        <li><img src="images/safari_64x64.png" alt="Safari" width="64" height="64" border="0" id="safari-img"> <meter min="0" max="100" value="62"></meter>  
+        <span class="style1">62/100</span>
   </li>
-          <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="94.5"></meter> 
-          <span class="style1">94.5/100</span></li>
+          <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="93"></meter> 
+          <span class="style1">93/100</span></li>
         <li><img src="images/firefox.png" alt="Firefox" width="64" height="64" border="0" id="FF-img">
-          <meter min="0" max="100" value="91"></meter>
-        &nbsp; <span class="style1">91/100</span></li>
-        <li><img src="images/ie.png" alt="Internet Explorer" width="64" height="64" border="0" id="ie-img"><meter min="0" max="100" value="37"></meter>
-        &nbsp;<span class="style3" id="ie">37</span><span class="style3">/100</span></li>
-        <li><img src="images/edge.png" alt="Edge"><!--<meter min="0" max="100" value="37"></meter>-->&nbsp;<span class="style3" id="ie">??</span><span class="style3">/100</span></li>
+          <meter min="0" max="100" value="89"></meter>
+        &nbsp; <span class="style1">89/100</span></li>
+        <li><img src="images/ie.png" alt="Internet Explorer" width="64" height="64" border="0" id="ie-img"><meter min="0" max="100" value="35"></meter>
+        &nbsp;<span class="style3" id="ie">35</span><span class="style3">/100</span></li>
+        <li><img src="images/edge.png" alt="Edge"><meter min="0" max="100" value="40"></meter>&nbsp;<span class="style3" id="ie">40/100</span></li>
       </ul>
     </div>   
    <!-- <div class=mac><h3><img src="images/mac-logo.png" width="64" height="64">  Mac Summary</h3>
@@ -307,7 +307,7 @@ function checkHC(){
         <span style="display:block">Firefox 38 - windows</span></th>
         <th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
         <span style="display:block">IE 11 - windows</span></th>
-        <th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge</span></th>
+        <th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
         <th width="49%" scope="col">Notes</th>
       </tr>
       <tr>
@@ -316,8 +316,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
           </p>
           <p><strong>Firefox:</strong> exposes element with a <code>document</code> role in MSAA/IA2 </p></td>
       </tr>
@@ -327,8 +327,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
           </p>
           <p><strong>Firefox:</strong> exposes  as ARIA <code>role=&quot;complementary&quot;</code> via IA2 object attribute and IA2 <code>note</code> role. </p></td>
       </tr>
@@ -338,22 +338,21 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>Safari: </strong>requires VoiceOver to be enabled to be usable with the keyboard.</p>
           <p><strong>Firefox: (funky) </strong>keyboard access is provided via <a href="http://support.mozilla.org/en-US/kb/Viewing%20video%20in%20Firefox%20without%20a%20plugin#w_keyboard-controls">Firefox specific shortcuts</a></p>
-          <p><strong>Chrome</strong>: Full support!          </p>
-          <p><strong>IE 11:</strong> Full Support</p></td>
+          <p><strong>Chrome</strong>: Full support!</p>
+          <p><strong>IE 11 / Edge:</strong> Full Support</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/canvas.html">canvas</a></code></th>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td><td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE, Chrome, Firefox: </strong>supports the accessible canvas element sub-DOM.<strong><br>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
+        <td><p><strong>IE, Edge, Chrome, Firefox: </strong>supports the accessible canvas element sub-DOM.<strong><br>
           Firefox, Chrome</strong>:  support drawfocus ring.</p>
-          <p><strong>Safari:</strong> supports the accessible canvas element sub-DOM. <strong>Note:</strong> VoiceOver does not appear to announce text in canvas sub-DOM.</p>
-          <p>&nbsp;</p></td>
+          <p><strong>Safari:</strong> supports the accessible canvas element sub-DOM. <strong>Note:</strong> VoiceOver does not appear to announce text in canvas sub-DOM.</p></td>
       </tr>
       <tr>
         <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/datalist.html">datalist</a></code></th>
@@ -361,7 +360,7 @@ function checkHC(){
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
          <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
          <td><p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list. (<a href="https://code.google.com/p/chromium/issues/detail?id=282005">related bug</a>)</p></td>
       </tr>
       <tr>
@@ -379,7 +378,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state. <br>
         <strong>Note:</strong> Currently Chrome keyboard support is incomplete,  does not move focus back to trigger control on dialog close (<a href="https://code.google.com/p/chromium/issues/detail?id=298078">chrome dialog bug</a>) .</p></td>
       </tr>
@@ -389,8 +388,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
           </p>
           <p><strong>Chrome, Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2 object attribute. </p>
           <p><strong>Firefox: </strong>exposes the <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p>
@@ -402,7 +401,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.<br>
           </p>
         <p><strong>Firefox &amp; Chrome:</strong> exposes element <code>role=group</code> with accessible name from <code>figcaption</code>.</p>
@@ -414,8 +413,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
           </p>
         <p><strong>Firefox, Chrome:</strong> exposes  as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
@@ -425,8 +424,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
           </p>
         <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code> or <code>section</code> elements</p></td>
       </tr>
@@ -436,7 +435,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><p><strong>Chrome</strong>: has keyboard support, exposes button as IA2 color chooser exposes color information in RGB as accValue.</p>
           <p><strong>Firefox:</strong> keyboard accessible, exposed as a button but color value not exposed to AT. Refer to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a></p></td>
       </tr>
@@ -446,7 +445,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+      <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
          <p>&nbsp;</p></td>
       </tr>
@@ -464,7 +463,7 @@ function checkHC(){
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+      <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>Chrome:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
           <p>&nbsp;</p></td>
       </tr>
@@ -474,7 +473,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
          <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-       <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+       <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
        <td><p><strong>Firefox:</strong> supported in Version 27: </p>
         <p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p></td>
       </tr>
@@ -484,7 +483,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+      <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
         <p>&nbsp;</p></td>
       </tr>
@@ -493,8 +492,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+       <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+       <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Chrome</strong>: <del>chrome bug <a href="https://code.google.com/p/chromium/issues/detail?id=385014">385014</a></del> fixed</p></td>
       </tr>
       <tr>
@@ -503,7 +502,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>all good</strong></p></td>
       </tr>
       <tr>
@@ -512,7 +511,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
         </a><a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
         <p><strong>Safari: </strong>AXSubRole: Searchfield</p></td>
@@ -522,8 +521,8 @@ function checkHC(){
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br>
         </a><a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
         <p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p></td>
@@ -534,7 +533,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+      <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><strong>Chrome:</strong> Full support.</td>
       </tr>
       <tr>
@@ -543,7 +542,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a></p>
         <p><a href="https://code.google.com/p/chromium/issues/detail?id=323161">Chrome bug filed - resolved fixed!</a></p>
         <p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p></td>
@@ -554,7 +553,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+      <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , and datepicker interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
         <p>&nbsp;</p></td>
       </tr>
@@ -564,7 +563,7 @@ function checkHC(){
     <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
     <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
      <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-     <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
      <td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make  &lt;mark&gt; element accessible</a> <a href="https://code.google.com/p/chromium/issues/detail?id=494612">Chrome bug: 494612</a> , <a href="https://bugs.webkit.org/show_bug.cgi?id=145974">Safari Bug 145974</a></td>
   </tr>
       <tr>
@@ -573,9 +572,9 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-       <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
        <td><strong>Firefox and Chrome:</strong> implements as <code>role=main.<br>
-       </code><strong>IE:</strong> provides no semantic information via accessibility APIs (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)        </td>
+       </code><strong>Edge:</strong> provides no semantic information via accessibility APIs (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)        </td>
       </tr>
       <tr>
         <th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menu-context.html"><code>menu</code></a><code> - <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#popup-menu-state">popup menu</a></code></th>
@@ -583,7 +582,7 @@ function checkHC(){
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><strong>Firefox: </strong>does not indicate presence of popup menu.</td>
       </tr>
       <tr>
@@ -592,7 +591,7 @@ function checkHC(){
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
         <td>not implemented </td>
       </tr>
 <tr>
@@ -601,7 +600,7 @@ function checkHC(){
     <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
    <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
    <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-   <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
    <td><strong>Firefox:</strong> Supports menu item role and keyboard interaction.</td>
   </tr>
       <tr>
@@ -610,7 +609,7 @@ function checkHC(){
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><p>Safari: role= AXProgressIndicator, both current vlaue and fallback content exposed.</p>
           <p><strong>Firefox: </strong> role exposed as meter in MSAA, properties not exposed. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559770">Firefox bug 1</a> (API) and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=687202">Firefox bug 2</a> (UI) </p>
           <p><strong>Chrome:</strong> exposed as progressbar and value announced, refer to firefox bugs for implementation details that need working out.</p>
@@ -622,8 +621,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
           </p>
           <p><strong>Firefox:</strong> exposes  as ARIA landmark <code>role=&quot;navigation&quot;</code> via IA2 object attribute</p></td>
       </tr>
@@ -633,10 +632,10 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
         <td><p><strong>Firefox:</strong> accessibility support implemented -  IA2 <code>section</code> role,  with <code>aria-live=polite</code> and hasIA2 <code>controlled_by relation</code> defined by <code>@for</code> attribute.</p>
           <p><strong>Chrome: </strong>implemented with role=status, <s>refer to <a href="https://code.google.com/p/chromium/issues/detail?id=323143">Chrome bug</a></s>.</p>
-          <p><strong>IE:</strong> not supported, <a href="https://connect.microsoft.com/IE/feedback/details/809569/implement-html5-output-element-accessibility">IE bug filed</a></p>
+          <p><strong>IE/Edge:</strong> not supported, <a href="https://connect.microsoft.com/IE/feedback/details/809569/implement-html5-output-element-accessibility">IE bug filed</a></p>
         <p><strong>Note:</strong> there is currently disagreement amongst implementers as to how the sematnics of the output element should be exposed: <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=26135">bug 26135</a> - is <code>role=status</code> correct for output element?</p></td>
       </tr>
       <tr>
@@ -645,7 +644,7 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>all good</strong></p></td>
       </tr>
       <tr>
@@ -654,8 +653,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)</p>
+        <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+        <td><p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr> (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)</p>
           <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
          <p><strong>Firefox:</strong> exposes element with a <code>paragraph</code> role in IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
       </tr>
@@ -690,8 +689,8 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-        <td><p><strong>IE:</strong> supports both WebVTT and TTML</p>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+        <td><p><strong>IE/Edge:</strong> supports both WebVTT and TTML</p>
           <p><strong>Chrome/Firefox:</strong> only support WebVTT</p>
           <p>Refer to <a href="http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/">WebVTT support in browsers</a> for more details</p></td>
       </tr>
@@ -701,11 +700,11 @@ function checkHC(){
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
         <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-        <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+        <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
         <td><p><strong>Safari: </strong>requires VoiceOver to be enabled to be usable with the keyboard.</p>
           <p><strong>Firefox:</strong> keyboard support <em>suboptimal</em> - cannot interact with individual controls. refer to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=494175">Bug 494175</a> -<span id="summary_alias_container2"> <span id="short_desc_nonedit_display2">Make &lt;video&gt; and &lt;audio&gt; controls keyboard navigable</span></span></p>
           <p><strong>Chrome:</strong>  full support!         </p>
-        <p><strong>IE 11: </strong>Full support!</p></td>
+        <p><strong>IE 11 / Edge: </strong>Full support!</p></td>
       </tr>
     </table>
   </div>
@@ -738,8 +737,8 @@ function checkHC(){
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-      <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
-      <td><p><strong>Chrome, Firefox, IE: </strong>Content within elements that have a hidden attribute are not displayed or navigable. </p>
+      <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+      <td><p><strong>Chrome, Firefox, IE, Edge: </strong>Content within elements that have a hidden attribute are not displayed or navigable. </p>
         <p><strong>Note:</strong> In all supporting browsers CSS <code>display:none</code> is applied to elements with the <code>hidden</code> attribute.<br>
       </p></td>
     </tr>
@@ -749,7 +748,7 @@ function checkHC(){
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-      <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+      <td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
       <td><p><strong>Firefox:</strong> exposes popup message as alert and identifies the field as invalid.</p>
         <p><strong>Chrome</strong>: exposes as IA2 <code>required and invalid </code> states, does not expose popup message.</p>
       <p><strong>IE:</strong> required state exposed via (UIA - CurrentHelpText;This is a required field;<br>
@@ -762,7 +761,7 @@ CurrentIsRequiredForForm;True;) No MSAA.</p>
       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
       <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
-      <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Unknown</span></td>
+      <td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
       <td><p><strong>Safari:</strong>  Note VoiceOver always announces the placeholder attribute content before label text.</p>
         <p><strong>Note:</strong> there are incompatibilities between the IE, Firefox and Chrome accessibility implementations of placeholder. </p>
       <p>Refer to: <a href="http://www.html5accessibility.com/tests/placeholder-labelling.html">HTML5 accessibility Chops: the placeholder attribute</a></p></td>
