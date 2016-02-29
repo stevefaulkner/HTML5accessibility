@@ -906,61 +906,55 @@
 			</section>
 
 			<section id="howto">
-				<h2><a name="legend">Support Tables - Legend &amp; notes:</a></h2>
+				<h2>How to Test</h2>
+				
+				<p>Each feature has its own test page, including the pass criteria, and spec references for the required mapping from HTML feature to the platform accessibility layer.</p>
+				<p>Browser support for a feature is automatically detected. This checks to see if the browser claims it supports the feature via object detection, not if it is fully supported correctly. If a feature is not supported, it is excluded from the scoring.</p>
+				<p>If a feature is supported, the next step is to test if it is correctly mapped to the platform accessibility layer. This must be tested manually. This can be done with one of the tools listed at the end of this section.</p>
+				<p>To be accessibly supported, elements that represent interactive controls must be fully keyboard accessible. Actions that must be able to be performed are listed in the test file, but shortcuts may be different between browsers and platforms.</p>
+				
+				<p>Free testing tools:</p>
+				
 				<ul>
-					<li><img src="images/cross.png" width="16" height="16" alt=""> &quot;not supported&quot; means the feature is implemented
-						by the browser, but required accessibility support is not implemented.</li>
-					<li><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">						&quot;partially supported&quot; means the feature is implemented and accessibility support is partially implemented.</li>
-					<li><img src="images/ni.gif" width="25" height="25" alt=""> &quot;not implemented&quot; means the feature has not yet been
-						implemented in a public version of the browser, so accessibility support is unknown.</li>
-					<li><img src="images/tick.png" width="16" height="16" alt=""> &quot;supported&quot; means that the browser exposes feature
-						information via an accessibility API and if the feature is interactive it can be operated using a range of input device
-						types.
-					</li>
-					<li>The 'notes' cell of each row provides further information about browser support.</li>
-					<li>A <a href="http://www.html5accessibility.com/html5elements/">test page</a> was used to test the support in each browser.</li>
-					<li>The following tools were used to test the <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> feature information
-						being exposed in browsers to accessibility APIs:
-						<ul>
-							<li>
-								<A href="http://www.paciellogroup.com/blog/?p=635">Aviewer</A> (free desktop application for windows ) </li>
-							<li>
-								<A href="https://addons.mozilla.org/en-US/firefox/addon/6622/">Dom   Inspector</A> (free Firefox extension) </li>
-							<li>
-								<A href="http://msdn.microsoft.com/en-us/library/dd318521%28v=vs.85%29.aspx">Inspect.exe</A> (free desktop application for windows available as part of the Windows SDK) </li>
-							<li>
-								<A href="http://accessibility.linuxfoundation.org/a11yweb/util/accprobe/">Accprobe</A> (free open source desktop application) </li>
-							<li>
-								<A href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTesting/OSXAXTestingApps.html">Accessibility   Inspector</A>A(free Mac application) </li>
-						</ul>
-					</li>
-					<li>Keyboard support was tested by attempting to use interactive controls using the keyboard.</li>
-					<li>Please report any inaccuracies to <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a>.</li>
+					<li><a href="https://www.paciellogroup.com/blog/2013/03/aviewer-2013/">Aviewer</a> (Windows)</li>
+					<li><a href="https://addons.mozilla.org/en-US/firefox/addon/6622/">Dom Inspector</a> (Firefox extension)</li>
+					<li><a href="http://msdn.microsoft.com/en-us/library/dd318521%28v=vs.85%29.aspx">Inspect</a> (Part of the Windows SDK)</li>
+					<li><a href="http://accessibility.linuxfoundation.org/a11yweb/util/accprobe/">Accprobe</a> (Open source)</li>
+					<li><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTesting/OSXAXTestingApps.html">Accessibility Inspector</a> (Mac)</li>
 				</ul>
 			</section>
 
 			<section id="notes">
 				<h2>Notes &amp; Further Resources</h2>
+				
+				<section>
+					<h3>Helpful Links</h3>
 
-				<p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br/> 
-      			<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</strong></p>
+					<ul>
+						<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
+						<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Contributors</h3>
 
-				<ul class="navlist">
-					<li><strong>elsewhere:</strong></li>
-					<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
-					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a>
-						<li><a href="http://rawgit.com/w3c/aria/master/html-aam/html-aam.html">HTML Accessibility API Mappings 1.0</a>
-				</ul>
+					<p>HTML5 Accessiblity was <a href="http://www.paciellogroup.com">developed by The Paciello Group</a>, your accessibility partner.
+					<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</p>
+					  
+					<p>Further design and development by <a href="https://www.twitter.com/dstorey">David Storey</a> and 
+					<a href="https://www.twitter.com/somelaniesaid">Melanie Richards</a> of the Microsoft Edge team.</p>
+				</section>
 			</section>
 		</main>
 
 		<footer>
-			<a class="licence-link" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">
+			<a class="licence" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">
 				<img alt="" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png" />
 				<small>This work is licenced under a Creative Commons Licence.</small>
 			</a>
 
-			<a class="github-link" href="https://github.com/stevefaulkner/HTML5accessibility">Fork on GitHub</a>
+			<a class="github" href="https://github.com/stevefaulkner/HTML5accessibility">Fork on GitHub</a>
 		</footer>
 	</div>
 </body>
