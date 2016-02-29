@@ -229,13 +229,13 @@
 
 		<main>
 			<section id="results" aria-label="HTML5 Accessibillity browser support scores">
-				<ul>
+				<ul class="test-results">
 					<li>
 						<h3 class="browser">Chrome XX, Opera</h3>
 						<p class="platform">(Win)</p>
 						<p class="result">93%</p>
-						<img src="images/chrome.png" width="64" height="64" alt="" /> 
-					    <img src="images/opera.png" width="24" height="24" alt="" />
+						<img src="images/chrome.png" width="64" height="64" alt="" />
+						<img src="images/opera.png" width="24" height="24" alt="" />
 					</li>
 					<li>
 						<h3 class="browser">Edge 13</h3>
@@ -265,21 +265,12 @@
 			</section>
 
 			<section id="overview" aria-label="overview">
-				<p>This site is a resource to provide information about which <strong>new <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> user interface features</strong>					are accessibility supported in browsers, making them usable by people who rely upon assistive technology (AT) to use
-					the web.</p>
-				<p><strong>Note:</strong> Browsers may not have practical accessibility support for HTML features on particular operating
-					systems. Refer to <a href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">Rough Guide: browsers, operating systems and screen reader support</a>					for details.</p>
-				<p>It is not intended to dissuade developers from <strong>using new <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a> features</strong>.
-					Sometimes there are better choices, sometimes developers have to add a little extra to make the feature useful or usable,
-					and other times features have simply not been implemented by any browser or only by browsers that do not yet support
-					assistive technologies. As a consequence it may not yet be practical to use a particular <a href="http://www.w3.org/html/wg/drafts/html/master/">HTML5</a>					feature. </p>
-				<p>The information in the support table is updated on a semi-regular basis, to keep up with support improvements made in
-					browsers as new versions are released.</p>
-				<p><a href="#legend">Support Tables - Legend & notes</a></p>
-				<p><strong id="note" tabindex="-1">NOTE: </strong> Opera is now under Chrome as it uses Chrome's rendering engine and any
-					accessibility support it may have is provided by Chrome's accessibility implementation.</p>
+				<p>This site tests which new HTML5 features are <strong>accessibly</strong> supported by major browsers. This includes if
+				   they are keyboard accessible, mapped to the platform accessibility APIs, and if any accessibility related features are
+				   supported. An accessibly supported feature means it is usable by people who rely on assistive technology, without developers
+				   having to supplement with ARIA or other additional workarounds.</p>
 			</section>
-			
+
 			<aside>
 				<p class="nvda">Use and <a href="http://www.nvaccess.org/wiki/Donate">support</a> <a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a> the open source screen reader for Windows.</p>
 			</aside>
@@ -469,8 +460,7 @@
 							<p><strong>Chrome</strong>: has keyboard support, exposes button as IA2 color chooser exposes color information in RGB
 								as accValue.</p>
 							<p><strong>Firefox:</strong> keyboard accessible, exposed as a button but color value not exposed to AT. Refer to
-								<a
-								href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a>
+								<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a>
 							</p>
 						</td>
 					</tr>
@@ -871,7 +861,7 @@
 				<ul>
 					<li><img src="images/cross.png" width="16" height="16" alt=""> &quot;not supported&quot; means the feature is implemented
 						by the browser, but required accessibility support is not implemented.</li>
-					<li><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">					&quot;partially supported&quot; means the feature is implemented and accessibility support is partially implemented.</li>
+					<li><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">						&quot;partially supported&quot; means the feature is implemented and accessibility support is partially implemented.</li>
 					<li><img src="images/ni.gif" width="25" height="25" alt=""> &quot;not implemented&quot; means the feature has not yet been
 						implemented in a public version of the browser, so accessibility support is unknown.</li>
 					<li><img src="images/tick.png" width="16" height="16" alt=""> &quot;supported&quot; means that the browser exposes feature
@@ -899,23 +889,23 @@
 					<li>Please report any inaccuracies to <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a>.</li>
 				</ul>
 			</section>
-			
+
 			<section id="notes">
 				<h2>Notes &amp; Further Resources</h2>
-				
+
 				<p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br/> 
       			<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</strong></p>
-			  
+
 				<ul class="navlist">
 					<li><strong>elsewhere:</strong></li>
 					<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
 					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a>
-					<li><a href="http://rawgit.com/w3c/aria/master/html-aam/html-aam.html">HTML Accessibility API Mappings 1.0</a>
+						<li><a href="http://rawgit.com/w3c/aria/master/html-aam/html-aam.html">HTML Accessibility API Mappings 1.0</a>
 				</ul>
 			</section>
 		</main>
 
-		<footer>			  
+		<footer>
 			<a class="licence-link" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">
 				<img alt="" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png" />
 				<small>This work is licenced under a Creative Commons Licence.</small>
