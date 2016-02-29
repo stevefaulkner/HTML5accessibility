@@ -213,24 +213,21 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<div><img src="images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="images/logo_reasonably_small.png"
-				alt="Accessibility" width="128" height="128"></div>
-			<h1>A work in progress: February 2016</h1>
-			<p><strong>Editors Draft February 03, 2016</strong></p>
-			<p><strong>WARNING!</strong> the data below is under continued revision</p>
+			<h1>HTML5 Accessibility</h1>
 
 			<nav>
-				<ul class=navlist>
-					<li><strong>elsewhere:</strong></li>
-					<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
-					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a>
-					<li><a href="http://rawgit.com/w3c/aria/master/html-aam/html-aam.html">HTML Accessibility API Mappings 1.0</a>
+				<ul>
+					<li><a href="#results">Browser Results</a></li>
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#support">Feature Support</a></li>
+					<li><a href="#howto">How to Test</a></li>
+					<li><a href="#notes">Notes &amp; Further Resources</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<section aria-label="HTML5 Accessibillity browser support scores">
+			<section id="results" aria-label="HTML5 Accessibillity browser support scores">
 				<ul class="sumry">
 					<li><img src="images/safari_64x64.png" alt="Safari" width="64" height="64" border="0" id="safari-img">
 						<meter min="0" max="100" value="62"></meter>
@@ -251,7 +248,7 @@
 				</ul>
 			</section>
 
-			<section aria-label="overview">
+			<section id="overview" aria-label="overview">
 				<p>This site is a resource to provide information about which <strong>new <a href="http://dev.w3.org/html5/spec/spec.html">HTML5</a> user interface features</strong>					are accessibility supported in browsers, making them usable by people who rely upon assistive technology (AT) to use
 					the web.</p>
 				<p><strong>Note:</strong> Browsers may not have practical accessibility support for HTML features on particular operating
@@ -271,7 +268,7 @@
 				<p class="nvda">Use and <a href="http://www.nvaccess.org/wiki/Donate">support</a> <a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a> the open source screen reader for Windows.</p>
 			</aside>
 
-			<section>
+			<section id="support">
 				<h2>Feature Support</h2>
 
 				<table width="96%" border="1">
@@ -853,7 +850,7 @@
 				</table>
 			</section>
 
-			<section>
+			<section id="howto">
 				<h2><a name="legend">Support Tables - Legend &amp; notes:</a></h2>
 				<ul>
 					<li><img src="images/cross.png" width="16" height="16" alt=""> &quot;not supported&quot; means the feature is implemented
@@ -886,12 +883,23 @@
 					<li>Please report any inaccuracies to <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a>.</li>
 				</ul>
 			</section>
+			
+			<section id="notes">
+				<h2>Notes &amp; Further Resources</h2>
+				
+				<p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br/> 
+      			<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</strong></p>
+			  
+				<ul class="navlist">
+					<li><strong>elsewhere:</strong></li>
+					<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
+					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a>
+					<li><a href="http://rawgit.com/w3c/aria/master/html-aam/html-aam.html">HTML Accessibility API Mappings 1.0</a>
+				</ul>
+			</section>
 		</main>
 
-		<footer>
-			<p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br/> 
-      		<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</strong></p>
-			  
+		<footer>			  
 			<a class="licence-link" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">
 				<img alt="" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png" />
 				<small>This work is licenced under a Creative Commons Licence.</small>
