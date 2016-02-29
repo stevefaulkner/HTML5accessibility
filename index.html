@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>HTML5 accessibility - work in progress June 2015</title>
+<title>HTML5 accessibility - work in progress February 2016</title>
 <script>
 	function noimage()
 
@@ -11,7 +11,7 @@
 
 var imagesOn = (function(){var i=new
 Image();i.src='data:image/gif,GIF89a%01%00%01%00%80%00%00%00%00%00%FF%FF%FF!%F9%04%01%00%00%00%00%2C%00%00%00%00%01%00%01%00%00%02%01D%00%3B';return!!i.width})();
-//alert(imagesOn); 
+//alert(imagesOn);
 
 if
 
@@ -30,7 +30,7 @@ var objCSS = objHead[0].appendChild(document.createElement('link'));
 }
 
 function checkHC(){
-		
+
 			var e,c;
 			//Create a test div
 			e=document.createElement("div");
@@ -46,11 +46,11 @@ function checkHC(){
 			c=c.replace(/ /g,"");
 			//Check if we got back what we set
 			//If not we are in high contrast mode
-			
+
 			if (c!="rgb(31,41,59)"){
 			return true;
 			}
-		
+
 		}
 
 
@@ -70,7 +70,7 @@ function checkHC(){
 		font-size: large
 	}
 
-	h1, h2 { 
+	h1, h2 {
 		font-family: Verdana, arial, helvetica, sans-serif;
 		font-size: larger;
 	}
@@ -117,7 +117,7 @@ function checkHC(){
 		display: inline-block;
 		padding: 2px;
 	}
-	
+
 	span:focus {
 		background: #f5f5f5;
 		border: 2px solid #a0522d;
@@ -149,16 +149,16 @@ function checkHC(){
 	}
 
 	h3 { font-size: 150%; }
-	
+
 	p, li { font-family: arial; }
-	
+
 	h2 { color: #008000; }
 
 	#float { float: right; }
 
 	.float { float: left; }
 
-	.nvda { 
+	.nvda {
 		border:1px #ff7f50 solid;
 		font-size: 80%;
 		padding: 5px;
@@ -205,16 +205,16 @@ function checkHC(){
 		color: #006600;
 		font-size: large;
 	}
-	
+
 	.style2 { color: #CC3300; }
-	
+
 	.style3 { font-size: large; }
-	
-	.style4 { 
+
+	.style4 {
 		font-size: large;
 		color: #006600;
 	}
-	
+
 	.style5 { color: #FF00FF; }
 </style>
 </head>
@@ -222,15 +222,15 @@ function checkHC(){
 <div id="wrapper">
   <header role="banner"> <div id="float">
     <p class="nvda">Use and <a href="http://www.nvaccess.org/wiki/Donate">support</a> <a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a> the open source screen reader for Windows.</p>
-    
-    <p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br> 
-      <a href="http://www.paciellogroup.com/contact/">Contact us</a> for  solutions to your accessibility issues.</strong></p>  
+
+    <p class="nvda"><strong>HTML5accessibility.com <a href="http://www.paciellogroup.com">developed by TPG</a> <em>your accessibility partner</em>. <br>
+      <a href="http://www.paciellogroup.com/contact/">Contact us</a> for  solutions to your accessibility issues.</strong></p>
     </div><div><img src="images/HTML5_Logo.png" alt="HTML5" width="128" height="128" border="0"> <img src="images/logo_reasonably_small.png" alt="Accessibility" width="128" height="128"></div>
     <h1>A work in progress: February 2016</h1>
     <p><strong>Editors Draft February 03, 2016</strong></p>
     <p><strong>WARNING!</strong> the data below is under continued revision</p>
-    
-    
+
+
     <ul class=navlist>
       <li><strong>elsewhere:</strong></li>
       <li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
@@ -238,19 +238,19 @@ function checkHC(){
       <li><a href="http://rawgit.com/w3c/aria/master/html-aam/html-aam.html">HTML Accessibility API Mappings 1.0</a>
       <li><a href="https://github.com/stevefaulkner/HTML5accessibility">Fork HTML5Accessibility</a> on Github</li>
       </ul>
- 
+
   </header>
-  
+
   <div role="main">
-    
+
     <div class=windows>
       <h3><a href="#wbdetails">Major Browsers</a> Summary - Chrome and Firefox   Rock! </h3>
       <p><strong>HTML5 Accessibility Support Score</strong></p>
       <ul class="sumry">
-        <li><img src="images/safari_64x64.png" alt="Safari" width="64" height="64" border="0" id="safari-img"> <meter min="0" max="100" value="62"></meter>  
+        <li><img src="images/safari_64x64.png" alt="Safari" width="64" height="64" border="0" id="safari-img"> <meter min="0" max="100" value="62"></meter>
         <span class="style1">62/100</span>
   </li>
-          <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="93"></meter> 
+          <li><img src="images/chrome.png" alt="Chrome" width="64" height="64" border="0" id="chrome-img"> + <img src="images/opera.png" alt="Opera" width="24" height="24" border="0" id="opera-img"><meter min="0" max="100" value="93"></meter>
           <span class="style1">93/100</span></li>
         <li><img src="images/firefox.png" alt="Firefox" width="64" height="64" border="0" id="FF-img">
           <meter min="0" max="100" value="89"></meter>
@@ -259,7 +259,7 @@ function checkHC(){
         &nbsp;<span class="style3" id="ie">35</span><span class="style3">/100</span></li>
         <li><img src="images/edge.png" alt="Edge"><meter min="0" max="100" value="40"></meter>&nbsp;<span class="style3" id="ie">40/100</span></li>
       </ul>
-    </div>   
+    </div>
    <!-- <div class=mac><h3><img src="images/mac-logo.png" width="64" height="64">  Mac Summary</h3>
       <ul class="sumry">
         <li><img src="images/chrome.png" alt="Chrome" width="62" height="61" border="0" id="chrome-img"><meter min="0" max="370" value="145" aria-labelledby="chrome-img chrome"><span id="chrome">145/370</span></meter></li>
@@ -293,7 +293,7 @@ function checkHC(){
     <p><a href="#legend">Support Tables - Legend & notes</a></p>
     <p><strong id="note" tabindex="-1">NOTE: </strong> Opera is now under Chrome as it uses Chrome's rendering engine and any accessibility support it may have is provided by Chrome's accessibility implementation.</p>
 <h3><a name="wbdetails"></a>Major browsers - Details</h3>
- 
+
     <table width="96%" border="1">
       <caption>
       HTML5 feature accessibility support in  Major Browsers
@@ -658,7 +658,7 @@ function checkHC(){
           <p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
          <p><strong>Firefox:</strong> exposes element with a <code>paragraph</code> role in IA2 (Unsure about the correctness of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p></td>
       </tr>
-      
+
       <tr>
         <th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html">summary</a></code></th>
         <td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
@@ -766,7 +766,7 @@ CurrentIsRequiredForForm;True;) No MSAA.</p>
         <p><strong>Note:</strong> there are incompatibilities between the IE, Firefox and Chrome accessibility implementations of placeholder. </p>
       <p>Refer to: <a href="http://www.html5accessibility.com/tests/placeholder-labelling.html">HTML5 accessibility Chops: the placeholder attribute</a></p></td>
     </tr>
- 
+
   </table>
   <hr>
 
@@ -1116,8 +1116,8 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
         <th scope="row"><a href="http://dev.w3.org/html5/spec/the-track-element.html#the-track-element"><code>track</code></a></th>
         <td ><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-        
-        
+
+
         <td class="partial"><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td class="partial"><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Partially supported</span></td>
         <td><p><strong>IE:</strong> supports both WebVTT and TTML</p>
@@ -1193,7 +1193,7 @@ AXRoleDescription:  &quot;complementary&quot;</p></td>
     <td><p><strong>Safari:</strong> supports via AXPlaceholderValue</p>
 <p>Refer to: <a href="http://www.html5accessibility.com/tests/placeholder-labelling.html">HTML5 accessibility Chops: the placeholder attribute</a></p></td>
   </tr>
-</table>--> 
+</table>-->
 <h3><a name="legend">Support Tables - Legend &amp; notes:</a></h3>
 <ul>
   <li><img src="images/cross.png" width="16" height="16" alt=""> &quot;not supported&quot; means the feature is implemented by the browser, but required accessibility support is not implemented.</li>
