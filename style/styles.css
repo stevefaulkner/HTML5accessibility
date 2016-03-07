@@ -3,7 +3,7 @@
 	src: url("../fonts/leaguespartan-bold.woff2") format("woff2"),
 	     url("../fonts/leaguespartan-bold.woff") format("woff"),
 	     url("../fonts/leaguespartan-bold.ttf") format("truetype");
-	font-weight: bold;
+	font-weight: 700;
 }
 
 @font-face {
@@ -67,14 +67,18 @@ h1 {
 	font: 300 1.75em/1 "Work Sans", sans-serif;
 }
 
+h2,
 .meta h3,
-.reference,
 .test-title {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: .08em;
 	line-height: 1.25;
+	letter-spacing: .08em;
+}
+
+.meta h3,
+.test-title {
+	text-transform: uppercase;
 }
 
 .meta h3::before,
@@ -87,7 +91,13 @@ h1 {
 	content: "";
 }
 
-/* Criteria, reference, and code titles */
+
+h2 {
+	margin-top: .6em;
+	margin-bottom: 1.8em;
+	font-size: 1.1em;
+}
+
 .meta h3 {
 	padding: 2.5em 0 1em; /* Needs to be padding so the test bg doesn't bleed through */
 	font-size: .722em; /* 13px at large breakpoint */
@@ -97,6 +107,16 @@ h1 {
 .reference li {
 	color: #666;
 }
+
+main > section {
+	border-top: 4px solid #333;
+	margin-bottom: 4em;
+}
+
+[id="overview"] {
+	border: 0;
+}
+
 
 /*	CRITERIA AND REFERENCE
  *	--------------------------------------------- */
