@@ -40,6 +40,13 @@ body {
 	color: #333;
 }
 
+[id="overview"]::after,
+[id="results"]::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
 /* Nicer link underlines */
 a:link, a:visited {
 	border-bottom: 1px solid rgba(42, 122, 130, .5);
@@ -121,7 +128,8 @@ h2,
 .meta h3,
 [id="support"] h3,
 aside,
-nav a {
+nav a,
+.browser {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
@@ -164,6 +172,126 @@ main > section {
 	margin-bottom: 4em;
 }
 
+[id="results"] {
+	padding-top: 56px;
+}
+
+.test-results {
+	padding: 0;
+}
+
+.test-results li {
+	position: relative;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	float: left;
+	width: calc(20% - 9.6px);
+	height: 308px;
+	
+	padding-top: 132px;
+	
+	vertical-align: text;
+	background-color: #fcfcfc;
+	list-style: none;
+	text-align: center;
+	box-shadow: 0 0 8px hsla(0, 0%, 0%, .15);
+	background-repeat: no-repeat;
+	background-position: center 60px;
+}
+
+.test-results li + li {
+	margin-left: 12px;
+	margin-top: 0;
+}
+
+.test-results li::before {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+
+	width: 34px;
+	height: 10px;
+	
+	background-color: #f7f7f5;
+	border-radius: 8px;
+	box-shadow: inset 0 0 8px hsla(0, 0%, 0%, .15);
+	
+	content: "";
+	
+}
+
+.chrome { 
+	background-image: url("../images/chrome.png");
+}
+
+.edge { 
+	background-image: url("../images/edge.png");
+	background-size: auto 58px;
+}
+
+.firefox { 
+	background-image: url("../images/firefox.png");
+}
+
+.ie {
+	background-image: url("../images/ie.png");
+}
+
+.safari { 
+	background-image: url("../images/safari_64x64.png");
+}
+
+.browser,
+.platform {
+	font-size: .7em;
+	line-height: 1;
+	margin: 3px 0;
+}
+
+.result {
+	display: inline-block;
+	font-weight: 300;
+	font-size: 3em;
+	line-height: 1;
+	margin: 0;
+	border-top: 4px solid;
+	padding-top: 16px;
+	margin: 16px 0;
+	
+	-webkit-order: -1;
+	-moz-order: -1;
+	-ms-flex-order: -1;
+	order: -1;
+}
+
+.result.high {
+	border-color: #889b30;
+}
+
+.result.medium {
+	border-color: #c0872d; 
+}
+
+.result.low {
+	border-color: #b23828
+}
+
 [id="overview"] {
 	border: 0;
 }
@@ -176,12 +304,6 @@ main > section {
 
 .sponsor {
 	width: 20%;
-}
-
-[id="overview"]::after{
-	display: table;
-	clear: both;
-	content: "";
 }
 
 [id="overview"] > p {
