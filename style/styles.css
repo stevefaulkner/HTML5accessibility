@@ -61,16 +61,67 @@ li + li {
 	margin-top: .5em;
 }
 
+body > header {
+	padding-left: 130px;
+	background: url("../images/temp/logo-temp.png") no-repeat;
+}
+
+body > header::after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+
 
 h1 {
 	margin: 0;
-	font: 300 1.75em/1 "Work Sans", sans-serif;
+	font-family: "League Spartan";
+	font-size: 2.7em;
+	letter-spacing: .03em;
+}
+
+.subtitle {
+	font-size: 1.2em;
+	margin-top: .2em;
+}
+
+.branding {
+	width: calc(100% - 260px);
+	float: left;
+}
+
+nav {
+	display: inline-block;
+	float: right;
+}
+
+nav ul {
+	padding-left: 8px;
+	margin: 0 0 8px;
+	border-left: 2px solid #333;
+}
+nav li {
+	list-style: none;
+	margin: 0;
+	padding-bottom: 4px;
+}
+
+nav li + li {
+	border-top: 2px dotted #333;
+	padding: 4px 0;
+}
+
+nav a:link {
+	color: inherit;
+	font-size: .8em;
+	border: 0;
 }
 
 h2,
 .meta h3,
 .test-title,
-aside {
+aside,
+nav a {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
