@@ -7,761 +7,759 @@
 </head>
 
 <body>
-	<div id="wrapper">
-		<header>
-			<h1>HTML5 Accessibility</h1>
-			<p class="subtitle">Get the current accessiblity support status of HTML5 features across major browsers.</p>
+	<header>
+		<h1>HTML5 Accessibility</h1>
+		<p class="subtitle">Get the current accessiblity support status of HTML5 features across major browsers.</p>
 
-			<nav>
+		<nav>
+			<ul>
+				<li><a href="#results">Browser Results</a></li>
+				<li><a href="#overview">Overview</a></li>
+				<li><a href="#support">Feature Support</a></li>
+				<li><a href="#howto">How to Test</a></li>
+				<li><a href="#notes">Notes &amp; Further Resources</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="results" aria-label="HTML5 Accessibillity browser support scores">
+			<ul class="test-results">
+				<li>
+					<h3 class="browser">Chrome XX, Opera</h3>
+					<p class="platform">(Win)</p>
+					<p class="result">93%</p>
+					<img src="images/chrome.png" width="64" height="64" alt="" />
+					<img src="images/opera.png" width="24" height="24" alt="" />
+				</li>
+				<li>
+					<h3 class="browser">Edge 13</h3>
+					<p class="platform">(Win 10)</p>
+					<p class="result">40%</p>
+					<img src="images/edge.png" height="58" alt="" />
+				</li>
+				<li>
+					<h3 class="browser">Firefox XX</h3>
+					<p class="platform">(Win)</p>
+					<p class="result">89%</p>
+					<img src="images/firefox.png" width="64" height="64" alt="" />
+				</li>
+				<li>
+					<h3 class="browser">Internet Explorer 11</h3>
+					<p class="platform">(Win)</p>
+					<p class="result">35%</p>
+					<img src="images/ie.png" width="64" height="64" alt="" />
+				</li>
+				<li>
+					<h3 class="browser">Safari 8</h3>
+					<p class="platform">(OS X)</p>
+					<p class="result">62%</p>
+					<img src="images/safari_64x64.png" alt="" width="64" height="64" />
+				</li>
+			</ul>
+		</section>
+
+		<section id="overview" aria-label="overview">
+			<p>This site tests which new HTML5 features are <strong>accessibly</strong> supported by major browsers. This includes if
+				they are keyboard accessible, mapped to the platform accessibility APIs, and if any accessibility related features are
+				supported. An accessibly supported feature means it is usable by people who rely on assistive technology, without developers
+				having to supplement with ARIA or other additional workarounds.</p>
+		</section>
+
+		<aside class="sponsor">
+			<p><a href="http://www.nvaccess.org/wiki/Donate">Donate</a> to 
+				<a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a>,
+				the open source screen reader for Windows.
+			</p>
+		</aside>
+
+		<section id="support">
+			<h2>Feature Support</h2>
+			
+			<section>
+				<h3>Sections &amp; Grouping</h3>
+				
+				<table width="96%" border="1">
+					<tr>
+						<th width="14%" scope="col">HTML5 elements (links to test files)</th>
+						<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
+						<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
+							<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
+							alt=""><small>Opera </small></th>
+						<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">Firefox 38 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">IE 11 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
+						<th width="49%" scope="col">Notes</th>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/article.html">article</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+							</p>
+							<p><strong>Firefox:</strong> exposes element with a <code>document</code> role in MSAA/IA2 </p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/section.html">section</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)</p>
+							<p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
+							<p><strong>Firefox:</strong> exposes element with a <code>paragraph</code> role in IA2 (Unsure about the correctness
+								of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/nav.html">nav</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+							</p>
+							<p><strong>Firefox:</strong> exposes as ARIA landmark <code>role=&quot;navigation&quot;</code> via IA2 object attribute</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/aside.html">aside</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+							</p>
+							<p><strong>Firefox:</strong> exposes as ARIA <code>role=&quot;complementary&quot;</code> via IA2 object attribute and
+								IA2 <code>note</code> role. </p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/header.html">header</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+							</p>
+							<p><strong>Firefox:</strong> exposes as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code>								or <code>section</code> elements</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/footer.html">footer</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+							</p>
+							<p><strong>Firefox, Chrome:</strong> exposes as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child
+								of <code>article</code> or <code>section</code> elements</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/figure.html">figure</a></code></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.
+								<br>
+							</p>
+							<p><strong>Firefox &amp; Chrome:</strong> exposes element <code>role=group</code> with accessible name from <code>figcaption</code>.</p>
+							<p><strong>Safari: </strong>dependent on <a href="https://bugs.webkit.org/show_bug.cgi?id=108996">figcaption bug</a></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/figure-figcaption.html">figcaption</a></code></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.
+								<br>
+							</p>
+							<p><strong>Chrome, Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2
+								object attribute. </p>
+							<p><strong>Firefox: </strong>exposes the <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p>
+							<p><strong>Safari:</strong> <a href="https://bugs.webkit.org/show_bug.cgi?id=108996">figcaption bug</a></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/main.html"><code>main</code></a></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><strong>Firefox and Chrome:</strong> implements as <code>role=main.</code>
+							<strong>Edge:</strong> provides no semantic information via accessibility APIs (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
+						</td>
+					</tr>
+				</table>
+			</section>
+			
+			<section>
+				<h3>Text-level</h3>
+				
+				<table width="96%" border="1">
+					<tr>
+						<th width="14%" scope="col">HTML5 elements (links to test files)</th>
+						<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
+						<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
+							<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
+							alt=""><small>Opera </small></th>
+						<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">Firefox 38 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">IE 11 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
+						<th width="49%" scope="col">Notes</th>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/time.html"><code>time</code></a></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td>
+							<p><strong>Safari, IE, Edge:</strong> Currently provides the same amount of semantic information to AT as a span element.
+							</p>
+							<p><a href="https://connect.microsoft.com/IE/feedback/details/1274286/feature-request-expose-html-time-element-semantics-in-acc-layer">Edge bug</a></p>
+							<p><strong>Firefox &amp; Chrome:</strong> exposes as iA2 object attributes - <code>xml-roles:time</code> and <code>datetime</code></p>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<A href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/mark.html"><code>mark</code></A>
+						</th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">							<span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">							<span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make  &lt;mark&gt; element accessible</a>							<a href="https://code.google.com/p/chromium/issues/detail?id=494612">Chrome bug: 494612</a> , <a href="https://bugs.webkit.org/show_bug.cgi?id=145974">Safari Bug 145974</a></td>
+					</tr>
+				</table>
+			</section>
+			
+			<section>
+				<h3>Graphics &amp; Media</h3>
+				
+				<table width="96%" border="1">
+					<tr>
+						<th width="14%" scope="col">HTML5 elements (links to test files)</th>
+						<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
+						<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
+							<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
+							alt=""><small>Opera </small></th>
+						<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">Firefox 38 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">IE 11 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
+						<th width="49%" scope="col">Notes</th>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/canvas.html">canvas</a></code></th>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>IE, Edge, Chrome, Firefox: </strong>supports the accessible canvas element sub-DOM.<strong><br>
+								Firefox, Chrome</strong>: support drawfocus ring.</p>
+							<p><strong>Safari:</strong> supports the accessible canvas element sub-DOM. <strong>Note:</strong> VoiceOver does not
+								appear to announce text in canvas sub-DOM.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/audio.html"><code>audio</code></a></th>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>Safari: </strong>requires VoiceOver to be enabled to be usable with the keyboard.</p>
+							<p><strong>Firefox: (funky) </strong>keyboard access is provided via <a href="http://support.mozilla.org/en-US/kb/Viewing%20video%20in%20Firefox%20without%20a%20plugin#w_keyboard-controls">Firefox specific shortcuts</a></p>
+							<p><strong>Chrome</strong>: Full support!</p>
+							<p><strong>IE 11 / Edge:</strong> Full Support</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>video</code></a></th>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>Safari: </strong>requires VoiceOver to be enabled to be usable with the keyboard.</p>
+							<p><strong>Firefox:</strong> keyboard support <em>suboptimal</em> - cannot interact with individual controls. refer to
+								<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=494175">Bug 494175</a> -<span id="summary_alias_container2"> <span id="short_desc_nonedit_display2">Make &lt;video&gt; and &lt;audio&gt; controls keyboard navigable</span></span>
+							</p>
+							<p><strong>Chrome:</strong> full support! </p>
+							<p><strong>IE 11 / Edge: </strong>Full support!</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>track</code></a></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>IE/Edge:</strong> supports both WebVTT and TTML</p>
+							<p><strong>Chrome/Firefox:</strong> only support WebVTT</p>
+							<p>Refer to <a href="http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/">WebVTT support in browsers</a> for more details</p>
+						</td>
+					</tr>
+				</table>
+			</section>
+			
+			<section>
+				<h3>Controls</h3>
+				
+				<table width="96%" border="1">
+					<tr>
+						<th width="14%" scope="col">HTML5 elements (links to test files)</th>
+						<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
+						<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
+							<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
+							alt=""><small>Opera </small></th>
+						<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">Firefox 38 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
+							<span style="display:block">IE 11 - windows</span></th>
+						<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
+						<th width="49%" scope="col">Notes</th>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-search.html"><code>Search</code></a> <code>input</code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br></a>
+							<a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
+							<p><strong>Safari: </strong>AXSubRole: Searchfield</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-tel.html"><code>Telephone</code></a> <code>input</code></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br></a>
+							<a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
+							<p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-url.html"><code>URL</code></a> <code>input</code></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a></p>
+							<p><a href="https://code.google.com/p/chromium/issues/detail?id=323161">Chrome bug filed - resolved fixed!</a></p>
+							<p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-email.html"><code>E-mail</code></a> <code>input</code></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>Firefox:</strong> supported in Version 27: </p>
+							<p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-datetime-local.html" title="attr-input-type-datetime-local">Local Date and Time</a>
+						<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>Chrome:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and
+								property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-date.html"><code>Date</code></a> <code>input</code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker
+								interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-month.html"><code>Month</code></a> <code>input</code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker
+								interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-week.html"><code>Week</code></a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , and datepicker
+								interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-time.html"><code>Time</code></a> <code>input</code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><strong>Chrome:</strong> Full support.</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-number.html"><code>Number</code></a> <code>input</code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>
+							<p><strong>Chrome</strong>: <del>chrome bug <a href="https://code.google.com/p/chromium/issues/detail?id=385014">385014</a></del>fixed</p>
+						</td>
+					</tr>	
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-range.html"><code>Range</code></a> <code>input</code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>all good</strong></p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-color.html"><code>Color</code></a><code> input</code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td>
+							<p><strong>Chrome</strong>: has keyboard support, exposes button as IA2 color chooser exposes color information in RGB
+								as accValue.</p>
+							<p><strong>Firefox:</strong> keyboard accessible, exposed as a button but color value not exposed to AT. Refer to
+								<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/datalist.html">datalist</a></code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list. (<a href="https://code.google.com/p/chromium/issues/detail?id=282005">related bug</a>)</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/output.html">output</a></code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
+						<td>
+							<p><strong>Firefox:</strong> accessibility support implemented - IA2 <code>section</code> role, with <code>aria-live=polite</code> and hasIA2 <code>controlled_by relation</code> defined by <code>@for</code> attribute.</p>
+							<p><strong>Chrome: </strong>implemented with role=status, <s>refer to <a href="https://code.google.com/p/chromium/issues/detail?id=323143">Chrome bug</a></s>.</p>
+							<p><strong>IE/Edge:</strong> not supported, <a href="https://connect.microsoft.com/IE/feedback/details/809569/implement-html5-output-element-accessibility">IE bug filed</a></p>
+							<p><strong>Note:</strong> there is currently disagreement amongst implementers as to how the sematnics of the output
+								element should be exposed: <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=26135">bug 26135</a> - is <code>role=status</code> correct for output element?</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/progress.html">progress</a></code></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><p><strong>all good</strong></p></td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/meter.html"><code>meter</code></a></th>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
+							<span class="hidden">Partially supported</span>
+						</td>
+						<td>
+							<p>Safari: role= AXProgressIndicator, both current vlaue and fallback content exposed.</p>
+							<p><strong>Firefox: </strong> role exposed as meter in MSAA, properties not exposed. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559770">Firefox bug 1</a> (API) and 
+							<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=687202">Firefox bug 2</a> (UI) </p>
+							<p><strong>Chrome:</strong> exposed as progressbar and value announced, refer to firefox bugs for implementation details that need working out.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html"><code>details</code></a></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><p><strong>Safari:</strong> refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=131111">bug131111</a>.</p></td>
+					</tr>
+					<tr>
+						<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html">summary</a></code></th>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td>
+							<p><strong>Chrome:</strong><del> keyboard support, correct role, (implemented but not in release - expanded/collapsed state). chrome bug: Issue <a href="https://code.google.com/p/chromium/issues/detail?id=282016">282016</a></del> - fixed</p>
+							<p><strong>Safari:</strong> not exposed as a control - see <a href="https://bugs.webkit.org/show_bug.cgi?id=131111">bug131111</a>.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menu-toolbar.html"><code>menu</code></a><code> - <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#toolbar-state">toolbar</a></code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td>not implemented </td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menu-context.html"><code>menu</code></a><code> - <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#popup-menu-state">popup menu</a></code></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><strong>Firefox: </strong>does not indicate presence of popup menu.</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menuitem.html"><code>menuitem</code></a></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><strong>Firefox:</strong> Supports menu item role and keyboard interaction.</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://codepen.io/stevef/debug/dPxgZq"><code>dialog</code></a></th>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td>
+							<p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state.
+								<br>
+								<strong>Note:</strong> Currently Chrome keyboard support is incomplete, does not move focus back to trigger control
+								on dialog close (<a href="https://code.google.com/p/chromium/issues/detail?id=298078">chrome dialog bug</a>) .</p>
+						</td>
+					</tr>
+				</table>
+			</section>
+			
+			<section>
+				<h3>Properties</h3>
+				
+				<table width="96%" border="1">
+					<tr>
+						<th width="13%" scope="col">selected HTML5 attributes (note: this is not all of them!)</th>
+						<th scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
+						<th scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0"> <span style="display:block">Chrome 43 - windows</span>
+							<img src="images/opera.png" width="24" height="24" border="0" alt=""><small>Opera </small></th>
+						<th scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt=""> <span style="display:block">Firefox 38 - windows</span></th>
+						<th scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt=""> <span style="display:block">IE 11 - windows</span></th>
+						<th scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge</span></th>
+						<th width="47%" scope="col">Notes</th>
+					</tr>
+					<!--<tr>
+						<td><code><a href="http://dev.w3.org/html5/spec/dnd.html#the-draggable-attribute">draggable</a></code> attribute</td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
+						<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
+						<td>&nbsp;</td>
+					</tr>-->
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.html"><code>hidden</code></a></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>Chrome, Firefox, IE, Edge: </strong>Content within elements that have a hidden attribute are not displayed or navigable.</p>
+							<p><strong>Note:</strong> In all supporting browsers CSS <code>display:none</code> is applied to elements with the <code>hidden</code> attribute.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/required-att.html"><code>required</code></a></th>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td>
+							<p><strong>Firefox:</strong> exposes popup message as alert and identifies the field as invalid.</p>
+							<p><strong>Chrome</strong>: exposes as IA2 <code>required and invalid </code> states, does not expose popup message.</p>
+							<p><strong>IE:</strong> required state exposed via (UIA - CurrentHelpText;This is a required field;
+								<br> CurrentIsRequiredForForm;True;) No MSAA.</p>
+							<p><strong>Safari:</strong> exposes <code>AXrequired</code> state, does not expose <code>AXinvalid</code> state.</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/placeholder-att.html"><code>placeholder</code></a></th>
+						<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
+						<td>
+							<p><strong>Safari:</strong> Note VoiceOver always announces the placeholder attribute content before label text.</p>
+							<p><strong>Note:</strong> there are incompatibilities between the IE, Firefox and Chrome accessibility implementations of placeholder. </p>
+							<p>Refer to: <a href="http://www.html5accessibility.com/tests/placeholder-labelling.html">HTML5 accessibility Chops: the placeholder attribute</a></p>
+						</td>
+					</tr>
+				</table>
+			</section>
+		</section>
+
+		<section id="howto">
+			<h2>How to Test</h2>
+			
+			<p>Each feature has its own test page, including the pass criteria, and spec references for the required mapping from HTML feature to the platform accessibility layer.</p>
+			<p>Browser support for a feature is automatically detected. This checks to see if the browser claims it supports the feature via object detection, not if it is fully supported correctly. If a feature is not supported, it is excluded from the scoring.</p>
+			<p>If a feature is supported, the next step is to test if it is correctly mapped to the platform accessibility layer. This must be tested manually. This can be done with one of the tools listed at the end of this section.</p>
+			<p>To be accessibly supported, elements that represent interactive controls must be fully keyboard accessible. Actions that must be able to be performed are listed in the test file, but shortcuts may be different between browsers and platforms.</p>
+			
+			<section class="meta">
+				<h3>Browser-Based Dev Tools</h3>
+			
 				<ul>
-					<li><a href="#results">Browser Results</a></li>
-					<li><a href="#overview">Overview</a></li>
-					<li><a href="#support">Feature Support</a></li>
-					<li><a href="#howto">How to Test</a></li>
-					<li><a href="#notes">Notes &amp; Further Resources</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main>
-			<section id="results" aria-label="HTML5 Accessibillity browser support scores">
-				<ul class="test-results">
-					<li>
-						<h3 class="browser">Chrome XX, Opera</h3>
-						<p class="platform">(Win)</p>
-						<p class="result">93%</p>
-						<img src="images/chrome.png" width="64" height="64" alt="" />
-						<img src="images/opera.png" width="24" height="24" alt="" />
-					</li>
-					<li>
-						<h3 class="browser">Edge 13</h3>
-						<p class="platform">(Win 10)</p>
-						<p class="result">40%</p>
-						<img src="images/edge.png" height="58" alt="" />
-					</li>
-					<li>
-						<h3 class="browser">Firefox XX</h3>
-						<p class="platform">(Win)</p>
-						<p class="result">89%</p>
-						<img src="images/firefox.png" width="64" height="64" alt="" />
-					</li>
-					<li>
-						<h3 class="browser">Internet Explorer 11</h3>
-						<p class="platform">(Win)</p>
-						<p class="result">35%</p>
-						<img src="images/ie.png" width="64" height="64" alt="" />
-					</li>
-					<li>
-						<h3 class="browser">Safari 8</h3>
-						<p class="platform">(OS X)</p>
-						<p class="result">62%</p>
-						<img src="images/safari_64x64.png" alt="" width="64" height="64" />
-					</li>
+					<li><a href="chrome://accessibility/">chrome://accessibility/</a> (Chrome)</li>
+					<li><a href="https://addons.mozilla.org/en-US/firefox/addon/6622/">Dom Inspector</a> (Firefox extension)</li>
 				</ul>
 			</section>
-
-			<section id="overview" aria-label="overview">
-				<p>This site tests which new HTML5 features are <strong>accessibly</strong> supported by major browsers. This includes if
-				   they are keyboard accessible, mapped to the platform accessibility APIs, and if any accessibility related features are
-				   supported. An accessibly supported feature means it is usable by people who rely on assistive technology, without developers
-				   having to supplement with ARIA or other additional workarounds.</p>
+			
+			<section class="meta">
+				<h3>Desktop Apps</h3>
+			
+				<ul>
+					<li><a href="https://www.paciellogroup.com/blog/2013/03/aviewer-2013/">Aviewer</a> (Windows)</li>
+					<li><a href="http://msdn.microsoft.com/en-us/library/dd318521%28v=vs.85%29.aspx">Inspect</a> (Part of the Windows SDK)</li>
+					<li><a href="http://accessibility.linuxfoundation.org/a11yweb/util/accprobe/">Accprobe</a> (Open source)</li>
+					<li><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTesting/OSXAXTestingApps.html">Accessibility Inspector</a> (Mac)</li>
+				</ul>
 			</section>
+		</section>
 
-			<aside class="sponsor">
-				<p><a href="http://www.nvaccess.org/wiki/Donate">Donate</a> to 
-				   <a href="http://www.nvda-project.org/"><abbr title="NonVisual Desktop Access ">NVDA</abbr></a>,
-				   the open source screen reader for Windows.
-				</p>
-			</aside>
+		<section id="notes">
+			<h2>Notes &amp; Further Resources</h2>
+			
+			<section class="meta">
+				<h3>Helpful Links</h3>
 
-			<section id="support">
-				<h2>Feature Support</h2>
-				
-				<section>
-					<h3>Sections &amp; Grouping</h3>
-					
-					<table width="96%" border="1">
-						<tr>
-							<th width="14%" scope="col">HTML5 elements (links to test files)</th>
-							<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
-							<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
-								<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
-								alt=""><small>Opera </small></th>
-							<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">Firefox 38 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">IE 11 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
-							<th width="49%" scope="col">Notes</th>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/article.html">article</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
-								</p>
-								<p><strong>Firefox:</strong> exposes element with a <code>document</code> role in MSAA/IA2 </p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/section.html">section</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)</p>
-								<p><strong>Chrome:</strong> exposes element with a <code>section</code> role in IA2</p>
-								<p><strong>Firefox:</strong> exposes element with a <code>paragraph</code> role in IA2 (Unsure about the correctness
-									of this mapping). Refer to <a href="http://www.paciellogroup.com/blog/2011/03/html5-accessibility-chops-section-elements/">HTML5 Accessibility Chops: section elements</a></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/nav.html">nav</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
-								</p>
-								<p><strong>Firefox:</strong> exposes as ARIA landmark <code>role=&quot;navigation&quot;</code> via IA2 object attribute</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/aside.html">aside</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
-								</p>
-								<p><strong>Firefox:</strong> exposes as ARIA <code>role=&quot;complementary&quot;</code> via IA2 object attribute and
-									IA2 <code>note</code> role. </p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/header.html">header</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
-								</p>
-								<p><strong>Firefox:</strong> exposes as ARIA landmark <code>role=&quot;banner&quot;</code> when not a child of <code>article</code>								or <code>section</code> elements</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/footer.html">footer</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>								(<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
-								</p>
-								<p><strong>Firefox, Chrome:</strong> exposes as ARIA landmark <code>role=&quot;contentinfo&quot;</code> when not a child
-									of <code>article</code> or <code>section</code> elements</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/figure.html">figure</a></code></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>IE:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.
-									<br>
-								</p>
-								<p><strong>Firefox &amp; Chrome:</strong> exposes element <code>role=group</code> with accessible name from <code>figcaption</code>.</p>
-								<p><strong>Safari: </strong>dependent on <a href="https://bugs.webkit.org/show_bug.cgi?id=108996">figcaption bug</a></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/figure-figcaption.html">figcaption</a></code></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> provides no semantic information via accessibility APIs<abbr title="assistive technology"></abbr>.
-									<br>
-								</p>
-								<p><strong>Chrome, Firefox:</strong> exposes element as IA2 <code>caption</code> role and the element name as an IA2
-									object attribute. </p>
-								<p><strong>Firefox: </strong>exposes the <code>figcaption</code> content as an accessible name for its parent <code>figure</code>.</p>
-								<p><strong>Safari:</strong> <a href="https://bugs.webkit.org/show_bug.cgi?id=108996">figcaption bug</a></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/main.html"><code>main</code></a></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><strong>Firefox and Chrome:</strong> implements as <code>role=main.</code>
-							    <strong>Edge:</strong> provides no semantic information via accessibility APIs (<a href="http://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">related bug</a>)
-							</td>
-						</tr>
-					</table>
-				</section>
-				
-				<section>
-					<h3>Text-level</h3>
-					
-					<table width="96%" border="1">
-						<tr>
-							<th width="14%" scope="col">HTML5 elements (links to test files)</th>
-							<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
-							<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
-								<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
-								alt=""><small>Opera </small></th>
-							<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">Firefox 38 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">IE 11 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
-							<th width="49%" scope="col">Notes</th>
-						</tr>
-					 	<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/time.html"><code>time</code></a></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td>
-								<p><strong>Safari, IE, Edge:</strong> Currently provides the same amount of semantic information to AT as a span element.
-								</p>
-								<p><a href="https://connect.microsoft.com/IE/feedback/details/1274286/feature-request-expose-html-time-element-semantics-in-acc-layer">Edge bug</a></p>
-								<p><strong>Firefox &amp; Chrome:</strong> exposes as iA2 object attributes - <code>xml-roles:time</code> and <code>datetime</code></p>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<A href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/mark.html"><code>mark</code></A>
-							</th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">							<span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">							<span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>Currently provides the same amount of semantic information to AT as a span element. Firefox bug: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">make  &lt;mark&gt; element accessible</a>							<a href="https://code.google.com/p/chromium/issues/detail?id=494612">Chrome bug: 494612</a> , <a href="https://bugs.webkit.org/show_bug.cgi?id=145974">Safari Bug 145974</a></td>
-						</tr>
-					</table>
-				</section>
-				
-				<section>
-					<h3>Graphics &amp; Media</h3>
-					
-					<table width="96%" border="1">
-						<tr>
-							<th width="14%" scope="col">HTML5 elements (links to test files)</th>
-							<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
-							<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
-								<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
-								alt=""><small>Opera </small></th>
-							<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">Firefox 38 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">IE 11 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
-							<th width="49%" scope="col">Notes</th>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/canvas.html">canvas</a></code></th>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>IE, Edge, Chrome, Firefox: </strong>supports the accessible canvas element sub-DOM.<strong><br>
-									Firefox, Chrome</strong>: support drawfocus ring.</p>
-								<p><strong>Safari:</strong> supports the accessible canvas element sub-DOM. <strong>Note:</strong> VoiceOver does not
-									appear to announce text in canvas sub-DOM.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/audio.html"><code>audio</code></a></th>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>Safari: </strong>requires VoiceOver to be enabled to be usable with the keyboard.</p>
-								<p><strong>Firefox: (funky) </strong>keyboard access is provided via <a href="http://support.mozilla.org/en-US/kb/Viewing%20video%20in%20Firefox%20without%20a%20plugin#w_keyboard-controls">Firefox specific shortcuts</a></p>
-								<p><strong>Chrome</strong>: Full support!</p>
-								<p><strong>IE 11 / Edge:</strong> Full Support</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>video</code></a></th>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>Safari: </strong>requires VoiceOver to be enabled to be usable with the keyboard.</p>
-								<p><strong>Firefox:</strong> keyboard support <em>suboptimal</em> - cannot interact with individual controls. refer to
-									<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=494175">Bug 494175</a> -<span id="summary_alias_container2"> <span id="short_desc_nonedit_display2">Make &lt;video&gt; and &lt;audio&gt; controls keyboard navigable</span></span>
-								</p>
-								<p><strong>Chrome:</strong> full support! </p>
-								<p><strong>IE 11 / Edge: </strong>Full support!</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>track</code></a></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>IE/Edge:</strong> supports both WebVTT and TTML</p>
-								<p><strong>Chrome/Firefox:</strong> only support WebVTT</p>
-								<p>Refer to <a href="http://www.w3.org/community/texttracks/2012/08/23/webvtt-support-in-browsers/">WebVTT support in browsers</a> for more details</p>
-							</td>
-						</tr>
-					</table>
-				</section>
-				
-				<section>
-					<h3>Controls</h3>
-					
-					<table width="96%" border="1">
-						<tr>
-							<th width="14%" scope="col">HTML5 elements (links to test files)</th>
-							<th width="13%" scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
-							<th width="13%" scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0">
-								<span style="display:block">Chrome 43 - windows</span><img src="images/opera.png" width="24" height="24" border="0"
-								alt=""><small>Opera </small></th>
-							<th width="11%" scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">Firefox 38 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt="">
-								<span style="display:block">IE 11 - windows</span></th>
-							<th width="13%" scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge 13 - windows</span></th>
-							<th width="49%" scope="col">Notes</th>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-search.html"><code>Search</code></a> <code>input</code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br></a>
-								<a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
-								<p><strong>Safari: </strong>AXSubRole: Searchfield</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-tel.html"><code>Telephone</code></a> <code>input</code></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.<br></a>
-								<a href="https://code.google.com/p/chromium/issues/detail?id=323161"><del>Chrome bug filed</del> - fixed</a></p>
-								<p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-url.html"><code>URL</code></a> <code>input</code></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>Firefox:</strong> supported in Version 27: see resolved bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=924896">Expose whether the input is a search, url, tel, etc.</a></p>
-								<p><a href="https://code.google.com/p/chromium/issues/detail?id=323161">Chrome bug filed - resolved fixed!</a></p>
-								<p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-email.html"><code>E-mail</code></a> <code>input</code></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>Firefox:</strong> supported in Version 27: </p>
-								<p><a href="https://bugs.webkit.org/show_bug.cgi?id=145973">Safari bug</a></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-datetime-local.html" title="attr-input-type-datetime-local">Local Date and Time</a>
-							<code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>Chrome:</strong> keyboard operable, spin buttons exposed correctly (except for accname). No role state and
-									property information exposed for calendar interface. No indication that the control can expose a date picker control.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-date.html"><code>Date</code></a> <code>input</code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker
-									interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-month.html"><code>Month</code></a> <code>input</code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , but not for datepicker
-									interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-week.html"><code>Week</code></a> <code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-input-element">input</a></code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>Chrome:</strong> keyboard operable. role state and property information exposed for input , and datepicker
-									interface. Datepicker can be opened using <kbd>alt+down</kbd> arrow keys.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-time.html"><code>Time</code></a> <code>input</code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><strong>Chrome:</strong> Full support.</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-number.html"><code>Number</code></a> <code>input</code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>
-								<p><strong>Chrome</strong>: <del>chrome bug <a href="https://code.google.com/p/chromium/issues/detail?id=385014">385014</a></del>fixed</p>
-							</td>
-						</tr>	
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-range.html"><code>Range</code></a> <code>input</code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>all good</strong></p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-color.html"><code>Color</code></a><code> input</code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td>
-								<p><strong>Chrome</strong>: has keyboard support, exposes button as IA2 color chooser exposes color information in RGB
-									as accValue.</p>
-								<p><strong>Firefox:</strong> keyboard accessible, exposed as a button but color value not exposed to AT. Refer to
-									<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">bug 559767</a>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/datalist.html">datalist</a></code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>Chrome:</strong> keyboard accessible. Does not expose datalist as list. (<a href="https://code.google.com/p/chromium/issues/detail?id=282005">related bug</a>)</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/output.html">output</a></code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span> </td>
-							<td>
-								<p><strong>Firefox:</strong> accessibility support implemented - IA2 <code>section</code> role, with <code>aria-live=polite</code> and hasIA2 <code>controlled_by relation</code> defined by <code>@for</code> attribute.</p>
-								<p><strong>Chrome: </strong>implemented with role=status, <s>refer to <a href="https://code.google.com/p/chromium/issues/detail?id=323143">Chrome bug</a></s>.</p>
-								<p><strong>IE/Edge:</strong> not supported, <a href="https://connect.microsoft.com/IE/feedback/details/809569/implement-html5-output-element-accessibility">IE bug filed</a></p>
-								<p><strong>Note:</strong> there is currently disagreement amongst implementers as to how the sematnics of the output
-									element should be exposed: <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=26135">bug 26135</a> - is <code>role=status</code> correct for output element?</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/progress.html">progress</a></code></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><p><strong>all good</strong></p></td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/meter.html"><code>meter</code></a></th>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt="">
-								<span class="hidden">Partially supported</span>
-							</td>
-							<td>
-								<p>Safari: role= AXProgressIndicator, both current vlaue and fallback content exposed.</p>
-								<p><strong>Firefox: </strong> role exposed as meter in MSAA, properties not exposed. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559770">Firefox bug 1</a> (API) and 
-								<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=687202">Firefox bug 2</a> (UI) </p>
-								<p><strong>Chrome:</strong> exposed as progressbar and value announced, refer to firefox bugs for implementation details that need working out.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html"><code>details</code></a></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><p><strong>Safari:</strong> refer to <a href="https://bugs.webkit.org/show_bug.cgi?id=131111">bug131111</a>.</p></td>
-						</tr>
-						<tr>
-							<th scope="row"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html">summary</a></code></th>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td>
-								<p><strong>Chrome:</strong><del> keyboard support, correct role, (implemented but not in release - expanded/collapsed state). chrome bug: Issue <a href="https://code.google.com/p/chromium/issues/detail?id=282016">282016</a></del> - fixed</p>
-								<p><strong>Safari:</strong> not exposed as a control - see <a href="https://bugs.webkit.org/show_bug.cgi?id=131111">bug131111</a>.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menu-toolbar.html"><code>menu</code></a><code> - <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#toolbar-state">toolbar</a></code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td>not implemented </td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menu-context.html"><code>menu</code></a><code> - <a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#popup-menu-state">popup menu</a></code></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><strong>Firefox: </strong>does not indicate presence of popup menu.</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/menuitem.html"><code>menuitem</code></a></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><strong>Firefox:</strong> Supports menu item role and keyboard interaction.</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://codepen.io/stevef/debug/dPxgZq"><code>dialog</code></a></th>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt="Supported"> <span class="hidden">Supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td>
-								<p><strong>Chrome: </strong>exposes correct role for dialog and traps focus in dialog in the modal state.
-									<br>
-									<strong>Note:</strong> Currently Chrome keyboard support is incomplete, does not move focus back to trigger control
-									on dialog close (<a href="https://code.google.com/p/chromium/issues/detail?id=298078">chrome dialog bug</a>) .</p>
-							</td>
-						</tr>
-					</table>
-				</section>
-				
-				<section>
-					<h3>Properties</h3>
-					
-					<table width="96%" border="1">
-						<tr>
-							<th width="13%" scope="col">selected HTML5 attributes (note: this is not all of them!)</th>
-							<th scope="col"><img src="images/safari_64x64.png" alt="" width="64" height="64" border="0"> <span style="display:block">Safari 8 - OSX</span></th>
-							<th scope="col"><img src="images/chrome.png" alt="" width="64" height="64" border="0"> <span style="display:block">Chrome 43 - windows</span>
-								<img src="images/opera.png" width="24" height="24" border="0" alt=""><small>Opera </small></th>
-							<th scope="col"><img src="images/firefox.png" width="64" height="64" border="0" alt=""> <span style="display:block">Firefox 38 - windows</span></th>
-							<th scope="col"><img src="images/ie.png" width="64" height="64" border="0" alt=""> <span style="display:block">IE 11 - windows</span></th>
-							<th scope="col"><img src="images/edge.png" width="64" height="69" alt="Edge"><span style="display:block">Edge</span></th>
-							<th width="47%" scope="col">Notes</th>
-						</tr>
-						<!--<tr>
-							<td><code><a href="http://dev.w3.org/html5/spec/dnd.html#the-draggable-attribute">draggable</a></code> attribute</td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/ni.gif" width="25" height="25" alt=""><span class="hidden">Not implemented</span></td>
-							<td><img src="images/cross.png" width="16" height="16" alt=""><span class="hidden">Not supported</span></td>
-							<td>&nbsp;</td>
-						</tr>-->
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/hidden-att.html"><code>hidden</code></a></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>Chrome, Firefox, IE, Edge: </strong>Content within elements that have a hidden attribute are not displayed or navigable.</p>
-								<p><strong>Note:</strong> In all supporting browsers CSS <code>display:none</code> is applied to elements with the <code>hidden</code> attribute.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/required-att.html"><code>required</code></a></th>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td>
-								<p><strong>Firefox:</strong> exposes popup message as alert and identifies the field as invalid.</p>
-								<p><strong>Chrome</strong>: exposes as IA2 <code>required and invalid </code> states, does not expose popup message.</p>
-								<p><strong>IE:</strong> required state exposed via (UIA - CurrentHelpText;This is a required field;
-									<br> CurrentIsRequiredForForm;True;) No MSAA.</p>
-								<p><strong>Safari:</strong> exposes <code>AXrequired</code> state, does not expose <code>AXinvalid</code> state.</p>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/placeholder-att.html"><code>placeholder</code></a></th>
-							<td><img src="images/tick.png" width="16" height="16" alt=""><span class="hidden"> Supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td><img src="images/cross.gif" width="16" height="16" alt=""> <img src="images/tick.png" width="16" height="16" alt=""><span class="hidden">Partially supported</span></td>
-							<td>
-								<p><strong>Safari:</strong> Note VoiceOver always announces the placeholder attribute content before label text.</p>
-								<p><strong>Note:</strong> there are incompatibilities between the IE, Firefox and Chrome accessibility implementations of placeholder. </p>
-								<p>Refer to: <a href="http://www.html5accessibility.com/tests/placeholder-labelling.html">HTML5 accessibility Chops: the placeholder attribute</a></p>
-							</td>
-						</tr>
-					</table>
-				</section>
+				<ul>
+					<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
+					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a></li>
+				</ul>
 			</section>
+			
+			<section class="meta">
+				<h3>Contributors</h3>
 
-			<section id="howto">
-				<h2>How to Test</h2>
-				
-				<p>Each feature has its own test page, including the pass criteria, and spec references for the required mapping from HTML feature to the platform accessibility layer.</p>
-				<p>Browser support for a feature is automatically detected. This checks to see if the browser claims it supports the feature via object detection, not if it is fully supported correctly. If a feature is not supported, it is excluded from the scoring.</p>
-				<p>If a feature is supported, the next step is to test if it is correctly mapped to the platform accessibility layer. This must be tested manually. This can be done with one of the tools listed at the end of this section.</p>
-				<p>To be accessibly supported, elements that represent interactive controls must be fully keyboard accessible. Actions that must be able to be performed are listed in the test file, but shortcuts may be different between browsers and platforms.</p>
-				
-				<section class="meta">
-					<h3>Browser-Based Dev Tools</h3>
-				
-					<ul>
-						<li><a href="chrome://accessibility/">chrome://accessibility/</a> (Chrome)</li>
-						<li><a href="https://addons.mozilla.org/en-US/firefox/addon/6622/">Dom Inspector</a> (Firefox extension)</li>
-					</ul>
-				</section>
-				
-				<section class="meta">
-					<h3>Desktop Apps</h3>
-				
-					<ul>
-						<li><a href="https://www.paciellogroup.com/blog/2013/03/aviewer-2013/">Aviewer</a> (Windows)</li>
-						<li><a href="http://msdn.microsoft.com/en-us/library/dd318521%28v=vs.85%29.aspx">Inspect</a> (Part of the Windows SDK)</li>
-						<li><a href="http://accessibility.linuxfoundation.org/a11yweb/util/accprobe/">Accprobe</a> (Open source)</li>
-						<li><a href="http://developer.apple.com/library/mac/#documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTesting/OSXAXTestingApps.html">Accessibility Inspector</a> (Mac)</li>
-					</ul>
-				</section>
+				<p>HTML5 Accessiblity was <a href="http://www.paciellogroup.com">developed by The Paciello Group</a>, your accessibility partner.
+				<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</p>
+					
+				<p>Further design and development by <a href="https://www.twitter.com/dstorey">David Storey</a> and 
+				<a href="https://www.twitter.com/somelaniesaid">Melanie Richards</a> of the Microsoft Edge team.</p>
 			</section>
+		</section>
+	</main>
 
-			<section id="notes">
-				<h2>Notes &amp; Further Resources</h2>
-				
-				<section class="meta">
-					<h3>Helpful Links</h3>
+	<footer>
+		<a class="licence" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">
+			<img alt="" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png" />
+			<small>This work is licenced under a Creative Commons Licence.</small>
+		</a>
 
-					<ul>
-						<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
-						<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a></li>
-					</ul>
-				</section>
-				
-				<section class="meta">
-					<h3>Contributors</h3>
-
-					<p>HTML5 Accessiblity was <a href="http://www.paciellogroup.com">developed by The Paciello Group</a>, your accessibility partner.
-					<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</p>
-					  
-					<p>Further design and development by <a href="https://www.twitter.com/dstorey">David Storey</a> and 
-					<a href="https://www.twitter.com/somelaniesaid">Melanie Richards</a> of the Microsoft Edge team.</p>
-				</section>
-			</section>
-		</main>
-
-		<footer>
-			<a class="licence" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">
-				<img alt="" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png" />
-				<small>This work is licenced under a Creative Commons Licence.</small>
-			</a>
-
-			<a class="github" href="https://github.com/stevefaulkner/HTML5accessibility">Fork on GitHub</a>
-		</footer>
-	</div>
+		<a class="github" href="https://github.com/stevefaulkner/HTML5accessibility">Fork on GitHub</a>
+	</footer>
 </body>
 </html>
