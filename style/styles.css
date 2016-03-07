@@ -69,7 +69,8 @@ h1 {
 
 h2,
 .meta h3,
-.test-title {
+.test-title,
+aside {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
@@ -115,6 +116,34 @@ main > section {
 
 [id="overview"] {
 	border: 0;
+}
+
+[id="overview"] > p,
+.sponsor  {
+	float: left;
+	width: 80%;
+}
+
+.sponsor {
+	width: 20%;
+}
+
+[id="overview"]::after{
+	display: table;
+	clear: both;
+	content: "";
+}
+
+[id="overview"] > p {
+	font: 300 1.6em/1.4 "Work Sans", sans-serif;
+	margin-top: 0;
+	padding-right: 24px;
+}
+
+.sponsor {
+	font-size: .8em;
+	line-height: 1.8;
+	padding-left: 20px
 }
 
 /* without column-span and some way to break columns, elements clash into each other */
