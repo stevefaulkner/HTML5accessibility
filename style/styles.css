@@ -135,7 +135,8 @@ main > section {
 }
 
 [id="overview"] > p {
-	font: 300 1.6em/1.4 "Work Sans", sans-serif;
+	font-size: 1.6em;
+	font-weight: 300;
 	margin-top: 0;
 	padding-right: 24px;
 }
