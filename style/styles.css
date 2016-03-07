@@ -29,7 +29,6 @@
 
 html {
 	border: .75em solid #fff;
-	min-height: 100vh;
 }
 
 body {
@@ -62,24 +61,15 @@ li + li {
 	margin-top: .5em;
 }
 
-code {
-	white-space: pre-wrap;
-	text-transform: none;
-	font-family: Consolas, monaco, monospace;
-	-moz-tab-size: 4;
-	tab-size: 4;
-}
 
-/* Direct descendents = scoped to avoid test markup */
-body > h1 {
+h1 {
 	margin: 0;
 	font: 300 1.75em/1 "Work Sans", sans-serif;
 }
 
 .meta h2,
 .reference,
-.test-title,
-.code-title {
+.test-title {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -98,15 +88,13 @@ body > h1 {
 }
 
 /* Criteria, reference, and code titles */
-.meta h2,
-.code-title {
+.meta h2 {
 	padding: 2.5em 0 1em; /* Needs to be padding so the test bg doesn't bleed through */
 	font-size: .722em; /* 13px at large breakpoint */
 }
 
 /* Reference labels and code titles */
-.reference li,
-.code-title {
+.reference li {
 	color: #666;
 }
 
@@ -145,14 +133,6 @@ body > h1 {
 	height: 4px;
 }
 
-.meta ul ul {
-	margin: .5em 0 0 1em;
-}
-
-.meta li li:before {
-	transform: rotate(45deg);
-}
-
 .reference li {
 	white-space: nowrap;
 	font-size: .611em; /* 11px */
@@ -176,16 +156,6 @@ body > h1 {
  *  test content and code snippets.
  *	--------------------------------------------- */
 
-.test {
-	margin-top: 2em;
-}
-
-.test-case,
-.test pre {
-	padding: 20px;
-	background: hsla(0, 0%, 100%, .75);
-	border: 2px solid hsla(0, 0%, 0%, .1);
-}
 
 .test-title {
 	position: relative;
@@ -194,43 +164,6 @@ body > h1 {
 	font-size: 1.111em; /* 20px at large breakpoint */
 }
 
-.test-title:before {
-	width: 1em;
-	height: 1em;
-}
-
-/* Circle */
-.test:nth-child(4n) .test-title:before {
-	border-radius: .5em;
-}
-
-/* Triangle */
-.test:nth-child(4n+1) .test-title:before {
-	border-radius: 0;
-	border-left: .5em solid transparent;
-	border-right: .5em solid transparent;
-	border-bottom: .825em solid #333;
-	width: 0;
-	height: 0;
-	margin-top: .125em;
-	background: transparent;
-}
-
-/* Diamond */
-.test:nth-child(4n+2) .test-title:before {
-	width: .75em;
-	height: .75em;
-	transform: rotate(45deg);
-	margin-top: .125em;
-}
-
-.code-title {
-	margin: 20px 0 0;
-}
-
-.test pre {
-	margin-top: 0;
-}
 
 /*	SMALL BREAKPOINT
  *	--------------------------------------------- */
