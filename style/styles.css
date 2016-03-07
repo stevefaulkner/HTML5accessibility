@@ -119,7 +119,7 @@ nav a:link, nav a:visited {
 
 h2,
 .meta h3,
-.test-title,
+[id="support"] h3,
 aside,
 nav a {
 	font-family: "League Spartan", sans-serif;
@@ -129,13 +129,12 @@ nav a {
 }
 
 .meta h3,
-.test-title {
+[id="support"] h3 {
 	text-transform: uppercase;
 }
 
 .meta h3::before,
-.meta li:before,
-.test-title:before {
+.meta li:before {
 	display: block;
 	position: absolute;
 	left: 0;
@@ -302,17 +301,45 @@ footer {
 	letter-spacing: 0;
 }
 
-/*	TESTS
- *	20px measurements in here are to ensure white space around
- *  test content and code snippets.
- *	--------------------------------------------- */
-
-
-.test-title {
+[id="support"] > section {
 	position: relative;
+}
+
+[id="support"] > section h3::before {
+	position: absolute;
+	left: -80px;
+	width: 64px;
+	height: 100%;
+	margin-top: -6px;
+	content: "";
+	background-repeat: no-repeat;
+	background-origin: content-box;
+}
+
+#sections h3::before {
+	background-image: url("../images/temp/sections-temp.png");
+}
+
+#text h3::before {
+	background-image: url("../images/temp/text-temp.png");
+}
+
+#graphics h3::before {
+	background-image: url("../images/temp/media-temp.png");
+}
+
+#controls h3::before {
+	background-image: url("../images/temp/controls-temp.png");
+}
+
+#properties h3::before {
+	background-image: url("../images/temp/properties-temp.png");
+}
+
+[id="support"] h3 {
 	margin: 0;
-	padding: 2em 0 1.333em 1.5em;
-	font-size: 1.111em; /* 20px at large breakpoint */
+	padding: 1.5em 0 1em;
+	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
 
