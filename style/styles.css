@@ -117,15 +117,65 @@ main > section {
 	border: 0;
 }
 
+/* without column-span and some way to break columns, elements clash into each other */
+@supports (column-span: all) {
+	
+	[id="howto"] {
+		-webkit-column-count: 3;
+		column-count: 3;
+		
+		-webkit-column-gap: 48px;
+		column-gap: 48px;
+	}
 
-/*	CRITERIA AND REFERENCE
- *	--------------------------------------------- */
+	[id="howto"] h2 {
+		column-span: all;
+	}
+	
+	[id="howto"] p { 
+		-webkit-column-break-inside: avoid;
+		break-inside: avoid; 
+	}
+	
+	/* stop having blank line at top and bottom of columns */
+	[id="howto"] p:first-of-type,
+	[id="howto"] p + section h3 {
+		margin-top: 0;
+	}
+
+	[id="howto"] p:last-of-type {
+		margin-bottom: 0;
+	}
+
+}
+
+[id="links"],
+[id="contributors"],
+footer {
+	float: left;
+	width: 33.33%;
+	padding: 0 16px;
+}
+
+[id="links"] {
+	padding: 0 32px 0 0;
+}
+
+footer {
+	padding: 0 0 0 32px;
+}
 
 .meta h3 {
 	position: relative;
 	margin: 3em 0 0;
 	padding-top: 1.5em;
 	border-top: 0;
+}
+
+/* sections floated under means double margin, so remove one */
+[id="links"] h3,
+[id="contributors"] h3 {
+	margin-top: 0;
 }
 
 .meta h3::before {
