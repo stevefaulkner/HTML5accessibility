@@ -369,7 +369,7 @@ footer {
 }
 
 footer {
-	padding: 0 0 0 32px;
+	padding: 64px 0 0 32px;
 }
 
 .meta h3 {
@@ -381,9 +381,11 @@ footer {
 
 /* sections floated under means double margin, so remove one */
 [id="links"] h3,
-[id="contributors"] h3 {
+[id="contributors"] h3,
+[id="contributors"] p:first-of-type {
 	margin-top: 0;
 }
+
 
 .meta h3::before {
 	top: 0;
@@ -469,13 +471,9 @@ footer {
 	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
-/* hack due to floated elements below. Fix correctly later */
-[id="notes"] {
-	margin-bottom: 0;
-}
-
-.licence img {
-	display: block;
+.licence {
+	background: url("../images/temp/cc-temp.png") no-repeat;
+	padding-top: 52px;
 }
 
 a.github {
