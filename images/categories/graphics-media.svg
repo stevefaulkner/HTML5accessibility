@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" viewBox="0 0 48 44">
+  <path id="Video_Outline" fill="none" stroke="#000" stroke-width="4" stroke-miterlimit="10" d="M2 2h44v40H2z"/>
+  <g id="Video_Controls">
+    <path fill="none" stroke="#000" stroke-width="4" stroke-miterlimit="10" d="M4 30h40"/>
+    <g id="Pause" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10">
+      <path d="M7 34v4M10 34v4"/>
+    </g>
+    <path id="Track" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" d="M13 36h29"/>
+    <path id="Time_Marker" d="M18 34h4v4h-4z"/>
+  </g>
+</svg>
