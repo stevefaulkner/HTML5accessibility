@@ -129,7 +129,8 @@ h2,
 [id="support"] h3,
 aside,
 nav a,
-.browser {
+.browser,
+.github {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
@@ -348,6 +349,10 @@ main > section {
 	[id="howto"] p:last-of-type {
 		margin-bottom: 0;
 	}
+	
+	[id="howto"] p + section {
+		break-inside: avoid;
+	}
 
 }
 
@@ -364,7 +369,7 @@ footer {
 }
 
 footer {
-	padding: 0 0 0 32px;
+	padding: 64px 0 0 32px;
 }
 
 .meta h3 {
@@ -376,9 +381,11 @@ footer {
 
 /* sections floated under means double margin, so remove one */
 [id="links"] h3,
-[id="contributors"] h3 {
+[id="contributors"] h3,
+[id="contributors"] p:first-of-type {
 	margin-top: 0;
 }
+
 
 .meta h3::before {
 	top: 0;
@@ -464,6 +471,23 @@ footer {
 	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
+.licence {
+	background: url("../images/temp/cc-temp.png") no-repeat;
+	padding-top: 52px;
+}
+
+a.github {
+	display: inline-block;
+	color: #f7f7f7;
+	text-transform: uppercase;
+	font-size: .7em;
+	line-height: 1;
+	padding: 16px 10px 14px 42px;
+	margin-top: 28px;
+	border: 0;
+	border-radius: 4px;
+	background: url("../images/temp/github-temp.png") no-repeat 6px center #333;
+}
 
 /*	SMALL BREAKPOINT
  *	--------------------------------------------- */
