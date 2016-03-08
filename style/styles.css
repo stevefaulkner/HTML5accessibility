@@ -348,6 +348,10 @@ main > section {
 	[id="howto"] p:last-of-type {
 		margin-bottom: 0;
 	}
+	
+	[id="howto"] p + section {
+		break-inside: avoid;
+	}
 
 }
 
