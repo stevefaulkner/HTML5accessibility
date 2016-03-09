@@ -70,7 +70,7 @@ li + li {
 
 body > header {
 	padding-left: 130px;
-	background: url("../images/temp/logo-temp.png") no-repeat;
+	background: url("../images/logos/html5-a11y.svg") no-repeat;
 }
 
 body > header::after {
@@ -540,30 +540,31 @@ footer {
 	left: -80px;
 	width: 64px;
 	height: 100%;
-	margin-top: -6px;
+	margin-top: -4px;
 	content: "";
 	background-repeat: no-repeat;
 	background-origin: content-box;
 }
 
 #sections h3::before {
-	background-image: url("../images/temp/sections-temp.png");
+	background-image: url("../images/categories/sections.svg");
 }
 
 #text h3::before {
-	background-image: url("../images/temp/text-temp.png");
+	background-image: url("../images/categories/text.svg");
 }
 
 #graphics h3::before {
-	background-image: url("../images/temp/media-temp.png");
+	background-image: url("../images/categories/graphics.svg");
 }
 
 #controls h3::before {
-	background-image: url("../images/temp/controls-temp.png");
+	background-image: url("../images/categories/controls.svg");
 }
 
 #properties h3::before {
-	background-image: url("../images/temp/properties-temp.png");
+	background-image: url("../images/categories/properties.svg");
+	margin-top: 0;
 }
 
 [id="support"] h3 {
@@ -573,7 +574,7 @@ footer {
 }
 
 .licence {
-	background: url("../images/temp/cc-temp.png") no-repeat;
+	background: url("../images/logos/creative-commons.svg") no-repeat;
 	padding-top: 52px;
 }
 
@@ -587,7 +588,7 @@ a.github {
 	margin-top: 28px;
 	border: 0;
 	border-radius: 4px;
-	background: url("../images/temp/github-temp.png") no-repeat 6px center #333;
+	background: url("../images/logos/github.svg") no-repeat 9px center #333;
 }
 
 /*	SMALL BREAKPOINT
