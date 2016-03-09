@@ -258,6 +258,107 @@ main > section {
 	background-image: url("../images/safari_64x64.png");
 }
 
+table {
+	background-color: #fcfcfc;
+	padding: 12px 24px 36px;
+	border-top: 4px solid #333;
+	width: 100%;
+	border-spacing: 0;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 0 12px hsla(0, 0%, 0%, .15);
+}
+
+th {
+	text-align: left;
+	padding-left: 10px;
+
+}
+
+thead th {
+	text-transform: uppercase;
+	font-size: 16px;
+	border-width: 0 0 2px 2px;
+	border-image: linear-gradient(to bottom, transparent, transparent 50%,
+											#929292 50%, #929292 100%) 2; 
+}
+
+thead th:first-of-type {
+	border-width: 0 0 2px 0;
+}
+
+
+td {
+	border-top: 2px solid #929292;
+	
+	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	                                             transparent 2px, transparent 4px);
+	background-size: 2px 4px, auto;
+	background-repeat: repeat-y, no-repeat;
+	background-clip: content-box;
+	background-position: left, center;
+
+	padding: 4px 0;
+	line-height: 2.2;
+	font-size: 16px;
+	text-indent: 10px;
+
+}
+
+th.chrome,
+th.edge,
+th.firefox,
+th.ie,
+th.safari {
+	background-size: auto 36px;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 60px;
+	height: 44px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+th[scope="row"] {
+	width: 296px;
+	border-top: 2px solid #929292;
+}
+
+[title="yes"],
+[title="no"],
+[title="n/a"],
+[title="partial"] {
+	max-width: 60px;
+	height: 44px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+[title="yes"] {
+	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	                                             transparent 2px, transparent 4px), 
+					  url(../images/status-icons/yes.svg);
+}
+
+[title="no"] {
+	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	                                             transparent 2px, transparent 4px), 
+					  url(../images/status-icons/no.svg);
+}
+
+[title="n/a"] {
+	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	                                             transparent 2px, transparent 4px), 
+					  url(../images/status-icons/n-a.svg);
+}
+
+[title="partial"] {
+	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	                                             transparent 2px, transparent 4px), 
+					  url(../images/status-icons/partial.svg);
+}
+
 .browser,
 .platform {
 	font-size: .7em;
@@ -467,7 +568,7 @@ footer {
 
 [id="support"] h3 {
 	margin: 0;
-	padding: 1.5em 0 1em;
+	padding: 2.4em 0 1em;
 	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
