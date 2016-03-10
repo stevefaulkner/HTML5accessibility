@@ -34,7 +34,7 @@ html {
 body {
 	margin: 1.5em auto;
 	width: 90%;
-	max-width: 54em;
+	max-width: 62em;
 	font: 400 105%/1.4 "Work Sans", sans-serif;
 	background: #f7f7f5;
 	color: #333;
@@ -62,6 +62,10 @@ a:hover {
 a:active {
 	background: #333;
 	color: #fff;
+}
+
+p {
+	margin: 0 0 .67em 0;
 }
 
 li + li {
@@ -103,7 +107,7 @@ nav {
 }
 
 nav ul {
-	padding-left: 8px;
+	padding-left: 12px;
 	margin: 0 0 8px;
 	border-left: 2px solid #333;
 }
@@ -153,13 +157,13 @@ nav a,
 
 
 h2 {
-	margin-top: .6em;
-	margin-bottom: 1.8em;
+	margin-top: .606em;
+	margin-bottom: 2.02em;
 	font-size: 1.1em;
 }
 
 .meta h3 {
-	padding: 2.5em 0 1em; /* Needs to be padding so the test bg doesn't bleed through */
+	padding: 2.5em 0 1.54em;
 	font-size: .722em; /* 13px at large breakpoint */
 }
 
@@ -170,11 +174,11 @@ h2 {
 
 main > section {
 	border-top: 4px solid #333;
-	margin-bottom: 4em;
+	margin-bottom: 4.44em;
 }
 
 [id="results"] {
-	padding-top: 56px;
+	padding-top: 54px;
 }
 
 .test-results {
@@ -203,9 +207,8 @@ main > section {
 	width: calc(20% - 9.6px);
 	height: 308px;
 	
-	padding-top: 132px;
+	padding-top: 122px;
 	
-	vertical-align: text;
 	background-color: #fcfcfc;
 	list-style: none;
 	text-align: center;
@@ -226,7 +229,7 @@ main > section {
 	right: 0;
 	margin: 0 auto;
 
-	width: 34px;
+	width: 36px;
 	height: 10px;
 	
 	background-color: #f7f7f5;
@@ -270,7 +273,7 @@ table {
 
 th {
 	text-align: left;
-	padding-left: 10px;
+	padding-left: 12px;
 
 }
 
@@ -297,11 +300,10 @@ td {
 	background-clip: content-box;
 	background-position: left, center;
 
-	padding: 4px 0;
-	line-height: 2.2;
+	padding: 8px 0;
+	line-height: 2.3;
 	font-size: 16px;
-	text-indent: 10px;
-
+	text-indent: 12px;
 }
 
 th.chrome,
@@ -363,7 +365,7 @@ th[scope="row"] {
 .platform {
 	font-size: .7em;
 	line-height: 1;
-	margin: 3px 0;
+	margin: 0 0 6px;
 }
 
 .result {
@@ -371,10 +373,9 @@ th[scope="row"] {
 	font-weight: 300;
 	font-size: 3em;
 	line-height: 1;
-	margin: 0;
 	border-top: 4px solid;
-	padding-top: 16px;
-	margin: 16px 0;
+	padding-top: 20px;
+	margin: 20px 0;
 	
 	-webkit-order: -1;
 	-moz-order: -1;
@@ -404,10 +405,6 @@ th[scope="row"] {
 	width: 80%;
 }
 
-.sponsor {
-	width: 20%;
-}
-
 [id="overview"] > p {
 	font-size: 1.6em;
 	font-weight: 300;
@@ -416,9 +413,14 @@ th[scope="row"] {
 }
 
 .sponsor {
+	width: 20%;
 	font-size: .8em;
 	line-height: 1.8;
 	padding-left: 20px
+}
+
+.sponsor img {
+	margin-bottom: 24px;
 }
 
 /* without column-span and some way to break columns, elements clash into each other */
@@ -428,8 +430,8 @@ th[scope="row"] {
 		-webkit-column-count: 3;
 		column-count: 3;
 		
-		-webkit-column-gap: 48px;
-		column-gap: 48px;
+		-webkit-column-gap: 60px;
+		column-gap: 60px;
 	}
 
 	[id="howto"] h2 {
@@ -462,15 +464,15 @@ th[scope="row"] {
 footer {
 	float: left;
 	width: 33.33%;
-	padding: 0 16px;
+	padding: 0 20px;
 }
 
 [id="links"] {
-	padding: 0 32px 0 0;
+	padding: 0 40px 0 0;
 }
 
 footer {
-	padding: 64px 0 0 32px;
+	padding: 22px 0 0 32px;
 }
 
 .meta h3 {
@@ -569,13 +571,14 @@ footer {
 
 [id="support"] h3 {
 	margin: 0;
-	padding: 2.4em 0 1em;
+	padding: 2.01em 0 1.6em;
 	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
 .licence {
+	display: block;
 	background: url("../images/logos/creative-commons.svg") no-repeat;
-	padding-top: 52px;
+	padding-top: 40px;
 }
 
 a.github {
@@ -585,7 +588,7 @@ a.github {
 	font-size: .7em;
 	line-height: 1;
 	padding: 16px 10px 14px 42px;
-	margin-top: 28px;
+	margin-top: 32px;
 	border: 0;
 	border-radius: 4px;
 	background: url("../images/logos/github.svg") no-repeat 9px center #333;
