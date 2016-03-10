@@ -37,7 +37,7 @@ body {
 	max-width: 62em;
 	font: 400 105%/1.4 "Work Sans", sans-serif;
 	background: #f7f7f5;
-	color: #333;
+	color: #555;
 }
 
 [id="overview"]::after,
@@ -54,13 +54,19 @@ a:link, a:visited {
 	color: #2b7a82;
 }
 
-a:hover {
-	border-bottom-color: currentColor;
-	color: #333;
+a:hover,
+header nav a:hover {
+	border-bottom: 2px solid currentColor;
+	color: #f16529;
 }
 
 a:active {
 	background: #333;
+	color: #fff;
+}
+
+::selection {
+	background-color: #333;
 	color: #fff;
 }
 
@@ -89,6 +95,7 @@ h1 {
 	font-family: "League Spartan";
 	font-size: 2.7em;
 	letter-spacing: .03em;
+	color: #333;
 }
 
 .subtitle {
@@ -115,6 +122,7 @@ nav li {
 	list-style: none;
 	margin: 0;
 	padding-bottom: 4px;
+	color: #333;
 }
 
 nav li + li {
@@ -128,17 +136,20 @@ nav a:link, nav a:visited {
 	border: 0;
 }
 
+
+
 h2,
 .meta h3,
 [id="support"] h3,
 aside,
 nav a,
-.browser,
-.github {
+.github,
+thead th {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
 	letter-spacing: .08em;
+	color: #333;
 }
 
 .meta h3,
@@ -279,7 +290,7 @@ th {
 
 thead th {
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 13px;
 	border-width: 0 0 2px 2px;
 	border-image: linear-gradient(to bottom, transparent, transparent 50%,
 											#929292 50%, #929292 100%) 2; 
@@ -376,6 +387,7 @@ th[scope="row"] {
 	border-top: 4px solid;
 	padding-top: 20px;
 	margin: 20px 0;
+	color: #333;
 	
 	-webkit-order: -1;
 	-moz-order: -1;
@@ -384,15 +396,15 @@ th[scope="row"] {
 }
 
 .result.high {
-	border-color: #889b30;
+	border-color: #99a83e;
 }
 
 .result.medium {
-	border-color: #c0872d; 
+	border-color: #cc983a; 
 }
 
 .result.low {
-	border-color: #b23828
+	border-color: #c14d35
 }
 
 [id="overview"] {
@@ -489,7 +501,6 @@ footer {
 	margin-top: 0;
 }
 
-
 .meta h3::before {
 	top: 0;
 	width: 2.5em;
@@ -583,7 +594,7 @@ footer {
 
 a.github {
 	display: inline-block;
-	color: #f7f7f7;
+	color: #fff;
 	text-transform: uppercase;
 	font-size: .7em;
 	line-height: 1;
@@ -592,6 +603,10 @@ a.github {
 	border: 0;
 	border-radius: 4px;
 	background: url("../images/logos/github.svg") no-repeat 9px center #333;
+}
+
+a.github:active {
+	opacity: .5;
 }
 
 /*	SMALL BREAKPOINT
