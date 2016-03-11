@@ -226,6 +226,7 @@ main > section {
 	box-shadow: 0 0 8px hsla(0, 0%, 0%, .15);
 	background-repeat: no-repeat;
 	background-position: center 60px;
+	background-size: 64px auto;
 }
 
 .test-results li + li {
@@ -255,22 +256,37 @@ main > section {
 	background-image: url("../images/chrome.png");
 }
 
-.edge { 
-	background-image: url("../images/edge.png");
-	background-size: auto 58px;
+th.chrome {
+	background-image: url("../images/chrome-simplified.svg");
 }
+
+body .edge { 
+	background-image: url("../images/msedge.svg");
+	background-size: 57px auto;
+}
+
 
 .firefox { 
 	background-image: url("../images/firefox.png");
 }
 
+th.firefox {
+	background-image: url("../images/firefox-simplified.svg");
+	
+}
+
 .ie {
-	background-image: url("../images/ie.png");
+	background-image: url("../images/ie.svg");
 }
 
 .safari { 
-	background-image: url("../images/safari_64x64.png");
+	background-image: url("../images/safari.png");
 }
+
+th.safari {
+	background-image: url("../images/safari-simplified.svg");
+}
+
 
 table {
 	background-color: #fcfcfc;
@@ -322,14 +338,18 @@ th.edge,
 th.firefox,
 th.ie,
 th.safari {
-	background-size: auto 36px;
+	background-size: auto 32px;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top;
 	max-width: 60px;
 	height: 44px;
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
+}
+
+th.edge {
+	background-size: auto 31px;
 }
 
 th[scope="row"] {
