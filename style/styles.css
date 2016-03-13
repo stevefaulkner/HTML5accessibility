@@ -143,6 +143,7 @@ h2,
 [id="support"] h3,
 aside,
 nav a,
+.key-label,
 .github,
 thead th {
 	font-family: "League Spartan", sans-serif;
@@ -379,10 +380,19 @@ th[scope="row"] code {
 					  url(../images/status-icons/yes.svg);
 }
 
+.yes {
+	background: url(../images/status-icons/yes.svg) no-repeat;
+}
+
 [title="no"] {
 	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
 	                                             transparent 2px, transparent 4px), 
 					  url(../images/status-icons/no.svg);
+}
+
+.no {
+	background: url(../images/status-icons/no.svg) no-repeat;
+;
 }
 
 [title="n/a"] {
@@ -391,10 +401,18 @@ th[scope="row"] code {
 					  url(../images/status-icons/n-a.svg);
 }
 
+.n-a {
+	background: url(../images/status-icons/n-a.svg) no-repeat;
+}
+
 [title="partial"] {
 	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
 	                                             transparent 2px, transparent 4px), 
 					  url(../images/status-icons/partial.svg);
+}
+
+.partial {
+	background: url(../images/status-icons/partial.svg) no-repeat;
 }
 
 .browser,
@@ -567,6 +585,32 @@ footer {
 	font: 400 1.636em "Work Sans", sans-serif;
 	text-transform: none;
 	letter-spacing: 0;
+}
+
+[id="support"] h2 {
+	margin-bottom: 1.11em;
+}
+
+.key-label {
+	font-size: .7em;
+	display: inline;
+}
+
+.key {
+	padding: 0;
+	display: inline;
+	vertical-align: middle;
+}
+
+.key li {
+	display: inline-block;
+	margin: 0 0 0 28px;
+	padding-left: 28px;
+	background-position: left center;
+}
+
+.key .yes {
+	padding-left: 31px;
 }
 
 [id="support"] > section {
