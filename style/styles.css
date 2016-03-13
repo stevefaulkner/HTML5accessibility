@@ -308,8 +308,8 @@ thead th {
 	text-transform: uppercase;
 	font-size: 13px;
 	border-width: 0 0 2px 2px;
-	border-image: linear-gradient(to bottom, transparent, transparent 50%,
-											#929292 50%, #929292 100%) 2; 
+	border-image: linear-gradient(to bottom, transparent, transparent 35%,
+											#929292 35%, #929292 100%) 2; 
 }
 
 thead th:first-of-type {
