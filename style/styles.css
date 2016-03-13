@@ -330,7 +330,7 @@ td {
 
 	padding: 8px 0;
 	font-size: .9em;
-	line-height: 1.5;
+	line-height: 38px;
 	text-indent: 12px;
 }
 
@@ -368,7 +368,6 @@ th[scope="row"] code {
 [title="n/a"],
 [title="partial"] {
 	max-width: 60px;
-	height: 44px;
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
