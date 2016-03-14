@@ -629,12 +629,16 @@ footer {
 	margin-bottom: 1.11em;
 }
 
+.key {
+	margin-bottom: 24px;
+}
+
 .key-label {
 	font-size: .7em;
 	display: inline;
 }
 
-.key {
+.key ul {
 	padding: 0;
 	display: inline;
 	vertical-align: middle;

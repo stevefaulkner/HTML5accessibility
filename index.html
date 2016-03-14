@@ -73,13 +73,15 @@
 		<section id="support">
 			<h2>Feature Support</h2>
 			
-			<p class="key-label">Key:</p>
-			<ul class="key">
-				<li class="yes">Yes</li>
-				<li class="no">No</li>
-				<li class="partial">Partial</li>
-				<li class="n-a">N/A</li>
-			</ul>
+			<div role="presentation" class="key">
+				<p class="key-label">Key:</p>
+				<ul>
+					<li class="yes">Yes</li>
+					<li class="no">No</li>
+					<li class="partial">Partial</li>
+					<li class="n-a">N/A</li>
+				</ul>
+			</div>
 			
 			<section id="sections">
 				<h3>Sections &amp; Grouping</h3>
@@ -1746,7 +1748,7 @@
 			}
 				
 			for (var i = 0; i <= numRows; i++) {				
-				(row.className === "expand") ? row.className = "" : row.className = "expand";
+				(row.className === "expand") ? row.className = "collapse" : row.className = "expand";
 				row = row.nextElementSibling;
 			}
 			
