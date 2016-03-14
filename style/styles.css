@@ -323,15 +323,24 @@ td {
 	
 	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
 	                                             transparent 2px, transparent 4px);
-	background-size: 2px 4px, auto;
+	background-size: 2px 4px, 16px auto;
 	background-repeat: repeat-y, no-repeat;
 	background-clip: content-box;
 	background-position: left, center;
 
 	padding: 8px 0;
 	font-size: .9em;
+	font-weight: 300;
 	line-height: 38px;
 	text-indent: 12px;
+	
+	//display: none;
+}
+
+th ~ td {
+	font-weight: 400;
+	background-size: 2px 4px, auto;
+	display: table-cell;
 }
 
 th.chrome,
@@ -357,6 +366,8 @@ th[scope="row"] {
 	width: 296px;
 	border-top: 2px solid #929292;
 	font: 400 1.15em/1.4 "Work Sans", sans-serif;
+	vertical-align: top;
+	padding-top: 10px;
 }
 
 th[scope="row"] code {
