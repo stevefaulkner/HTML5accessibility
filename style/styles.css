@@ -315,6 +315,7 @@ thead th {
 
 thead th:first-of-type {
 	border-width: 0 0 2px 0;
+	padding-left: 44px;
 }
 
 
@@ -376,6 +377,29 @@ th[scope="row"] {
 
 th[scope="row"] code {
 	font-family: inherit;
+}
+
+.expand th,
+.expand th ~ td {
+	color: #000;
+	border-top-color: currentColor;
+}
+
+th button {
+	border: 0;
+	background: url("../images/ui-icons/toggle-open.svg") no-repeat center transparent;
+	height: 32px;
+	width: 22px;
+	margin-right: 12px;
+
+	text-indent: 200%;
+	line-height: 1.4;
+	float: left;
+	cursor: pointer;
+}
+
+th button[aria-pressed="true"] {
+	background-image: url("../images/ui-icons/toggle-close.svg")
 }
 
 [title="yes"],

@@ -1726,6 +1726,7 @@
 		        txt = document.createTextNode("expand");
 			
 			btn.appendChild(txt); 
+			btn.setAttribute("aria-pressed", "false");
 			btn.onclick = collapseExpandRows;
 			
 			features[i].appendChild(btn);
@@ -1736,12 +1737,17 @@
 			    numRows = parent.getAttribute("rowspan") - 1,
 			    row = parent.parentNode;
 			
-			(this.textContent === "expand") ? this.textContent = "collapse" : this.textContent = "expand";
+			if (this.textContent === "expand") {
+				 this.textContent = "collapse";
+				 this.setAttribute("aria-pressed", "true");
+			} else {
+				 this.textContent = "expand";
+				 this.setAttribute("aria-pressed", "false");
+			}
 				
-			for (var i = 0; i < numRows; i++) {
-				row = row.nextElementSibling;
-				
+			for (var i = 0; i <= numRows; i++) {				
 				(row.className === "expand") ? row.className = "" : row.className = "expand";
+				row = row.nextElementSibling;
 			}
 			
 		}
