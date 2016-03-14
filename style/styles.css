@@ -333,13 +333,17 @@ td {
 	font-weight: 300;
 	line-height: 38px;
 	text-indent: 12px;
+	display: none;
 	
-	//display: none;
 }
 
 th ~ td {
 	font-weight: 400;
 	background-size: 2px 4px, auto;
+	display: table-cell;
+}
+
+.expand td {
 	display: table-cell;
 }
 

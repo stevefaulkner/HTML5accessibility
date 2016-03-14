@@ -1717,5 +1717,34 @@
 
 		<a class="github" href="https://github.com/stevefaulkner/HTML5accessibility">Fork on GitHub</a>
 	</footer>
+	<script>
+		
+		var features = document.querySelectorAll("th[scope=row]");
+				
+		for (var i = 0; i < features.length; i++) {
+			var btn = document.createElement("button"),
+		        txt = document.createTextNode("expand");
+			
+			btn.appendChild(txt); 
+			btn.onclick = collapseExpandRows;
+			
+			features[i].appendChild(btn);
+		}		
+		
+		function collapseExpandRows(e) {
+			var parent = this.parentNode,
+			    numRows = parent.getAttribute("rowspan") - 1,
+			    row = parent.parentNode;
+			
+			(this.textContent === "expand") ? this.textContent = "collapse" : this.textContent = "expand";
+				
+			for (var i = 0; i < numRows; i++) {
+				row = row.nextElementSibling;
+				
+				(row.className === "expand") ? row.className = "" : row.className = "expand";
+			}
+			
+		}
+	</script>
 </body>
 </html>
