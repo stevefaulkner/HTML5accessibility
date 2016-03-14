@@ -393,6 +393,8 @@ th button {
 	margin-right: 12px;
 
 	text-indent: 200%;
+	overflow: hidden;
+
 	line-height: 1.4;
 	float: left;
 	cursor: pointer;
