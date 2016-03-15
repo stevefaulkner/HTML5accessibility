@@ -1722,16 +1722,17 @@
 	<script>
 		
 		var features = document.querySelectorAll("th[scope=row]");
-				
-		for (var i = 0; i < features.length; i++) {
-			var btn = document.createElement("button"),
-		        txt = document.createTextNode("expand");
+		    btn = document.createElement("button"),
+		    txt = document.createTextNode("expand");
 			
 			btn.appendChild(txt); 
 			btn.setAttribute("aria-pressed", "false");
-			btn.onclick = collapseExpandRows;
+				
+		for (var i = 0; i < features.length; i++) {
+			var el = btn.cloneNode(true);
 			
-			features[i].appendChild(btn);
+			el.onclick = collapseExpandRows;
+			features[i].appendChild(el);
 		}		
 		
 		function collapseExpandRows(e) {
