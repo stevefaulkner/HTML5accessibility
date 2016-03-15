@@ -94,7 +94,8 @@ body > header::after,
 }
 
 nav a::after,
-aside a::after {
+aside a::after,
+.licence a::after {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -216,7 +217,7 @@ nav li + li {
 }
 
 nav a {
-	font-size: .8em;
+	font-size: .7em;
 	border: 0;
 }
 
@@ -693,16 +694,15 @@ footer {
 }
 
 footer {
-	padding: 60px 0 0 32px;
+	padding: 22px 0 0 32px;
 }
 
 .licence {
+	position: relative;
 	display: block;
-}
-
-.licence a {
 	padding-top: 40px;
 	background: url("../images/logos/creative-commons.svg") no-repeat;
+
 }
 
 a.github {
