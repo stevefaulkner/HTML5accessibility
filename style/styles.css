@@ -309,15 +309,15 @@ thead th {
 	text-transform: uppercase;
 	font-size: 13px;
 	border-width: 0 0 2px 2px;
+	border-style: solid;
 	border-image: linear-gradient(to bottom, transparent, transparent 35%,
-											#929292 35%, #929292 100%) 2; 
+											#929292 35%, #929292 100%) 2;
 }
 
 thead th:first-of-type {
 	border-width: 0 0 2px 0;
 	padding-left: 44px;
 }
-
 
 td {
 	border-top: 2px solid #929292;
@@ -359,7 +359,7 @@ th.safari {
 	max-width: 60px;
 	height: 44px;
 	overflow: hidden;
-	text-indent: 100%;
+	text-indent: 200%;
 	white-space: nowrap;
 }
 
