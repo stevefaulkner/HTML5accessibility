@@ -24,7 +24,8 @@
 	font-weight: 300;
 }
 
-/* BASE STYLES */
+
+/* CORE STYLES */
 
 * {
 	box-sizing: border-box;
@@ -35,52 +36,55 @@ html {
 }
 
 body {
-	margin: 1.5em auto;
 	width: 90%;
 	max-width: 62em;
+	margin: 1.5em auto;
+
 	font: 400 105%/1.4 "Work Sans", sans-serif;
+
 	background: #f7f7f5;
 	color: #555;
 }
 
-a:link, a:visited {
+p {
+	margin: 0 0 .67em;
+}
+
+a {
 	border-bottom: 1px solid rgba(42, 122, 130, .5);
 	text-decoration: none;
 	color: #2b7a82;
-}
-
-a:hover,
-header nav a:hover {
-	border-bottom: 2px solid currentColor;
-	color: #f16529;
-}
-
-a:active {
-	background: #333;
-	color: #fff;
-}
-
-::selection {
-	background-color: #333;
-	color: #fff;
-}
-
-p {
-	margin: 0 0 .67em 0;
 }
 
 li + li {
 	margin-top: .5em;
 }
 
+a:hover {
+	border-bottom: 2px solid;
+	color: #f16529;
+}
+
+a:active,
+::selection {
+	background: #333;
+	color: #fff;
+}
+
 h2 {
-	margin-top: .606em;
-	margin-bottom: 2.02em;
+	margin: .606em 0 2.02em;
 	font-size: 1.1em;
 }
 
+
 /* COMMON STYLES / HACKS */
 
+main > section {
+	border-top: 4px solid #333;
+	margin-bottom: 4.44em;
+}
+
+body > header::after,
 [id="overview"]::after,
 [id="results"]::after {
 	display: table;
@@ -88,14 +92,14 @@ h2 {
 	content: "";
 }
 
+h1,
 h2,
-.meta h3,
-[id="support"] h3,
 aside,
+thead,
+section > h3,
 nav a,
 .key-label,
-.github,
-thead th {
+.github{
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
@@ -103,8 +107,7 @@ thead th {
 	color: #333;
 }
 
-.meta h3,
-[id="support"] h3 {
+section > h3 {
 	text-transform: uppercase;
 }
 
@@ -150,10 +153,6 @@ thead th {
 	height: 4px;
 }
 
-main > section {
-	border-top: 4px solid #333;
-	margin-bottom: 4.44em;
-}
 
 /* PAGE HEADER */
 
@@ -162,18 +161,15 @@ body > header {
 	background: url("../images/logos/html5-a11y.svg") no-repeat;
 }
 
-body > header::after {
-	display: table;
-	clear: both;
-	content: "";
+.branding {
+	width: calc(100% - 260px);
+	float: left;
 }
 
 h1 {
 	margin: 0;
-	font-family: "League Spartan";
 	font-size: 2.65em;
 	letter-spacing: .03em;
-	color: #333;
 }
 
 .subtitle {
@@ -181,25 +177,22 @@ h1 {
 	margin-top: .2em;
 }
 
-.branding {
-	width: calc(100% - 260px);
-	float: left;
-}
-
+/* Navigation */
 nav {
-	display: inline-block;
 	float: right;
 }
 
 nav ul {
-	padding-left: 12px;
 	margin: 0 0 8px;
 	border-left: 2px solid #333;
+	padding-left: 12px;
 }
+
 nav li {
-	list-style: none;
 	margin: 0;
 	padding-bottom: 4px;
+
+	list-style: none;
 	color: #333;
 }
 
@@ -208,16 +201,11 @@ nav li + li {
 	padding: 4px 0;
 }
 
-nav a:link, nav a:visited {
-	color: inherit;
+nav a {
 	font-size: .8em;
 	border: 0;
 }
 
-/* Reference labels and code titles */
-.reference li {
-	color: #666;
-}
 
 /* RESULTS SECTION */
 
@@ -231,6 +219,7 @@ nav a:link, nav a:visited {
 
 .test-results li {
 	position: relative;
+	float: left;
 	
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -247,24 +236,22 @@ nav a:link, nav a:visited {
 	-ms-flex-align: center;
 	align-items: center;
 	
-	float: left;
 	width: calc(20% - 9.6px);
-	height: 308px;
-	
+	height: 308px;	
 	padding-top: 122px;
 	
-	background-color: #fcfcfc;
 	list-style: none;
 	text-align: center;
-	box-shadow: 0 0 8px hsla(0, 0%, 0%, .15);
+	
 	background-repeat: no-repeat;
 	background-position: center 60px;
 	background-size: 64px auto;
+	background-color: #fcfcfc;
+	box-shadow: 0 0 8px hsla(0, 0%, 0%, .15);
 }
 
 .test-results li + li {
-	margin-left: 12px;
-	margin-top: 0;
+	margin: 0 0 0 12px;
 }
 
 .test-results li::before {
@@ -286,25 +273,27 @@ nav a:link, nav a:visited {
 
 .browser,
 .platform {
+	margin: 0;
 	font-size: .75em;
 	line-height: 1.5;
-	margin: 0;
 }
 
 .result {
 	display: inline-block;
-	font-weight: 300;
-	font-size: 3em;
-	line-height: 1;
-	border-top: 4px solid;
-	padding-top: 20px;
-	margin: 20px 0;
-	color: #333;
 	
 	-webkit-order: -1;
 	-moz-order: -1;
 	-ms-flex-order: -1;
 	order: -1;
+	
+	margin: 20px 0;
+	border-top: 4px solid;
+	padding-top: 20px;
+
+	font-weight: 300;
+	font-size: 3em;
+	line-height: 1;
+	color: #333;
 }
 
 .result.high {
@@ -318,6 +307,7 @@ nav a:link, nav a:visited {
 .result.low {
 	border-color: #c14d35
 }
+
 
 /* BROWSER ICONS */
 
@@ -333,7 +323,6 @@ body .edge {
 	background-image: url("../images/msedge.svg");
 	background-size: 57px auto;
 }
-
 
 .firefox { 
 	background-image: url("../images/firefox.png");
@@ -356,6 +345,7 @@ th.safari {
 	background-image: url("../images/safari-simplified.svg");
 }
 
+
 /* OVERVIEW SECTION */
 
 [id="overview"] {
@@ -369,22 +359,25 @@ th.safari {
 }
 
 [id="overview"] > p {
-	font-size: 1.55em;
-	font-weight: 300;
 	margin-top: 0;
 	padding-right: 24px;
+
+	font-size: 1.55em;
+	font-weight: 300;
 }
 
 .sponsor {
 	width: 20%;
+	padding-left: 20px;
+
 	font-size: .7em;
 	line-height: 1.95;
-	padding-left: 20px
 }
 
 .sponsor img {
 	margin-bottom: 24px;
 }
+
 
 /* FEATURE SUPPORT */
 
@@ -392,19 +385,21 @@ th.safari {
 	margin-bottom: 1.11em;
 }
 
+/* Key */
+
 .key {
 	margin-bottom: 24px;
 }
 
 .key-label {
-	font-size: .7em;
 	display: inline;
+	font-size: .7em;
 }
 
 .key ul {
-	padding: 0;
 	display: inline;
 	vertical-align: middle;
+	padding: 0;
 }
 
 .key li {
@@ -431,12 +426,13 @@ th.safari {
 [id="support"] > section h3::before {
 	position: absolute;
 	left: -80px;
+
 	width: 64px;
 	height: 100%;
+
 	margin-top: -4px;
 	content: "";
-	background-repeat: no-repeat;
-	background-origin: content-box;
+	background: no-repeat content-box;
 }
 
 #sections h3::before {
@@ -460,79 +456,84 @@ th.safari {
 	margin-top: 0;
 }
 
+/* Support tables */
 
 table {
-	background-color: #fcfcfc;
-	padding: 12px 24px 36px;
-	border-top: 4px solid #333;
 	width: 100%;
+	border-top: 4px solid #333;
+	padding: 12px 24px 36px;
+
+	background-color: #fcfcfc;
 	border-spacing: 0;
 	border-radius: 0 0 3px 3px;
 	box-shadow: 0 0 12px hsla(0, 0%, 0%, .15);
 }
 
 th {
-	text-align: left;
 	padding-left: 12px;
-
+	text-align: left;
 }
 
 thead th {
-	text-transform: uppercase;
-	font-size: 13px;
 	border-width: 0 0 2px 2px;
 	border-style: solid;
 	border-image: linear-gradient(to bottom, transparent, transparent 35%,
-											#929292 35%, #929292 100%) 2;
+										   #929292 35%, #929292 100%) 2;
+											
+	text-transform: uppercase;
+	font-size: 13px;
 }
 
 thead th:first-of-type {
-	border-width: 0 0 2px 0;
+	border-left-width: 0;
 	padding-left: 44px;
 }
 
 td {
+	display: none;
+
 	border-top: 2px solid #929292;
+	padding: 8px 0;
 	
+	background: repeat-y content-box left, 
+	            no-repeat center;
+	background-size: 2px 4px, 16px auto;
 	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
 	                                             transparent 2px, transparent 4px);
-	background-size: 2px 4px, 16px auto;
-	background-repeat: repeat-y, no-repeat;
-	background-clip: content-box;
-	background-position: left, center;
-
-	padding: 8px 0;
-	font-size: .9em;
-	font-weight: 300;
-	line-height: 38px;
-	text-indent: 12px;
-	display: none;
 	
-}
-
-th ~ td {
-	font-weight: 400;
-	background-size: 2px 4px, auto;
-	display: table-cell;
+	font-size: .9em;
+	line-height: 38px;
+	font-weight: 300;
+	text-indent: 12px;	
 }
 
 .expand td {
 	display: table-cell;
 }
 
+th ~ td {
+	display: table-cell;
+	font-weight: 400;
+	background-size: 2px 4px, auto;
+}
+
+
+
 th.chrome,
 th.edge,
 th.firefox,
 th.ie,
 th.safari {
+	max-width: 60px;
+	height: 44px;
+
 	background-size: auto 32px;
 	background-repeat: no-repeat;
 	background-position: top;
-	max-width: 60px;
-	height: 44px;
+	
 	overflow: hidden;
-	text-indent: 200%;
 	white-space: nowrap;
+	text-indent: 200%;
 }
 
 th.edge {
@@ -542,9 +543,10 @@ th.edge {
 th[scope="row"] {
 	width: 342px;
 	border-top: 2px solid #929292;
-	font: 400 1.15em/1.4 "Work Sans", sans-serif;
-	vertical-align: top;
 	padding-top: 10px;
+
+	vertical-align: top;
+	font: 400 1.15em/1.4 "Work Sans", sans-serif;
 }
 
 th[scope="row"] code {
@@ -558,17 +560,19 @@ th[scope="row"] code {
 }
 
 th button {
-	border: 0;
-	background: url("../images/ui-icons/toggle-open.svg") no-repeat center transparent;
-	height: 32px;
+	float: left;
+
 	width: 22px;
+	height: 32px;
 	margin-right: 12px;
+	border: 0;
+	
+	background: url("../images/ui-icons/toggle-open.svg") no-repeat center transparent;
 
 	text-indent: 200%;
 	overflow: hidden;
 
 	line-height: 1.4;
-	float: left;
 	cursor: pointer;
 }
 
@@ -589,7 +593,7 @@ th button[aria-pressed="true"] {
 [title="yes"] {
 	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
 	                                             transparent 2px, transparent 4px), 
-					  url(../images/status-icons/yes.svg);
+					   url(../images/status-icons/yes.svg);
 }
 
 .yes {
@@ -599,12 +603,11 @@ th button[aria-pressed="true"] {
 [title="no"] {
 	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
 	                                             transparent 2px, transparent 4px), 
-					  url(../images/status-icons/no.svg);
+					   url(../images/status-icons/no.svg);
 }
 
 .no {
 	background: url(../images/status-icons/no.svg) no-repeat;
-;
 }
 
 [title="n/a"] {
@@ -626,6 +629,7 @@ th button[aria-pressed="true"] {
 .partial {
 	background: url(../images/status-icons/partial.svg) no-repeat;
 }
+
 
 /* HOW TO SECTION */
 
@@ -665,6 +669,7 @@ th button[aria-pressed="true"] {
 
 }
 
+
 /* NOTES, RESOURCES, FOOTER */
 
 [id="links"],
@@ -683,8 +688,6 @@ footer {
 	padding: 22px 0 0 32px;
 }
 
-
-
 /* sections floated under means double margin, so remove one */
 [id="links"] h3,
 [id="contributors"] h3,
@@ -694,21 +697,23 @@ footer {
 
 .licence {
 	display: block;
-	background: url("../images/logos/creative-commons.svg") no-repeat;
 	padding-top: 40px;
+	background: url("../images/logos/creative-commons.svg") no-repeat;
 }
 
 a.github {
 	display: inline-block;
-	color: #fff;
+	margin-top: 32px;
+	border: 0;
+	padding: 16px 10px 14px 42px;
+
 	text-transform: uppercase;
 	font-size: .7em;
 	line-height: 1;
-	padding: 16px 10px 14px 42px;
-	margin-top: 32px;
-	border: 0;
+	
 	border-radius: 4px;
 	background: url("../images/logos/github.svg") no-repeat 9px center #333;
+	color: #fff;
 }
 
 a.github:active {
