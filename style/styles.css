@@ -93,6 +93,17 @@ body > header::after,
 	content: "";
 }
 
+nav a::after,
+aside a::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	content: "";
+}
+
 h1,
 h2,
 aside,
@@ -207,16 +218,6 @@ nav li + li {
 nav a {
 	font-size: .8em;
 	border: 0;
-}
-
-nav a::after {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	
-	content: "";
 }
 
 
@@ -374,6 +375,10 @@ th.safari {
 	padding-right: 24px;
 	font-size: 1.55em;
 	font-weight: 300;
+}
+
+aside {
+	position: relative;
 }
 
 .sponsor {
@@ -688,11 +693,14 @@ footer {
 }
 
 footer {
-	padding: 22px 0 0 32px;
+	padding: 60px 0 0 32px;
 }
 
 .licence {
 	display: block;
+}
+
+.licence a {
 	padding-top: 40px;
 	background: url("../images/logos/creative-commons.svg") no-repeat;
 }
