@@ -29,6 +29,7 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0
 }
 
 html {
@@ -111,6 +112,10 @@ section > h3 {
 	text-transform: uppercase;
 }
 
+.meta {
+	margin-bottom: 2.17em;
+}
+
 .meta h3::before,
 .meta li:before {
 	display: block;
@@ -124,7 +129,6 @@ section > h3 {
 	padding: 2.5em 0 1.54em;
 	font-size: .722em; /* 13px at large breakpoint */
 	position: relative;
-	margin: 3em 0 0;
 	padding-top: 1.5em;
 	border-top: 0;
 }
@@ -136,7 +140,6 @@ section > h3 {
 }
 
 .meta ul {
-	margin: 0;
 	padding: 0;
 	list-style: none;
 }
@@ -167,7 +170,6 @@ body > header {
 }
 
 h1 {
-	margin: 0;
 	font-size: 2.65em;
 	letter-spacing: .03em;
 }
@@ -273,7 +275,6 @@ nav a {
 
 .browser,
 .platform {
-	margin: 0;
 	font-size: .75em;
 	line-height: 1.5;
 }
@@ -359,9 +360,7 @@ th.safari {
 }
 
 [id="overview"] > p {
-	margin-top: 0;
 	padding-right: 24px;
-
 	font-size: 1.55em;
 	font-weight: 300;
 }
@@ -418,7 +417,6 @@ th.safari {
 }
 
 [id="support"] h3 {
-	margin: 0;
 	padding: 2.01em 0 1.6em;
 	font-size: 1.11em; /* 20px at large breakpoint */
 }
@@ -652,12 +650,6 @@ th button[aria-pressed="true"] {
 		-webkit-column-break-inside: avoid;
 		break-inside: avoid; 
 	}
-	
-	/* stop having blank line at top and bottom of columns */
-	[id="howto"] p:first-of-type,
-	[id="howto"] p + section h3 {
-		margin-top: 0;
-	}
 
 	[id="howto"] p:last-of-type {
 		margin-bottom: 0;
@@ -686,13 +678,6 @@ footer {
 
 footer {
 	padding: 22px 0 0 32px;
-}
-
-/* sections floated under means double margin, so remove one */
-[id="links"] h3,
-[id="contributors"] h3,
-[id="contributors"] p:first-of-type {
-	margin-top: 0;
 }
 
 .licence {
