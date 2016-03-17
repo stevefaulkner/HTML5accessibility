@@ -32,23 +32,19 @@
 	margin: 0
 }
 
-html {
-	border: .75em solid #fff;
-}
-
 body {
 	width: 90%;
 	max-width: 62em;
-	margin: 1.5em auto;
+	margin: 1em auto;
 
-	font: 400 105%/1.4 "Work Sans", sans-serif;
+	font: 400 1em/1.4 "Work Sans", sans-serif;
 
 	background: #f7f7f5;
 	color: #555;
 }
 
 p {
-	margin: 0 0 .67em;
+	margin: 0 0 1em;
 }
 
 a {
@@ -77,6 +73,18 @@ h2 {
 	font-size: 1.1em;
 }
 
+@media (min-width: 50em) {
+
+	html {
+		border: 1.25em solid #fff;
+	}
+	
+	body {
+		margin: 3.5em auto;
+	}
+
+}
+
 
 /* COMMON STYLES / HACKS */
 
@@ -87,6 +95,7 @@ main > section {
 
 body > header::after,
 [id="overview"]::after,
+aside::after,
 [id="results"]::after {
 	display: table;
 	clear: both;
@@ -172,13 +181,7 @@ section > h3 {
 /* PAGE HEADER */
 
 body > header {
-	padding-left: 130px;
 	background: url("../images/logos/html5-a11y.svg") no-repeat;
-}
-
-.branding {
-	width: calc(100% - 260px);
-	float: left;
 }
 
 h1 {
@@ -188,18 +191,13 @@ h1 {
 
 .subtitle {
 	font-size: 1.15em;
-	margin-top: .2em;
+	margin: 1.25em 0;
 }
 
 /* Navigation */
-nav {
-	float: right;
-}
 
 nav ul {
-	margin: 0 0 8px;
-	border-left: 2px solid #333;
-	padding-left: 12px;
+	padding: 0;
 }
 
 nav li {
@@ -217,8 +215,53 @@ nav li + li {
 }
 
 nav a {
-	font-size: .7em;
+	font-size: 13px;
 	border: 0;
+}
+
+@media (max-width: 49.99em) {
+	
+	/* both temp until get real size or updated logo */
+	body > header {
+		background-size: 47px auto;
+	}
+	
+	h1 {
+		margin-left:  67px;
+		font-size: 2.29em;
+	}
+	
+	nav a { 
+		margin-left: 12px;
+	}
+
+}
+
+@media (min-width: 50em) {
+	
+	body > header {
+		padding-left: 130px;
+	}
+	
+	.branding {
+		width: calc(100% - 260px);
+		float: left;
+	}
+	
+	.subtitle {
+		margin-top: .2em;
+	}
+
+	nav {
+		float: right;
+	}
+	
+	nav ul {
+		margin: 0 0 8px;
+		border-left: 2px solid #333;
+		padding-left: 12px;
+	}
+
 }
 
 
@@ -234,7 +277,6 @@ nav a {
 
 .test-results li {
 	position: relative;
-	float: left;
 	
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -251,7 +293,6 @@ nav a {
 	-ms-flex-align: center;
 	align-items: center;
 	
-	width: calc(20% - 9.6px);
 	height: 308px;	
 	padding-top: 122px;
 	
@@ -263,10 +304,6 @@ nav a {
 	background-size: 64px auto;
 	background-color: #fcfcfc;
 	box-shadow: 0 0 8px hsla(0, 0%, 0%, .15);
-}
-
-.test-results li + li {
-	margin: 0 0 0 12px;
 }
 
 .test-results li::before {
@@ -322,6 +359,18 @@ nav a {
 	border-color: #c14d35
 }
 
+@media (min-width: 50em) {
+	
+	.test-results li {
+		float: left;
+		width: calc(20% - 9.6px);
+	}
+	
+	.test-results li + li {
+		margin: 0 0 0 12px;
+	}
+}
+
 
 /* BROWSER ICONS */
 
@@ -366,14 +415,7 @@ th.safari {
 	border: 0;
 }
 
-[id="overview"] > p,
-.sponsor  {
-	float: left;
-	width: 80%;
-}
-
 [id="overview"] > p {
-	padding-right: 24px;
 	font-size: 1.55em;
 	font-weight: 300;
 }
@@ -383,15 +425,40 @@ aside {
 }
 
 .sponsor {
-	width: 20%;
-	padding-left: 20px;
-
 	font-size: .7em;
 	line-height: 1.95;
 }
 
 .sponsor img {
-	margin-bottom: 24px;
+	margin-right: 20px;
+}
+
+@media (max-width: 49.99em) {
+	.sponsor img {
+		float: left;
+	}
+}	
+
+@media (min-width: 50em) {
+	
+	[id="overview"] > p,
+	.sponsor  {
+		float: left;
+		width: 80%;
+	}
+
+	[id="overview"] > p {
+		padding-right: 24px;
+	}
+	
+	.sponsor {
+		width: 20%;
+		padding-left: 20px;
+	}
+	
+	.sponsor img {
+		margin-bottom: 24px;
+	}
 }
 
 
@@ -408,7 +475,6 @@ aside {
 }
 
 .key-label {
-	display: inline;
 	font-size: .7em;
 }
 
@@ -420,13 +486,36 @@ aside {
 
 .key li {
 	display: inline-block;
-	margin: 0 0 0 28px;
 	padding-left: 28px;
 	background-position: left center;
 }
 
 .key .yes {
 	padding-left: 31px;
+}
+
+@media (max-width: 49.99em) {
+
+	.key li {
+		width: 49%;
+	}
+	
+	.key li + li {
+		margin-top: 1em;
+	}
+
+}
+
+@media (min-width: 50em) {
+
+	.key-label {
+		display: inline;
+	}
+	
+	.key li {
+		margin: 0 0 0 28px;
+	}
+
 }
 
 [id="support"] > section {
@@ -436,18 +525,22 @@ aside {
 [id="support"] h3 {
 	padding: 2.01em 0 1.6em;
 	font-size: 1.11em; /* 20px at large breakpoint */
+	padding-left: 80px;
+	min-height: 80px;
 }
 
 [id="support"] > section h3::before {
 	position: absolute;
-	left: -80px;
+	left: 0;
+	z-index: -1;
 
 	width: 64px;
 	height: 100%;
 
 	margin-top: -4px;
+
 	content: "";
-	background: no-repeat content-box;
+	background: no-repeat;
 }
 
 #sections h3::before {
@@ -471,12 +564,32 @@ aside {
 	margin-top: 0;
 }
 
+@media (max-width: 74.99em) {
+	#sections h3,
+	#text h3,
+	#graphics h3 {
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 75em) {
+	
+	[id="support"] h3 {
+		padding-left: 0;
+	}
+	
+	[id="support"] > section h3::before {
+		left: -80px;
+
+	}
+}
+
 /* Support tables */
 
 table {
 	width: 100%;
 	border-top: 4px solid #333;
-	padding: 12px 24px 36px;
+	padding: 8px;
 
 	background-color: #fcfcfc;
 	border-spacing: 0;
@@ -485,7 +598,6 @@ table {
 }
 
 th {
-	padding-left: 12px;
 	text-align: left;
 }
 
@@ -501,7 +613,6 @@ thead th {
 
 thead th:first-of-type {
 	border-left-width: 0;
-	padding-left: 44px;
 }
 
 td {
@@ -529,10 +640,7 @@ td {
 th ~ td {
 	display: table-cell;
 	font-weight: 400;
-	background-size: 2px 4px, auto;
 }
-
-
 
 th.chrome,
 th.edge,
@@ -646,55 +754,133 @@ th button[aria-pressed="true"] {
 }
 
 
+@media (max-width: 39.99em) {
+	
+	table {
+		position: relative;
+		left: -16px;
+		width: calc(100% + 32px);
+	}
+	
+
+		
+	thead th:nth-of-type(2),
+	tbody th + td:first-of-type {
+		display: none;
+	}
+	
+	th[scope="row"] {
+		display: inline;
+		padding: 0;
+		border: 0;
+		position: relative;
+		top: 16px;
+		font-size: 1em;
+	}	
+	
+	th[scope="row"] button {
+		margin: 12px 6px 0 0;
+	}
+	
+	th.chrome,
+	th.edge,
+	th.firefox,
+	th.ie,
+	th.safari {
+		background-size: auto 26px;
+		height: 34px;
+	}
+	
+	tbody tr {
+		background: linear-gradient(#929292, #929292 1px, transparent 1px), no-repeat;
+	}
+	
+	tr:not(.expand) + tr.expand {
+		background: linear-gradient(black, black 1px, transparent 1px), no-repeat;
+	}
+	
+	td {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 100px;
+		border: 0;
+	}
+	
+	tr > td:first-child {
+		background: 0;
+	}
+	
+}
+
+@media (min-width: 40em) {
+
+	table {
+		padding: 12px 24px 36px;
+	}
+	
+	thead th:first-of-type {
+		padding-left: 44px;
+	}
+	
+	th {
+		padding-left: 12px;
+	}
+	
+	th ~ td {
+		background-size: 2px 4px, auto;
+	}
+
+}
+
+
 /* HOW TO SECTION */
 
-/* without column-span and some way to break columns, elements clash into each other */
-@supports (column-span: all) {
+@media (max-width: 49.99em) {
 	
-	[id="howto"] {
-		-webkit-column-count: 3;
-		column-count: 3;
+	[id="howto"] .meta {
+		margin-top: 28px;
+	}
+}
+
+@media (min-width: 50em) {
+
+	/* without column-span and some way to break columns, elements clash into each other */
+	@supports (column-span: all) {
 		
-		-webkit-column-gap: 60px;
-		column-gap: 60px;
-	}
+		[id="howto"] {
+			-webkit-column-count: 3;
+			column-count: 3;
+			
+			-webkit-column-gap: 60px;
+			column-gap: 60px;
+		}
 
-	[id="howto"] h2 {
-		column-span: all;
-	}
-	
-	[id="howto"] p { 
-		-webkit-column-break-inside: avoid;
-		break-inside: avoid; 
-	}
+		[id="howto"] h2 {
+			column-span: all;
+		}
+		
+		[id="howto"] p { 
+			-webkit-column-break-inside: avoid;
+			break-inside: avoid; 
+		}
 
-	[id="howto"] p:last-of-type {
-		margin-bottom: 0;
-	}
-	
-	[id="howto"] p + section {
-		break-inside: avoid;
-	}
+		[id="howto"] p:last-of-type {
+			margin-bottom: 0;
+		}
+		
+		[id="howto"] p + section {
+			break-inside: avoid;
+		}
 
+	}
 }
 
 
 /* NOTES, RESOURCES, FOOTER */
 
-[id="links"],
-[id="contributors"],
-footer {
-	float: left;
-	width: 33.33%;
-	padding: 0 20px;
-}
-
 [id="links"] {
 	padding: 0 40px 0 0;
-}
-
-footer {
-	padding: 22px 0 0 32px;
 }
 
 .licence {
@@ -724,11 +910,27 @@ a.github:active {
 	opacity: .5;
 }
 
+@media (min-width: 50em) {
+
+	[id="links"],
+	[id="contributors"],
+	footer {
+		float: left;
+		width: 33.33%;
+		padding: 0 20px;
+	}
+	
+	footer {
+		padding: 22px 0 0 32px;
+	}
+
+}
+
 
 /*	SMALL BREAKPOINT
  *	--------------------------------------------- */
 
-@media (max-width: 30em) {
+@media (max-width: 29.99em) {
 
 	.meta li {
 		padding-left: 12px;
@@ -744,14 +946,6 @@ a.github:active {
  *	--------------------------------------------- */
 
 @media (min-width: 50em) {
-
-	html {
-		border-width: 1.25em;
-	}
-
-	body {
-		margin: 3.5em auto;
-	}
 
 	.meta:after {
 		display: table;
