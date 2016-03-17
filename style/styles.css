@@ -757,12 +757,15 @@ th button[aria-pressed="true"] {
 @media (max-width: 39.99em) {
 	
 	table {
+		table-layout:fixed;
 		position: relative;
 		left: -16px;
 		width: calc(100% + 32px);
 	}
 	
-
+	thead th:first-of-type {
+		width: 110px;
+	}
 		
 	thead th:nth-of-type(2),
 	tbody th + td:first-of-type {
@@ -789,6 +792,7 @@ th button[aria-pressed="true"] {
 	th.safari {
 		background-size: auto 26px;
 		height: 34px;
+		width: 24px;
 	}
 	
 	tbody tr {
@@ -805,6 +809,7 @@ th button[aria-pressed="true"] {
 		text-overflow: ellipsis;
 		max-width: 100px;
 		border: 0;
+		text-indent: 0;
 	}
 	
 	tr > td:first-child {
