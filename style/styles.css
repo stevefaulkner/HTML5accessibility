@@ -632,6 +632,12 @@ td {
 	line-height: 38px;
 	font-weight: 300;
 	text-indent: 12px;	
+	white-space: nowrap;
+
+}
+
+th + td:first-of-type {
+	padding-right: 12px;
 }
 
 .expand td {
@@ -711,7 +717,6 @@ th button[aria-pressed="true"] {
 	max-width: 60px;
 	overflow: hidden;
 	text-indent: 100%;
-	white-space: nowrap;
 }
 
 [title="yes"] {
@@ -830,7 +835,7 @@ th button[aria-pressed="true"] {
 	}
 	
 	th {
-		padding-left: 12px;
+		padding: 0 12px;
 	}
 	
 	th ~ td {
