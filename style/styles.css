@@ -427,6 +427,7 @@ aside {
 .sponsor {
 	font-size: .7em;
 	line-height: 1.95;
+	max-width: 350px;
 }
 
 .sponsor img {
@@ -572,7 +573,7 @@ aside {
 	}
 }
 
-@media (min-width: 75em) {
+@media (min-width: 86em) {
 	
 	[id="support"] h3 {
 		padding-left: 0;
