@@ -520,20 +520,17 @@ aside {
 }
 
 [id="support"] > section {
-	position: relative;
 }
 
 [id="support"] h3 {
-	padding: 2.01em 0 1.6em;
-	font-size: 1.11em; /* 20px at large breakpoint */
+	position: relative;
 	padding-left: 80px;
-	min-height: 80px;
+	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
 [id="support"] > section h3::before {
 	position: absolute;
 	left: 0;
-	z-index: -1;
 
 	width: 64px;
 	height: 100%;
@@ -565,18 +562,33 @@ aside {
 	margin-top: 0;
 }
 
-@media (max-width: 74.99em) {
-	#sections h3,
-	#text h3,
-	#graphics h3 {
-		margin-bottom: 20px;
+@media (max-width: 85.99em) {
+	[id="support"] h3 {
+		display: flex;
+		align-items: center;
+		min-height: 52px;
+		margin: 2.5em 0 20px;
+	}
+	
+	[id="support"] section:first-of-type h3 {
+		margin-top: 32px;
+	}
+	
+	#controls h3,
+	#properties h3 {
+		min-height: 30px;
+	}
+	
+	[id="support"] > section h3::before  {
+		margin-top: 0;
+		background-position: center left;
 	}
 }
 
 @media (min-width: 86em) {
 	
 	[id="support"] h3 {
-		padding-left: 0;
+		padding: 2.01em 0 1.6em;
 	}
 	
 	[id="support"] > section h3::before {
