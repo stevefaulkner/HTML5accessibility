@@ -545,9 +545,6 @@ aside {
 
 }
 
-[id="support"] > section {
-}
-
 [id="support"] h3 {
 	position: relative;
 	padding-left: 80px;
@@ -606,6 +603,7 @@ aside {
 	}
 	
 	[id="support"] > section h3::before  {
+		top: 0;
 		margin-top: 0;
 		background-position: center left;
 	}
