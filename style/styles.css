@@ -707,7 +707,6 @@ th.edge {
 }
 
 th[scope="row"] {
-	width: 342px;
 	border-top: 2px solid #929292;
 	padding-top: 10px;
 
@@ -815,16 +814,19 @@ th button[aria-pressed="true"] {
 	}
 	
 	th[scope="row"] {
-		display: inline;
-		padding: 0;
+		display: inline-block;
+		position: relative;	
+		padding: .9em .4em .9em 1.9em;
 		border: 0;
-		position: relative;
-		top: 16px;
 		font-size: 1em;
 	}	
 	
 	th[scope="row"] button {
-		margin: 12px 6px 0 0;
+		position: absolute;
+		top: 1px;
+		left: 0;
+		
+		height: 100%; 		
 	}
 	
 	th.chrome,
@@ -872,6 +874,10 @@ th button[aria-pressed="true"] {
 	
 	th {
 		padding: 0 12px;
+	}
+	
+	th[scope="row"] {
+			width: 342px;
 	}
 	
 	th ~ td {
