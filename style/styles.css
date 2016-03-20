@@ -39,7 +39,7 @@ body {
 
 	font: 400 1em/1.4 "Work Sans", sans-serif;
 
-	background: #f7f7f5;
+	background: #f7f7f7;
 	color: #555;
 }
 
@@ -73,6 +73,11 @@ h2 {
 	font-size: 1.1em;
 }
 
+main > section {
+	border-top: 4px solid #333;
+	margin-bottom: 3em;
+}
+
 @media (min-width: 50em) {
 
 	html {
@@ -82,16 +87,15 @@ h2 {
 	body {
 		margin: 3.5em auto;
 	}
+	
+	main > section {
+		margin-bottom: 4.44em;
+	}
 
 }
 
 
 /* COMMON STYLES / HACKS */
-
-main > section {
-	border-top: 4px solid #333;
-	margin-bottom: 4.44em;
-}
 
 body > header::after,
 [id="overview"]::after,
