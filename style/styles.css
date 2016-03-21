@@ -53,13 +53,18 @@ a {
 	color: #2b7a82;
 }
 
+a:focus, button:focus {
+	outline: 1px dotted #000;
+	outline-offset: 2px;
+}
+
 li + li {
 	margin-top: .5em;
 }
 
 a:hover {
 	border-bottom: 2px solid;
-	color: #f16529;
+	color: #1e565c;
 }
 
 a:active,
@@ -642,7 +647,7 @@ thead th {
 	border-width: 0 0 2px 2px;
 	border-style: solid;
 	border-image: linear-gradient(to bottom, transparent, transparent 35%,
-										   #929292 35%, #929292 100%) 2;
+										   #a2a2a2 35%, #a2a2a2 100%) 2;
 											
 	text-transform: uppercase;
 	font-size: 13px;
@@ -655,13 +660,13 @@ thead th:first-of-type {
 td {
 	display: none;
 
-	border-top: 2px solid #929292;
+	border-top: 2px solid #a2a2a2;
 	padding: 8px 0;
 	
 	background: repeat-y content-box left, 
 	            no-repeat center;
 	background-size: 2px 4px, 16px auto;
-	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
 	                                             transparent 2px, transparent 4px);
 	
 	font-size: .9em;
@@ -707,7 +712,7 @@ th.edge {
 }
 
 th[scope="row"] {
-	border-top: 2px solid #929292;
+	border-top: 2px solid #a2a2a2;
 	padding-top: 10px;
 
 	vertical-align: top;
@@ -755,7 +760,7 @@ th button[aria-pressed="true"] {
 }
 
 [title="yes"] {
-	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
 	                                             transparent 2px, transparent 4px), 
 					   url(../images/status-icons/yes.svg);
 }
@@ -765,7 +770,7 @@ th button[aria-pressed="true"] {
 }
 
 [title="no"] {
-	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
 	                                             transparent 2px, transparent 4px), 
 					   url(../images/status-icons/no.svg);
 }
@@ -775,7 +780,7 @@ th button[aria-pressed="true"] {
 }
 
 [title="n/a"] {
-	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
 	                                             transparent 2px, transparent 4px), 
 					  url(../images/status-icons/n-a.svg);
 }
@@ -785,7 +790,7 @@ th button[aria-pressed="true"] {
 }
 
 [title="partial"] {
-	background-image: linear-gradient(to bottom, #b8b8b8, #b8b8b8 2px, 
+	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
 	                                             transparent 2px, transparent 4px), 
 					  url(../images/status-icons/partial.svg);
 }
@@ -840,7 +845,7 @@ th button[aria-pressed="true"] {
 	}
 	
 	tbody tr {
-		background: linear-gradient(#929292, #929292 1px, transparent 1px), no-repeat;
+		background: linear-gradient(#a2a2a2, #a2a2a2 1px, transparent 1px), no-repeat;
 	}
 	
 	tr:not(.expand) + tr.expand {
@@ -957,6 +962,10 @@ a.github {
 	border-radius: 4px;
 	background: url("../images/logos/github.svg") no-repeat 9px center #333;
 	color: #fff;
+}
+
+a.github:hover {
+	background-color: #1e565c;;
 }
 
 a.github:active {
