@@ -937,7 +937,7 @@ th button[aria-pressed="true"] {
 
 /* NOTES, RESOURCES, FOOTER */
 
-[id="links"] {
+#links {
 	padding: 0 40px 0 0;
 }
 
