@@ -639,6 +639,15 @@ table {
 	box-shadow: 0 0 12px hsla(0, 0%, 0%, .15);
 }
 
+/* only controls as others are not very long. Consider for elements */
+#controls thead {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	
+	background-color: inherit;
+}
+
 th {
 	text-align: left;
 }
