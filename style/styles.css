@@ -501,7 +501,7 @@ nav a {
 	background-image: url("../images/chrome.png");
 }
 
-.chrome::after {
+.test-result .chrome::after {
 	position: absolute;
 	top: 50px;
 	left: 0;
@@ -549,7 +549,7 @@ th.safari {
 
 @media (max-width: 22.5em) {
 
-	.chrome::after {
+	.test-result .chrome::after {
 		left: 8px;
 		margin: 0;
 	}
