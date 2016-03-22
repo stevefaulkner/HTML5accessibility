@@ -683,6 +683,7 @@ aside {
 }
 
 @media (max-width: 85.99em) {
+
 	[id="support"] h3 {
 		display: flex;
 		align-items: center;
@@ -699,9 +700,9 @@ aside {
 		min-height: 30px;
 	}
 	
-	[id="support"] > section h3::before  {
+	#support > section h3::before  {
 		top: 0;
-		margin-top: 0;
+		margin-top: -3px;
 		background-position: center left;
 	}
 }
@@ -712,7 +713,7 @@ aside {
 		padding: 2.01em 0 1.6em;
 	}
 	
-	[id="support"] > section h3::before {
+	#support > section h3::before {
 		left: -80px;
 
 	}
