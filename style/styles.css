@@ -501,6 +501,22 @@ nav a {
 	background-image: url("../images/chrome.png");
 }
 
+.chrome::after {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	
+	width: 100px;
+	height: 80px;
+	margin: 0 auto;
+
+	content: "";
+
+	background: url("../images/opera.png") no-repeat top right;
+	background-size: 18px auto;
+}
+
 th.chrome {
 	background-image: url("../images/chrome-simplified.svg");
 }
@@ -529,6 +545,14 @@ th.firefox {
 
 th.safari {
 	background-image: url("../images/safari-simplified.svg");
+}
+
+@media (max-width: 22.5em) {
+
+	.chrome::after {
+		left: 8px;
+		margin: 0;
+	}
 }
 
 
