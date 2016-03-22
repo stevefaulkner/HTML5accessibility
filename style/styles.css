@@ -130,7 +130,7 @@ thead,
 section > h3,
 nav a,
 .key-label,
-.github{
+.github {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	line-height: 1.25;
@@ -228,25 +228,87 @@ nav a {
 	border: 0;
 }
 
-@media (max-width: 49.99em) {
+@media (max-width: 24.9em) {
 	
-	/* both temp until get real size or updated logo */
 	body > header {
-		background-size: 47px auto;
+		background-size: 40px auto;
 	}
 	
 	h1 {
-		margin-left:  67px;
+		margin-left: 62px;
+		font-size: 32px;
+	}
+	
+}
+
+@media (min-width: 25em) and (max-width: 59.9em) {
+	
+	/* both temp until get real size or updated logo */
+	body > header {
+		background-size: 80px auto;
+	}
+	
+	.branding {
+		margin-left:  112px;
+	}
+	
+	h1 {
 		font-size: 2.29em;
+	}
+
+}
+
+@media (min-width: 31em) and (max-width: 59.9em) {
+	
+	header nav li {
+		float: left;
+		width: calc(50% - 2px);
+
+		margin-right: 2px; /* stop dots butting against each other */
+		border: 0;
+		padding: 5px 0;
+
+		background: repeat-y content-box right;
+		background-size: 2px 4px;
+		background-image: linear-gradient(#333, #333 2px, 
+											transparent 2px, transparent 4px);
 	}
 	
 	nav a { 
 		margin-left: 12px;
 	}
-
+	
 }
 
-@media (min-width: 50em) {
+@media (min-width: 31em) and (max-width: 47.49em) {
+	
+	nav li:nth-last-of-type(n+2) {
+		border-bottom: 2px dotted;
+	}
+	
+	nav li:nth-of-type(even) {
+		background: 0;
+	}
+	
+}
+
+@media (min-width: 47.5em) and (max-width: 59.9em) { 
+	
+	header nav li {
+		width: calc(33% - 2px);
+	}
+	
+	nav li:nth-last-of-type(n+3) {
+		border-bottom: 2px dotted;
+	}
+	
+	nav li:nth-of-type(3) {
+		background: 0;
+	}
+	
+}
+
+@media (min-width: 60em) {
 	
 	body > header {
 		padding-left: 130px;
@@ -360,7 +422,7 @@ nav a {
 	border-color: #c14d35
 }
 
-@media (max-width: 49.99em) {
+@media (max-width: 22.5em) {
 
 	.test-results li {
 		padding: 30px 28px 28px 120px;
@@ -373,12 +435,13 @@ nav a {
 
 }
 
-@media (min-width: 50em) {
+@media (min-width: 22.51em) {
 	
 	.test-results li {
 		float: left;
-		width: calc(20% - 9.6px);
+		width: calc(50% - 6px);
 		height: 308px;
+		margin: 0 0 12px 0;
 		padding-top: 122px;		
 		
 		-webkit-align-items: center;
@@ -391,8 +454,8 @@ nav a {
 
 	}
 	
-	.test-results li + li {
-		margin: 0 0 0 12px;
+	.test-results li:nth-of-type(even) {
+		margin-left: 12px;
 	}
 	
 	.result {
@@ -400,6 +463,35 @@ nav a {
 		margin: 20px 0;
 		padding-top: 20px;
 	}
+}
+
+@media (min-width: 40em) and (max-width: 63.9em) { 
+
+	.test-results li {
+		width: calc(33% - 8px);
+	}
+	
+	.test-results li:nth-of-type(even) {
+		margin-left: 0;
+	}
+	
+	.test-results li:nth-of-type(3n+2),
+	.test-results li:nth-of-type(3) {
+		margin-left: 12px;
+	}
+
+}
+
+@media (min-width: 64em) {
+	
+	.test-results li {
+		width: calc(20% - 9.6px);
+	}
+	
+	.test-results li + li {
+		margin: 0 0 0 12px;
+	}
+	
 }
 
 
@@ -644,6 +736,7 @@ table {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	z-index: 2;
 	
 	background-color: inherit;
 }
@@ -722,10 +815,10 @@ th.edge {
 
 th[scope="row"] {
 	border-top: 2px solid #a2a2a2;
-	padding-top: 10px;
+	padding-top: 12px;
 
 	vertical-align: top;
-	font: 400 1.15em/1.4 "Work Sans", sans-serif;
+	font: 400 1em/1.4 "Work Sans", sans-serif;
 }
 
 th[scope="row"] code {
@@ -809,7 +902,7 @@ th button[aria-pressed="true"] {
 }
 
 
-@media (max-width: 39.99em) {
+@media (max-width: 55.49em) {
 	
 	table {
 		table-layout:fixed;
@@ -832,7 +925,6 @@ th button[aria-pressed="true"] {
 		position: relative;	
 		padding: .9em .4em .9em 1.9em;
 		border: 0;
-		font-size: 1em;
 	}	
 	
 	th[scope="row"] button {
@@ -876,7 +968,7 @@ th button[aria-pressed="true"] {
 	
 }
 
-@media (min-width: 40em) {
+@media (min-width: 55.5em) {
 
 	table {
 		padding: 12px 24px 36px;
@@ -891,7 +983,10 @@ th button[aria-pressed="true"] {
 	}
 	
 	th[scope="row"] {
-			width: 342px;
+		width: 342px;
+		font-size: 1.15em;
+		padding-top: 10px;
+
 	}
 	
 	th ~ td {
@@ -916,11 +1011,11 @@ th button[aria-pressed="true"] {
 	@supports (column-span: all) {
 		
 		[id="howto"] {
-			-webkit-column-count: 3;
-			column-count: 3;
+			-webkit-column-count: 2;
+			column-count: 2;
 			
-			-webkit-column-gap: 60px;
-			column-gap: 60px;
+			-webkit-column-gap: 32px;
+			column-gap: 32px;
 		}
 
 		[id="howto"] h2 {
@@ -934,6 +1029,8 @@ th button[aria-pressed="true"] {
 
 		[id="howto"] p:last-of-type {
 			margin-bottom: 0;
+			-webkit-column-break-after: always;
+			break-after: always; 
 		}
 		
 		[id="howto"] p + section {
@@ -943,12 +1040,20 @@ th button[aria-pressed="true"] {
 	}
 }
 
+@media (min-width: 64em) { 
+	
+	[id="howto"] {
+		-webkit-column-count: 3;
+		column-count: 3;
+		
+		-webkit-column-gap: 60px;
+		column-gap: 60px;
+	}
+	
+}
+
 
 /* NOTES, RESOURCES, FOOTER */
-
-#links {
-	padding: 0 40px 0 0;
-}
 
 .licence {
 	position: relative;
@@ -987,7 +1092,36 @@ a.github:active {
 	[id="contributors"],
 	footer {
 		float: left;
+		width: 50%;
+	}
+	
+	[id="links"] {
+		padding-right: 16px;
+	}
+	
+	[id="contributors"] {
+		padding-left: 16px;
+	}
+	
+	footer {
+		padding: 0 0 32px;
+	}
+	
+}
+
+@media (min-width: 64em) {
+
+	[id="links"],
+	[id="contributors"],
+	footer {
 		width: 33.33%;
+	}
+	
+	[id="links"] {
+		padding: 0 40px 0 0;
+	}
+	
+	[id="contributors"] {
 		padding: 0 20px;
 	}
 	
