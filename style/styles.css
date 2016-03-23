@@ -1128,7 +1128,7 @@ a.github:hover {
 }
 
 a.github:active {
-	opacity: .5;
+	opacity: .75;
 }
 
 @media (min-width: 50em) {
