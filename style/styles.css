@@ -67,10 +67,19 @@ a:hover {
 	color: #1e565c;
 }
 
-a:active,
-::selection {
+a:active {
 	background: #333;
 	color: #fff;
+}
+
+::-moz-selection {
+	background: #9bd8de;
+	color: #000;
+}
+
+::selection {
+	background: #9bd8de;
+	color: #000;
 }
 
 h2 {
