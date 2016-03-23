@@ -879,7 +879,7 @@ th button {
 	float: left;
 
 	width: 22px;
-	height: 32px;
+	height: 28px;
 	margin-right: 12px;
 	border: 0;
 	
@@ -1029,7 +1029,7 @@ th button[aria-pressed="true"] {
 	th[scope="row"] {
 		width: 342px;
 		font-size: 1.15em;
-		padding-top: 10px;
+		padding-top: 13px;
 
 	}
 	
