@@ -209,7 +209,7 @@ h1 {
 
 .subtitle {
 	font-size: 1.15em;
-	margin: 1.25em 0;
+	margin: 1.1em 0;
 	max-width: 30em;
 }
 
@@ -217,12 +217,13 @@ h1 {
 
 nav ul {
 	padding: 0;
+	border-top: 2px solid #333;
 }
 
 nav li {
 	position: relative;
 	margin: 0;
-	padding-bottom: 4px;
+	padding: 4px 0;
 
 	list-style: none;
 	color: #333;
@@ -230,7 +231,6 @@ nav li {
 
 nav li + li {
 	border-top: 2px dotted #333;
-	padding: 4px 0;
 }
 
 nav a {
@@ -249,6 +249,10 @@ nav a {
 		font-size: 32px;
 	}
 	
+	nav ul {
+		margin-top: 20px;
+	}
+	
 }
 
 @media (min-width: 25em) and (max-width: 59.9em) {
@@ -259,7 +263,8 @@ nav a {
 	}
 	
 	.branding {
-		margin-left:  112px;
+		margin:  0 0 32px 112px;
+		min-height: 134px;
 	}
 	
 	h1 {
@@ -339,8 +344,13 @@ nav a {
 	
 	nav ul {
 		margin: 0 0 8px;
+		border-top: 0;
 		border-left: 2px solid #333;
 		padding-left: 12px;
+	}
+	
+	nav li:first-of-type {
+		padding-top: 0;
 	}
 
 }
