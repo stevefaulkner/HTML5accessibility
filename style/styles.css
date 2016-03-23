@@ -165,11 +165,10 @@ section > h3 {
 }
 
 .meta h3 {
-	padding: 2.5em 0 1.54em;
-	font-size: .722em; /* 13px at large breakpoint */
 	position: relative;
-	padding-top: 1.5em;
 	border-top: 0;
+	padding: 1.5em 0 1em;
+	font-size: .722em; /* 13px at large breakpoint */
 }
 
 .meta h3::before {
