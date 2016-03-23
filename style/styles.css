@@ -202,7 +202,7 @@ body > header {
 }
 
 h1 {
-	font-size: 2.65em;
+	font-size: 1.75em;
 	letter-spacing: .03em;
 }
 
@@ -245,7 +245,6 @@ nav a {
 	
 	h1 {
 		margin-left: 62px;
-		font-size: 32px;
 	}
 	
 	nav ul {
@@ -264,10 +263,6 @@ nav a {
 	.branding {
 		margin:  0 0 32px 112px;
 		min-height: 134px;
-	}
-	
-	h1 {
-		font-size: 2.29em;
 	}
 
 }
@@ -331,6 +326,10 @@ nav a {
 	.branding {
 		width: calc(100% - 260px);
 		float: left;
+	}
+	
+	h1 {
+		font-size: 2.65em;
 	}
 	
 	.subtitle {
