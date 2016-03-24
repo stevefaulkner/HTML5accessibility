@@ -92,7 +92,7 @@ main > section {
 	margin-bottom: 3em;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
 
 	html {
 		border: 1.25em solid #fff;
@@ -111,7 +111,6 @@ main > section {
 
 /* COMMON STYLES / HACKS */
 
-body > header::after,
 [id="overview"]::after,
 aside::after,
 [id="results"]::after {
@@ -197,7 +196,7 @@ section > h3 {
 
 /* PAGE HEADER */
 
-body > header {
+.branding {
 	background: url("../images/logos/html5-a11y.svg") no-repeat;
 }
 
@@ -208,7 +207,7 @@ h1 {
 
 .subtitle {
 	font-size: 1.15em;
-	margin: 1.1em 0;
+	margin: 1.1em 0 0;
 	max-width: 30em;
 }
 
@@ -237,14 +236,15 @@ nav a {
 	border: 0;
 }
 
-@media (max-width: 24.9em) {
+@media (max-width: 31em) {
 	
-	body > header {
+	.branding {
 		background-size: 40px auto;
 	}
 	
 	h1 {
 		margin-left: 62px;
+		max-width: 70%;
 	}
 	
 	nav ul {
@@ -253,21 +253,30 @@ nav a {
 	
 }
 
-@media (min-width: 25em) and (max-width: 59.9em) {
+@media (min-width: 31em) {
 	
-	/* both temp until get real size or updated logo */
 	body > header {
-		background-size: 80px auto;
+		display: table;
+		width: 100%;
 	}
 	
 	.branding {
-		margin:  0 0 32px 112px;
-		min-height: 134px;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 130px;
+		background-position: left;
 	}
 
 }
 
 @media (min-width: 31em) and (max-width: 59.9em) {
+	
+
+	.branding {
+		height: 176px;
+		padding-left:  112px;
+		background-size: 80px auto;
+	}
 	
 	header nav li {
 		float: left;
@@ -281,6 +290,10 @@ nav a {
 		background-size: 2px 4px;
 		background-image: linear-gradient(#333, #333 2px, 
 											transparent 2px, transparent 4px);
+	}
+	
+	nav {
+		display: table-row;
 	}
 	
 	nav a { 
@@ -318,26 +331,18 @@ nav a {
 }
 
 @media (min-width: 60em) {
-	
-	body > header {
-		padding-left: 130px;
-	}
-	
-	.branding {
-		width: calc(100% - 260px);
-		float: left;
-	}
-	
+
 	h1 {
 		font-size: 2.65em;
 	}
 	
 	.subtitle {
-		margin-top: .2em;
+		margin-top: 12px;
 	}
 
 	nav {
 		float: right;
+		min-width: 220px;
 	}
 	
 	nav ul {
