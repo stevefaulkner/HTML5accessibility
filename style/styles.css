@@ -886,7 +886,7 @@ th button {
 
 	width: 22px;
 	height: 28px;
-	margin-right: 12px;
+	margin-right: 36px;
 	border: 0;
 	
 	background: url("../images/ui-icons/toggle-open.svg") no-repeat center transparent;
@@ -998,7 +998,7 @@ th button[aria-pressed="true"] {
 	}
 	
 	thead th:first-of-type {
-		padding-left: 44px;
+		padding-left: 68px;
 	}
 	
 	th {
