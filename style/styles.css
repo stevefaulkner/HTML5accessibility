@@ -864,7 +864,7 @@ th.edge {
 	background-size: auto 31px;
 }
 
-th[scope="row"] {;
+th[scope="row"] {
 	border-left: 0;
 	vertical-align: top;
 	font: 400 1em/1.4 "Work Sans", sans-serif;
