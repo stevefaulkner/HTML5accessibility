@@ -239,11 +239,12 @@ nav a {
 @media (max-width: 31em) {
 	
 	.branding {
-		background-size: 40px auto;
+		background: url("../images/logos/html5-a11y-mobi.svg") no-repeat;
+		background-size: 48px auto;
 	}
 	
 	h1 {
-		margin-left: 62px;
+		margin-left: 70px;
 		max-width: 70%;
 	}
 	
