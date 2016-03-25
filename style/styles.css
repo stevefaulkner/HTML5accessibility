@@ -586,7 +586,8 @@ th.safari {
 }
 
 [id="overview"] > p {
-	font-size: 1.55em;
+	margin-bottom: 2em;
+	font-size: 1.1em;
 	font-weight: 300;
 }
 
@@ -619,7 +620,9 @@ aside {
 	}
 
 	[id="overview"] > p {
+		margin-bottom: 1em;
 		padding-right: 24px;
+		font-size: 1.55em;
 	}
 	
 	.sponsor {
