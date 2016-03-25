@@ -659,6 +659,7 @@ aside {
 	display: inline-block;
 	padding-left: 28px;
 	background-position: left center;
+	background-repeat: no-repeat;
 }
 
 .key .yes {
@@ -807,17 +808,19 @@ thead th:first-of-type {
 	border-left-width: 0;
 }
 
+td, th[scope="row"] {
+	border: 2px solid transparent;
+	border-width: 8px 2px;
+	border-left: 2px dotted #a2a2a2;
+
+	border-image: url("../images/dot-border.svg") 10 2 8 2 repeat;
+}
+
 td {
 	display: none;
-
-	border-top: 2px solid #a2a2a2;
-	padding: 8px 0;
 	
-	background: repeat-y content-box left, 
-	            no-repeat center;
-	background-size: 2px 4px, 16px auto;
-	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
-	                                             transparent 2px, transparent 4px);
+	background: no-repeat center;
+	background-size: 16px auto;
 	
 	font-size: .9em;
 	line-height: 38px;
@@ -861,10 +864,8 @@ th.edge {
 	background-size: auto 31px;
 }
 
-th[scope="row"] {
-	border-top: 2px solid #a2a2a2;
-	padding-top: 12px;
-
+th[scope="row"] {;
+	border-left: 0;
 	vertical-align: top;
 	font: 400 1em/1.4 "Work Sans", sans-serif;
 }
@@ -877,6 +878,7 @@ th[scope="row"] code {
 .expand th ~ td {
 	color: #000;
 	border-top-color: currentColor;
+	border-image-source: url("../images/dot-border-focus.svg");
 }
 
 th button {
@@ -906,47 +908,23 @@ th button[aria-pressed="true"] {
 [title="partial"] {
 	max-width: 60px;
 	overflow: hidden;
-	text-indent: 100%;
+	text-indent: 110%;
 }
 
-[title="yes"] {
-	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
-	                                             transparent 2px, transparent 4px), 
-					   url(../images/status-icons/yes.svg);
+[title="yes"], .yes {
+	background-image:  url(../images/status-icons/yes.svg);
+} 
+
+[title="no"], .no {
+	background-image: url(../images/status-icons/no.svg);
 }
 
-.yes {
-	background: url(../images/status-icons/yes.svg) no-repeat;
+[title="n/a"], .n-a {
+	background-image:  url(../images/status-icons/n-a.svg);
 }
 
-[title="no"] {
-	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
-	                                             transparent 2px, transparent 4px), 
-					   url(../images/status-icons/no.svg);
-}
-
-.no {
-	background: url(../images/status-icons/no.svg) no-repeat;
-}
-
-[title="n/a"] {
-	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
-	                                             transparent 2px, transparent 4px), 
-					  url(../images/status-icons/n-a.svg);
-}
-
-.n-a {
-	background: url(../images/status-icons/n-a.svg) no-repeat;
-}
-
-[title="partial"] {
-	background-image: linear-gradient(to bottom, #a2a2a2, #a2a2a2 2px, 
-	                                             transparent 2px, transparent 4px), 
-					  url(../images/status-icons/partial.svg);
-}
-
-.partial {
-	background: url(../images/status-icons/partial.svg) no-repeat;
+[title="partial"], .partial {
+	background-image: url(../images/status-icons/partial.svg);
 }
 
 
@@ -968,11 +946,16 @@ th button[aria-pressed="true"] {
 		display: none;
 	}
 	
+	td, th[scope="row"] {
+		border-top-width: 6px;
+		border-bottom-width: 5px;
+	}
+	
 	th[scope="row"] {
 		display: inline-block;
 		position: relative;	
-		padding: .9em .4em .9em 1.9em;
-		border: 0;
+		width: 100%;
+		padding: .5em .4em .4em 1.9em;
 	}	
 	
 	th[scope="row"] button {
@@ -993,25 +976,17 @@ th button[aria-pressed="true"] {
 		width: 24px;
 	}
 	
-	tbody tr {
-		background: linear-gradient(#a2a2a2, #a2a2a2 1px, transparent 1px), no-repeat;
-	}
-	
-	tr:not(.expand) + tr.expand {
-		background: linear-gradient(black, black 1px, transparent 1px), no-repeat;
-	}
-	
 	td {
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		max-width: 100px;
-		border: 0;
 		text-indent: 0;
 	}
 	
 	tr > td:first-child {
 		background: 0;
+		border: 0;
 	}
 	
 }
@@ -1033,12 +1008,11 @@ th button[aria-pressed="true"] {
 	th[scope="row"] {
 		width: 342px;
 		font-size: 1.15em;
-		padding-top: 13px;
-
+		padding-top: 6px;
 	}
 	
 	th ~ td {
-		background-size: 2px 4px, auto;
+		background-size: auto;
 	}
 
 }
