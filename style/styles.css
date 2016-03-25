@@ -983,7 +983,6 @@ th button[aria-pressed="true"] {
 	td {
 		overflow: hidden;
 		white-space: nowrap;
-		text-overflow: ellipsis;
 		max-width: 100px;
 		text-indent: 0;
 	}
