@@ -947,7 +947,17 @@ th button[aria-pressed="true"] {
 		
 	thead th:nth-of-type(2),
 	tbody th + td:first-of-type {
-		display: none;
+		width: 0;
+		border: 0;
+		border-bottom: 2px solid #a2a2a2;
+		padding: 0;
+		overflow: hidden;
+		text-indent: 2px;
+	}
+	
+	tbody th + td:first-of-type {
+		border-bottom: 0;
+		border-top: 1px solid #a2a2a2;
 	}
 	
 	td, th[scope="row"] {
