@@ -880,7 +880,6 @@ th[rowspan] ~ td {
 
 th button {
 	vertical-align: middle;
-
 	width: 22px;
 	height: 28px;
 	margin-right: 24px;
@@ -963,15 +962,10 @@ th button[aria-pressed="true"] {
 	
 	th[scope="row"] {
 		display: inline-block;
-		position: relative;	
+		vertical-align: middle;
 		width: 100%;
 		padding: .5em .4em .4em 6px;
 	}	
-	
-	th[scope="row"] button {}
-		
-		height: 100%; 		
-	}
 	
 	th.chrome,
 	th.edge,
@@ -1021,6 +1015,14 @@ th button[aria-pressed="true"] {
 		background-size: auto;
 	}
 
+}
+
+@media (min-width: 75em) {
+	
+	th[scope="row"] {
+		padding-top: 4px;
+	}
+	
 }
 
 
