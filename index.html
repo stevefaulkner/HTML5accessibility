@@ -1732,7 +1732,7 @@
 			var el = btn.cloneNode(true);
 			
 			el.addEventListener("click", handleExpandButton, false);
-			features[i].appendChild(el);
+			features[i].insertBefore(el, features[i].firstChild);
 			this.collapseExpandRows(features[i]);
 		}			
 		

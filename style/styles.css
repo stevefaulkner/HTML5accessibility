@@ -879,7 +879,7 @@ th[rowspan] ~ td {
 }
 
 th button {
-	float: left;
+	vertical-align: middle;
 
 	width: 22px;
 	height: 28px;
@@ -965,13 +965,10 @@ th button[aria-pressed="true"] {
 		display: inline-block;
 		position: relative;	
 		width: 100%;
-		padding: .5em .4em .4em 46px;
+		padding: .5em .4em .4em 6px;
 	}	
 	
-	th[scope="row"] button {
-		position: absolute;
-		top: 1px;
-		left: 6px;
+	th[scope="row"] button {}
 		
 		height: 100%; 		
 	}
