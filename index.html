@@ -1680,10 +1680,7 @@
 		<a class="github" href="https://github.com/stevefaulkner/HTML5accessibility">Fork on GitHub</a>
 	</footer>
 	<script>
-		function collapseExpandRows(e) {
-			var parent = this.parentNode,
-			    numRows = parent.getAttribute("rowspan") - 1,
-			    row = parent.parentNode;
+		function handleExpandButton(e) {
 			
 			if (this.textContent === "expand") {
 				 this.textContent = "collapse";
@@ -1692,12 +1689,36 @@
 				 this.textContent = "expand";
 				 this.setAttribute("aria-pressed", "false");
 			}
-				
-			for (var i = 0; i <= numRows; i++) {				
-				(row.className === "expand") ? row.className = "collapse" : row.className = "expand";
-				row = row.nextElementSibling;
+			
+			collapseExpandRows(this.parentNode);
+
+		}
+		
+		function collapseExpandRows(el) { 
+			var rowSpan = el.getAttribute("rowspan"),
+				numRows = rowSpan || el.getAttribute("data-rowspan"),
+			    row = el.parentNode;
+								
+			if (rowSpan) {
+				el.removeAttribute("rowspan");
+				el.setAttribute("data-rowspan", numRows);
+			} else {
+				el.removeAttribute("data-rowspan");
+				el.setAttribute("rowspan", numRows);
 			}
 			
+			numRows = numRows - 2;
+			
+			for (var i = 0; i <= numRows; i++) {
+				row = row.nextElementSibling; //first row never hidden
+				
+				if (row.getAttribute("hidden")) {
+					row.removeAttribute("hidden");
+				} else {
+					row.setAttribute("hidden", "hidden");
+				}
+			}
+						
 		}
 		
 		var features = document.querySelectorAll("th[scope=row]");
@@ -1710,9 +1731,10 @@
 		for (var i = 0; i < features.length; i++) {
 			var el = btn.cloneNode(true);
 			
-			el.addEventListener("click", collapseExpandRows, false);
+			el.addEventListener("click", handleExpandButton, false);
 			features[i].appendChild(el);
-		}		
+			this.collapseExpandRows(features[i]);
+		}			
 		
 	</script>
 </body>

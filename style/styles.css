@@ -820,9 +820,7 @@ td, th[scope="row"] {
 	border-image: url("../images/dot-border.svg") 10 2 8 2 repeat;
 }
 
-td {
-	display: none;
-	
+td {	
 	background: no-repeat center;
 	background-size: 16px auto;
 	
@@ -838,12 +836,8 @@ th + td:first-of-type {
 	padding-right: 12px;
 }
 
-.expand td {
-	display: table-cell;
-}
 
 th ~ td {
-	display: table-cell;
 	font-weight: 400;
 }
 
@@ -878,10 +872,9 @@ th[scope="row"] code {
 	font-family: inherit;
 }
 
-.expand th,
-.expand th ~ td {
+th[rowspan],
+th[rowspan] ~ td {
 	color: #000;
-	border-top-color: currentColor;
 	border-image-source: url("../images/dot-border-focus.svg");
 }
 
