@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" viewBox="0 0 48 44">
-	<g fill="none" stroke="#000" stroke-width="4">
+	<g style="fill: none; stroke: windowText; stroke-width: 4">
   		<path d="M2 2h44v40H2z"/>
     	<path d="M4 30h40"/>
 		<g stroke-width="2">
