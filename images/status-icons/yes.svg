@@ -1,3 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<style>
+		@media (-ms-high-contrast: active) {
+			path { stroke: highlight }
+		}
+	</style>
 	<path fill="none" stroke="#99a83e" stroke-width="4" d="M2 12.4l6.4 6.4L22 5.2" />
 </svg>

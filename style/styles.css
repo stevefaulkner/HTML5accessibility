@@ -806,7 +806,15 @@ thead th {
 											
 	text-transform: uppercase;
 	font-size: 13px;
+	-ms-high-contrast-adjust: none;
 }
+
+	@media (-ms-high-contrast: active) {
+		thead th { 
+			border-image: linear-gradient(to bottom, transparent, transparent 35%,
+										             windowText 35%, windowText 100%) 2; 
+		}
+	}
 
 thead th:first-of-type {
 	border-left-width: 0;
@@ -818,6 +826,7 @@ td, th[scope="row"] {
 	border-left: 2px dotted #a2a2a2;
 
 	border-image: url("../images/dot-border.svg") 10 2 8 2 repeat;
+	-ms-high-contrast-adjust: none;
 }
 
 td {	
@@ -829,7 +838,6 @@ td {
 	font-weight: 300;
 	text-indent: 12px;	
 	white-space: nowrap;
-
 }
 
 th + td:first-of-type {
