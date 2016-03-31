@@ -7,5 +7,5 @@
     		<path d="M13 36h29"/>
 		</g>
 	</g>
-    <path d="M18 34h4v4h-4z"/>
+    <path style="fill: windowText" d="M18 34h4v4h-4z"/>
 </svg>

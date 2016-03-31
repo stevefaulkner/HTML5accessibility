@@ -97,7 +97,7 @@ main > section {
 	html {
 		border: 1.25em solid #fff;
 	}
-	
+		
 	body {
 		margin: 3.5em auto;
 	}
@@ -809,12 +809,12 @@ thead th {
 	-ms-high-contrast-adjust: none;
 }
 
-	@media (-ms-high-contrast: active) {
-		thead th { 
-			border-image: linear-gradient(to bottom, transparent, transparent 35%,
-										             windowText 35%, windowText 100%) 2; 
-		}
+@media (-ms-high-contrast: active) {
+	thead th { 
+		border-image: linear-gradient(to bottom, transparent, transparent 35%,
+								                 windowText 35%, windowText 100%) 2; 
 	}
+}
 
 thead th:first-of-type {
 	border-left-width: 0;
@@ -826,7 +826,6 @@ td, th[scope="row"] {
 	border-left: 2px dotted #a2a2a2;
 
 	border-image: url("../images/dot-border.svg") 10 2 8 2 repeat;
-	-ms-high-contrast-adjust: none;
 }
 
 td {	
@@ -900,6 +899,7 @@ th button {
 
 	line-height: 1.4;
 	cursor: pointer;
+	-ms-high-contrast-adjust: none;
 }
 
 th button[aria-pressed="true"] {
@@ -913,6 +913,7 @@ th button[aria-pressed="true"] {
 	max-width: 60px;
 	overflow: hidden;
 	text-indent: 110%;
+	-ms-high-contrast-adjust: none;
 }
 
 [title="yes"], .yes {
