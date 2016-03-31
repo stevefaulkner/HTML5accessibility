@@ -97,6 +97,12 @@ main > section {
 	html {
 		border: 1.25em solid #fff;
 	}
+	
+	@media (-ms-high-contrast: active) {
+		html {
+			border: 0;
+		}
+	}
 		
 	body {
 		margin: 3.5em auto;
@@ -161,6 +167,7 @@ section > h3 {
 	left: 0;
 	background: #333;
 	content: "\0000a0\0000a0\0000a0";
+	-ms-high-contrast-adjust: none;
 }
 
 .meta h3 {
@@ -443,7 +450,24 @@ nav a {
 
 .test-results .low,
 .low .result {
-	border-color: #c14d35
+	border-color: #c14d35;
+}
+
+@media (-ms-high-contrast: active) {
+	.test-results .high,
+	.high .result {
+		border-color: #218721;
+	}
+
+	.test-results .medium,
+	.medium .result {
+		border-color: #af641e; 
+	}
+
+	.test-results .low,
+	.low .result {
+		border-color: #e91919;
+	}
 }
 
 @media (max-width: 22.5em) {
@@ -784,6 +808,7 @@ table {
 	box-shadow: 0 0 12px hsla(0, 0%, 0%, .15);
 }
 
+
 /* only controls as others are not very long. Consider for elements */
 #controls thead {
 	position: -webkit-sticky;
@@ -1034,6 +1059,13 @@ th button[aria-pressed="true"] {
 	
 }
 
+@media (-ms-high-contrast: active) {
+	table {
+		border: 0;
+		padding: 12px 0;
+	}
+}
+
 
 /* HOW TO SECTION */
 
@@ -1127,6 +1159,12 @@ a.github:hover {
 
 a.github:active {
 	opacity: .75;
+}
+
+@media (-ms-high-contrast: active) {
+	a.github {
+		border: 1px solid;
+	}
 }
 
 @media (min-width: 50em) {
