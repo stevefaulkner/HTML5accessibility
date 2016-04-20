@@ -931,29 +931,29 @@ th button[aria-pressed="true"] {
 	background-image: url("../images/ui-icons/toggle-close.svg")
 }
 
-[title="yes"],
-[title="no"],
-[title="n/a"],
-[title="partial"] {
+td.yes,
+td.no,
+td.n-a,
+td.partial {
 	max-width: 60px;
 	overflow: hidden;
 	text-indent: 110%;
 	-ms-high-contrast-adjust: none;
 }
 
-[title="yes"], .yes {
+.yes {
 	background-image:  url(../images/status-icons/yes.svg);
 } 
 
-[title="no"], .no {
+.no {
 	background-image: url(../images/status-icons/no.svg);
 }
 
-[title="n/a"], .n-a {
+.n-a {
 	background-image:  url(../images/status-icons/n-a.svg);
 }
 
-[title="partial"], .partial {
+.partial {
 	background-image: url(../images/status-icons/partial.svg);
 }
 
