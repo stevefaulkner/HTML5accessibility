@@ -663,7 +663,7 @@ aside {
 
 /* FEATURE SUPPORT */
 
-[id="support"] h2 {
+[id="support"] {
 	margin-bottom: 1.11em;
 }
 
@@ -718,13 +718,13 @@ aside {
 
 }
 
-[id="support"] h3 {
+[aria-labelledby="support"] h3 {
 	position: relative;
 	padding-left: 80px;
 	font-size: 1.11em; /* 20px at large breakpoint */
 }
 
-[id="support"] > section h3::before {
+[aria-labelledby="support"] h3::before {
 	position: absolute;
 	left: 0;
 
@@ -734,49 +734,50 @@ aside {
 	margin-top: -4px;
 
 	content: "";
-	background: no-repeat;
+	background-repeat: no-repeat;
 }
 
-#sections h3::before {
+[id="sections"]::before {
 	background-image: url("../images/categories/sections.svg");
 }
 
-#text h3::before {
+[id="text"]::before {
 	background-image: url("../images/categories/text.svg");
 }
 
-#graphics h3::before {
+[id="graphics"]::before {
 	background-image: url("../images/categories/graphics.svg");
 }
 
-#controls h3::before {
+[id="controls"]::before {
 	background-image: url("../images/categories/controls.svg");
 }
 
-#properties h3::before {
+[id="properties"]::before {
 	background-image: url("../images/categories/properties.svg");
 	margin-top: 0;
 }
 
 @media (max-width: 85.99em) {
 
-	[id="support"] h3 {
+	[aria-labelledby="support"] h3 {
 		display: flex;
 		align-items: center;
 		min-height: 52px;
 		margin: 2.5em 0 20px;
 	}
 	
-	[id="support"] section:first-of-type h3 {
+	[aria-labelledby="support"] section:first-of-type h3 {
 		margin-top: 32px;
 	}
 	
 	#controls h3,
 	#properties h3 {
 		min-height: 30px;
+		margin-top: 0;
 	}
 	
-	#support > section h3::before  {
+	[aria-labelledby="support"] > section h3::before {
 		top: 0;
 		margin-top: -3px;
 		background-position: center left;
@@ -785,11 +786,11 @@ aside {
 
 @media (min-width: 86em) {
 	
-	[id="support"] h3 {
+	[aria-labelledby="support"] h3 {
 		padding: 2.01em 0 1.6em;
 	}
 	
-	#support > section h3::before {
+	[aria-labelledby="support"] > section h3::before {
 		left: -80px;
 
 	}
@@ -1081,7 +1082,7 @@ td.partial {
 	/* without column-span and some way to break columns, elements clash into each other */
 	@supports (column-span: all) {
 		
-		[id="howto"] {
+		[aria-labelledby="howto"] {
 			-webkit-column-count: 2;
 			column-count: 2;
 			
@@ -1089,22 +1090,22 @@ td.partial {
 			column-gap: 32px;
 		}
 
-		[id="howto"] h2 {
+		[id="howto"] {
 			column-span: all;
 		}
 		
-		[id="howto"] p { 
+		[aria-labelledby="howto"] p { 
 			-webkit-column-break-inside: avoid;
 			break-inside: avoid; 
 		}
 
-		[id="howto"] p:last-of-type {
+		[aria-labelledby="howto"] p:last-of-type {
 			margin-bottom: 0;
 			-webkit-column-break-after: always;
 			break-after: always; 
 		}
 		
-		[id="howto"] p + section {
+		[aria-labelledby="howto"] p + section {
 			-webkit-column-break-inside: avoid;
 			break-inside: avoid;
 		}
@@ -1116,7 +1117,7 @@ td.partial {
 	
 		@supports (column-span: all) {
 	
-			[id="howto"] {
+			[aria-labelledby="howto"] {
 				-webkit-column-count: 3;
 				column-count: 3;
 				
