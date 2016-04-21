@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	<style>
+		@media (-ms-high-contrast: active) {
+			path { stroke: #e91919 }
+		}
+	</style>
+	<path stroke="#c14d35" stroke-width="4" d="M4 20L20 4M20 20L4 4" />
+</svg>

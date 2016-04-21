@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="44" viewBox="0 0 48 44">
+	<g style="fill: none; stroke: windowText; stroke-width: 4">
+  		<path d="M2 2h44v40H2z"/>
+    	<path d="M4 30h40"/>
+		<g stroke-width="2">
+    		<path d="M7 34v4M10 34v4"/>
+    		<path d="M13 36h29"/>
+		</g>
+	</g>
+    <path style="fill: windowText" d="M18 34h4v4h-4z"/>
+</svg>
