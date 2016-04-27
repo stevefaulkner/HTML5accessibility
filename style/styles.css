@@ -951,7 +951,8 @@ td.partial {
 	background-image: url(../images/status-icons/no.svg);
 }
 
-td.no a {
+td.no a,
+td.partial a {
 	position: absolute;
 	top: 4px;
 	bottom: 3px;
@@ -961,7 +962,8 @@ td.no a {
 	border: 0;
 }
 
-.no a:focus {
+.no a:focus,
+.partial a:focus {
 	outline: 1px dotted #000;
 }
 
