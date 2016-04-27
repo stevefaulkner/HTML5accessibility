@@ -936,6 +936,7 @@ td.yes,
 td.no,
 td.n-a,
 td.partial {
+	position: relative;
 	max-width: 60px;
 	overflow: hidden;
 	text-indent: 110%;
@@ -948,6 +949,20 @@ td.partial {
 
 .no {
 	background-image: url(../images/status-icons/no.svg);
+}
+
+td.no a {
+	position: absolute;
+	top: 4px;
+	bottom: 3px;
+	left: 6px;
+	right: 4px;
+	
+	border: 0;
+}
+
+.no a:focus {
+	outline: 1px dotted #000;
 }
 
 .n-a {
