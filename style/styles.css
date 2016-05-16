@@ -967,6 +967,11 @@ td.partial a {
 	outline: 1px dotted #000;
 }
 
+.no a:active,
+.partial a:active {
+	background: 0;
+}
+
 .n-a {
 	background-image:  url(../images/status-icons/n-a.svg);
 }
