@@ -811,7 +811,7 @@ table {
 
 
 /* only controls as others are not very long. Consider for elements */
-#controls thead {
+[aria-labelledby="controls"] thead {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
