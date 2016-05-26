@@ -811,7 +811,7 @@ table {
 
 
 /* only controls as others are not very long. Consider for elements */
-#controls thead {
+[aria-labelledby="controls"] thead {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -936,6 +936,7 @@ td.yes,
 td.no,
 td.n-a,
 td.partial {
+	position: relative;
 	max-width: 60px;
 	overflow: hidden;
 	text-indent: 110%;
@@ -948,6 +949,27 @@ td.partial {
 
 .no {
 	background-image: url(../images/status-icons/no.svg);
+}
+
+td.no a,
+td.partial a {
+	position: absolute;
+	top: 4px;
+	bottom: 3px;
+	left: 6px;
+	right: 4px;
+	
+	border: 0;
+}
+
+.no a:focus,
+.partial a:focus {
+	outline: 1px dotted #000;
+}
+
+.no a:active,
+.partial a:active {
+	background: 0;
 }
 
 .n-a {
