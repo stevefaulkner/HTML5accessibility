@@ -61,10 +61,10 @@
 				they are keyboard accessible, mapped to the platform accessibility APIs, and if any accessibility related features are
 				supported. An accessibly supported feature means it is usable by people who rely on assistive technology, without developers
 				having to supplement with ARIA or other additional workarounds.</p>
-		
+
 				<aside class="sponsor">
 					<img src="images/logos/nvda.svg" alt="" />
-					<p><a href="http://www.nvaccess.org/wiki/Donate">Donate to 
+					<p><a href="http://www.nvaccess.org/wiki/Donate">Donate to
 						<abbr title="NonVisual Desktop Access ">NVDA</abbr></a>,
 						the open source screen reader for Windows.
 					</p>
@@ -73,7 +73,7 @@
 
 		<section aria-labelledby="support">
 			<h2 id="support">Feature Support</h2>
-			
+
 			<div class="key" aria-hidden="true">
 				<p class="key-label">Key:</p>
 				<ul>
@@ -83,10 +83,10 @@
 					<li class="n-a">N/A</li>
 				</ul>
 			</div>
-			
+
 			<section aria-labelledby="sections">
 				<h3 id="sections">Sections &amp; Grouping</h3>
-				
+
 				<table aria-labelledby="sections">
 					<thead>
 						<tr>
@@ -392,10 +392,10 @@
 					</tbody>
 				</table>
 			</section>
-			
+
 			<section aria-labelledby="text">
 				<h3 id="text">Text-level</h3>
-				
+
 				<table aria-labelledby="text">
 					<thead>
 						<tr>
@@ -411,7 +411,7 @@
 					<tbody>
 						<tr>
 							<th scope="row" rowspan="4"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/time.html"><code>time</code></a></th>
-							<td>Accessibly supported</td>	
+							<td>Accessibly supported</td>
 							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
 							<td class="yes">yes</td>
@@ -424,7 +424,7 @@
 							<td class="no">no</td>
 							<td class="yes">yes</td>
 							<td class="no">no</td>
-							<td class="no">no</td>
+							<td class="no"><a href="https://bugs.webkit.org/show_bug.cgi?id=68156">no</a></td>
 						</tr>
 						<tr>
 							<td>Mapped</td>
@@ -478,10 +478,10 @@
 					</tbody>
 				</table>
 			</section>
-			
+
 			<section aria-labelledby="graphics">
 				<h3 id="graphics">Graphics &amp; Media</h3>
-				
+
 				<table aria-labelledby="graphics">
 					<thead>
 						<tr>
@@ -630,10 +630,10 @@
 					</tbody>
 				</table>
 			</section>
-			
+
 			<section aria-labelledby="controls">
 				<h3 id="controls">Controls</h3>
-				
+
 				<table aria-labelledby="controls">
 					<thead>
 						<tr>
@@ -974,7 +974,7 @@
 							<td class="yes">yes</td>
 							<td class="no">no</td>
 							<td class="no">no</td>
-							<td class="no">no</td>
+							<td class="no"><a href="https://bugs.webkit.org/show_bug.cgi?id=88026">no</a></td>
 						</tr>
 						<tr>
 							<td>Mapped</td>
@@ -1048,7 +1048,7 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-						</tr>						
+						</tr>
 						<tr>
 							<th scope="row" rowspan="5"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-range.html"><code>range</code></a> input</th>
 							<td>Accessibly supported</td>
@@ -1352,7 +1352,7 @@
 							<td class="no">no</td>
 							<td class="no">no</td>
 							<td class="no">no</td>
-							<td class="no">no</td>
+							<td class="no"><a href="https://bugs.webkit.org/show_bug.cgi?id=158259">no</a></td>
 						</tr>
 						<tr>
 							<td>Mapped</td>
@@ -1472,10 +1472,10 @@
 					</tbody>
 				</table>
 			</section>
-			
+
 			<section aria-labelledby="properties">
 				<h3 id="properties">Properties</h3>
-				
+
 				<table aria-labelledby="properties">
 					<thead>
 						<tr>
@@ -1596,25 +1596,25 @@
 
 		<section aria-labelledby="howto">
 			<h2 id="howto">How to Test</h2>
-			
+
 			<p>Each feature has its own test page, including the pass criteria, and spec references for the required mapping from HTML feature to the platform accessibility layer.</p>
 			<p>Browser support for a feature is automatically detected. This checks to see if the browser claims it supports the feature via object detection, not if it is fully supported correctly. If a feature is not supported, it is excluded from the scoring.</p>
 			<p>If a feature is supported, the next step is to test if it is correctly mapped to the platform accessibility layer. This must be tested manually. This can be done with one of the tools listed at the end of this section.</p>
 			<p>To be accessibly supported, elements that represent interactive controls must be fully keyboard accessible. Actions that must be able to be performed are listed in the test file, but shortcuts may be different between browsers and platforms.</p>
-			
+
 			<section class="meta">
 				<h3>Browser-Based Dev Tools</h3>
-			
+
 				<ul>
 					<li><a href="chrome://accessibility/">chrome://accessibility/</a> (Chrome)</li>
 					<li>F12 Accessibility Tree (Edge)</li>
 					<li><a href="https://addons.mozilla.org/en-US/firefox/addon/6622/">Dom Inspector</a> (Firefox extension)</li>
 				</ul>
 			</section>
-			
+
 			<section class="meta">
 				<h3>Desktop Apps</h3>
-			
+
 				<ul>
 					<li><a href="https://www.paciellogroup.com/resources/aviewer/">Aviewer</a> (Windows)</li>
 					<li><a href="http://msdn.microsoft.com/en-us/library/dd318521%28v=vs.85%29.aspx">Inspect</a> (Windows SDK)</li>
@@ -1626,7 +1626,7 @@
 
 		<section aria-labelledby="notes">
 			<h2 id="notes">Notes &amp; Further Resources</h2>
-			
+
 			<section id="links" class="meta">
 				<h3>Helpful Links</h3>
 
@@ -1635,20 +1635,20 @@
 					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a></li>
 				</ul>
 			</section>
-			
+
 			<section id="contributors" class="meta">
 				<h3>Contributors</h3>
 
 				<p>HTML5 Accessiblity was <a href="http://www.paciellogroup.com">developed by The Paciello Group</a>, your accessibility partner.
 				<a href="http://www.paciellogroup.com/contact/">Contact us</a> for solutions to your accessibility issues.</p>
-					
-				<p>Further design and development by <a href="https://twitter.com/dstorey">David Storey</a> and 
+
+				<p>Further design and development by <a href="https://twitter.com/dstorey">David Storey</a> and
 				<a href="https://twitter.com/somelaniesaid">Melanie Richards</a>.</p>
 			</section>
 		</section>
 	</main>
 
-	<footer>	
+	<footer>
 		<small class="licence">
 			This work is licenced under a <a href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license">Creative Commons Licence.</a>
 		</small>
@@ -1657,7 +1657,7 @@
 	</footer>
 	<script>
 		function handleExpandButton(e) {
-			
+
 			if (this.textContent === "expand") {
 				 this.textContent = "collapse";
 				 this.setAttribute("aria-pressed", "true");
@@ -1665,16 +1665,16 @@
 				 this.textContent = "expand";
 				 this.setAttribute("aria-pressed", "false");
 			}
-			
+
 			collapseExpandRows(this.parentNode);
 
 		}
-		
-		function collapseExpandRows(el) { 
+
+		function collapseExpandRows(el) {
 			var rowSpan = el.getAttribute("rowspan"),
 				numRows = rowSpan || el.getAttribute("data-rowspan"),
 			    row = el.parentNode;
-								
+
 			if (rowSpan) {
 				el.removeAttribute("rowspan");
 				el.setAttribute("data-rowspan", numRows);
@@ -1682,36 +1682,36 @@
 				el.removeAttribute("data-rowspan");
 				el.setAttribute("rowspan", numRows);
 			}
-			
+
 			numRows = numRows - 2;
-			
+
 			for (var i = 0; i <= numRows; i++) {
 				row = row.nextElementSibling; //first row never hidden
-				
+
 				if (row.getAttribute("hidden")) {
 					row.removeAttribute("hidden");
 				} else {
 					row.setAttribute("hidden", "hidden");
 				}
 			}
-						
+
 		}
-		
+
 		var features = document.querySelectorAll("th[scope=row]");
 		    btn = document.createElement("button"),
 		    txt = document.createTextNode("expand");
-			
-			btn.appendChild(txt); 
+
+			btn.appendChild(txt);
 			btn.setAttribute("aria-pressed", "false");
-				
+
 		for (var i = 0; i < features.length; i++) {
 			var el = btn.cloneNode(true);
-			
+
 			el.addEventListener("click", handleExpandButton, false);
 			features[i].insertBefore(el, features[i].firstChild);
 			this.collapseExpandRows(features[i]);
-		}			
-		
+		}
+
 	</script>
 </body>
 </html>
