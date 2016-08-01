@@ -960,6 +960,8 @@ td.partial a {
 	right: 4px;
 	
 	border: 0;
+	background: url(../images/arrow.svg) no-repeat top right;
+	opacity: .7;
 }
 
 .no a:focus,
