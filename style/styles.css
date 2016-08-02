@@ -97,17 +97,17 @@ main > section {
 	html {
 		border: 1.25em solid #fff;
 	}
-	
+
 	@media (-ms-high-contrast: active) {
 		html {
 			border: 0;
 		}
 	}
-		
+
 	body {
 		margin: 3.5em auto;
 	}
-	
+
 	main > section {
 		margin-bottom: 4.44em;
 	}
@@ -133,7 +133,7 @@ aside a::after,
 	bottom: 0;
 	left: 0;
 	right: 0;
-	
+
 	content: "";
 }
 
@@ -218,6 +218,12 @@ h1 {
 	max-width: 30em;
 }
 
+/* @TODO: remove when "Editor's draft" is removed */
+.subtitle em {
+	font-style: normal;
+	font-family: "League Spartan", sans-serif;
+}
+
 /* Navigation */
 
 nav ul {
@@ -244,30 +250,30 @@ nav a {
 }
 
 @media (max-width: 31em) {
-	
+
 	.branding {
 		background: url("../images/logos/html5-a11y-mobi.svg") no-repeat;
 		background-size: 48px auto;
 	}
-	
+
 	h1 {
 		margin-left: 70px;
 		max-width: 70%;
 	}
-	
+
 	nav ul {
 		margin-top: 20px;
 	}
-	
+
 }
 
 @media (min-width: 31em) {
-	
+
 	body > header {
 		display: table;
 		width: 100%;
 	}
-	
+
 	.branding {
 		display: table-cell;
 		vertical-align: middle;
@@ -278,14 +284,14 @@ nav a {
 }
 
 @media (min-width: 31em) and (max-width: 59.9em) {
-	
+
 
 	.branding {
 		height: 176px;
 		padding-left:  112px;
 		background-size: 80px auto;
 	}
-	
+
 	header nav li {
 		float: left;
 		width: calc(50% - 2px);
@@ -296,46 +302,46 @@ nav a {
 
 		background: repeat-y content-box right;
 		background-size: 2px 4px;
-		background-image: linear-gradient(#333, #333 2px, 
+		background-image: linear-gradient(#333, #333 2px,
 											transparent 2px, transparent 4px);
 	}
-	
+
 	nav {
 		display: table-row;
 	}
-	
-	nav a { 
+
+	nav a {
 		margin-left: 12px;
 	}
-	
+
 }
 
 @media (min-width: 31em) and (max-width: 47.49em) {
-	
+
 	nav li:nth-last-of-type(n+2) {
 		border-bottom: 2px dotted;
 	}
-	
+
 	nav li:nth-of-type(even) {
 		background: 0;
 	}
-	
+
 }
 
-@media (min-width: 47.5em) and (max-width: 59.9em) { 
-	
+@media (min-width: 47.5em) and (max-width: 59.9em) {
+
 	header nav li {
 		width: calc(33% - 2px);
 	}
-	
+
 	nav li:nth-last-of-type(n+3) {
 		border-bottom: 2px dotted;
 	}
-	
+
 	nav li:nth-of-type(3) {
 		background: 0;
 	}
-	
+
 }
 
 @media (min-width: 60em) {
@@ -343,7 +349,7 @@ nav a {
 	h1 {
 		font-size: 2.65em;
 	}
-	
+
 	.subtitle {
 		margin-top: 12px;
 	}
@@ -352,14 +358,14 @@ nav a {
 		float: right;
 		min-width: 220px;
 	}
-	
+
 	nav ul {
 		margin: 0 0 8px;
 		border-top: 0;
 		border-left: 2px solid #333;
 		padding-left: 12px;
 	}
-	
+
 	nav li:first-of-type {
 		padding-top: 0;
 	}
@@ -379,7 +385,7 @@ nav a {
 
 .test-results li {
 	position: relative;
-	
+
 	list-style: none;
 
 	background-repeat: no-repeat;
@@ -387,12 +393,12 @@ nav a {
 	background-size: 64px auto;
 	background-color: #fcfcfc;
 	box-shadow: 0 0 8px hsla(0, 0%, 0%, .15);
-		
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flexbox;
 	display: flex;
-	
+
 	-webkit-flex-direction: column;
 	-moz-flex-direction: column;
 	-ms-flex-direction: column;
@@ -408,11 +414,11 @@ nav a {
 
 	width: 36px;
 	height: 10px;
-	
+
 	background-color: #f7f7f7;
 	border-radius: 8px;
 	box-shadow: inset 0 0 8px hsla(0, 0%, 0%, .15);
-	
+
 	content: "";
 }
 
@@ -424,12 +430,12 @@ nav a {
 
 .result {
 	display: inline-block;
-	
+
 	-webkit-order: -1;
 	-moz-order: -1;
 	-ms-flex-order: -1;
 	order: -1;
-	
+
 	margin: 28px 0 20px;
 
 	font-weight: 300;
@@ -445,7 +451,7 @@ nav a {
 
 .test-results .medium,
 .medium .result {
-	border-color: #cc983a; 
+	border-color: #cc983a;
 }
 
 .test-results .low,
@@ -461,7 +467,7 @@ nav a {
 
 	.test-results .medium,
 	.medium .result {
-		border-color: #af641e; 
+		border-color: #af641e;
 	}
 
 	.test-results .low,
@@ -476,7 +482,7 @@ nav a {
 		padding: 30px 28px 28px 120px;
 		border-bottom: 4px solid;
 	}
-	
+
 	.browser, .platform {
 		margin: 0;
 	}
@@ -484,28 +490,28 @@ nav a {
 }
 
 @media (min-width: 22.51em) {
-	
+
 	.test-results li {
 		float: left;
 		width: calc(50% - 6px);
 		height: 308px;
 		margin: 0 0 12px 0;
-		padding-top: 122px;		
-		
+		padding-top: 122px;
+
 		-webkit-align-items: center;
 		-moz-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
-		
+
 		text-align: center;
 		background-position: center 60px;
 
 	}
-	
+
 	.test-results li:nth-of-type(even) {
 		margin-left: 12px;
 	}
-	
+
 	.result {
 		border-top: 4px solid;
 		margin: 20px 0;
@@ -513,16 +519,16 @@ nav a {
 	}
 }
 
-@media (min-width: 40em) and (max-width: 63.9em) { 
+@media (min-width: 40em) and (max-width: 63.9em) {
 
 	.test-results li {
 		width: calc(33% - 8px);
 	}
-	
+
 	.test-results li:nth-of-type(even) {
 		margin-left: 0;
 	}
-	
+
 	.test-results li:nth-of-type(3n+2),
 	.test-results li:nth-of-type(3) {
 		margin-left: 12px;
@@ -531,21 +537,21 @@ nav a {
 }
 
 @media (min-width: 64em) {
-	
+
 	.test-results li {
 		width: calc(20% - 9.6px);
 	}
-	
+
 	.test-results li + li {
 		margin: 0 0 0 12px;
 	}
-	
+
 }
 
 
 /* BROWSER ICONS */
 
-.chrome { 
+.chrome {
 	background-image: url("../images/chrome.png");
 }
 
@@ -554,7 +560,7 @@ nav a {
 	top: 50px;
 	left: 0;
 	right: 0;
-	
+
 	width: 100px;
 	height: 80px;
 	margin: 0 auto;
@@ -569,25 +575,25 @@ th.chrome {
 	background-image: url("../images/chrome-simplified.svg");
 }
 
-body .edge { 
+body .edge {
 	background-image: url("../images/msedge.svg");
 	background-size: 57px auto;
 }
 
-.firefox { 
+.firefox {
 	background-image: url("../images/firefox.png");
 }
 
 th.firefox {
 	background-image: url("../images/firefox-simplified.svg");
-	
+
 }
 
 .ie {
 	background-image: url("../images/ie.svg");
 }
 
-.safari { 
+.safari {
 	background-image: url("../images/safari.png");
 }
 
@@ -634,10 +640,10 @@ aside {
 	.sponsor img {
 		float: left;
 	}
-}	
+}
 
 @media (min-width: 50em) {
-	
+
 	[id="overview"] > p,
 	.sponsor  {
 		float: left;
@@ -649,12 +655,12 @@ aside {
 		padding-right: 24px;
 		font-size: 1.55em;
 	}
-	
+
 	.sponsor {
 		width: 20%;
 		padding-left: 20px;
 	}
-	
+
 	.sponsor img {
 		margin-bottom: 16px;
 	}
@@ -699,7 +705,7 @@ aside {
 	.key li {
 		width: 49%;
 	}
-	
+
 	.key li + li {
 		margin-top: 1em;
 	}
@@ -711,7 +717,7 @@ aside {
 	.key-label {
 		display: inline;
 	}
-	
+
 	.key li {
 		margin: 0 0 0 28px;
 	}
@@ -766,17 +772,17 @@ aside {
 		min-height: 52px;
 		margin: 2.5em 0 20px;
 	}
-	
+
 	[aria-labelledby="support"] section:first-of-type h3 {
 		margin-top: 32px;
 	}
-	
+
 	#controls h3,
 	#properties h3 {
 		min-height: 30px;
 		margin-top: 0;
 	}
-	
+
 	[aria-labelledby="support"] > section h3::before {
 		top: 0;
 		margin-top: -3px;
@@ -785,11 +791,11 @@ aside {
 }
 
 @media (min-width: 86em) {
-	
+
 	[aria-labelledby="support"] h3 {
 		padding: 2.01em 0 1.6em;
 	}
-	
+
 	[aria-labelledby="support"] > section h3::before {
 		left: -80px;
 
@@ -816,7 +822,7 @@ table {
 	position: sticky;
 	top: 0;
 	z-index: 2;
-	
+
 	background-color: inherit;
 }
 
@@ -829,16 +835,16 @@ thead th {
 	border-style: solid;
 	border-image: linear-gradient(to bottom, transparent, transparent 35%,
 										   #a2a2a2 35%, #a2a2a2 100%) 2;
-											
+
 	text-transform: uppercase;
 	font-size: 13px;
 	-ms-high-contrast-adjust: none;
 }
 
 @media (-ms-high-contrast: active) {
-	thead th { 
+	thead th {
 		border-image: linear-gradient(to bottom, transparent, transparent 35%,
-								                 windowText 35%, windowText 100%) 2; 
+								                 windowText 35%, windowText 100%) 2;
 	}
 }
 
@@ -854,14 +860,14 @@ td, th[scope="row"] {
 	border-image: url("../images/dot-border.svg") 10 2 8 2 repeat;
 }
 
-td {	
+td {
 	background: no-repeat center;
 	background-size: 16px auto;
-	
+
 	font-size: .9em;
 	line-height: 38px;
 	font-weight: 300;
-	text-indent: 12px;	
+	text-indent: 12px;
 	white-space: nowrap;
 }
 
@@ -885,7 +891,7 @@ th.safari {
 	background-size: auto 32px;
 	background-repeat: no-repeat;
 	background-position: top;
-	
+
 	overflow: hidden;
 	white-space: nowrap;
 	text-indent: 200%;
@@ -917,7 +923,7 @@ th button {
 	height: 28px;
 	margin-right: 24px;
 	border: 0;
-	
+
 	background: url("../images/ui-icons/toggle-open.svg") no-repeat center transparent;
 
 	text-indent: 200%;
@@ -945,7 +951,7 @@ td.partial {
 
 .yes {
 	background-image:  url(../images/status-icons/yes.svg);
-} 
+}
 
 .no {
 	background-image: url(../images/status-icons/no.svg);
@@ -958,7 +964,7 @@ td.partial a {
 	bottom: 3px;
 	left: 6px;
 	right: 4px;
-	
+
 	border: 0;
 	background: url(../images/arrow.svg) no-repeat top right;
 	opacity: .7;
@@ -982,7 +988,7 @@ td.partial a {
 	background-image: url(../images/status-icons/partial.svg);
 }
 
-@media (max-width: 31em) { 
+@media (max-width: 31em) {
 
 	table {
 		position: relative;
@@ -994,38 +1000,38 @@ td.partial a {
 
 
 @media (max-width: 55.49em) {
-	
+
 	table {
 		table-layout: fixed;
 	}
-	
+
 	thead th:first-of-type {
 		width: 110px;
 		padding-left: 6px;
 	}
-		
+
 	thead th:nth-of-type(2) {
 		display: none;
 	}
-	
+
 	tbody th + td:first-of-type {
 		position: absolute;
 		clip: rect(0, 0, 0, 0);
 	}
-	
-	
+
+
 	td, th[scope="row"] {
 		border-top-width: 6px;
 		border-bottom-width: 5px;
 	}
-	
+
 	th[scope="row"] {
 		display: inline-block;
 		vertical-align: middle;
 		width: 100%;
 		padding: .5em .4em .4em 6px;
-	}	
-	
+	}
+
 	th.chrome,
 	th.edge,
 	th.firefox,
@@ -1035,19 +1041,19 @@ td.partial a {
 		height: 34px;
 		width: 24px;
 	}
-	
+
 	td {
 		overflow: hidden;
 		white-space: nowrap;
 		max-width: 100px;
 		text-indent: 0;
 	}
-	
+
 	tr > td:first-child {
 		background: 0;
 		border: 0;
 	}
-	
+
 }
 
 @media (min-width: 55.5em) {
@@ -1055,21 +1061,21 @@ td.partial a {
 	table {
 		padding: 12px 24px 36px;
 	}
-	
+
 	thead th:first-of-type {
 		padding-left: 56px;
 	}
-	
+
 	th {
 		padding: 0 12px;
 	}
-	
+
 	th[scope="row"] {
 		width: 342px;
 		font-size: 1.15em;
 		padding-top: 6px;
 	}
-	
+
 	th ~ td {
 		background-size: auto;
 	}
@@ -1077,11 +1083,11 @@ td.partial a {
 }
 
 @media (min-width: 75em) {
-	
+
 	th[scope="row"] {
 		padding-top: 4px;
 	}
-	
+
 }
 
 @media (-ms-high-contrast: active) {
@@ -1095,7 +1101,7 @@ td.partial a {
 /* HOW TO SECTION */
 
 @media (max-width: 49.99em) {
-	
+
 	[id="howto"] .meta {
 		margin-top: 28px;
 	}
@@ -1105,11 +1111,11 @@ td.partial a {
 
 	/* without column-span and some way to break columns, elements clash into each other */
 	@supports (column-span: all) {
-		
+
 		[aria-labelledby="howto"] {
 			-webkit-column-count: 2;
 			column-count: 2;
-			
+
 			-webkit-column-gap: 32px;
 			column-gap: 32px;
 		}
@@ -1117,18 +1123,18 @@ td.partial a {
 		[id="howto"] {
 			column-span: all;
 		}
-		
-		[aria-labelledby="howto"] p { 
+
+		[aria-labelledby="howto"] p {
 			-webkit-column-break-inside: avoid;
-			break-inside: avoid; 
+			break-inside: avoid;
 		}
 
 		[aria-labelledby="howto"] p:last-of-type {
 			margin-bottom: 0;
 			-webkit-column-break-after: always;
-			break-after: always; 
+			break-after: always;
 		}
-		
+
 		[aria-labelledby="howto"] p + section {
 			-webkit-column-break-inside: avoid;
 			break-inside: avoid;
@@ -1137,19 +1143,19 @@ td.partial a {
 	}
 }
 
-@media (min-width: 64em) { 
-	
+@media (min-width: 64em) {
+
 		@supports (column-span: all) {
-	
+
 			[aria-labelledby="howto"] {
 				-webkit-column-count: 3;
 				column-count: 3;
-				
+
 				-webkit-column-gap: 60px;
 				column-gap: 60px;
 			}
 		}
-	
+
 }
 
 
@@ -1172,7 +1178,7 @@ a.github {
 	text-transform: uppercase;
 	font-size: .7em;
 	line-height: 1;
-	
+
 	border-radius: 4px;
 	background: url("../images/logos/github.svg") no-repeat 9px center #333;
 	color: #fff;
@@ -1200,19 +1206,19 @@ a.github:active {
 		float: left;
 		width: 50%;
 	}
-	
+
 	[id="links"] {
 		padding-right: 16px;
 	}
-	
+
 	[id="contributors"] {
 		padding-left: 16px;
 	}
-	
+
 	footer {
 		padding: 0 0 32px;
 	}
-	
+
 }
 
 @media (min-width: 64em) {
@@ -1222,15 +1228,15 @@ a.github:active {
 	footer {
 		width: 33.33%;
 	}
-	
+
 	[id="links"] {
 		padding: 0 40px 0 0;
 	}
-	
+
 	[id="contributors"] {
 		padding: 0 20px;
 	}
-	
+
 	footer {
 		padding: 22px 0 0 32px;
 	}
