@@ -140,7 +140,7 @@ var ariaStates = {
 	"title": ["my title"]
 };
 
-var globalStates = ["aria-current", "aria-controls","aria-details", "aria-disabled", "aria-grabbed", "aria-dropeffect", "aria-haspopup", "aria-hidden", "aria-labelledby", "aria-label", "aria-describedby", "aria-owns", "aria-flowto","aria-keyshortcuts", "aria-message", "aria-live","aria-atomic", "aria-busy", "aria-relevant", "aria-roledescription"];
+var globalStates = ["aria-current", "aria-controls","aria-details", "aria-disabled", "aria-grabbed", "aria-dropeffect", "aria-haspopup", "aria-hidden", "aria-labelledby", "aria-label", "aria-describedby", "aria-owns", "aria-flowto","aria-keyshortcuts", "aria-errormessage", "aria-live","aria-atomic", "aria-busy", "aria-relevant", "aria-roledescription"];
 
 var groups = {"Widget Roles" : widgetRoles, "Composite Roles": compositeRoles, "Document Structure Roles": documentStructureRoles, "Landmark Roles": landmarkRoles};
 
