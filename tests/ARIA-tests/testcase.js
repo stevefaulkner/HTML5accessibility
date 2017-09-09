@@ -1,6 +1,6 @@
 $(document).ready(function() {
    var widgetRoles = {
-   	"alert": ["aria-expanded", "aria-modal"],
+   	"alert": ["aria-expanded"],
 	"alertdialog": ["aria-expanded", "aria-modal"],
 	"button": ["aria-expanded", "aria-pressed"],
 	"checkbox": ["aria-checked"],
@@ -9,7 +9,7 @@ $(document).ready(function() {
 	"link": ["aria-expanded"],
 	"log": ["aria-expanded"],
 	"marquee": ["aria-expanded"],
-	"menuitem": [],
+	"menuitem": ["aria-posinset", "aria-setsize"],
 	"menuitemcheckbox": ["aria-checked", "aria-posinset", "aria-setsize"],
 	"menuitemradio": ["aria-checked", "aria-posinset", "aria-selected", "aria-setsize"],
 	"option": ["aria-checked", "aria-posinset", "aria-selected", "aria-setsize"],
@@ -129,7 +129,7 @@ var ariaStates = {
 	"aria-describedby": ["%idr_describedBy"],
 	"aria-flowto": ["%idr_flowTo"],
 	"aria-labelledby": ["%idr_labelledBy"],
-	"aria-message" : ["%idr_singleDescribedBy"],
+	"aria-errormessage" : ["%idr_singleDescribedBy"],
 	"aria-owns": ["%idr_owns"],
 	"aria-posinset": ["%n", 10],
 	"aria-rowcount" : ["%n", 4],
