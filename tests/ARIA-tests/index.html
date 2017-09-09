@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Test ARIA Forward - Test Cases</title>
+	<style type="text/css">
+		body{
+			font-size: 1em;
+			font-family: Helvetica,Garuda,sans-serif;	
+		}
+	
+		.roleTest {
+			border: 2px solid black;
+			width: 1em;
+			height: 1em;
+			margin: 5px;
+		}
+		.container {
+			width: 15em;
+			height: 10em;
+		}
+		
+		.widgetDemo {
+			border: 1px solid #EEE;
+			width: 15em;	
+			margin-right: 5px;
+			margin-bottom: 5px;
+			padding: 5px;
+			float: left;
+		}
+		
+		.widgetDemo p {
+			color: #696969;
+			font-size: 0.9em;
+			padding: 0;
+			margin: 0 0 5px 0;
+		}
+		
+		h1, h2,h3, h4,h5, h6 {
+			margin-top: 10px;
+			margin-bottom: 5px; 	
+		}
+		
+		/* new clearfix */
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+			}
+		* html .clearfix             { zoom: 1; } /* IE6 */
+		*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+		h3
+	{
+		padding: 0.5em;
+		border-top: 3px solid #630;
+		
+		margin-top: 2em;
+		margin-bottom:1.5em;
+	}
+		
+		h2 {font-size:2em;padding: 2em 1em .5em 1em;}
+		
+		summary:hover, summary:focus, :hover[tabindex="0"]{cursor: pointer}
+		
+		
+
+
+:focus:not([tabindex="-1"]),:hover[tabindex="0"] {
+	outline: 0.25rem solid #aade87;
+}
+		
+	</style>
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="testcase.js"></script></head>
+<body>
+
+<h1>Test ARIA Forward - test cases</h1>
+<div id="demoContent"></div>
+
+<h2>Label and Description Parts</h2>
+<p id="lbl1" tabindex="0">Label 1</p><p id="lbl2" tabindex="0">Label 2</p>
+<p id="desc1" tabindex="0">Description 1</p><p id="desc2" tabindex="0">Description 2</p>
+<p id="flowTo1" tabindex="0">Flow To Target 1</p><p id="flowTo2" tabindex="0">Flow To Target 2</p>
+<p id="owns1" tabindex="0">Owns Target 1</p><p id="owns2" tabindex="0">Owns Target 2</p>
+<p id="controls1" tabindex="0">Controls Target 1</p><p id="controls2" tabindex="0">Controls Target 2</p>
+<p id="activeDescendant" tabindex="-1"></p>
+</body>
+</html>
