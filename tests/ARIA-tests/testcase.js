@@ -23,7 +23,7 @@ $(document).ready(function() {
 	"switch" : ["aria-checked", "aria-readonly"],
 	"tab": ["aria-expanded", "aria-selected"],
 	"tabpanel": ["aria-expanded"],
-	"textbox": ["aria-activedescendant", "aria-autocomplete", "aria-multiline", "aria-readonly", "aria-required", "aria-paceholder"],
+	"textbox": ["aria-activedescendant", "aria-autocomplete", "aria-multiline", "aria-readonly", "aria-required", "aria-placeholder"],
 	"timer": ["aria-expanded"],
 	"tooltip": ["aria-expanded"],
 	"treeitem": ["aria-level", "aria-posinset", "aria-setsize", "aria-expanded", "aria-checked", "aria-selected"]
