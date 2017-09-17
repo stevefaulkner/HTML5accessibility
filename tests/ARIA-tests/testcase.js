@@ -223,7 +223,7 @@ $.each(groups, function(groupName, roles ){
 	$("#demoContent").append("<h2>" + groupName + "</h2>");
 
 	$.each(roles, function(roleName, roleStates) {
-		var section = $("<details class='clearfix'></details>").appendTo("#demoContent");
+		var section = $("<details class='clearfix' id='"+roleName+"'></details>").appendTo("#demoContent");
 		section.append("<summary>role='"+ roleName +"'</summary>");
 		$.merge(roleStates, globalStates);
 		$.each(roleStates, function (i, state) {
