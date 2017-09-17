@@ -290,7 +290,7 @@ $.each(groups, function(groupName, roles ){
 				}	
 			});
 
-			html += "<div class='widgetDemo'><p class='stateDesc'><span class='dStateDesc'>"+dStateDescHTML+"</span>"+ stateDescHTML +"</p>"+ preHTML +"<span id='role" + widgetIncrement++ +"' class='roleTest "+ roleName + dStateHTML +"' tabindex='0' role='"+ roleName +"' "+ attribHTML + stateHTML + " >&nbsp;&nbsp;&nbsp;&nbsp;</span>"+ postHTML +"</div>";
+			html += "<div class='widgetDemo'><p class='stateDesc'><span class='dStateDesc'>"+dStateDescHTML+"</span>"+ stateDescHTML +"</p>"+ preHTML +"<span id='role" + widgetIncrement++ +"' class='roleTest "+ roleName + dStateHTML +"' tabindex='0' role='"+ roleName +"' "+ attribHTML + stateHTML + " aria-label='acc name'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"+ postHTML +"</div>";
 			section.append(html);
 			});
 
