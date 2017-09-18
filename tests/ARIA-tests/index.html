@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Test ARIA Forward - Test Cases</title>
+    <link rel="stylesheet" href="https://thepaciellogroup.github.io/AT-browser-tests/style/styles.css">
 	<style type="text/css">
 		body{
 			font-size: 1em;
-			font-family: Helvetica,Garuda,sans-serif;	
+				
 		}
 	
 		.roleTest {
@@ -37,7 +38,7 @@
 		}
 		
 		h1, h2,h3, h4,h5, h6 {
-			margin-top: 10px;
+			margin-top: 0px;
 			margin-bottom: 5px; 	
 		}
 		
@@ -73,14 +74,29 @@
 }
 		
 	</style>
-    <link rel="stylesheet" href="https://thepaciellogroup.github.io/AT-browser-tests/style/styles.css">
+    
     <script src="jquery-1.6.2.min.js"></script>
     <script src="testcase.js"></script></head>
 <body>
 
-<h1>Test ARIA Forward - test cases</h1>
+<header><a href="https://www.paciellogroup.com/">
+        <svg width="200" height="29" focusable="false">
+          <image xlink:href="https://developer.paciellogroup.com/wp-content/themes/tpg2015/images/logo.svg" src="https://developer.paciellogroup.com/wp-content/themes/tpg2015/images/logo.png" alt="The Paciello Group" width="200" height="29"></image>
+        </svg>
+      </a>
+<h1>Test ARIA 1.1 Forward - test cases</h1>
+<p>last updated 18 September 2017</p>
+<h2>Notes</h2>
+<ul>
+  <li>Based on a <a href="https://github.com/hanshillen/AriaTester">script</a> by Hans Hillen, <a href="https://github.com/stevefaulkner/HTML5accessibility/tree/gh-pages/tests/ARIA-tests">messed with</a> by Steve Faulkner</li>
+  <li>Each role has a test case with each of its allowed allowed properties</li>
+  <li>Roles with required children and the roles with required ancestors do not currently have them</li>
+  <li>Live region attributes are present for each test case combination but do not currently have 'live' content.</li>
+</ul></header>
+<main>
 <div id="demoContent"></div>
-
+</main>
+<footer>
 <h2>Label and Description Parts</h2>
 <p id="lbl1" tabindex="0">Label 1</p><p id="lbl2" tabindex="0">Label 2</p>
 <p id="desc1" tabindex="0">Description 1</p><p id="desc2" tabindex="0">Description 2</p>
@@ -88,5 +104,6 @@
 <p id="owns1" tabindex="0">Owns Target 1</p><p id="owns2" tabindex="0">Owns Target 2</p>
 <p id="controls1" tabindex="0">Controls Target 1</p><p id="controls2" tabindex="0">Controls Target 2</p>
 <p id="activeDescendant" tabindex="-1"></p>
+</footer>
 </body>
 </html>
