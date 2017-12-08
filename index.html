@@ -11,7 +11,7 @@
 	<header>
 		<div class="branding">
 			<h1>HTML5 Accessibility</h1>
-			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em></p>
+			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, December 2017</p>
 		</div>
 
 		<nav>
@@ -29,29 +29,29 @@
 		<section id="results" aria-label="HTML5 Accessibillity browser support scores">
 			<ul class="test-results">
 				<li class="chrome high">
-					<h3 class="browser">Chrome 52, Opera</h3>
-					<p class="platform">on Windows</p>
-					<p class="result">81%</p>
+					<h3 class="browser">Chrome 62</h3>
+					<p class="platform">on Windows 10</p>
+					<p class="result">92%</p>
 				</li>
 				<li class="edge high">
-					<h3 class="browser">Edge 14</h3>
+					<h3 class="browser">Edge 16</h3>
 					<p class="platform">on Windows 10</p>
 					<p class="result">100%</p>
 				</li>
 				<li class="firefox high">
-					<h3 class="browser">Firefox 49</h3>
-					<p class="platform">on Windows</p>
-					<p class="result">91%</p>
+					<h3 class="browser">Firefox 58.0b9</h3>
+					<p class="platform">on Windows 10</p>
+					<p class="result">89%</p>
 				</li>
 				<li class="ie low">
 					<h3 class="browser">Internet Explorer 11</h3>
-					<p class="platform">on Windows</p>
+					<p class="platform">on Windows 10</p>
 					<p class="result">56%</p>
 				</li>
-				<li class="safari medium">
-					<h3 class="browser">Safari 9.1</h3>
-					<p class="platform">on OS X</p>
-					<p class="result">73%</p>
+				<li class="safari high">
+					<h3 class="browser">Safari 11.0.2</h3>
+					<p class="platform">on OS High Sierra</p>
+					<p class="result">90%</p>
 				</li>
 			</ul>
 		</section>
@@ -235,7 +235,7 @@
 						<tr>
 							<th scope="row" rowspan="4"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/header.html">header</a></code></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
@@ -251,7 +251,7 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial"><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=628533">partial</a></td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="no"><a href="https://connect.microsoft.com/IE/feedback/details/804723/html5-structural-elements-not-exposed-via-accessibility-api">no</a></td>
@@ -502,7 +502,7 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
@@ -526,7 +526,7 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="no">no</td>
-							<td class="no">no</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>sub-DOM</td>
@@ -541,7 +541,7 @@
 							<td>Accessibly supported</td>
 							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td class="yes">yes</td>
+							<td class="partial">partial</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 						</tr>
@@ -555,7 +555,7 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="no">no</td>
+							<td class="partial"><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=756837">partial</a></td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
@@ -565,7 +565,7 @@
 							<td>Keyboard</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="yes">yes</td>
+							<td class="no"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=494175">no</a></td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 						</tr>
@@ -588,7 +588,7 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="no">no</td>
+							<td class="partial">partial</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
@@ -716,7 +716,7 @@
 						<tr>
 							<th scope="row" rowspan="5"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-url.html"><code>url</code></a> input</th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
@@ -748,16 +748,16 @@
 						</tr>
 						<tr>
 							<td>Error state mapped</td>
-							<td class="no">no</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td>&nbsp;</td>
 							<td class="no">no</td>
-							<td class="no">no</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="5"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-email.html"><code>email</code></a> input</th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
@@ -783,17 +783,17 @@
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td>&nbsp;</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Error state mapped</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="no">no</td>
 							<td class="yes">yes</td>
-							<td>&nbsp;</td>
-							<td class="no">no</td>
-							<td class="no">no</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="5"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-datetime-local.html"><code>datetime-&#8203;local</code></a> input</th>
@@ -1003,7 +1003,7 @@
 						<tr>
 							<th scope="row" rowspan="6"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/input-number.html"><code>number</code></a> input</th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
@@ -1035,7 +1035,7 @@
 						</tr>
 						<tr>
 							<td>Error state mapped</td>
-							<td class="no">no</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td>&nbsp;</td>
 							<td class="no">no</td>
@@ -1119,7 +1119,7 @@
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td>&nbsp;</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -1299,11 +1299,11 @@
 						<tr>
 							<th scope="row" rowspan="5"><code><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html">summary</a></code></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
 							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
@@ -1315,19 +1315,19 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="no"><a href="https://bugs.webkit.org/show_bug.cgi?id=131111">no</a></td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Name/Description</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Keyboard</td>
@@ -1526,11 +1526,11 @@
 						<tr>
 							<th scope="row" rowspan="4"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/required-att.html"><code>required</code></a></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="partial">partial</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
@@ -1550,11 +1550,11 @@
 						</tr>
 						<tr>
 							<td>Error state mapped</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="no">no</td>
 							<td class="yes">yes</td>
-							<td>&nbsp;</td>
-							<td class="no">no</td>
-							<td class="no">no</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="4"><a href="http://thepaciellogroup.github.io/AT-browser-tests/test-files/placeholder-att.html"><code>placeholder</code></a></th>
@@ -1634,7 +1634,7 @@
 				<ul>
 					<li><a href="http://www.html5accessibility.com/html5elements/">HTML5 Elements test page</a></li>
 					<li><a href="http://thepaciellogroup.github.io/AT-browser-tests/">Aural UI of HTML</a></li>
-					<li><a href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</a></li>
+					<li><a href="http://w3c.github.io/aria-in-html/">Using ARIA</a></li>
 				</ul>
 			</section>
 
