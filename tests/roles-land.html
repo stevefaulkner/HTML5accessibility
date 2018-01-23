@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>ARIA landmark role use example</title>
+
+<style type="text/css">
+	div {
+		padding: 2%;
+		border: solid 2px #000000;
+		margin: 10px;
+		font: bold larger "Courier New", Courier, monospace;
+		white-space: inherit;
+	}
+	#banner {height:100px;background:#ff8c00 }
+	#navigation {float:left;
+		width:15%;
+		height:400px;
+		background:#7fff00}
+	#main {float:left;
+		width:50%;
+		height:400px;
+		background:#f0e68c}
+	#complementary {float:left;width:15%;height:400px;background:#4682b4}
+	#contentinfo {clear:both;height:100px;background:#ffb6c1}
+	#search {background:#ffff00;font-size:small;}
+	#form {background:#fafad2;font-size:medium;}
+	#application {background:#f5f5f5;font-size:medium;width:300px;height:200px}
+</style>
+
+</head>
+
+<body>
+<div id="banner" role="banner">banner</div>
+<div id="navigation" role="navigation">navigation</div>
+<div id="main" role="main">main
+<div role="application" id="application">application</div> 
+</div>
+<div id="complementary" role="complementary"> complementary
+<div role="form" id="form"> form
+<div id="search" role="search">search</div>
+</div></div>
+<div id="contentinfo" role="contentinfo">contentinfo</div>
+
+</body>
+</html>
