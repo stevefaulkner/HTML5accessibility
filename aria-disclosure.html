@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ARIA disclosure role</title>
+<link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css">
+<style>
+		th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.3em;
+    border: 1px solid #630;}    
+
+     th[scope='row'] {text-align:left} 
+	 
+	 table {
+    border-collapse: collapse;
+    border: 1px solid #630;
+    font: 1em arial,Verdana,helvetica,sans-serif;
+}  
+    
+	 
+	    </style>
+</head>
+
+<body>
+<h1>disclosure (role)</h1>
+<p>editor: steve faulkner</p>
+<p>last updated: 07/07/14</p>
+
+<div>
+  <p>A button that changes the display state of a controlled element, or elements, when clicked or pressed.  </p>
+  <p>Disclosure buttons support the required <a href="http://www.w3.org/TR/wai-aria-1.1/terms#def_attribute">attributes</a> <a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-pressed">aria-expanded</a> and  <a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-controls">aria-controls</a>. </p>
+  <p>The <code>aria-controls</code> attribute MUST have a valid <a href="http://www.w3.org/TR/wai-aria/states_and_properties#valuetype_idref_list">ID reference list</a> to 1 or more elements in the document. When the <code>aria-expanded=true</code> the controlled element(s) MUST be visible (for example,  CSS <code>display:block</code>). When <code>aria-expanded=false </code>the controlled element(s) MUST be hidden (for example,  CSS <code>display:none</code>).</p>
+</div>
+<table>
+  <caption>
+    Characteristics of button
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Characteristic</th>
+      <th scope="col">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Superclass Role:</th>
+      <td><a href="http://www.w3.org/TR/wai-aria-1.1/roles#command">command</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Base Concept:</th>
+      <td><a href="http://www.w3.org/TR/html4/interact/forms.html#edef-BUTTON"><abbr title="Hypertext Markup Language">HTML</abbr> button</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Related Concepts:</th>
+      <td><ul>
+        <li>Mac OS <a href="https://developer.apple.com/library/mac/documentation/UserExperience/Reference/Accessibility_RoleAttribute_Ref/Role.html#//apple_ref/doc/uid/TP40007870-Roles-AXDisclosureTriangle">Disclosure Triangle</a></li>
+      </ul></td>
+    </tr>
+    <tr>
+      <th scope="row">Required States and Properties:</th>
+      <td><ul>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-expanded">aria-expanded (state)</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-controls">aria-controls</a></li>
+      </ul></td>
+    </tr>
+    <tr>
+      <th scope="row">Inherited States and Properties:</th>
+      <td><ul>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-atomic">aria-atomic</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-busy">aria-busy (state)</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-describedby">aria-describedby</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-disabled">aria-disabled (state)</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-dropeffect">aria-dropeffect</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-flowto">aria-flowto</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-grabbed">aria-grabbed (state)</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-haspopup">aria-haspopup</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-hidden">aria-hidden (state)</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-invalid">aria-invalid (state)</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-label">aria-label</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-labelledby">aria-labelledby</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-live">aria-live</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-owns">aria-owns</a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria-1.1/states_and_properties#aria-relevant">aria-relevant</a></li>
+      </ul></td>
+    </tr>
+    <tr>
+      <th scope="row">Name From:</th>
+      <td><ul>
+        <li>contents</li>
+        <li>author</li>
+      </ul></td>
+    </tr>
+    <tr>
+      <th scope="row">Accessible Name Required:</th>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th scope="row">Children Presentational:</th>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

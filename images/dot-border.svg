@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="22px" fill="#a2a2a2">
+	<style>
+		@media (-ms-high-contrast: active) {
+			svg { fill: windowText; }
+		}
+	</style>
+	<rect y="0" width="100%" height="2" />
+	<rect y="10" width="2" height="2" />
+</svg>

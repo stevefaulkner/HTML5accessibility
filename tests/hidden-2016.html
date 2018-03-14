@@ -1,0 +1,579 @@
+<!DOCTYPE HTML>
+
+
+
+<html>
+
+<head>
+
+	<title>hidden content</title>
+
+	<style type="text/css">
+
+body
+
+
+
+{
+
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+
+	color: #333;
+
+	background: #fff;
+
+	padding: 0 1em;
+
+	
+
+	
+
+}
+
+
+
+caption {text-align:left;font-weight:bold;font-size:large}
+
+
+
+h1, h2
+
+
+
+{
+
+
+
+	color: #630;
+
+
+
+	background: #fff;
+
+
+
+	padding-bottom: 0.5em;
+
+
+
+	margin-bottom: 0;
+
+
+
+}
+
+
+
+
+
+
+
+table
+
+
+
+{
+
+
+
+	border-collapse: collapse;
+
+
+
+	border: 1px solid #630;	
+
+	
+
+font: normal 90% arial, Verdana, helvetica, sans-serif;
+
+}
+
+
+
+
+
+
+
+th, td
+
+
+
+{
+
+
+
+	text-align: left;
+
+
+
+	vertical-align: top;
+
+
+
+	padding: 0.3em;
+
+
+
+	border: 1px solid #630;
+
+
+
+}
+
+
+
+td h1 {font-size:85%;margin:0 0 0 0;}
+
+td p {margin:0 0 0 0;}
+
+thead th, thead td
+
+
+
+{
+
+
+
+	font-weight: bold;
+
+
+
+	text-align: center;
+
+
+
+}
+
+
+
+td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+
+/*span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+
+td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
+
+caption {text-align:left}
+
+
+
+
+
+td.support {background:#90ee90;}
+
+	td.partial {background:#eee8aa;}
+
+	td.nosupport{background:#ffb6c1;}
+
+	
+
+
+
+	div.example{border: 1px dashed #b8860b;padding: 5px;margin-top:5px;background:#FFFFFF}
+
+	
+
+	td ul {padding-left:4px;list-style-type:none}
+
+	img {border: none;	}
+
+	.test {border: 1px solid #666666;padding:4px;margin-top:15px;background:#FFFFCC}
+
+	
+
+	#labels {text-indent:-1000px;height:1px}
+
+	figure {border:1px solid #CCF; padding:1em; width:40em;}
+
+	figure figure { width:30em;}
+
+	figcaption {border:1px dashed #CCC;padding:0.5em;background-color:#FFC}
+
+    </style> 
+
+</head>
+
+
+
+<body>
+
+<p>back to <a href="https://www.paciellogroup.com/?p=4249">The state of hidden content support in 2016</a></p>
+
+<h1>Screen reader support for hidden content</h1>
+
+<h2>Software used for testing</h2>
+
+<ul>
+
+	<li>Windows 10
+
+	  <ul>
+
+	    <li>Firefox 43</li>
+
+	    <li>Internet Explorer 11</li>
+
+	    <li>JAWS 17</li>
+
+	    <li>Window Eyes 9</li>
+
+        <li>NVDA 2015.4</li>
+        <li>Narrator 10</li>
+
+	  </ul>
+
+	</li>
+
+	<li>VoiceOver on iOS 9.2.1 (iPhone 6)</li>
+
+	<li>VoiceOver on OSX El Capitan</li>
+
+	<li>ChromeVox 1.51.1 on Chrome OS 15.0.874</li>
+
+	<li>Orca 3.16 on Linux</li>
+
+</ul>
+
+
+<hr>
+
+<table>
+
+  <caption>
+
+  screen reader support for various methods of hiding content
+
+  </caption>
+
+<tr>
+
+	<th>test</th>
+
+	<th>expected behavior</th>
+
+	<th>JAWS 17 + Firefox 43</th>
+
+	<th>JAWS 17 +IE 11</th>
+	<th>JAWS 17 +chrome 47</th>
+	<th>Window Eyes 9 + Firefox 43</th>
+
+	<th>Window Eyes 9   +IE 11</th>
+	<th>Window Eyes 9 +chrome 47</th>
+	<th>NVDA 2015 + Firefox 43</th>
+
+	<th>NVDA 2015 + IE 11</th>
+	<th>NVDA 2015 + +chrome 47</th>
+	<th>VoiceOver Mac OSX El Capitan + Safari</th>
+
+	<th>VoiceOver iOS + Safari</th>
+
+	<th>ChromeVox Chrome OS 47</th>
+	<th>Orca 3.4.2 Epiphany 3.4.1/ Webkit 1.8.3 + </th>
+	<th>Orca 3.16, Firefox 43, Ubuntu 15.10</th>
+	<th>Talkback, Android 4.4, Chrome 31</th>
+	<th>Talkback, Android 4.4 + Firefox 25</th>
+	<th>Narrator 10 +IE 11</th>
+	</tr>
+
+<tr>
+
+	<th scope=row> 1. aria-hidden</th>
+
+	<td>content visible on screen ignored by screen reader</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	</tr>
+
+<tr>
+
+	<th scope=row> 2. html5 hidden</th>
+
+	<td>content hidden (in supporting browsers) and ignored by screen reader</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	</tr>
+
+<tr>
+
+	<th scope=row>3. CSS display:none</th>
+
+	<td>content hidden (in supporting browsers) and ignored by screen reader</td>
+
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	</tr>
+
+<tr>
+
+	<th scope=row>4. CSS off screen</th>
+
+	<td>content hidden (in supporting browsers) and announced by screen reader</td>
+
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	</tr>
+
+<tr>
+
+	<th scope=row>5. HTML5 hidden aria-hidden=false</th>
+
+	<td><p>content hidden (in supporting browsers) </p>
+    <p>and ignored by AT.</p></td>
+	<td class="support">Pass</td>
+
+	<td class="nosupport">Fail</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="nosupport">Fail</td>
+	<td class="nosupport">Fail</td>
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="nosupport">Fail</td>
+	<td class="nosupport">Fail</td>
+	<td class="support">Pass</td>
+	</tr>
+
+<tr>
+
+  <th scope=row>6. CSS display:none aria-hidden=false</th>
+
+  <td><p>content hidden (in supporting browsers) </p>
+    <p>and ignored by AT.</p></td>
+  <td class="support">Pass</td>
+
+  <td class="nosupport">Fail</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="nosupport">Fail</td>
+  <td class="nosupport">Fail</td>
+  <td class=support>Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="nosupport">Fail</td>
+  <td class="nosupport">Fail</td>
+  <td class="support">Pass</td>
+  </tr>
+
+<tr>
+
+	<th scope=row>7. CSS off screen aria-hidden=true</th>
+
+	<td>content hidden (in supporting browsers) and ignored by screen reader</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+
+	<td class=support>Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	<td class="support">Pass</td>
+	</tr>
+<tr>
+  <th scope="row"> 8. HTML5 hidden aria-hidden=false on child element</th>
+  <td>content hidden (in supporting browsers) and ignored by AT.</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class=support>Pass</td>
+  <td class=support>Pass</td>
+  <td class=support>Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  <td class="support">Pass</td>
+  </tr>
+
+</table>
+
+<h2>Tests</h2>
+
+<h3>test 1 aria-hidden</h3>
+
+<p id="a" aria-hidden="true">test 1 aria hidden</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="a" aria-hidden="true"&gt;test aria hidden&lt;/p&gt;</p>
+
+<h3>test 2 HTML5 hidden</h3>
+
+<p id="b" hidden="">test 2 html5 hidden</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="b" hidden&gt;test html5 hidden&lt;/p&gt;</p>
+
+<h3>test 3 CSS display:none</h3>
+
+<p id="c" style="display:none">test 3 display:none</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="c" style="display:none"&gt;test display:none&lt;/p&gt;</p>
+
+<h3>test 4 CSS off screen</h3>
+
+<p id="d" style="position:absolute;left:-9999px">test 4 position:absolute;left:-9999px</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="d" style="position:absolute;left:-9999px"&gt;test position:absolute;left:-9999px&lt;/p&gt;</p>
+
+<hr>
+
+<h3>test 5 HTML5 hidden aria-hidden=false</h3>
+
+<p id="e" aria-hidden="false" hidden="">patrick is a dickhead test 5 html5 hidden aria-hidden="false"</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="e" hidden aria-hidden="false"&gt;test html5 hidden&lt;/p&gt;</p>
+
+<h3>test 6 CSS display:none aria-hidden=false</h3>
+
+<p id="f" style="display:none" aria-hidden="false">plomo test 6 display:none aria-hidden="false"</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="f" style="display:none" aria-hidden="false"&gt;test display:none&lt;/p&gt;</p>
+
+<h3>test 7 CSS off left aria-hidden=true</h3>
+
+<p id="g" style="position:absolute;left:-9999px" aria-hidden="true">test 7 position:absolute;left:-9999px aria-hidden="true"</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="g" style="position:absolute;left:-9999px" aria-hidden="true"&gt;test 7 position:absolute;left:-9999px aria-hidden="true"&lt;/p&gt;</p>
+<h3>test 8 HTML5 hidden aria-hidden=false on child element</h3>
+
+<p id="h" hidden=""><span aria-hidden="false">patrick is a knob</span> test 8 html5 hidden aria-hidden="false" on child</p>
+
+<h4>code</h4>
+
+<p>&lt;p id="h" hidden&gt;&lt;span aria-hidden="false"&gt;patrick is a knob&lt;/span&gt; test 8 html5 hidden aria-hidden="false" on child element;&lt;/p&gt;</p>
+</main>
+<hr>
+
+<footer role="contentinfo"> <p><strong>Editor:</strong> Steve Faulkner <a href="http://www.paciellogroup.com">The Paciello Group</a><br>
+
+      <strong>contact:</strong> <a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a></p>
+
+	 
+
+<p>last modified 26/01/2016</p>
+
+</footer>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>svg test 6 - svg object</title>
+<link href="test.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>SVG using object</h1>
+<ul>
+  <li>&lt;circle&gt; has focusable=true and onkeypress (changes fill from red to blue)</li>
+  <li>&lt;title&gt;circle</li>
+  <li>&lt;description&gt; big red circle</li>
+  <li>&lt;foreignObject&gt; with &lt;button&gt; has onclick (changes fill from red to blue)</li>
+</ul>
+
+<p><object data="test.svg" type="image/svg+xml"></object> 
+</p>
+<h2>testing results</h2>
+<table width="100%" border="1">
+  <caption>
+    results
+  </caption>
+  <tr>
+    <th width="21%" scope="col">result</th>
+    <th width="19%" scope="col">Internet Explorer 10 (windows)</th>
+    <th width="16%" scope="col">Firefox 24 (windows)</th>
+    <th width="13%" scope="col">Chrome 30 (windows)</th>
+    <th width="11%" scope="col">Chrome 30 (Mac) </th>
+    <th width="10%" scope="col">Safari 6 (Mac)</th>
+  </tr>
+  <tr>
+    <td>&lt;title&gt;</td>
+    <td>No for object - acc name is file path for svg file (yes for nested graphic)</td>
+    <td>yes for document (no for nested graphic)</td>
+    <td>No for obect, SVG file yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>&lt;description&gt;</td>
+    <td>No</td>
+    <td>No<sup><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=935935"></a></sup></td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>object role </td>
+    <td>client</td>
+    <td>document</td>
+    <td>client</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>svg  role </td>
+    <td>circle</td>
+    <td>graphic (child of document)</td>
+    <td>document</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>foreign object content available</td>
+    <td>not visible (button is in acc tree)</td>
+    <td>NO (button not exposed)</td>
+    <td>NO (button not exposed)</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>interaction</td>
+    <td>in tab order - no script activation via keyboard- script activation via mouse click</td>
+    <td>in tab order - no script activation via keyboard- script activation via mouse click</td>
+    <td>NOT in tab order - no script activation via keyboard- script activation via mouse click</td>
+    <td>NOT in tab order - no script activation via keyboard- script activation via mouse click</td>
+    <td>NOT in tab order - no script activation via keyboard- script activation via mouse click</td>
+  </tr>
+  <tr>
+    <td>JAWS 15 announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>No - object/SVG ignored</td>
+    <td>No - object identified as frame SVG ignored</td>
+    <td>No - object/SVG ignored</td>
+    <td> N/A</td>
+    <td> N/A</td>
+  </tr>
+  <tr>
+    <td>NVDA 2013.1.1 announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>No - object identified as 'embedded object', SVG ignored</td>
+    <td>Partial - obejected identified as 'iframe graphic clickable' no acc name/desc. when iframe has focus pressing enter/space changes color of cirlce (script works)</td>
+    <td>No - when cursoring to object file path for svg file is announced, no other info.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>VoiceOver on OSX announces acc name/description/role can navigate to navigate to and activate the button.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>No - Object/SVG ignored</td>
+    <td>No - Object/SVG ignored</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+</body>
+</html>

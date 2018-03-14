@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+body	
+	{
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+	color: #333;
+	background: #fff;
+	padding: 0 1em;
+	
+	
+}
+
+caption {text-align:left;font-weight:bold;font-size:large}
+
+h1, h2
+
+{
+
+	color: #630;
+
+	background: #fff;
+
+	padding-bottom: 0.5em;
+
+	margin-bottom: 0;
+
+}
+
+
+
+table
+
+{
+
+	border-collapse: collapse;
+
+	border: 1px solid #630;	
+	
+font: normal 90% arial, Verdana, helvetica, sans-serif;
+}
+
+
+
+th, td
+
+{
+
+	text-align: left;
+
+	vertical-align: top;
+
+	padding: 0.3em;
+
+	border: 1px solid #630;
+
+}
+
+td h1 {font-size:85%;margin:0 0 0 0;}
+td p {margin:0 0 0 0;}
+thead th, thead td
+
+{
+
+	font-weight: bold;
+
+	text-align: center;
+
+}
+
+td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+/*span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
+caption {text-align:left}
+
+
+td.support {background:#90ee90;}
+	td.partial {background:#eee8aa;}
+	td.nosupport{background:#ffb6c1;}
+	
+
+	div.example{border: 1px dashed #b8860b;padding: 5px;margin-top:5px;background:#FFFFFF}
+	
+	td ul {padding-left:4px;list-style-type:none}
+	img {border: 1px solid #630;	}
+	.test {border: 1px solid #666666;padding:4px;margin-top:15px;background:#FFFFCC}
+
+
