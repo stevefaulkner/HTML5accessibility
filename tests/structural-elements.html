@@ -11,21 +11,28 @@
 </head>
 
 <body>
-<header role="banner"> this is a header </header>
-<aside role="complementary"> this is an aside </aside>
-<nav role="navigation"> this is a nav </nav>
-<main role="main">this is the main <a href="#">content</a>
+<header> this is a header </header>
+<aside> this is an aside </aside>
+<nav> this is a nav </nav>
+<main>this is the main <a href="#">content</a>
 <section aria-label="section with header"> 
 <header> this is a header inside a section </header>
-this is a section
+<header role="banner"> this is a header with role=banner inside a section </header>
+this is a section with an aria-label
 <footer> this is a footer inside a section</footer>
+<footer role="contentinfo"> this is a footer with role=contentinfo inside a section</footer>
+</section>
+<section>
+This is a section without a label
 </section>
 <article> 
 <header> this is a header inside an article </header>
+<header role="banner"> this is a header with role=banner inside an article</header>
 this is an article
 <footer> this is a footer inside an article</footer>
+<footer role="contentinfo"> this is a footer with role=contentinfo inside an article</footer>
 </section></article>
 </main>
-<footer role="contentinfo"> this is a footer</footer>
+<footer> this is a footer</footer>
 </body>
 </html>
