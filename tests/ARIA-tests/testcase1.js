@@ -1,11 +1,15 @@
 $(document).ready(function() {
    var widgetRoles = {
    
-
+    "alert": [],
+	"alertdialog": [],
 	"button": [],
 	"checkbox": [],
+	"dialog": [],
 	"gridcell": [],
 	"link": [],
+	"log": [],
+	"marquee": [],
 	"menuitem": [],
 	"menuitemcheckbox": [],
 	"menuitemradio": [],
@@ -16,8 +20,10 @@ $(document).ready(function() {
 	"searchbox": [],
 	"slider": [] ,
 	"spinbutton": [],
+	"status": [],
 	"switch" : [],
 	"tab": [],
+	"tabpanel": ["aria-expanded"],
 	"textbox": [],
 	"treeitem": []
    };
