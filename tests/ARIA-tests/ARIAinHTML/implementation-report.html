@@ -8,6 +8,7 @@
 
 <body>
 <h1>Implementation Report</h1>
+<p>last updated 15 April 2018</p>
 <table>
   <caption>
     Rules of ARIA attributes usage by HTML language feature
@@ -32,28 +33,28 @@
     <TD><a>No corresponding role</a></TD>
     <TD><p><a><strong>Any</strong> <code>role</code></a></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-    <TD>no</TD>
+    <TD>no <a href="https://github.com/validator/validator/issues/638">issue #638</a></TD>
   </TR>
   <TR id="address" tabindex="-1">
     <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-address-element"><code>address</code></a>
     <TD><a>No corresponding role</a></TD>
     <TD><p><a><strong>Any</strong> <code>role</code></a></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any).</p></TD>
-    <TD>no</TD>
+    <TD>no <a href="https://github.com/validator/validator/issues/637">issue #637</a></TD>
   </TR>
   <TR id="areahref" tabindex="-1">
     <TD><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-area-element"><code>area</code></a> with a <a href="https://www.w3.org/TR/html/links.html#element-attrdef-a-href"><code>href</code></a></TD>
     <TD><code>role=<a href="#index-aria-link">link</a></code></TD>
     <TD><p><strong class="nosupport">No <code>role</code></strong></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code><a href="#index-aria-link">link</a></code> role.</p></TD>
-    <TD>&nbsp;</TD>
+    <TD>yes</TD>
   </TR>
   <TR id="article" tabindex="-1">
     <TD><code><a href="https://www.w3.org/TR/html/sections.html#the-article-element">article</a></code></TD>
     <TD><code>role=<a href="#index-aria-article">article</a></code></TD>
     <TD><p>Roles: <code><a href="#index-aria-feed">feed</a></code> - <span class="new-feature">(new)</span>, <code><a href="#index-aria-presentation">presentation</a>, <a href="#index-aria-none">none</a>, <a href="#index-aria-document">document</a>, <a href="#index-aria-application">application</a>, <a href="#index-aria-main">main</a> or <a href="#index-aria-region">region</a></code>.<br>
       <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-    <TD>&nbsp;</TD>
+    <TD>yes</TD>
   </TR>
   <TR id="aside" tabindex="-1">
     <TD><code><a href="https://www.w3.org/TR/html/sections.html#the-aside-element">aside</a></code></TD>
@@ -61,21 +62,21 @@
     <TD><p>Roles:<code> <a href="#index-aria-feed">feed</a></code> - <span class="new-feature">(new)</span>, <code><a href="#index-aria-note">note</a>, <a href="#index-aria-presentation">presentation</a>, <a href="#index-aria-none">none</a>, <a href="#index-aria-region">region</a></code> or <a href="#index-aria-search"><code>search</code></a>.</p>
       <p>DPub Roles: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-example"><code>doc-example</code></a><code>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-footnote">doc-footnote</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote">doc-pullquote</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-tip">doc-tip</a></code> - <span class="new-feature">(new)</span></p>
       <p> <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-    <TD>&nbsp;</TD>
+    <TD>yes</TD>
   </TR>
   <TR id="audio" tabindex="-1">
     <TD><code><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-audio-element">audio</a></code></TD>
     <TD><a>No corresponding role</a></TD>
     <TD><p>Role: <a href="#index-aria-application"><code>application</code></a> <br>
       <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <a href="#index-aria-application"><code>application</code></a> role.</p></TD>
-    <TD>&nbsp;</TD>
+    <TD>yes</TD>
   </TR>
   <tbody>
     <TR id="base" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-base-element">base</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong></TD>
-      <TD>&nbsp;</TD>
+      <TD>not tested</TD>
     </TR>
     <TR id="body" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/sections.html#the-body-element"><code>body</code></a></TD>
@@ -96,7 +97,7 @@
       <TD><code>role=<a href="#index-aria-button">button</a></code></TD>
       <TD><p>Roles: <code><a href="#index-aria-menuitem">menuitem</a></code>. <br>
         <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any) <span class="changed-feature">(changed)</span></p></TD>
-      <TD>&nbsp;</TD>
+      <TD>not tested</TD>
     </TR>
     <TR id="caption2" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/semantics-scripting.html#the-canvas-element"><code>canvas</code></a>
