@@ -7,18 +7,20 @@
 </head>
 
 <body>
-<h1>Implementation Report</h1>
-<p>last updated 21 April 2018</p>
+<h1>Implementation Report </h1>
+<p>For <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> rules implemented in <a href="https://validator.w3.org/nu/">W3C HTML checker</a></p>
+<p>last updated 21 May 2018</p>
 <table>
   <caption>
     Rules of ARIA attributes usage by HTML language feature
   </caption>
   <tr>
-    <th>HTML language feature </th>
-    <th><p id="implicit">Implicit ARIA semantics -</p>
+    <th width="373">HTML language feature </th>
+    <th width="360"><p id="implicit">Implicit ARIA semantics -</p>
       <p> SHOULD NOT be used</p></th>
-    <th>ARIA roles, states and properties which MAY be used</th>
-    <th>Implemented in W3C Validator</th>
+    <th width="864">ARIA roles, states and properties which MAY be used</th>
+    <th width="48">Test case</th>
+    <th width="169">Implemented in W3C Validator</th>
   </tr>
   <TR id="ahref" tabindex="-1">
     <td><a href="https://www.w3.org/TR/html/textlevel-semantics.html#the-a-element"><code>a</code></a> element with a <a href="https://www.w3.org/TR/html/links.html#element-attrdef-a-href"><code>href</code></a></td>
@@ -26,6 +28,7 @@
     <td><p>Roles: <code><a href="#index-aria-button">button</a>, <a href="#index-aria-checkbox">checkbox</a>, <a href="#index-aria-menuitem">menuitem</a>, <a href="#index-aria-menuitemcheckbox">menuitemcheckbox</a>, <a href="#index-aria-menuitemradio">menuitemradio</a>, <a href="#index-aria-option">option</a></code> - <span class="changed-feature">(changed)</span>, <code><a href="#index-aria-radio">radio</a>, <a href="#index-aria-switch">switch</a></code> - <span class="new-feature">(new)</span>, <a href="#index-aria-tab">tab</a> or<code> <a href="#index-aria-treeitem">treeitem</a></code></p>
       <p>DPub Roles: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-backlink"><code>doc-backlink</code></a><code>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-biblioref">doc-biblioref</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-glossref">doc-glossref</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-noteref">doc-noteref</a></code> - <span class="new-feature">(new)</span></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+    <td><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/ahref-test.html">a-href</a></TD>
     <td>yes</TD>
   </TR>
   <TR id="anohref" tabindex="-1">
@@ -33,20 +36,23 @@
     <TD><a>No corresponding role</a></TD>
     <TD><p><a><strong>Any</strong> <code>role</code></a></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-    <TD>no <a href="https://github.com/validator/validator/issues/638">issue #638</a></TD>
+    <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/anohref-test.html">a-no-href</a></TD>
+    <TD>no <a href="https://github.com/validator/validator/issues/638">issue #638 marked as wontfix</a></TD>
   </TR>
   <TR id="address" tabindex="-1">
     <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-address-element"><code>address</code></a>
     <TD><a>No corresponding role</a></TD>
     <TD><p><a><strong>Any</strong> <code>role</code></a></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any).</p></TD>
-    <TD>no <a href="https://github.com/validator/validator/issues/637">issue #637</a></TD>
+    <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/address-test.html">address</a></TD>
+    <TD>yes <a href="https://github.com/validator/validator/issues/637">issue #637 - fixed</a></TD>
   </TR>
   <TR id="areahref" tabindex="-1">
     <TD><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-area-element"><code>area</code></a> with a <a href="https://www.w3.org/TR/html/links.html#element-attrdef-a-href"><code>href</code></a></TD>
     <TD><code>role=<a href="#index-aria-link">link</a></code></TD>
     <TD><p><strong class="nosupport">No <code>role</code></strong></p>
       <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code><a href="#index-aria-link">link</a></code> role.</p></TD>
+    <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/area-test.html">area</a></TD>
     <TD>yes</TD>
   </TR>
   <TR id="article" tabindex="-1">
@@ -54,6 +60,7 @@
     <TD><code>role=<a href="#index-aria-article">article</a></code></TD>
     <TD><p>Roles: <code><a href="#index-aria-feed">feed</a></code> - <span class="new-feature">(new)</span>, <code><a href="#index-aria-presentation">presentation</a>, <a href="#index-aria-none">none</a>, <a href="#index-aria-document">document</a>, <a href="#index-aria-application">application</a>, <a href="#index-aria-main">main</a> or <a href="#index-aria-region">region</a></code>.<br>
       <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+    <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/article-test.html">article</a></TD>
     <TD>yes</TD>
   </TR>
   <TR id="aside" tabindex="-1">
@@ -62,6 +69,7 @@
     <TD><p>Roles:<code> <a href="#index-aria-feed">feed</a></code> - <span class="new-feature">(new)</span>, <code><a href="#index-aria-note">note</a>, <a href="#index-aria-presentation">presentation</a>, <a href="#index-aria-none">none</a>, <a href="#index-aria-region">region</a></code> or <a href="#index-aria-search"><code>search</code></a>.</p>
       <p>DPub Roles: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-example"><code>doc-example</code></a><code>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-footnote">doc-footnote</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote">doc-pullquote</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-tip">doc-tip</a></code> - <span class="new-feature">(new)</span></p>
       <p> <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+    <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/aside-test.html">aside</a></TD>
     <TD>yes</TD>
   </TR>
   <TR id="audio" tabindex="-1">
@@ -69,6 +77,7 @@
     <TD><a>No corresponding role</a></TD>
     <TD><p>Role: <a href="#index-aria-application"><code>application</code></a> <br>
       <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <a href="#index-aria-application"><code>application</code></a> role.</p></TD>
+    <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/audio-test.html">audio</a></TD>
     <TD>yes</TD>
   </TR>
   <tbody>
@@ -76,13 +85,15 @@
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-base-element">base</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong></TD>
-      <TD>not tested</TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/base-test.html">base</a></TD>
+      <TD>yes</TD>
     </TR>
     <TR id="body" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/sections.html#the-body-element"><code>body</code></a></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code><a href="#index-aria-document">document</a></code> role.</p></TD>
+      <TD>not tested</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="button" tabindex="-1">
@@ -90,13 +101,15 @@
       <TD><code>role=<a href="#index-aria-button">button</a></code></TD>
       <TD><p>Roles: <code><a href="#index-aria-checkbox">checkbox</a></code>, <code><a href="#index-aria-link">link</a>, <a href="#index-aria-menuitem">menuitem</a>, <a href="#index-aria-menuitemcheckbox">menuitemcheckbox</a>, <a href="#index-aria-menuitemradio">menuitemradio</a>,<a href="#index-aria-option">option</a></code> - <span class="changed-feature">(changed)</span><code>, <a href="#index-aria-radio">radio</a></code>, <a href="#index-aria-switch"><code>switch</code></a> - <span class="new-feature">(new)</span> or <a href="#index-aria-tab"><code>tab</code></a><br>
         <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any) </p></TD>
-      <TD>Partial <a href="https://github.com/validator/validator/issues/639">issue #639</a></TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/button-test.html">button</a></TD>
+      <TD>yes - fixed Partial <a href="https://github.com/validator/validator/issues/639">issue #639</a></TD>
     </TR>
     <TR id="typemenu" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/sec-forms.html#the-button-element">button</a> <a href="https://www.w3.org/TR/html/sec-forms.html#element-attrdef-button-type">type="menu"</a></code>
       <TD><code>role=<a href="#index-aria-button">button</a></code></TD>
       <TD><p>Roles: <code><a href="#index-aria-menuitem">menuitem</a></code>. <br>
         <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any) <span class="changed-feature">(changed)</span></p></TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/buttontypemenu-test.html">type=menu</a></TD>
       <TD>not tested</TD>
     </TR>
     <TR id="caption2" tabindex="-1">
@@ -104,6 +117,7 @@
       <TD><a>No corresponding role</a></TD>
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD><a href="http://stevefaulkner.github.io/HTML5accessibility/tests/ARIA-tests/ARIAinHTML/canvas-testcases.html">canvas</a></TD>
       <TD>yes</TD>
     </TR>
     <TR id="caption" tabindex="-1">
@@ -111,7 +125,8 @@
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
-      <TD>no <a href="https://github.com/validator/validator/issues/640">issue #640</a></TD>
+      <TD><a href="http://stevefaulkner.github.io/HTML5accessibility/tests/ARIA-tests/ARIAinHTML/caption-testcases.html">caption</a></TD>
+      <TD>yes, fixed <a href="https://github.com/validator/validator/issues/640">issue #640</a></TD>
     </TR>
     <TR id="col-colgroup" tabindex="-1">
       <TD><p><a href="https://www.w3.org/TR/html/tabular-data.html#the-col-element"><code>col</code></a><code>, <a
@@ -119,20 +134,23 @@
         <p></p>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria-*</code> attributes</strong></TD>
-      <TD>no <a href="https://github.com/validator/validator/issues/645">issue #645</a> and <a href="https://github.com/validator/validator/issues/646">issue #646</a></TD>
+      <TD><a href="http://stevefaulkner.github.io/HTML5accessibility/tests/ARIA-tests/ARIAinHTML/col-testcases.html">col</a> &amp; <a href="http://stevefaulkner.github.io/HTML5accessibility/tests/ARIA-tests/ARIAinHTML/colgroup-testcases.html">colgroup</a></TD>
+      <TD>yes, fixed <a href="https://github.com/validator/validator/issues/645">issue #645</a> and yes, fixed <a href="https://github.com/validator/validator/issues/646">issue #646</a></TD>
     </TR>
     <TR id="datalist" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/sec-forms.html#the-datalist-element">datalist</a></code>
       <TD><code>role=<a href="#index-aria-listbox">listbox</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <a href="#index-aria-listbox">listbox</a> role. </p></TD>
-      <TD>&nbsp;</TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/datalist-test.html">datalist</a></TD>
+      <TD>partial <a href="https://github.com/validator/validator/issues/653">issue #653</a></TD>
     </TR>
     <TR id="dd-dt" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-dd-element"><code>dd</code></a>
       <TD><code>role=<a href="#index-aria-definition">definition</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>definition</code> role.</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="details" tabindex="-1">
@@ -141,6 +159,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>group</code> role.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="dialog" tabindex="-1">
       <TD><a href="https://w3c.github.io/html/interactive-elements.html#the-dialog-element"><code>dialog</code></a></TD>
@@ -148,12 +167,14 @@
       <TD><p>Role: <a href="#index-aria-alerTDialog"><code>alertdialog</code></a><code></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>dialog</code> role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="div" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-div-element"><code>div</code></a>
       <TD><a>No corresponding role</a></TD>
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="dl" tabindex="-1">
@@ -163,12 +184,14 @@
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-glossary"><code>doc-glossary</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="dd-dt2" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/grouping-content.html#the-dt-element">dt</a></code>
       <TD><code>role=<a href="#index-aria-listitem">listitem</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <a href="#index-aria-listitem">listitem</a> role</code></a>.</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="embed" tabindex="-1">
@@ -177,12 +200,14 @@
       <TD><p>Role: <code><a href="#index-aria-application">application</a>, <a href="#index-aria-document">document</a>, <a href="#index-aria-presentation">presentation</a>, <a href="#index-aria-none">none</a></code>or<code> <a href="#index-aria-img">img</a></code></p>
         <p> <a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-figcaption-element"><code>figcaption</code></a> - <span class="new-feature">(new)</span>
       <TD><a>No corresponding role</a></TD>
       <TD><p>Roles: <code><a href="#index-aria-group">group</a></code>, <code><a href="#index-aria-presentation">presentation</a></code><code> or <a href="#index-aria-none">none</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="fieldset" tabindex="-1">
@@ -191,12 +216,14 @@
       <TD><p>Roles: <code><a href="#index-aria-group">group</a>,</code> <code> <a href="#index-aria-none">none</a>,</code> or <code><a href="#index-aria-presentation">presentation</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="figure" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-figure-element"><code>figure</code></a>
       <TD><code>role=<a href="#index-aria-figure">figure</a></code> - <span class="new-feature">(new)</span></TD>
       <TD><p>Roles: <code><a href="#index-aria-group">group</a></code><code>, <a href="#index-aria-none">none</a></code> or <code><a href="#index-aria-presentation">presentation</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="footer" tabindex="-1">
@@ -207,12 +234,14 @@
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the
           allowed </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="form" tabindex="-1">
       <TD><code><a href="https://w3c.github.io/html/sec-forms.html#the-form-element">form</a></code></TD>
       <TD><code>role=<a href="#index-aria-form">form</a></code></TD>
       <TD><p>Role: <a href="#index-aria-search"><code>search</code></a>, <code><a href="#index-aria-none">none</a></code> or <a href="#index-aria-presentation"><code>presentation</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="p-pre-blockquote" tabindex="-1">
@@ -224,6 +253,7 @@
       <TD><p><strong class="nosupport">Any <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="h1-h6" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements"><code>h1</code></a> to <a
@@ -233,11 +263,13 @@
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle"><code>doc-subtitle</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="head" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-head-element">head</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="header" tabindex="-1">
@@ -248,6 +280,7 @@
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the
           allowed </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="hr" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/grouping-content.html#the-hr-element">hr</a></code>
@@ -256,11 +289,13 @@
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak"><code>doc-pagebreak</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>separator</code> role.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="html" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics.html#the-html-element">html</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="iframe" tabindex="-1">
@@ -269,12 +304,14 @@
       <TD><p>Role: <code>application, document, </code>or<code> img </code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <tr id="img-alt" tabindex="-1">
       <td><code><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-img-element">img</a> with <a href="https://www.w3.org/TR/html/semantics-embedded-content.html#element-attrdef-img-alt">alt</a>=""</code></td>
       <td><a>No corresponding role</a></td>
       <td><p>Role: <code><a href="#index-aria-none">none</a></code> or <a href="#index-aria-presentation"><code>presentation</code></a><span class="changed-feature">(changed)</span></p>
         <p><strong class="nosupport">No <code>aria*</code> attributes</strong> except <code>aria-hidden</code> <span class="changed-feature">(changed)</span></p></td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr id="img" tabindex="-1">
@@ -283,12 +320,14 @@
       <td><p><strong>Any</strong> <code>role</code> except <code>presentation</code> or <code>none</code> <span class="changed-feature">(changed)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></td>
       <td>&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
     <TR id="input-button" tabindex="-1">
       <TD><code>input type= </code><a href="https://www.w3.org/TR/html/sec-forms.html#button-state-typebutton"><code>button </code></a></TD>
       <TD><code>role=<a href="#index-aria-button">button</a></code></TD>
       <TD><p>Role: <code> <a href="#index-aria-link">link</a>, <a href="#index-aria-menuitem">menuitem</a>, <a href="#index-aria-menuitemcheckbox">menuitemcheckbox</a>, <a href="#index-aria-menuitemradio">menuitemradio</a>, <a href="#index-aria-option">option</a></code> - <span class="changed-feature">(changed)</span><code>, <a href="#index-aria-radio">radio</a>, </code><a href="#index-aria-switch"><code>switch</code></a> or <a href="#index-aria-tab"><code>tab</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any) </p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-checkbox" tabindex="-1">
@@ -298,12 +337,14 @@
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any) </p>
         <p><strong>Note:</strong> the HTML <a href="https://w3c.github.io/html/sec-forms.html#element-attrdef-input-checked"><code>checked</code></a> attribute may be used instead of the <code>aria-checked</code> attribute for <code>menuitemcheckbox</code>, <code>option</code> or <code>switch</code> when used on <code>type=checkbox</code>. <span class="changed-feature">(changed)</span></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR>
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#color-state-typecolor">color</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code></strong>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-color" tabindex="-1">
@@ -312,12 +353,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-datetime" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#local-date-and-time-state-typedatetimelocal">datetime</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-email" tabindex="-1">
@@ -327,6 +370,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>textbox</code> role</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-file" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#file-upload-state-typefile">file</a></code></TD>
@@ -334,11 +378,13 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-hidden" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#hidden-state-typehidden">hidden</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-image" tabindex="-1">
@@ -347,12 +393,14 @@
       <TD><p>Role: <code> <a href="#index-aria-link">link</a>, <a href="#index-aria-menuitem">menuitem</a>, <a href="#index-aria-menuitemcheckbox">menuitemcheckbox</a>, <a href="#index-aria-menuitemradio">menuitemradio</a>, <a href="#index-aria-radio">radio</a> or </code><a href="#index-aria-switch"><code>switch</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any) </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-month" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#month-state-typemonth">month</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-number" tabindex="-1">
@@ -361,12 +409,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>spinbutton</code> role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-password" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#password-state-typepassword">password</a></code></TD>
       <TD><a>No corresponding role</a> - <span class="changed-feature">(changed)</span></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and <code>aria-required</code> - <span class="changed-feature">(changed)</span></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-radio" tabindex="-1">
@@ -376,6 +426,7 @@
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>menuitemradio</code> role.</p>
         <p><strong>Note:</strong> the HTML <a href="https://w3c.github.io/html/sec-forms.html#element-attrdef-input-checked"><code>checked</code></a> attribute may be used instead of the <code>aria-checked</code> attribute for <code>menuitemradio</code> when used on <code>type=checkbox</code>. <span class="changed-feature">(changed)</span></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-range" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#range-state-typerange">range</a></code></TD>
@@ -383,12 +434,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> slider </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-reset" tabindex="-1">
       <TD><code>input type= <a href="https://www.w3.org/TR/html/sec-forms.html#reset-button-state-typereset">reset</a></code></TD>
       <TD><code>role=<a href="#index-aria-button">button</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> button </code>role. </p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-search-no-list" tabindex="-1">
@@ -399,6 +452,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> searchbox </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-submit" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#submit-button-state-typesubmit"
@@ -407,12 +461,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> button </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-tel" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#telephone-state-typetel">tel</a></code>, with no <a href="https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-list"><code>list</code></a> attribute</TD>
       <TD><code>role=<a href="#index-aria-textbox">textbox</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> textbox </code>role. </p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-text" tabindex="-1">
@@ -423,6 +479,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> textbox </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-text-list" tabindex="-1">
       <TD><code>input type=</code> <a
@@ -432,12 +489,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> combobox </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR  id="input-time" tabindex="-1">
       <TD><code>input  type= <a href="https://www.w3.org/TR/html/sec-forms.html#time-state-typetime">time</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="input-url" tabindex="-1">
@@ -447,12 +506,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> textbox </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="input-week" tabindex="-1">
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#week-state-typeweek">week</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR  id="ins-del" tabindex="-1">
@@ -462,12 +523,14 @@
       <TD><p><strong class="nosupport">Any <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR  id="keygen" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html51/sec-forms.html#the-keygen-element"><code>keygen</code></a>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="label" tabindex="-1">
@@ -476,12 +539,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="legend" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/sec-forms.html#the-legend-element"><code>legend</code></a>
       <TD><a>No corresponding role</a></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="li" tabindex="-1">
@@ -493,12 +558,14 @@
         <p>DPub Roles: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-biblioentry"><code>doc-biblioentry</code></a><code>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-endnote">doc-endnote</a></code> - <span class="new-feature">(new)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="link-href" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/document-metadata.html#the-link-element"><code>link</code></a> element with a <a
 			  href="https://www.w3.org/TR/html/links.html#element-attrdef-a-href"><code>href</code></a></TD>
       <TD><code>role=<a href="#index-aria-link">link</a></code></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="main" tabindex="-1">
@@ -507,11 +574,13 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> main </code>role.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="map" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-map-element"><code>map</code></a></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR  id="math" tabindex="-1">
@@ -519,6 +588,7 @@
       <TD><code>role=<a href="#index-aria-math">math</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> math </code>role.</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="menu-context" tabindex="-1">
@@ -528,12 +598,14 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> menu </code>role.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="menuitem-command" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html51/interactive-elements.html#the-menuitem-element"><code>menuitem</code></a> <code>type=command</code>
       <TD><code>role=<a href="#index-aria-menuitem">menuitem</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> menuitem </code>role. </p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="menuitem-checkbox" tabindex="-1">
@@ -542,6 +614,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> menuitemcheckbox </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="menuitem-radio" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html51/interactive-elements.html#the-menuitem-element"><code>menuitem</code></a> <code> type=radio</code>
@@ -549,11 +622,13 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> menuitemradio </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="meta" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-meta-element">meta</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="meter" tabindex="-1">
@@ -562,6 +637,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="nav" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/sections.html#the-nav-element">nav</a></code>
@@ -569,11 +645,13 @@
       <TD><p>DPub Roles: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-index"><code>doc-index</code></a><code>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist">doc-pagelist</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-toc">doc-toc</a></code> - <span class="new-feature">(new)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> navigation </code>role.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="noscript" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics-scripting.html#the-noscript-element">noscript</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="object" tabindex="-1">
@@ -582,6 +660,7 @@
       <TD><p>Role: <code><a href="#index-aria-application">application</a>, <a href="#index-aria-document">document</a>, </code>or<code> <a href="#index-aria-img">img</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="ol" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/grouping-content.html#the-ol-element">ol</a></code>
@@ -589,12 +668,14 @@
       <TD><p>Role: <code><a href="#index-aria-directory">directory</a>, <a href="#index-aria-group">group</a>, <a href="#index-aria-listbox">listbox</a>, <a href="#index-aria-menu">menu</a>, <a href="#index-aria-menubar">menubar</a>,<a href="#index-aria-none">none</a></code>, <a href="#index-aria-presentation"><code>presentation</code></a><code><a href="#index-aria-presentation"></a> , <a href="#index-aria-radiogroup">radiogroup</a></code> - <span class="changed-feature">(changed)</span><code>, <a href="#index-aria-tablist">tablist</a>, <a href="#index-aria-toolbar">toolbar</a></code> or <a href="#index-aria-tree"><code>tree</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="optgroup" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/sec-forms.html#the-optgroup-element"><code>optgroup</code></a>
       <TD><code>role=<a href="#index-aria-group">group</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> group </code>role.</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="option" tabindex="-1">
@@ -605,6 +686,7 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> option </code>role.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="output" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/sec-forms.html#the-output-element">output</a></code>
@@ -612,17 +694,20 @@
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR>
       <TD><code><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-param-element">param</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="picture" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-picture-element">picture</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="progress" tabindex="-1">
@@ -631,11 +716,13 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> progressbar </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="script" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics-scripting.html#the-script-element">script</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="section" tabindex="-1">
@@ -645,12 +732,14 @@
         <p>DPub Roles: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-abstract"><code>doc-abstract</code></a><code>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-acknowledgments">doc-acknowledgments</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-afterword">doc-afterword</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-appendix">doc-appendix</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-bibliography">doc-bibliography</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-chapter">doc-chapter</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-colophon">doc-colophon</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-conclusion">doc-conclusion</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-credit">doc-credit</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-credits">doc-credits</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-dedication">doc-dedication</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-endnotes">doc-endnotes</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-epilogue">doc-epilogue</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-errata">doc-errata</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-example">doc-example</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-foreword">doc-foreword</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-index">doc-index</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-introduction">doc-introduction</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-notice">doc-notice</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist">doc-pagelist</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-part">doc-part</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-preface">doc-preface</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-prologue">doc-prologue</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pullquote">doc-pullquote</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-qna">doc-qna</a>, <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-toc">doc-toc</a></code> - <span class="new-feature">(new)</span></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="select" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/sec-forms.html#the-select-element">select</a></code> (with NO <code>multiple</code> attribute and NO <code>size</code> attribute having value greater than <code>1</code>) <span class="changed-feature">(changed)</span></TD>
       <TD><code>role=<a href="#index-aria-combobox">combobox</a></code></TD>
       <TD><p>Role: <code><a href="#index-aria-menu">menu</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> combobox</code> or <code>menu</code> role. - <span class="changed-feature">(changed)</span></p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="select2" tabindex="-1">
@@ -659,11 +748,13 @@
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> listbox</code> role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="source" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-source-element">source</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="span" tabindex="-1">
@@ -672,11 +763,13 @@
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="style" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-style-element">style</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="svg" tabindex="-1">
@@ -684,6 +777,7 @@
       <TD><a>No corresponding role</a></TD>
       <TD><p>Role: <code><a href="#index-aria-application">application</a>, <a href="#index-aria-document">document</a>, or <a href="#index-aria-img">img</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="summary" tabindex="-1">
@@ -693,6 +787,7 @@
 			  href="https://www.w3.org/TR/html/interactive-elements.html#element-attrdef-details-open"><code>open</code></a> attribute is present, <code> aria-expanded="false"</code> otherwise. </p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> button </code>role. </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="table" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/tabular-data.html#the-table-element"><code>table</code></a>
@@ -700,11 +795,13 @@
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="template" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics-scripting.html#the-template-element">template</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="textarea" tabindex="-1">
@@ -712,6 +809,7 @@
       <TD><code>role=<a href="#index-aria-textbox">textbox</a></code></TD>
       <TD><p><strong class="nosupport">No <code>role</code></strong></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> textbox </code>role.</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="tbody-tfoot-thead" tabindex="-1">
@@ -721,11 +819,13 @@
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code>attributes applicable to the allowed roles and implied role (if any).</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="el-title" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-title-element">title</a></code>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="TD" tabindex="-1">
@@ -735,6 +835,7 @@
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="text-level-semantics" tabindex="-1">
       <TD><p>Text level semantic elements not listed elsewhere:</p>
@@ -743,12 +844,14 @@
       <TD><a><strong>Any</strong> <code>role</code></a>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="th" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/tabular-data.html#the-th-element">th</a></code>
       <TD><code>role=<a href="#index-aria-columnheader">columnheader</a></code> or <code><a href="#index-aria-rowheader">rowheader</a></code></TD>
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="tr" tabindex="-1">
@@ -757,11 +860,13 @@
       <TD><p><a><strong>Any</strong> <code>role</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="track" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-track-element"><code>track</code></a>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="ul" tabindex="-1">
@@ -770,12 +875,14 @@
       <TD><p>Role: <code><a href="#index-aria-directory">directory</a>, <a href="#index-aria-group">group</a>, <a href="#index-aria-listbox">listbox</a>, <a href="#index-aria-menu">menu</a>, <a href="#index-aria-menubar">menubar</a>, <a href="#index-aria-radiogroup">radiogroup</a></code> - <span class="changed-feature">(changed)</span>, <code><a href="#index-aria-tablist">tablist</a>, <a href="#index-aria-toolbar">toolbar</a>, <a href="#index-aria-tree">tree</a>, <a href="#index-aria-presentation">presentation</a></code></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="video" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-video-element"><code>video</code></a>
       <TD><a>No corresponding role</a></TD>
       <TD><p>Role: <a href="#index-aria-application"><code>application</code></a></p>
         <p><a href="#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code> application </code>role. </p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="attr-disabled" tabindex="-1">
@@ -785,6 +892,7 @@
 			  href="https://www.w3.org/TR/html/sec-forms.html#enabling-and-disabling-form-controls-the-disabled-attribute">allowed the <code>disabled</code> attribute</a> in HTML5. </p>
         <p>Only use the <code>aria-disabled</code> attribute for elements that are <strong>not allowed</strong> to have a <code>disabled </code>attribute in HTML5 </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="attr-placeholder" tabindex="-1">
       <TD>Element with a <a href="https://www.w3.org/TR/html/sec-forms.html#the-placeholder-attribute"><code>placeholder</code></a> attribute -<span class="new-feature">(new)</span></TD>
@@ -792,6 +900,7 @@
       <TD><p>Use the <code>placeholder</code> attribute on any element that is allowed the <a
 			  href="https://www.w3.org/TR/html/sec-forms.html#enabling-and-disabling-form-controls-the-disabled-attribute"><code>placeholder</code></a> attribute in HTML5. </p>
         <p>Only use the <code>aria-placeholder</code> attribute on elements that are <strong>not allowed</strong> to have a <code>placeholder </code>attribute in HTML5. </p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="attr-required" tabindex="-1">
@@ -801,6 +910,7 @@
 			  href="https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-required">allowed the <code>required</code> attribute</a> in HTML5. MUST NOT be set to <code>false</code> if the <a href="https://www.w3.org/TR/html/sec-forms.html#element-attrdef-input-required"><code>required</code></a> attribute is set.  - <span class="changed-feature">(changed)</span></p>
         <p>MAY also be used for elements that have an  ARIA  role which allows the <code>aria-required </code> attribute.</p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="attr-readonly" tabindex="-1">
       <TD>Element with a <a href="https://www.w3.org/TR/html/sec-forms.html#element-attrdef-textarea-readonly"><code>readonly</code></a> attribute </TD>
@@ -809,12 +919,14 @@
 			  href="https://www.w3.org/TR/html/sec-forms.html#element-attrdef-textarea-readonly">allowed the <code>readonly</code> attribute</a> in HTML5. </p>
         <p>Only use the <code>aria-readonly</code> attribute for elements that are <em>not allowed</em> to have a <code>readonly</code> attribute in HTML5 </p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR id="attr-hidden" tabindex="-1">
       <TD>Element with a <a href="https://www.w3.org/TR/html/editing.html#the-hidden-attribute"><code>hidden</code></a> attribute </TD>
       <TD><code>aria-hidden=&quot;true&quot;</code></TD>
       <TD><p>Use the <code>aria-hidden</code> attribute on any HTML element. </p>
         <p><strong>Note:</strong> If an element has a <code>hidden</code> attribute, an <code>aria-hidden</code> attribute is not required.</p></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="IDL-ValidityState" tabindex="-1">
@@ -824,11 +936,13 @@
       <TD><code>aria-invalid=&quot;true&quot;</code></TD>
       <TD><p>The <code>aria-invalid</code> attribute may be used on any HTML5 element that allows <a href="#index-aria-global">global <code>aria-*</code> attributes</a> except for a <a href="https://www.w3.org/TR/html/sec-forms.html#submittable-element">submittable element</a> that does not satisy its <a href="https://www.w3.org/TR/html/sec-forms.html#constraints">validation constraints</a>. - <span class="changed-feature">(changed)</span></p></TD>
       <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
     </TR>
     <TR tabindex="-1">
       <TD>Element with <code><a href="https://www.w3.org/TR/html/editing.html#element-attrdef-global-contenteditable">contenteditable</a></code> attribute</TD>
       <TD><code>aria-readonly=&quot;false&quot;</code></TD>
       <TD>Do not set <code>aria-readonly=&quot;true&quot;</code> on an element that has a <code>contenteditable</code> attribute set. - <span class="new-feature">(new)</span></TD>
+      <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
 </table>
