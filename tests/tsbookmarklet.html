@@ -3,11 +3,9 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
-  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
-  <title>CodePen - text spacing bookmarklet</title>
-  
-  
+ 
+  <title>text spacing bookmarklet</title>
+ 
   
   <link rel="stylesheet prefetch" href="tsbookmarklet_files/styles.css">
 
@@ -23,22 +21,18 @@ p{
  margin-bottom: 2em !important;
 } */
     </style>
-
   
-  
-  
-  
-
-<style wiid="N1">* { line-height: 1.5 !important; letter-spacing: 0.12em !important; word-spacing: 0.16em !important; } p,li,h1,h2,h3,h4,h5,h6{ margin-bottom: 2em !important; } </style></head>
+  </head>
 
 <body translate="no">
 
   <h1>text spacing bookmarklet</h1>
+  <p>Last updated: 26/05/2018</p>
 
 <p>Quick and dirty testing of <a href="https://www.w3.org/TR/WCAG21/#text-spacing">WCAG 2.1 Success Criterion 1.4.12 Text Spacing</a>.
 
 </p><p>Experimental:<strong>use at own risk!</strong>
-</p><p>Bookmarklet: <a href="javascript:(function(){%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27*%20{%20line-height:%201.5%20!important;%20letter-spacing:%200.12em%20!important;%20word-spacing:%200.16em%20!important;%20}%20p,li,h1,h2,h3,h4,h5,h6{%20margin-bottom:%202em%20!important;%20}%20%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput[0].appendChild(style);%20})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
+</p><p>Bookmarklet: <a href="javascript:(function(){%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27*%20{%20line-height:%201.5%20!important;%20letter-spacing:%200.12em%20!important;%20word-spacing:%200.16em%20!important;%20}%20p{%20margin-bottom:%202em%20!important;%20}%20%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput[0].appendChild(style);%20})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
   
 </p><p><a href="https://codepen.io/stevef/pen/YLMqbo">Edit this</a> on codepen
   
