@@ -9,7 +9,7 @@
 <body>
 <h1>Implementation Report (in progress)</h1>
 <p>For <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> rules implemented in <a href="https://validator.w3.org/nu/">W3C HTML checker</a></p>
-<p>last updated 19 June 2018</p>
+<p>last updated 01 July 2018</p>
 <table>
   <caption>
     Rules of ARIA attributes usage by HTML language feature
@@ -179,25 +179,25 @@
     </TR>
     <TR id="dl" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/grouping-content.html#the-dl-element"><code>dl</code></a>
-      <TD><code>role=<a href="https://www.w3.org/TR/html-aria/#index-aria-list">list</a></code></TD>
-      <TD><p>Role: <code><a href="https://www.w3.org/TR/html-aria/#index-aria-group">group</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation">presentation</a></code> or <code> <a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code></p>
+      <TD><a>No corresponding role</a></TD>
+      <TD><p>Role: <code><a href="https://www.w3.org/TR/html-aria/#index-aria-group">group</a>,<a href="https://www.w3.org/TR/html-aria/#index-aria-list">list</a> <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation">presentation</a></code> or <code> <a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code></p>
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-glossary"><code>doc-glossary</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/dl-test.html">dl</a></TD>
-      <TD>partial <a href="https://github.com/validator/validator/issues/669">issue 669</a></TD>
+      <TD>partial <a href="https://github.com/validator/validator/issues/671">issue 671</a></TD>
     </TR>
     <TR id="dd-dt2" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/grouping-content.html#the-dt-element">dt</a></code>
-      <TD><code>role=<a href="https://www.w3.org/TR/html-aria/#index-aria-listitem">listitem</a></code></TD>
-      <TD><p><strong class="nosupport">No <code>role</code></strong></p>
-        <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <a href="https://www.w3.org/TR/html-aria/#index-aria-listitem">listitem</a> role</code></a>.</p></TD>
+      <TD><code>role=<a href="https://www.w3.org/TR/html-aria/#index-aria-term">term</a></code></TD>
+      <TD><p>Role: <code><a href="https://www.w3.org/TR/html-aria/#index-aria-listitem">listitem</a></code></p>
+      <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <a href="https://www.w3.org/TR/html-aria/#index-aria-listitem">allowed</a> role</code></a>.</p></TD>
       <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
     </TR>
     <TR id="embed" tabindex="-1">
       <TD><code><a href="https://w3c.github.io/html/semantics-embedded-content.html#the-embed-element">embed</a></code>
       <TD><a>No corresponding role</a></TD>
-      <TD><p>Role: <code><a href="https://www.w3.org/TR/html-aria/#index-aria-application">application</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-document">document</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation">presentation</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code>or<code> <a href="https://www.w3.org/TR/html-aria/#index-aria-img">img</a></code></p>
+      <TD><p>Role: <code><a href="https://www.w3.org/TR/html-aria/#index-aria-application">application</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-document">document</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation">presentation</a>, <a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code> or<code> <a href="https://www.w3.org/TR/html-aria/#index-aria-img">img</a></code></p>
         <p> <a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
       <TD>&nbsp;</TD>
