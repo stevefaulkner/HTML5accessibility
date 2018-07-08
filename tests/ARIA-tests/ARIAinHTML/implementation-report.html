@@ -9,7 +9,7 @@
 <body>
 <h1>Implementation Report (in progress)</h1>
 <p>For <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> rules implemented in <a href="https://validator.w3.org/nu/">W3C HTML checker</a></p>
-<p>last updated 01 July 2018</p>
+<p>last updated 08 July 2018</p>
 <table>
   <caption>
     Rules of ARIA attributes usage by HTML language feature
@@ -241,8 +241,8 @@
       <TD><code>role=<a href="https://www.w3.org/TR/html-aria/#index-aria-form">form</a></code></TD>
       <TD><p>Role: <a href="https://www.w3.org/TR/html-aria/#index-aria-search"><code>search</code></a>, <code><a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code> or <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation"><code>presentation</code></a></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-      <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+         <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/form-test.html">form</a></TD>
+         <td>yes</td>
     </TR>
     <TR id="p-pre-blockquote" tabindex="-1">
       <TD><p>grouping content elements not listed elsewhere:</p>
@@ -253,7 +253,7 @@
       <TD><p><strong class="nosupport">Any <code>role</code></strong></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
       <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+      <TD>yes</TD>
     </TR>
     <TR id="h1-h6" tabindex="-1">
       <TD><a href="https://www.w3.org/TR/html/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements"><code>h1</code></a> to <a
@@ -262,8 +262,16 @@
       <TD><p>Role: <a href="https://www.w3.org/TR/html-aria/#index-aria-tab"><code>tab</code></a><code>, <a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code> or <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation"><code>presentation</code></a></p>
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-subtitle"><code>doc-subtitle</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-      <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+      <TD><ul>
+        <li><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h1-test.html"><code>&lt;h1&gt;</code></a></li>
+        <li><code><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h2-test.html">&lt;h2&gt;</a></code></li>
+        <li><code><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h3-test.html">&lt;h3&gt;</a></code></li>
+        <li><code><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h4-test.html">&lt;h4&gt;</a></code></li>
+        <li><code><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h5-test.html">&lt;h5&gt;</a></code></li>
+        <li><code><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h6-test.html">&lt;h6&gt;</a></code><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/h6-test.html"></a></li>
+      </ul>
+      <p>&nbsp;</p></TD>
+      <TD>yes</TD>
     </TR>
     <TR id="head" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/document-metadata.html#the-head-element">head</a></code>
@@ -279,8 +287,8 @@
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-footnote"><code>doc-footnote</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the
           allowed </p></TD>
-      <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/header-test.html">header</a></TD>
+      <TD>yes</TD>
     </TR>
     <TR id="hr" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/grouping-content.html#the-hr-element">hr</a></code>
@@ -288,8 +296,8 @@
       <TD><p>Roles: <code><a href="https://www.w3.org/TR/html-aria/#index-aria-none">none</a></code> or <a href="https://www.w3.org/TR/html-aria/#index-aria-presentation"><code>presentation</code></a></p>
         <p>DPub Role: <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagebreak"><code>doc-pagebreak</code></a> - <span class="new-feature">(new)</span></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the <code>separator</code> role.</p></TD>
-      <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/hr-test.html">hr</a></TD>
+      <TD>yes</TD>
     </TR>
     <TR id="html" tabindex="-1">
       <TD><code><a href="https://www.w3.org/TR/html/semantics.html#the-html-element">html</a></code>
@@ -303,8 +311,8 @@
       <TD><a>No corresponding role</a></TD>
       <TD><p>Role: <code>application, document, </code>or<code> img </code></p>
         <p><a href="https://www.w3.org/TR/html-aria/#index-aria-global">global <code>aria-*</code> attributes</a> and any <code>aria-*</code> attributes applicable to the allowed roles and implied role (if any)</p></TD>
-      <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/iframe-test.html">iframe</a></TD>
+      <TD>yes (note: <code>none, presentation</code> are allowed)</TD>
     </TR>
     <tr id="img-alt" tabindex="-1">
       <td><code><a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-img-element">img</a> with <a href="https://www.w3.org/TR/html/semantics-embedded-content.html#element-attrdef-img-alt">alt</a>=""</code></td>
@@ -384,8 +392,8 @@
       <TD><code>input type=<a href="https://www.w3.org/TR/html/sec-forms.html#hidden-state-typehidden">hidden</a></code></TD>
       <TD><a>No corresponding role</a></TD>
       <TD><strong class="nosupport">No <code>role</code> or <code>aria*</code> attributes</strong></TD>
-      <TD>&nbsp;</TD>
-      <TD>&nbsp;</TD>
+      <TD><a href="https://hanshillen.github.io/aria-test-builder/dist/testcases/input-Hidden-test.html">hidden</a></TD>
+      <TD>no <a href="https://github.com/validator/validator/issues/679">issue 679</a></TD>
     </TR>
     <TR id="input-image" tabindex="-1">
       <TD><code>input type= </code><a href="https://www.w3.org/TR/html/sec-forms.html#image-button-state-typeimage"><code>image </code></a></TD>
