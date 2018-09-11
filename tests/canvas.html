@@ -189,14 +189,14 @@ context.fillText  ('Shapes', 20, 0);
     <div>
 	
 	<!-- <input type="button" value="show" onclick="showDescription()"> -->
-	<canvas id="example" width="260" height="200">
+	<canvas id="example" width="260" height="200" role="presentation">
 	<h2>Shapes</h2>
   <p>A rectangle with a black border. In the background is a pink circle. Partially overlaying the <a href="http://en.wikipedia.org/wiki/Circle" onfocus="drawCircle();" onblur="drawPicture();">circle</a> is a green <a href="http://en.wikipedia.org/wiki/Square" onfocus="drawSquare();" onblur="drawPicture();">square</a> and a purple <a href="http://en.wikipedia.org/wiki/Triangle" onfocus="drawTriangle();" onblur="drawPicture();">triangle</a>, both of which are semi-opaque, so the full circle can be seen underneath.</p>
 </canvas>
 
 <h3>code</h3>
 <xmp>
-<canvas id="example" width="260" height="200">
+<canvas id="example" width="260" height="200" role="presentation">
 	<h2>Shapes</h2>
   <p>A rectangle with a black border. In the background is a pink circle. Partially overlaying the 
   <a href="http://en.wikipedia.org/wiki/Circle" onfocus="drawCircle();" onblur="drawPicture();">circle</a>. 
@@ -206,6 +206,7 @@ context.fillText  ('Shapes', 20, 0);
   both of which are semi-opaque, so the full circle can be seen underneath.</p>
 </canvas>
 </xmp>
+<p><b>Note:</b> <code>role=presentation</code> added to <code>&lt;canvas></code> to mute repeated announcement of <i>graphic</i> role by some screen readers when navigating canvas subtree</p?
 	</div>
 	
 
