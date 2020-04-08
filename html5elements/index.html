@@ -1,1173 +1,927 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
+	<meta charset="utf-8">
+	<title>HTML5 Elements</title>
+	<meta name="description" content="An example HTML5 document" />
+	<meta name="keywords" content="HTML5, template, elements" />
+	<!-- Internal CSS -->
 
-<meta charset="utf-8">
+	<style type="text/css">
 
-<title>HTML5 Elements</title>
+		#list1,	#list2,	#list3 {display: none;}
 
-<meta name="description" content="An example HTML5 document" />
+		form {
+			font: 100% Lucinda Grande, Sans-serif;
+			margin: 0;
+			padding: 0;
+			width: 20em;
+			padding: .5em;
+		}
 
-<meta name="keywords" content="HTML5, template, elements" />
+		.entry {margin-bottom: .5em;}
 
-<!-- Internal CSS -->
+		label {
+			color: #666666;
+			float: left;
+			width: 130px;
+			padding: 0;
+			text-align: right;
+		}
 
-<style type="text/css">
+		input, textarea {margin-left: 5px;}
 
-/*article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+		input {width: 6em}
 
-	display: block;
+		.button {
+			padding-left: 140px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+		}
 
-} */
+		input:required {
+			outline: 1px red solid;
+			color: red;
+		}
 
-#list1, #list2, #list3 {
+		/*menu {display: block;}*/
 
-	display:none;
+	</style>
 
-}
+	<!-- Learn more about the following CSS setup here:
 
-form {
+Optimizing websites for iPhone and Android
 
-	font:100% Lucinda Grande, Sans-serif;
+https://www.rkblog.rk.edu.pl/w/p/optimizing-websites-iphone-and-android/
 
-	margin: 0;
-
-	padding: 0;
-
-	
-
-	width: 20em;
-
-	
-
-	padding: .5em;
-
-}
-
-.entry {
-
-	margin-bottom:.5em;
-
-}
-
-label {
-
-	color:#666666;
-
-	float: left;
-
-	width: 130px;
-
-	padding: 0;
-
-	text-align: right;
-
-}
-
-input, textarea {
-
-	margin-left:5px;
-
-}
-
-
-
-input {width:6em}
-
-.button {
-
-	padding-left:140px;
-
-	padding-bottom:5px;
-
-	padding-top:5px;
-
-}
-
-input:required {
-
-outline: 1px red solid;
-
-color:red;
-
-}
-
-
-
-menu {display:block}
-
-
-
-</style>
-
-<!-- Learn more about the following CSS setup here:
-
-
-
-	Optimizing websites for iPhone and Android
-
-	http://www.rkblog.rk.edu.pl/w/p/optimizing-websites-iphone-and-android/
-
-    
-
-    See individual CSS files below for ideas and references.
-
-
+See individual CSS files below for ideas and references.
 
 -->
 
-<link href="assets/css/print.css" media="print" rel="stylesheet" type="text/css">
+	<link href="assets/css/print.css" media="print" rel="stylesheet" type="text/css">
+	<link href="assets/css/screen.css" media="screen and (min-width: 481px)" rel="stylesheet" type="text/css">
+	<link href="assets/css/smart.css" media="only screen and (max-width: 480px)" rel="stylesheet" type="text/css">
+	<link href="assets/css/mobile.css" media="handheld" rel="stylesheet" type="text/css">
 
-<link href="assets/css/screen.css" media="screen and (min-width: 481px)" rel="stylesheet" type="text/css">
-
-<link href="assets/css/smart.css" media="only screen and (max-width: 480px)" rel="stylesheet" type="text/css">
-
-<link href="assets/css/mobile.css" media="handheld" rel="stylesheet" type="text/css">
-
-<!--[if IE]>
+	<!--[if IE]>
 
 <link rel="stylesheet" href="assets/css/screen.css" media="screen" type="text/css" />
 
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
 <![endif]-->
 
-<!-- tell iPhone not to shrink mobile website -->
+	<!-- tell iPhone not to shrink mobile website -->
+	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<!-- jQuery provided by Google -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<!-- Local Scroll effect -->
+	<script src="assets/js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+	<!-- Simple collapsible menus for lists of elements found in the aside -->
 
-<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<script type="text/javascript">
 
-<!-- jQuery provided by Google -->
+		$(document).ready(function() {
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+			$("#toggle1").attr('aria-expanded', 'false');
+			$("#toggle2").attr('aria-expanded', 'false');
+			$("#toggle3").attr('aria-expanded', 'false');
 
-<!-- Local Scroll effect -->
+			$("#toggle1").click(function() {
+				$("#list1").slideToggle('fast', function() {
+					if($("#list1").css('display') == 'block') {
+						$("#toggle1").attr('aria-expanded', 'true');
+					} else {
+						$("#toggle1").attr('aria-expanded', 'false');
+					}
+				});
+				return false;
+			});
 
-<script src="assets/js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
+			$("#toggle2").click(function() {
+				$("#list2").slideToggle('fast', function() {
+					if($("#list2").css('display') == 'block') {
+						$("#toggle2").attr('aria-expanded', 'true');
+					} else {
+						$("#toggle2").attr('aria-expanded', 'false');
+					}
+				});
+				return false;
+			});
 
-<script src="assets/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+			$("#toggle3").click(function() {
+				$("#list3").slideToggle('fast', function() {
+					if($("#list3").css('display') == 'block') {
+						$("#toggle3").attr('aria-expanded', 'true');
+					} else {
+						$("#toggle3").attr('aria-expanded', 'false');
+					}
+				});
+				return false;
+			});
 
-<!-- Simple collapsible menus for lists of elements found in the aside -->
+			// Local Scroll effect
 
-<script type="text/javascript">
-
-	$(document).ready(function(){
-
-		$("#toggle1").click(function(){
-
-			$("#list1").slideToggle();
-
-			return false;
-
+			$.localScroll({
+				duration: 1000,
+				hash: true,
+			});
 		});
-
-		$("#toggle2").click(function(){
-
-			$("#list2").slideToggle();
-
-			return false;
-
-		});
-
-		$("#toggle3").click(function(){
-
-			$("#list3").slideToggle();
-
-			return false;
-
-		});
-
-		// Local Scroll effect
-
-		$.localScroll({
-
-			duration:1000,
-
-			hash:true,
-
-		});
-
-	});
-
-</script>
+	</script>
 
 </head>
 
 <body>
 
-<noscript>
+	<noscript>
 
 <!-- Specify what happens if the user has JavaScript disabled. For example, you may want to display the lists in the right column instead of hiding them by default. -->
 
 </noscript>
 
-<div id="wrap">
+	<div id="wrap">
 
-  <header>
-      <!-- Example comment: Add valid elements within header group -->
-<div style="width:200px;height:250px;float:right;"> <figure> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-   <title>HTML5 Logo</title>
-   <desc>Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.</desc> 
-    <polygon fill="#E44D26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512    "/>
-    <polygon fill="#F16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894    "/>
-    <polygon fill="#EBEBEB" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627"/>
-    <polygon fill="#EBEBEB" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399"/>
-    <path d="M108.382,0h23.077v22.8h21.11V0h23.078v69.044H152.57v-23.12h-21.11v23.12h-23.077V0z"/>
-    <path d="M205.994,22.896h-20.316V0h63.72v22.896h-20.325v46.148h-23.078V22.896z"/>
-    <path d="M259.511,0h24.063l14.802,24.26L313.163,0h24.072v69.044h-22.982V34.822l-15.877,24.549h-0.397l-15.888-24.549v34.222h-22.58V0z"/>
-    <path d="M348.72,0h23.084v46.222h32.453v22.822H348.72V0z"/>
-    <polygon fill="#FFFFFF" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217"/>
-    <polygon fill="#FFFFFF" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305"/><text>poot</text>
-</svg><figcaption style="font-size:.8em">svg image with <code>title</code> and <code>desc</code></figcaption></figure></div> 
- <h1>HTML5 Elements</h1>
+		<header>
+			<!-- Example comment: Add valid elements within header group -->
+			<div style="width:200px;height:250px;float:right;">
+				<figure>
+					<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512">
+						<title>HTML5 Logo</title>
+						<desc>Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.</desc>
+						<polygon fill="#E44D26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512    "/>
+						<polygon fill="#F16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894    "/>
+						<polygon fill="#EBEBEB" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627"/>
+						<polygon fill="#EBEBEB" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399"/>
+						<path d="M108.382,0h23.077v22.8h21.11V0h23.078v69.044H152.57v-23.12h-21.11v23.12h-23.077V0z"/>
+						<path d="M205.994,22.896h-20.316V0h63.72v22.896h-20.325v46.148h-23.078V22.896z"/>
+						<path d="M259.511,0h24.063l14.802,24.26L313.163,0h24.072v69.044h-22.982V34.822l-15.877,24.549h-0.397l-15.888-24.549v34.222h-22.58V0z"/>
+						<path d="M348.72,0h23.084v46.222h32.453v22.822H348.72V0z"/>
+						<polygon fill="#FFFFFF" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217"/>
+						<polygon fill="#FFFFFF" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305"/><text>poot</text>
+						</svg>
+					<figcaption style="font-size:.8em">svg image with <code>title</code> and <code>desc</code></figcaption>
+				</figure>
+			</div>
+			<h1>HTML5 Elements</h1>
+
+			<div>
+				<p><a href="https://www.html5accessibility.com">Home</a></p>
+				<p>This is the global <code>&lt;header&gt;</code> element for this page, including the<code>&lt;nav&gt;</code> element.</p>
+
+				<nav>
+					<ul>
+						<li><a href="#" title="Global header link">Global <code>&lt;nav&gt;</code> link within the <code>&lt;header&gt;</code></a></li>
+						<li><a href="#" title="Global header link">Global <code>&lt;nav&gt;</code> link within the <code>&lt;header&gt;</code></a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<main>
+
+			<header>
+				<h2>Main Header</h2>
+			</header>
+
+			<article>
+				<header>
+					<h3>Article header</h3>
+				</header>
+
+				<div>
+					<p><a href="https://www.ackernaut.com/space-station/zip/html5-elements.zip" title="Download the HTML and asset files">Download the HTML and asset files</a> <br> (ZIP does not include audio or video to reduce file size. <br> You can download them from
+						this page using your browser.)</p>
+
+					<h4>Purpose of this document:</h4>
+
+					<ul>
+						<li>Includes all the HTML5 elements as listed in the side column.</li>
+						<li>Minimal styling has been used. Use this document to test CSS files (base, reset, custom, etc.) on desired elements in various browsers.</li>
+						<li>Use this document to create comprehensive templates that need to use many of the common HTML5 elements.</li>
+						<li>Includes jQuery because it comes in handy.</li>
+						<li>Includes HTML5 compatibility for Internet Explorer.</li>
+						<li>Includes CSS files for screen, print, mobile and smart phones.</li>
+						<li>See <a href="#info" title="Reference links below">reference links below</a> for more information.</li>
+					</ul>
+
+					<p><span>Note:</span> This is only a guide &mdash; a starting point &mdash; if you will.</p>
+
+					<hr>
+
+					<h1>Heading 1 &lt;h1&gt;</h1>
+
+					<p>This is an example paragraph used within this article for this document.</p>
+
+					<h2>Heading 2 &lt;h2&gt;</h2>
+
+					<p>This is an example paragraph used within this article for this document.</p>
+
+					<h3>Heading 3 &lt;h3&gt;</h3>
 
-<div>
- <p><a href="http://www.html5accessibility.com">home</a></p>
-  
-  
-  <p>This is the global <code>&lt;header&gt;</code> element for this page, including the<code>&lt;nav&gt;</code> element.</p>
-  
-  
-  <nav>
-    
-    <ul>
-      
-      <li><a href="#" title="Global header link">Global <code>&lt;nav&gt;</code> link within the <code>&lt;header&gt;</code></a></li>
-      
-      <li><a href="#" title="Global header link">Global <code>&lt;nav&gt;</code> link within the <code>&lt;header&gt;</code></a></li>
-      
-      </ul>
-    
-  </nav>
-</div>
-  </header>
+					<p>This is an example paragraph used within this article for this document.</p>
 
-  <main>
+					<h4>Heading 1 &lt;h4&gt;</h4>
 
-    <header>
+					<p>This is an example paragraph used within this article for this document.</p>
+
+					<h5>Heading &lt;h5&gt;</h5>
 
-      <h2>main header</h2>
+					<p>This is an example paragraph used within this article for this document.</p>
 
-    </header>
+					<h6>Heading &lt;h6&gt;</h6>
 
-    <article>
+					<p>This is an example paragraph used within this article for this document.</p>
 
-      <header>
+					<hr>
 
-        <h3>Article header</h3>
-
-      </header>
-
-      <div>
-
-        <p><a href="http://www.ackernaut.com/space-station/zip/html5-elements.zip" title="Download the HTML and asset files">Download the HTML and asset files</a> <br>
-
-          (ZIP does not include audio or video to reduce file size. <br>
-
-          You can download them from this page using your browser.)</p>
-
-        <h4>Purpose of this document:</h4>
-
-        <ul>
-
-          <li>Includes all the HTML5 elements as listed in the side column.</li>
-
-          <li>Minimal styling has been used. Use this document to test CSS files (base, reset, custom, etc.) on desired elements in various browsers.</li>
-
-          <li>Use this document to create comprehensive templates that need to use many of the common HTML5 elements.</li>
-
-          <li>Includes jQuery because it comes in handy.</li>
-
-          <li>Includes HTML5 compatibility for Internet Explorer.</li>
-
-          <li>Includes CSS files for screen, print, mobile and smart phones.</li>
-
-          <li>See <a href="#info" title="Reference links below">reference links below</a> for more information.</li>
-
-        </ul>
-
-        <p><span>Note:</span> This is only a guide &mdash; a starting point &mdash; if you will.</p>
-
-        <hr>
-
-        <h1>Heading 1 &lt;h1&gt;</h1>
-
-        <p>This is an example paragraph used within this article for this document.</p>
-
-        <h2>Heading 2 &lt;h2&gt;</h2>
-
-        <p>This is an example paragraph used within this article for this document.</p>
-
-        <h3>Heading 3 &lt;h3&gt;</h3>
-
-        <p>This is an example paragraph used within this article for this document.</p>
-
-        <h4>Heading 1 &lt;h4&gt;</h4>
-
-        <p>This is an example paragraph used within this article for this document.</p>
-
-        <h5>Heading &lt;h5&gt;</h5>
-
-        <p>This is an example paragraph used within this article for this document.</p>
-
-        <h6>Heading &lt;h6&gt;</h6>
-
-        <p>This is an example paragraph used within this article for this document.</p>
-
-        <hr>
-
-        <h4>Unordered list</h4>
-
-        <ul>
-
-          <li>Unordered list item</li>
-
-          <li>Unordered list item
-
-            <ul>
-
-              <li>Unordered list item</li>
-
-              <li>Unordered list item
-
-                <ul>
-
-                  <li>Unordered list item</li>
-
-                  <li>Unordered list item</li>
-
-                  <li>Unordered list item</li>
-
-                </ul></li>
-
-              <li>Unordered list item</li>
-
-            </ul></li>
-
-          <li>Unordered list item</li>
-
-        </ul>
-
-        <h4>Ordered list</h4>
-
-        <ol>
-
-          <li>Ordered list item</li>
-
-          <li>Ordered list item
-
-            <ol>
-
-              <li>Ordered list item</li>
-
-              <li>Ordered list item
-
-                <ol>
-
-                  <li>Ordered list item</li>
-
-                  <li>Ordered list item</li>
-
-                  <li>Ordered list item</li>
-
-                </ol></li>
-
-              <li>Ordered list item</li>
-
-            </ol></li>
-
-          <li>Ordered list item</li>
-
-        </ol>
-        
-         <h4>Description list</h4>
-<dl>
-<dt>HTML</dt>
-<dd>HTML is the markup language used to give content structure.</dd>
-<dt>CSS</dt>
-<dd>CSS is the language used to add a creative layer on top of HTML.</dd>
-</dl> 
-        <hr>
-
-        <h4>Address and blockquote:</h4>
-
-        <address>
-
-        700 Address Element Road<br>
-
-        Town, State Zip
-
-        </address>
-
-        <blockquote>This is a blockquote.</blockquote>
-
-        <hr>
-
-        <h4>Audio and video:</h4>
-
-        <p>Example of the <code>&lt;audio&gt;</code> element:</p>
-
-        <audio controls tabindex="0" title="audio">
-
-		 <source src="assets/audio/1.mp3">
-
-          <source src="assets/audio/kahvi285d_jim_black-yoctosecond.ogg">
-
-          <!-- Find the audio file here: http://www.kahvi.org/releases.php?release_number=285 -->
-
-          Your browser does not support OGG audio. Try using Safari, Chrome or Firefox.</audio>
-
-        <p>Example of the <code>&lt;video&gt;</code> element:</p>
-
-        <video width="300" height="225" src="assets/video/a-new-computer-small.ogg" controls tabindex="0"></video>
-
-		<p>Example of the <code>&lt;video&gt;</code> element for IE9:</p>
-
-		<video src="assets/video/IE9_HTML5_8000k.mp4" width="300" height="225" controls tabindex="0"></video>
-
-          
-
-       
-
-       
-
-        <hr>
-
-        <h4>Figure:</h4>
-
-        <figure>
-
-          <p>Use an <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code> or <code>&lt;table&gt;</code> as content for the <code>&lt;figure&gt;</code> element.</p>
-
-          <img src="assets/img/sky.jpg" width="240" height="160" alt="Watching the Sky by Nathaniel Reinhart"><br>
-
-          <figcaption><a href="http://www.flickr.com/photos/0mega/3178584649/" title="Watching the Sky by Nathaniel Reinhart">Watching the Sky</a> by Nathaniel Reinhart (<code>&lt;figcaption&gt;</code>)</figcaption>
-
-        </figure>
-
-        <hr>
-
-        <h4>Form:</h4>
-
-        
-
-          <fieldset>
-
-          <legend>Form legend</legend>
-<form>
-          
-
-		  <div class="entry">
-
-        <label for="form-1">Text (required &amp; autofocus) </label><br>
-
-        <input id="form-1"  name="haha" type="text" autofocus required>
-
-       </div>
-
-		
-
-		<div class="entry">
-
-        <label for="form-1a">Text with place holder</label><br>
-
-        <input id="form-1a"  name="hah" type="text" placeholder="place holder">
-
- </div>
-
-		
-
-
-
-		
-
-    <!-- entry end -->
-
-    <div class="entry">
-
-        <label for="form-2">Text with Datalist</label>
-
-        <input id="form-2"   list="mylist" type="text">
-
-        <datalist id="mylist">
-
-            <option label="Mr" value="Mr">
-
-            <option label="Ms" value="Ms">
-
-            <option label="Prof" value="Mad Professor"> 
-
-        </datalist>
-
-    </div>
-
-    <!-- entry end -->
-
-    <div class="entry">
-
-        <label for="form-4">Number</label>
-
-        <input id="form-4"  name="age" type="number" min="18" max="25">
-
-    </div>
-
-    <!-- entry end -->
-
-    <div class="entry">
-
-        <label for="form-5">Email</label>
-
-        <input id="form-5"  name="email" type="email">
-
-    </div>
-
-    <!-- entry end -->
-
-    <div class="entry">
-
-        <label for="form-6">URL</label>
-
-        <input id="form-6"  name="url" type="url">
-
-    </div>
-
-    <!-- entry end -->
-
-	<div class="entry">
-
-        <label for="form-7">Date</label>
-
-        <input id="form-7"  name="dob" type="date">
-
-    </div>
-
-    <div class="entry">
-
-        <label for="form-8">Date Time</label>
-
-        <input id="form-8"  name="dt" type="datetime">
-
-    </div>
-
-	
-
-	<div class="entry">
-
-        <label for="form-9">Date Time-local</label>
-
-        <input id="form-9"  name="dtl" type="datetime-local">
-
-    </div>
-
-	<div class="entry">
-
-        <label for="form-10">Month</label>
-
-        <input id="form-10"  name="m" type="month">
-
-    </div>
-
-	
-
-	<div class="entry">
-
-        <label for="form-11">Time</label>
-
-        <input id="form-11"  name="t" type="time">
-
-    </div>
-
-	<div class="entry">
-
-        <label for="form-12">Week</label>
-
-        <input id="form-12"  name="w" type="week">
-
-    </div>
-
-	<div class="entry">
-
-        <label for="form-13">Telephone</label>
-
-        <input id="form-13"  name="tel" type="tel">
-
-    </div>
- </form>
-    <!-- entry end -->
-
-    <div class="entry">
-
-        
-
-         <form oninput="x.value=parseInt(a.value)"> 
-  <label for="a">Range</label><input type="range" id="a" value="50"> <br>= Output <output name="x" for="a">
-</form> 
-
-    </div>
-
-	<form>
-
-	<div class="entry">
-
-        <label for="form-15">Color</label>
-
-        <input id="form-15"  name="tel" type="color">
-
-    </div>
-
-	
-
-    <!-- entry end -->
-
-    <div class="button">
-
-        <button type=submit>Submit</button>
-
-    </div>
-
- </form>
-
-          </fieldset>
-
-      
+					<h4>Unordered list</h4>
+
+					<ul>
+						<li>Unordered list item</li>
+						<li>Unordered list item
+							<ul>
+								<li>Unordered list item</li>
+								<li>Unordered list item
+									<ul>
+										<li>Unordered list item</li>
+										<li>Unordered list item</li>
+										<li>Unordered list item</li>
+									</ul>
+								</li>
+								<li>Unordered list item</li>
+							</ul>
+						</li>
+						<li>Unordered list item</li>
+					</ul>
+
+					<h4>Ordered list</h4>
+
+					<ol>
+						<li>Ordered list item</li>
+						<li>Ordered list item
+							<ol>
+								<li>Ordered list item</li>
+								<li>Ordered list item
+									<ol>
+										<li>Ordered list item</li>
+										<li>Ordered list item</li>
+										<li>Ordered list item</li>
+									</ol>
+								</li>
+								<li>Ordered list item</li>
+							</ol>
+						</li>
+						<li>Ordered list item</li>
+					</ol>
+
+					<h4>Description list</h4>
+					<dl>
+						<dt>HTML</dt>
+						<dd>HTML is the markup language used to give content structure.</dd>
+						<dt>CSS</dt>
+						<dd>CSS is the language used to add a creative layer on top of HTML.</dd>
+					</dl>
+					<hr>
+
+					<h4>Address and blockquote:</h4>
+
+					<address>
+						700 Address Element Road<br>
+						Town, State Zip
+					</address>
+
+					<blockquote>This is a blockquote.</blockquote>
+
+					<hr>
+
+					<h4>Audio and video:</h4>
+
+					<p>Example of the <code>&lt;audio&gt;</code> element:</p>
+
+					<audio controls tabindex="0" title="audio">
+
+						<source src="assets/audio/1.mp3">
+						<source src="assets/audio/kahvi285d_jim_black-yoctosecond.ogg">
+						<!-- Find the audio file here: https://www.kahvi.org/releases.php?release_number=285 -->
+
+							Your browser does not support OGG audio. Try using Safari, Chrome or Firefox.</audio>
+
+							<p>Example of the <code>&lt;video&gt;</code> element:</p>
+
+							<video width="300" height="225" src="assets/video/a-new-computer-small.ogg" controls tabindex="0"></video>
+
+							<p>Example of the <code>&lt;video&gt;</code> element for IE9:</p>
+
+							<video src="assets/video/IE9_HTML5_8000k.mp4" width="300" height="225" controls tabindex="0"></video>
+
+					<hr>
+
+					<h4>Figure:</h4>
+
+					<figure>
+						<p>Use an <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code> or <code>&lt;table&gt;</code> as content for the <code>&lt;figure&gt;</code> element.</p>
+						<p><img src="assets/img/sky.jpg" width="240" height="160" alt="Watching the Sky by Nathaniel Reinhart"></p>
+						<figcaption><a href="https://www.flickr.com/photos/0mega/3178584649/" title="Watching the Sky by Nathaniel Reinhart">Watching the Sky</a> by Nathaniel Reinhart (<code>&lt;figcaption&gt;</code>)</figcaption>
+					</figure>
+
+					<hr>
+
+					<h4>Form:</h4>
+
+					<fieldset>
+						<legend>Form legend</legend>
+						<form>
+							<div class="entry">
+								<label for="form-1">Text (required &amp; autofocus) </label><br>
+								<input id="form-1" name="haha" type="text" autofocus required>
+							</div>
+
+							<div class="entry">
+								<label for="form-1a">Text with place holder</label><br>
+								<input id="form-1a" name="hah" type="text" placeholder="place holder">
+							</div>
+
+							<!-- entry end -->
+
+							<div class="entry">
+								<label for="form-2">Text with Datalist</label>
+								<input id="form-2" list="mylist" type="text">
+								<datalist id="mylist">
+									<option label="Mr" value="Mr">
+									<option label="Ms" value="Ms">
+									<option label="Prof" value="Mad Professor">
+								</datalist>
+							</div>
+
+							<!-- entry end -->
+
+							<div class="entry">
+								<label for="form-4">Number</label>
+								<input id="form-4" name="age" type="number" min="18" max="25">
+							</div>
+
+							<!-- entry end -->
+
+							<div class="entry">
+								<label for="form-5">Email</label>
+								<input id="form-5" name="email" type="email">
+							</div>
+
+							<!-- entry end -->
+
+							<div class="entry">
+								<label for="form-6">URL</label>
+								<input id="form-6" name="url" type="url">
+							</div>
+
+							<!-- entry end -->
+
+							<div class="entry">
+								<label for="form-7">Date</label>
+								<input id="form-7" name="dob" type="date">
+							</div>
+
+							<div class="entry">
+								<label for="form-8">Date Time</label>
+								<input id="form-8" name="dt" type="datetime">
+							</div>
+
+							<div class="entry">
+								<label for="form-9">Date Time-local</label>
+								<input id="form-9" name="dtl" type="datetime-local">
+							</div>
+
+							<div class="entry">
+								<label for="form-10">Month</label>
+								<input id="form-10" name="m" type="month">
+							</div>
+
+							<div class="entry">
+								<label for="form-11">Time</label>
+								<input id="form-11" name="t" type="time">
+							</div>
+
+							<div class="entry">
+								<label for="form-12">Week</label>
+								<input id="form-12" name="w" type="week">
+							</div>
+
+							<div class="entry">
+								<label for="form-13">Telephone</label>
+								<input id="form-13" name="tel" type="tel">
+							</div>
+						</form>
+						<!-- entry end -->
+
+						<div class="entry">
+							<form oninput="x.value=parseInt(a.value)">
+								<label for="a">Range</label><input type="range" id="a" value="50"> <br>= Output <output name="x" for="a">
+							</form>
+
+						</div>
+
+						<form>
+
+							<div class="entry">
+								<label for="form-15">Color</label>
+								<input id="form-15"  name="tel" type="color">
+							</div>
+
+						<!-- entry end -->
+
+						<div class="button">
+							<button type=submit>Submit</button>
+						</div>
+					</form>
+				</fieldset>
 
 	<hr>
 
-	<h4>menu element type="context" and menutitem elements: Image description via a context menu and longdesc </h4>
-	
-  
-<img tabindex="0" aria-haspopup="true" src="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg" id="i1" alt="A painting inspired by Alfred Tennyson's poem The Lady of Shalott" contextmenu="descmenu" longdesc="http://bit.ly/5HJvVZ" width="200">
-<menu type="context" id="descmenu">
-  <menuitem label="Image Description" onclick="window.location.assign(document.getElementById('i1').attributes.longdesc.value);" icon="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
-<menuitem label="Image description - new window" onclick="window.open(document.getElementById('i1').attributes.longdesc.value);" icon="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
-<menuitem label="Image description - inline" onclick="document.getElementById('in').src='http://bit.ly/5HJvVZ';document.getElementById('incon').style.cssText='display:block;width:60%;height:400px;'" icon="http://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
-  </menu>
-		<hr>
+	<!--h4>Menu element type="context" and menutitem elements: Image description via a context menu and longdesc </h4>
 
-	<h4>Progress</h4>	
+	<p><img tabindex="0" aria-haspopup="true" src="https://dev.w3.org/html5/alt-techniques/images/shalott.jpg" id="i1" alt="A painting inspired by Alfred Tennyson's poem The Lady of Shalott" contextmenu="descmenu" longdesc="https://bit.ly/5HJvVZ" width="200" /></p>
+	<menu type="context" id="descmenu">
+		<menuitem label="Image Description" onclick="window.location.assign(document.getElementById('i1').attributes.longdesc.value);" icon="https://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
+		<menuitem label="Image description - new window" onclick="window.open(document.getElementById('i1').attributes.longdesc.value);" icon="https://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
+		<menuitem label="Image description - inline" onclick="document.getElementById('in').src='https://bit.ly/5HJvVZ';document.getElementById('incon').style.cssText='display:block;width:60%;height:400px;'" icon="https://dev.w3.org/html5/alt-techniques/images/shalott.jpg"></menuitem>
+	</menu>
+
+	<hr-->
+
+	<h4>Progress</h4>
 
 	<p>Progress: <progress id="p" max=100 value="50" tabindex="0"><span>50</span>%</progress></p>
 
-	
+	<hr>
+
+	<!--h4>KeyGen</h4>
+	<p><keygen name="key"></p>
+	<hr-->
+
+	<h4>Inline text formatting:</h4>
+
+	<p>This is the <abbr title="Abbreviation">ABBR</abbr> element.</p>
+
+	<p>This is the <b>b</b> element.</p>
+
+	<p>This is the <cite>cite</cite> element.</p>
+
+	<p>This is the <code>code</code> element.</p>
+
+	<p>This is the <del>del</del> element.</p>
+
+	<p>This is the <dfn>dfn</dfn> element.</p>
+
+	<p>This is the <em>em</em> element.</p>
+
+	<p>This is the <i>i</i> element.</p>
+
+	<p>This is the <ins>ins</ins> element.</p>
+
+	<p>This is the <kbd>kbd</kbd> element.</p>
+
+	<p>This is the <mark>mark</mark> element.</p>
+
+	<p>This is the <samp>samp</samp> element.</p>
+
+	<p>This is the <small>small</small> element.</p>
+
+	<p>This is the <strong>strong</strong> element.</p>
+
+	<p>This is the <sub>sub</sub> element.</p>
+
+	<p>This is the <sup>sup</sup> element.</p>
+
+	<p>This is the <var>var</var> element.</p>
 
 	<hr>
 
-	<h4>KeyGen</h4>
+	<h4>Meter:</h4>
 
-	<p><keygen name="key"></p>
+	<p>An example of the <code>&lt;meter&gt;</code> element: Your score is:
 
+	<meter value="91" min="0" max="100" low="40" high="90" optimum="100" tabindex="0">A+</meter>
 
+	</p>
 
-	
+	<hr>
 
-	<hr>	
+	<h4>Pre and span:</h4>
 
-        <h4>Inline text formatting:</h4>
+	<p>This is the <code>&lt;pre&gt;</code> element:</p>
 
-        <p>This is the <abbr title="Abbreviation">ABBR</abbr> element.</p>
+	<pre>pre</pre>
 
-        <p>This is the <b>b</b> element.</p>
+	<p>This is the <span>span</span> element. All <code>&lt;span&gt;</code> elements within this demo are set to <span>bold</span> for styling purposes only.</p>
 
-        <p>This is the <cite>cite</cite> element.</p>
+	<hr>
 
-        <p>This is the <code>code</code> element.</p>
+	<h4>Table:</h4>
 
-        <p>This is the <del>del</del> element.</p>
+	<table>
+	<caption>table caption</caption>
+	<thead>
 
-        <p>This is the <dfn>dfn</dfn> element.</p>
+	<tr>
 
-        <p>This is the <em>em</em> element.</p>
+	<th>Table header</th>
 
-        <p>This is the <i>i</i> element.</p>
+	<th>Table header</th>
 
-        <p>This is the <ins>ins</ins> element.</p>
+	<th>Table header</th>
 
-        <p>This is the <kbd>kbd</kbd> element.</p>
+	</tr>
 
-        <p>This is the
+	</thead>
 
-          <mark>mark</mark>
+	<tfoot>
 
-          element.</p>
+	<tr>
 
-        <p>This is the <samp>samp</samp> element.</p>
+	<td>Table footer</td>
 
-        <p>This is the <small>small</small> element.</p>
+	<td>Table footer</td>
 
-        <p>This is the <strong>strong</strong> element.</p>
+	<td>Table footer</td>
 
-        <p>This is the <sub>sub</sub> element.</p>
+	</tr>
 
-        <p>This is the <sup>sup</sup> element.</p>
+	</tfoot>
 
-        <p>This is the <var>var</var> element.</p>
+	<tbody>
 
-        <hr>
+	<tr>
 
-        <h4>Meter:</h4>
+	<td>Table data</td>
 
-        <p>An example of the <code>&lt;meter&gt;</code> element: Your score is:
+	<td>Table data</td>
 
-          <meter value="91" min="0" max="100" low="40" high="90" optimum="100" tabindex="0">A+</meter>
+	<td>Table data</td>
 
-        </p>
+	</tr>
 
-        <hr>
+	</tbody>
 
-        <h4>Pre and span:</h4>
+	</table>
 
-        <p>This is the <code>&lt;pre&gt;</code> element:</p>
+	<hr>
 
-        <pre>pre</pre>
+	<h4>Time:</h4>
 
-        <p>This is the <span>span</span> element. All <code>&lt;span&gt;</code> elements within this demo are set to <span>bold</span> for styling purposes only.</p>
+	<p>The following is an example of the <code>&lt;time&gt;</code> element:</p>
 
-        <hr>
+	<time datetime="2010-03-22T11:00-06:00">11AM in Texas on March 22, 2010</time>
 
-        <h4>Table:</h4>
+	</div>
 
-        <table>
-<caption>table caption</caption>
-          <thead>
+	<hr>
 
-            <tr>
+	<h4>Hidden content (hidden attribute)</h4>
 
-              <th>Table header</th>
+	<p hidden>this should not be displayed. This <a href="#">link</a> should not be in the tab order</p>
 
-              <th>Table header</th>
+	<hr>
 
-              <th>Table header</th>
+	<footer class="article">
 
-            </tr>
+	<p>This is the <code>&lt;footer&gt;</code> for this <code>&lt;article&gt;</code>.</p>
 
-          </thead>
+	<h4><a id="info"></a>Details and summary:</h4>
 
-          <tfoot>
+	<details>
 
-            <tr>
+	<summary>Article Summary</summary>
 
-              <td>Table footer</td>
+	<p>Details: some useful links to HTML5 and related specification documents. This uses the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</p>
 
-              <td>Table footer</td>
+	<ul>
 
-              <td>Table footer</td>
-
-            </tr>
-
-          </tfoot>
-
-          <tbody>
-
-            <tr>
-
-              <td>Table data</td>
-
-              <td>Table data</td>
-
-              <td>Table data</td>
-
-            </tr>
-
-          </tbody>
-
-        </table>
-
-        <hr>
-
-        <h4>Time:</h4>
-
-        <p>The following is an example of the <code>&lt;time&gt;</code> element:</p>
-
-        <time datetime="2010-03-22T11:00-06:00">11AM in Texas on March 22, 2010</time>
-
-      </div>
-
-	  <hr>
-
-	  <h4>Hidden content (hidden attribute)</h4>
-
-	  <p hidden>this should not be displayed. This <a href="#">link</a> should not be in the tab order</p>
-
-      <hr>
-
-      <footer class="article">
-
-        <p>This is the <code>&lt;footer&gt;</code> for this <code>&lt;article&gt;</code>.</p>
-
-        <h4><a id="info"></a>Details and summary:</h4>
-
-        <details>
-
-          <summary>Article Summary</summary>
-
-          <p>Details: some useful links to HTML5 and related specification documents. This uses the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.</p>
-
-          <ul>
-
-            <li><a href="https://www.w3.org/TR/html5/">W3C HTML5 specification</a></li>
-
-            <li><a href="http://w3c.github.io/html/">W3C HTML 5.1 specification</a></li>
-
-            <li><a href="https://www.w3.org/TR/2dcontext/">HTML canvas 2d context</a></li>
-
-            <li><a href="https://www.w3.org/TR/html5-diff/">HTML5 differences from HTML 4</a></li>
-
-            <li><A href="https://www.w3.org/TR/html-aria/">ARIA in HTML</A></li>
-
-            <li><A href="http://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</A></li>
-
-          </ul>
-
-        </details>
-
-      </footer>
-
-    </article>
-<section>
-    <footer>
-
-     <p>This is the <code>&lt;footer&gt;</code> for this <code>&lt;section&gt; of this page</code>.</p>
-
-    </footer>
-</section>
-  </main>
-
-  <aside>
-
-    <h3>The <code>&lt;aside&gt;</code> to the <code>&lt;section&gt;</code></h3>
-
-    <h4>Elements included in this demo:</h4>
-
-    <p><a id="toggle1" href="#" title="View / hide list of elements">View / hide</a> list of elements</p>
-
-    <p><span>Note:</span> Some elements are only used within the source code and not as examples.</p>
-
-    <ul id="list1">
-
-    <ul>
-          <li><a href="test-files/a-href.html"><code>a</code></a></li>
-          <li><a href="test-files/abbr.html"><code>abbr</code></a></li>
-          <li><a href="test-files/address.html"><code>address</code></a></li>
-          <li><a href="test-files/area.html"><code>area</code></a></li>
-          <li><a href="test-files/article.html"><code>article</code></a></li>
-          <li><a href="test-files/aside.html"><code>aside</code></a></li>
-          <li><a href="test-files/audio.html"><code>audio</code></a></li>
-          <li><a href="test-files/b.html"><code>b</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-base-element"><code>base</code></a></li>
-          <li><a href="test-files/bdi.html"><code>bdi</code></a></li>
-          <li><a href="test-files/bdo.html"><code>bdo</code></a></li>
-          <li><a href="test-files/blockquote-cite.html"><code>blockquote</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element"><code>body</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-br-element"><code>br</code></a></li>
-          <li><a href="test-files/button.html"><code>button</code></a></li>
-          <li><a href="test-files/canvas.html"><code>canvas</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>caption</code></a></li>
-          <li><a href="test-files/blockquote-cite.html"><code>cite</code></a></li>
-          <li><a href="test-files/code.html"><code>code</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element"><code>col</code></a></li>
-          <li><a href="test-files/tables-complex.html"><code>colgroup</code></a></li>
-          <li><a href="test-files/data.html"><code>data</code></a></li>
-          <li><a href="test-files/datalist.html"><code>datalist</code></a></li>
-          <li><a href="test-files/dl-dt-dd.html"><code>dd</code></a></li>
-          <li><a href="test-files/del-ins.html"><code>del</code></a></li>
-          <li><a href="test-files/details-summary.html"><code>details</code></a></li>
-          <li><a href="test-files/dfn.html"><code>dfn</code></a>
-            
-            <!-- 
-					<p><a href="http://www.w3.org/html/wg/drafts/html/master/commands.html#the-dialog-element"><code>dialog</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				 --></li>
-          <li><a href="test-files/div.html"><code>div</code></a></li>
-          <li><a href="test-files/dl-dt-dd.html"><code>dl</code></a></li>
-          <li><a href="test-files/dl-dt-dd.html"><code>dt</code></a></li>
-          <li><a href="test-files/em.html"><code>em</code></a></li>
-          <li><a href="test-files/embed.html"><code>embed</code></a></li>
-          <li><a href="test-files/fieldset-legend.html"><code>fieldset</code></a></li>
-          <li><a href="test-files/figure-figcaption.html"><code>figcaption</code></a></li>
-          <li><a href="test-files/figure.html"><code>figure</code></a></li>
-          <li><a href="test-files/footer.html"><code>footer</code></a></li>
-          <li><a href="test-files/form.html"><code>form</code></a></li>
-          <li><a href="test-files/h1-h6.html"><code>h1-h6</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-head-element"><code>head</code></a></li>
-          <li><a href="test-files/header.html"><code>header</code></a></li>
-          <li><a href="test-files/hr.html"><code>hr</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element"><code>html</code></a></li>
-          <li><a href="test-files/i.html"><code>i</code></a></li>
-          <li><a href="test-files/iframe.html"><code>iframe</code></a></li>
-          <li><a href="test-files/iframe-title.html"><code>iframe with title</code></a></li>
-          <li><a href="test-files/img-alt.html"><code>img</code></a></li>
-          <li><a href="test-files/input-button.html"><code>input [button]</code></a></li>
-          <li><a href="test-files/input-checkbox.html"><code>input [checkbox]</code></a></li>
-          <li><a href="test-files/input-color.html"><code>input [color]</code></a></li>
-          <li><a href="test-files/input-date.html"><code>input [date]</code></a>
-            
-            <!--
-					<p><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#date-and-time-state-(type=datetime)"><code>input [datetime]</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				--></li>
-          <li><a href="test-files/input-email.html"><code>input [email]</code></a></li>
-          <li><a href="test-files/input-file-upload.html"><code>input [file]</code></a></li>
-          <li><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#hidden-state-(type=hidden)">input [hidden] -</a></code></li>
-          <li><a href="test-files/input-image.html"><code>input [image]</code></a>
-            
-            <!--
-					<p><a href="test-files/input-month.html"><code>input [month]</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				--></li>
-          <li><a href="test-files/input-number.html"><code>input [number]</code></a></li>
-          <li><a href="test-files/input-password.html"><code>input [password]</code></a></li>
-          <li><a href="test-files/input-range.html"><code>input [range]</code></a></li>
-          <li><a href="test-files/input-radio.html"><code>input [radio]</code></a></li>
-          <li><a href="test-files/input-reset.html"><code>input [reset]</code></a></li>
-          <li><a href="test-files/input-search.html"><code>input [search]</code></a></li>
-          <li><a href="test-files/input-submit.html"><code>input [submit]</code></a></li>
-          <li><a href="test-files/input-tel.html"><code>input [tel]</code></a></li>
-          <li><a href="test-files/input-text.html"><code>input [text]</code></a></li>
-          <li><a href="test-files/input--time.html"><code>input [time]</code></a></li>
-          <li><a href="test-files/input-url.html"><code>input [url]</code></a>
-            
-            <!--
-					<p><a href="test-files/input-week.html"><code>input [week]</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				--></li>
-          <li><a href="test-files/del-ins.html"><code>ins</code></a></li>
-          <li><a href="test-files/keyboard.html"><code>kbd</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/the-button-element.html#the-keygen-element"><code>keygen</code></a></li>
-          <li><a href="test-files/label.html"><code>label</code></a></li>
-          <li><a href="test-files/fieldset-legend.html"><code>legend</code></a></li>
-          <li><a href="test-files/ul-li.html"><code>li</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-link-element"><code>link</code></a></li>
-          <li><a href="test-files/main.html"><code>main</code></a></li>
-          <li><a href="test-files/imagemap.html"><code>map</code></a></li>
-          <li><a href="test-files/mark.html"><code>mark</code></a></li>
-          <li><a href="test-files/math.html"><code>math</code></a>
-            
-            <!--
-					<p><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element"><code>menu</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				-->
-            <!--
-					<p><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element"><code>menuitem</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				--></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-meta-element"><code>meta</code></a></li>
-          <li><a href="test-files/meter.html"><code>meter</code></a></li>
-          <li><a href="test-files/nav.html"><code>nav</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element"><code>noscript</code></a></li>
-          <li><a href="test-files/object.html"><code>object</code></a></li>
-          <li><a href="test-files/ol-li.html"><code>ol</code></a></li>
-          <li><a href="test-files/select-option.html"><code>optgroup</code></a></li>
-          <li><a href="test-files/select-option.html"><code>option</code></a></li>
-          <li><a href="test-files/output.html"><code>output</code></a></li>
-          <li><a href="test-files/p.html"><code>p</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/the-iframe-element.html#the-param-element"><code>param</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-picture-element"><code>picture [no test</code></a></li>
-          <li><a href="test-files/pre.html"><code>pre</code></a>
-            
-            <!--
-					<p><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_preventDefault"><code>preventDefault</code></a>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				--></li>
-          <li><a href="test-files/progress.html"><code>progress</code></a></li>
-          <li><a href="test-files/q.html"><code>q</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rb-element"><code>rb</code></a></li>
-          <li><a href="http://www.w3.org/TR/ruby/#rbc"><code>rbc</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rp-element"><code>rp</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rt-element"><code>rt</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rtc-element"><code>rtc</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-ruby-element"><code>ruby[no test]</code></a></li>
-          <li><a href="test-files/samp.html"><code>samp</code></a></li>
-          <li><a href="test-files/s.html"><code>s</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element"><code>script no test]</code></a></li>
-          <li><a href="test-files/section.html"><code>section</code></a></li>
-          <li><a href="test-files/select-option.html"><code>select</code></a></li>
-          <li><a href="test-files/small.html"><code>small</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/the-video-element.html#the-source-element"><code>source</code></a></li>
-          <li><a href="test-files/span.html"><code>span</code></a></li>
-          <li><a href="test-files/strong.html"><code>strong</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-style-element"><code>style [mo test]</code></a></li>
-          <li><a href="test-files/sub-sup.html"><code>sub</code></a>
-            
-            <!--
-					<p><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-summary-element"><code>summary</code></a>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				--></li>
-          <li><code><a href="test-files/details-summary.html">summary</a></code></li>
-          <li><a href="test-files/sub-sup.html"><code>sup</code></a></li>
-          <li><code><a href="test-files/svg.html">svg</a></code></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>table</code></a></li>
-          <li><a href="test-files/tables-complex.html"><code>complex table test</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tbody</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>td</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element"><code>template</code></a></li>
-          <li><a href="test-files/textarea.html"><code>textarea</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tfoot</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>th</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>thead</code></a></li>
-          <li><a href="test-files/time.html"><code>time</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-title-element"><code>title</code></a></li>
-          <li><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tr</code></a></li>
-          <li><a href="test-files/video.html"><code>track</code></a></li>
-          <li><a href="test-files/u.html"><code>u</code></a></li>
-          <li><a href="test-files/ul-li.html"><code>ul</code></a></li>
-          <li><a href="test-files/var.html"><code>var</code></a></li>
-          <li><a href="test-files/video.html"><code>video</code></a></li>
-          <li><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr</code></a></li>
-</ul>
-    </ul>
-
-    <h4>Elements not included in this demo:</h4>
-
-    <p><a id="toggle2" href="#" title="View / hide list of elements">View / hide</a> list of elements</p>
-
-    <ul id="list2">
-
-      <li><code>&lt;area&gt;</code></li>
-
-      <li><code>&lt;base&gt;</code></li>
-
-      <li><code>&lt;bdo&gt;</code></li>
-
-      <li><code>&lt;canvas&gt;</code></li>
-
-      <li><code>&lt;col&gt;</code></li>
-
-      <li><code>&lt;colgroup&gt;</code></li>
-
-      <li><code>&lt;embed&gt;</code></li>
-
-      <li><code>&lt;iframe&gt;</code></li>
-
-      <li><code>&lt;map&gt;</code></li>
-
-      <li><code>&lt;object&gt;</code></li>
-
-      <li><code>&lt;param&gt;</code></li>
-
-      <li><code>&lt;rp&gt;</code></li>
-
-      <li><code>&lt;rt&gt;</code></li>
-
-      <li><code>&lt;ruby&gt;</code></li>
-
-    </ul>
-
-    <h4>Obselete Elements  HTML5:</h4>
-
-    <p><a id="toggle3" href="#" title="View / hide list of elements">View / hide</a> list of elements</p>
-
-    <ul id="list3">
-
-      <li><code>&lt;acronym&gt;</code></li>
-
-      <li><code>&lt;applet&gt;</code></li>
-
-      <li><code>&lt;basefont&gt;</code></li>
-
-      <li><code>&lt;big&gt;</code></li>
-
-      <li><code>&lt;center&gt;</code></li>
-
-      <li><code>&lt;dir&gt;</code></li>
-
-      <li><code>&lt;font&gt;</code></li>
-
-      <li><code>&lt;frame&gt;</code></li>
-
-      <li><code>&lt;frameset&gt;</code></li>
-      
-      <li><code>&lt;hgroup&gt;</code></li>
-
-      <li><code>&lt;noframes&gt;</code></li>
-
-      <li><code>&lt;strike&gt;</code></li>
-
-      <li><code>&lt;tt&gt;</code></li>
-
-      <li><code>&lt;xmp&gt;</code></li>
-
-    </ul>
-
-  </aside>
-
-  <footer>
-
-    <p>This is the global <code>&lt;footer&gt;</code> for this page/site.</p>
-
-    <nav>
-
-      <ul>
-
-        <li><a href="#" title="Global footer link">Global footer <code>&lt;nav&gt;</code> link</a></li>
-
-        <li><a href="#" title="Global footer link">Global footer <code>&lt;nav&gt;</code> link</a></li>
-
-        <li><a href="#" title="Global footer link">Global footer <code>&lt;nav&gt;</code> link</a></li>
-
-      </ul>
-
-    </nav>
-
-    <p>This document is a modified version of the document prepared by <a href="http://www.ackernaut.com/" title="the Ackernaut">the Ackernaut</a> for the benefit of the web development community. <br>
-
-      If you have suggestions on how to improve this page let him know: terry / at / ackernaut / dot / com<br>
-
-      Feel free to borrow and share a link! <br></p>
-      <figure>
-      <figcaption>Canvas element: mouse over or tab or touch for sound of creation</figcaption>
-      <canvas id="myCanvas" width="200" height="200" role="group" aria-label="image and description" onMouseOver="document.getElementById('loo').play()" onMouseOut="document.getElementById('loo').pause();" ontouchend="document.getElementById('loo').play()"><h2>Freewheeling the porcelain bus</h2>
-    <img src="goatse.jpg" width="200" height="200" alt="webstandards goatse"> 
-    <p>webstandards genius in the act of creation:</p>  <audio aria-label="the sound of creation" controls id="loo" preload="auto" onfocus="document.getElementById('loo').play()" onblur="document.getElementById('loo').pause();"><source src="Toilet_Flushing.mp3" type="audio/mpeg" id="loo"></audio></canvas></figure>
-
-  </footer>
-<script>
-    <!--  
-	var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
-      var imageObj = new Image();
-
-      imageObj.onload = function() {
-        context.drawImage(imageObj, 0, 0);
-      };
-      imageObj.src = 'goatse.jpg';
-	  -->
-    </script>
-</div>
-
-</body>
-
-</html>
+	<li><a href="https://www.w3.org/TR/html5/">W3C HTML5 specification</a></li>
+
+	<li><a href="https://w3c.github.io/html/">W3C HTML 5.1 specification</a></li>
+
+	<li><a href="https://www.w3.org/TR/2dcontext/">HTML canvas 2d context</a></li>
+
+	<li><a href="https://www.w3.org/TR/html5-diff/">HTML5 differences from HTML 4</a></li>
+
+	<li><A href="https://www.w3.org/TR/html-aria/">ARIA in HTML</A></li>
+
+	<li><A href="https://w3c.github.io/aria-in-html/">Notes on Using ARIA in HTML</A></li>
+
+	</ul>
+
+	</details>
+
+	</footer>
+
+	</article>
+
+	<footer>
+		<p>This is the <code>&lt;footer&gt;</code> for this <code>&lt;section&gt; of this page</code>.</p>
+	</footer>
+
+	</main>
+
+	<aside>
+
+	<h3>The <code>&lt;aside&gt;</code> to the <code>&lt;section&gt;</code></h3>
+
+	<h4>Elements included in this demo:</h4>
+
+	<p><button id="toggle1" aria-controls="list1">View / hide list of elements</button></p>
+
+	<p><strong>Note:</strong> Some elements are only used within the source code and not as examples.</p>
+
+	<ul id="list1">
+		<ul>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/a-href.html"><code>a</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/abbr.html"><code>abbr</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/address.html"><code>address</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/area.html"><code>area</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/article.html"><code>article</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/aside.html"><code>aside</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/audio.html"><code>audio</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/b.html"><code>b</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-base-element"><code>base</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/bdi.html"><code>bdi</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/bdo.html"><code>bdo</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/blockquote-cite.html"><code>blockquote</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element"><code>body</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-br-element"><code>br</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/button.html"><code>button</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/canvas.html"><code>canvas</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>caption</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/blockquote-cite.html"><code>cite</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/code.html"><code>code</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element"><code>col</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/tables-complex.html"><code>colgroup</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/data.html"><code>data</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/datalist.html"><code>datalist</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/dl-dt-dd.html"><code>dd</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/del-ins.html"><code>del</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html"><code>details</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/dfn.html"><code>dfn</code></a>
+
+		<!--
+		<p><a href="https://www.w3.org/html/wg/drafts/html/master/commands.html#the-dialog-element"><code>dialog</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		--></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/div.html"><code>div</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/dl-dt-dd.html"><code>dl</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/dl-dt-dd.html"><code>dt</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/em.html"><code>em</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/embed.html"><code>embed</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/fieldset-legend.html"><code>fieldset</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/figure-figcaption.html"><code>figcaption</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/figure.html"><code>figure</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/footer.html"><code>footer</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/form.html"><code>form</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/h1-h6.html"><code>h1-h6</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-head-element"><code>head</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/header.html"><code>header</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/hr.html"><code>hr</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element"><code>html</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/i.html"><code>i</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/iframe.html"><code>iframe</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/iframe-title.html"><code>iframe with title</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/img-alt.html"><code>img</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-button.html"><code>input [button]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-checkbox.html"><code>input [checkbox]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-color.html"><code>input [color]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-date.html"><code>input [date]</code></a>
+
+		<!--
+		<p><a href="https://www.w3.org/html/wg/drafts/html/master/forms.html#date-and-time-state-(type=datetime)"><code>input [datetime]</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		--></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-email.html"><code>input [email]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-file-upload.html"><code>input [file]</code></a></li>
+		<li><code><a href="https://www.w3.org/html/wg/drafts/html/master/forms.html#hidden-state-(type=hidden)">input [hidden] -</a></code></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-image.html"><code>input [image]</code></a>
+
+		<!--
+		<p><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-month.html"><code>input [month]</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		--></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-number.html"><code>input [number]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-password.html"><code>input [password]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-range.html"><code>input [range]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-radio.html"><code>input [radio]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-reset.html"><code>input [reset]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-search.html"><code>input [search]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-submit.html"><code>input [submit]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-tel.html"><code>input [tel]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-text.html"><code>input [text]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input--time.html"><code>input [time]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-url.html"><code>input [url]</code></a>
+
+		<!--
+		<p><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-week.html"><code>input [week]</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		--></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/del-ins.html"><code>ins</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/keyboard.html"><code>kbd</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/the-button-element.html#the-keygen-element"><code>keygen</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/label.html"><code>label</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/fieldset-legend.html"><code>legend</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/ul-li.html"><code>li</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-link-element"><code>link</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/main.html"><code>main</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/imagemap.html"><code>map</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/mark.html"><code>mark</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/math.html"><code>math</code></a>
+
+		<!--
+		<p><a href="https://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menu-element"><code>menu</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		-->
+		<!--
+		<p><a href="https://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-menuitem-element"><code>menuitem</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		--></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-meta-element"><code>meta</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/meter.html"><code>meter</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/nav.html"><code>nav</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element"><code>noscript</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/object.html"><code>object</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/ol-li.html"><code>ol</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/select-option.html"><code>optgroup</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/select-option.html"><code>option</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/output.html"><code>output</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/p.html"><code>p</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/the-iframe-element.html#the-param-element"><code>param</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-picture-element"><code>picture [no test</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/pre.html"><code>pre</code></a>
+
+		<!--
+		<p><a href="https://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_preventDefault"><code>preventDefault</code></a>
+		<td><img src="images/cross.png" alt="no"></td>
+		<td><img src="images/cross.png" alt="no"></td>
+		<td><img src="images/cross.png" alt="no"></td>
+		<td><img src="images/cross.png" alt="no"></td>
+		<td><img src="images/cross.png" alt="no"></td>
+		<td><img src="images/cross.png" alt="no" /></td>
+		<td><img src="images/cross.png" alt="no" /></td>
+		--></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/progress.html"><code>progress</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/q.html"><code>q</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rb-element"><code>rb</code></a></li>
+		<li><a href="https://www.w3.org/TR/ruby/#rbc"><code>rbc</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rp-element"><code>rp</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rt-element"><code>rt</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rtc-element"><code>rtc</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-ruby-element"><code>ruby[no test]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/samp.html"><code>samp</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/s.html"><code>s</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element"><code>script no test]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/section.html"><code>section</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/select-option.html"><code>select</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/small.html"><code>small</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/the-video-element.html#the-source-element"><code>source</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/span.html"><code>span</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/strong.html"><code>strong</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-style-element"><code>style [mo test]</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/sub-sup.html"><code>sub</code></a>
+
+		<!--
+		<p><a href="https://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-summary-element"><code>summary</code></a>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	--></li>
+		<li><code><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html">summary</a></code></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/sub-sup.html"><code>sup</code></a></li>
+		<li><code><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/svg.html">svg</a></code></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>table</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/tables-complex.html"><code>complex table test</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tbody</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>td</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element"><code>template</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/textarea.html"><code>textarea</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tfoot</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>th</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>thead</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/time.html"><code>time</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-title-element"><code>title</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tr</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>track</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/u.html"><code>u</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/ul-li.html"><code>ul</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/var.html"><code>var</code></a></li>
+		<li><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>video</code></a></li>
+		<li><a href="https://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr</code></a></li>
+		</ul>
+	</ul>
+
+	<h4>Elements not included in this demo:</h4>
+
+	<p><button id="toggle2" aria-controls="list2">View / hide elements not included</button></p>
+
+	<ul id="list2">
+		<li><code>&lt;area&gt;</code></li>
+		<li><code>&lt;base&gt;</code></li>
+		<li><code>&lt;bdo&gt;</code></li>
+		<li><code>&lt;canvas&gt;</code></li>
+		<li><code>&lt;col&gt;</code></li>
+		<li><code>&lt;colgroup&gt;</code></li>
+		<li><code>&lt;embed&gt;</code></li>
+		<li><code>&lt;iframe&gt;</code></li>
+		<li><code>&lt;map&gt;</code></li>
+		<li><code>&lt;object&gt;</code></li>
+		<li><code>&lt;param&gt;</code></li>
+		<li><code>&lt;rp&gt;</code></li>
+		<li><code>&lt;rt&gt;</code></li>
+		<li><code>&lt;ruby&gt;</code></li>
+	</ul>
+
+	<h4>Obsolete Elements  HTML5:</h4>
+
+	<p><button id="toggle3" aria-controls="list3">View / hide obsolete elements</button></p>
+
+	<ul id="list3">
+		<li><code>&lt;acronym&gt;</code></li>
+		<li><code>&lt;applet&gt;</code></li>
+		<li><code>&lt;basefont&gt;</code></li>
+		<li><code>&lt;big&gt;</code></li>
+		<li><code>&lt;center&gt;</code></li>
+		<li><code>&lt;dir&gt;</code></li>
+		<li><code>&lt;font&gt;</code></li>
+		<li><code>&lt;frame&gt;</code></li>
+		<li><code>&lt;frameset&gt;</code></li>
+		<li><code>&lt;hgroup&gt;</code></li>
+		<li><code>&lt;keygen&gt;</code></li>
+		<li><code>&lt;noframes&gt;</code></li>
+		<li><code>&lt;strike&gt;</code></li>
+		<li><code>&lt;tt&gt;</code></li>
+		<li><code>&lt;xmp&gt;</code></li>
+	</ul>
+
+	</aside>
+
+	<footer>
+
+	<p>This is the global <code>&lt;footer&gt;</code> for this page/site.</p>
+
+	<nav>
+		<ul>
+			<li><a href="#" title="Global footer link">Global footer <code>&lt;nav&gt;</code> link</a></li>
+			<li><a href="#" title="Global footer link">Global footer <code>&lt;nav&gt;</code> link</a></li>
+			<li><a href="#" title="Global footer link">Global footer <code>&lt;nav&gt;</code> link</a></li>
+		</ul>
+	</nav>
+
+	<p>This document is a modified version of the document prepared by <a href="https://www.ackernaut.com/" title="the Ackernaut">the Ackernaut</a> for the benefit of the web development community. </p>
+	<p>If you have suggestions on how to improve this page let him know: terry / at / ackernaut / dot / com;
+		feel free to borrow and share a link!</p>
+	<figure>
+		<figcaption>Canvas element: mouse over or tab or touch for sound of creation</figcaption>
+		<canvas id="myCanvas" width="200" height="200" role="group" aria-label="image and description" onMouseOver="document.getElementById('loo').play()" onMouseOut="document.getElementById('loo').pause();" ontouchend="document.getElementById('loo').play()"><h2>Freewheeling the porcelain bus</h2>
+			<img src="goatse.jpg" width="200" height="200" alt="webstandards goatse">
+			<p>webstandards genius in the act of creation:</p>  <audio aria-label="the sound of creation" controls id="loo" preload="auto" onfocus="document.getElementById('loo').play()" onblur="document.getElementById('loo').pause();"><source src="Toilet_Flushing.mp3" type="audio/mpeg" id="loo"></audio></canvas>
+	</figure>
+	</footer>
+
+	<script>
+			<!--
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+			var imageObj = new Image();
+
+			imageObj.onload = function() {
+			context.drawImage(imageObj, 0, 0);
+			};
+			imageObj.src = 'goatse.jpg';
+			-->
+	</script>
+	</div>
+
+	</body>
+
+	</html>

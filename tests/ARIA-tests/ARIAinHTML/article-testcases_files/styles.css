@@ -1,0 +1,393 @@
+@font-face {
+	font-family: "League Spartan";
+	src: url("../fonts/leaguespartan-bold.woff2") format("woff2"),
+	     url("../fonts/leaguespartan-bold.woff") format("woff"),
+	     url("../fonts/leaguespartan-bold.ttf") format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Work Sans";
+	src: url("../fonts/worksans-regular.woff2") format("woff2"),
+	     url("../fonts/worksans-regular.woff") format("woff"),
+		 url("../fonts/worksans-regular.ttf") format("truetype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Work Sans";
+	src: url("../fonts/worksans-light.woff2") format("woff2"),
+			 url("../fonts/worksans-light.woff") format("woff"),
+			 url("../fonts/worksans-light.ttf") format("truetype");
+	font-weight: 300;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	border: .75em solid #fff;
+	min-height: 100vh;
+}
+
+body {
+	background: #f7f7f5;
+	color: #333;
+	font: 400 105%/1.4 "Work Sans", sans-serif;
+	margin: 1.5em auto;
+	max-width: 54em;
+	width: 90%;
+}
+
+/* Nicer link underlines */
+a:link,
+a:visited {
+	border-bottom: 1px solid rgba(42, 122, 130, .5);
+	color: #2b7a82;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom: 2px solid;
+	color: #1e565c;
+}
+
+button:focus,
+a:focus {
+	box-shadow: none;
+	outline-offset: 2px;
+	outline: 3px solid rgba(42, 122, 130, .75);
+}
+
+a:focus {
+	border-bottom: none;
+}
+
+a:active {
+	background: #333;
+	color: #fff;
+}
+
+li + li {
+	margin-top: .5em;
+}
+
+code {
+	font-family: Consolas, monaco, monospace;
+	-moz-tab-size: 4;
+	tab-size: 4;
+	text-transform: none;
+	white-space: pre-wrap;
+}
+
+/* Direct descendants = scoped to avoid test markup */
+body > h1 {
+	font: 300 1.75em/1 "Work Sans", sans-serif;
+	margin: 0;
+}
+
+.meta h2,
+.reference,
+.test-title,
+.code-title,
+.badge-success,
+.badge-failure {
+	font-family: "League Spartan", sans-serif;
+	font-weight: 700;
+	letter-spacing: .08em;
+	line-height: 1.25;
+	text-transform: uppercase;
+}
+
+.meta h2:before,
+.meta li:before,
+.test-title:before {
+	background: #333;
+	content: "";
+	display: block;
+	left: 0;
+	position: absolute;
+}
+
+/* Criteria, reference, and code titles */
+.meta h2,
+.code-title {
+	padding: 2.5em 0 1em; /* Needs to be padding so the test bg doesn't bleed through */
+	font-size: .722em; /* 13px at large breakpoint */
+}
+
+/* Reference labels and code titles */
+.reference li,
+.code-title {
+	color: #666;
+}
+
+/*	CRITERIA AND REFERENCE
+ *	--------------------------------------------- */
+
+.meta h2 {
+	position: relative;
+	margin: 3em 0 0;
+	padding-top: 1.5em;
+	border-top: 0;
+}
+
+.meta h2:before {
+	top: 0;
+	width: 2.5em;
+	height: .5em;
+}
+
+/* Scoped to avoid tests */
+.meta ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.meta li {
+	position: relative;
+}
+
+.meta li:before {
+	top: .5em;
+	left: -12px;
+	margin-top: 2px;
+	width: 4px;
+	height: 4px;
+}
+
+.meta ul ul {
+	margin: .5em 0 0 1em;
+}
+
+.meta li li:before {
+	transform: rotate(45deg);
+}
+
+.reference li {
+	white-space: nowrap;
+	font-size: .611em; /* 11px */
+	line-height: 2;
+}
+
+.reference a {
+	white-space: normal;
+}
+
+/* Unset the styles on text next to links in references.
+   Doing it this way to reduce excess markup. */
+.reference a {
+	font: 400 1.636em "Work Sans", sans-serif;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/* Success/failure badges */
+.criteria ul span {
+	display: inline;
+	vertical-align: middle;
+	margin-right: .25em;
+}
+
+.criteria ul .badge-success,
+.criteria ul .badge-failure,
+.criteria ul .badge-manual {
+	display: inline-block;
+}
+
+.criteria .has-badge:before {
+	margin-top: 10px;
+}
+
+.badge-success,
+.badge-failure {
+	position: relative;
+	margin: .25em 0;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	padding: 10px 7px 7px 28px;
+	font-size: .666em;
+	line-height: 1;
+	letter-spacing: .1em;
+	color: #000;
+	box-shadow: 0 0 .5em rgba(0,0,0,.3);
+}
+
+.badge-success:before,
+.badge-failure:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	left: 7px;
+	height: 13px;
+	content: '';
+}
+
+.badge-success {
+	background: #b2c158;
+}
+
+.badge-success:before {
+	width: 16px;
+	background: url('../images/badge-check.svg') no-repeat;
+	background-size: 16px 13px;
+}
+
+.badge-failure {
+	background: #dc9080;
+}
+
+.badge-failure:before {
+	background-size: 13px 13px;
+	background: url('../images/badge-x.svg') no-repeat;
+	width: 13px;
+}
+
+.badge-manual {
+	display: inline-block;
+	font: 700 .75em/1 "League Spartan", sans-serif;
+}
+
+/*	TESTS
+ *	20px measurements in here are to ensure white space around
+ *  test content and code snippets.
+ *	--------------------------------------------- */
+
+.test {
+	margin-top: 2em;
+}
+
+.test-case,
+.test pre {
+	padding: 20px;
+	background: hsla(0, 0%, 100%, .75);
+	border: 2px solid hsla(0, 0%, 0%, .1);
+}
+
+.test-case > pre {
+	padding: 0;
+	border: none;
+	background: transparent;
+	margin-bottom: 0;
+}
+
+.test-title {
+	position: relative;
+	margin: 0;
+	padding: 2em 0 1.333em 1.5em;
+	font-size: 1.111em; /* 20px at large breakpoint */
+}
+
+.test-title:before {
+	width: 1em;
+	height: 1em;
+}
+
+/* Circle */
+.test:nth-child(4n) .test-title:before {
+	border-radius: .5em;
+}
+
+/* Triangle */
+.test:nth-child(4n+1) .test-title:before {
+	border-radius: 0;
+	border-left: .5em solid transparent;
+	border-right: .5em solid transparent;
+	border-bottom: .825em solid #333;
+	width: 0;
+	height: 0;
+	margin-top: .125em;
+	background: transparent;
+}
+
+/* Diamond */
+.test:nth-child(4n+2) .test-title:before {
+	width: .75em;
+	height: .75em;
+	transform: rotate(45deg);
+	margin-top: .125em;
+}
+
+.code-title {
+	margin: 20px 0 0;
+}
+
+.test pre {
+	margin-top: 0;
+}
+
+video {
+	max-width: 100%;
+}
+
+.test button {
+	min-width: 3em;
+	min-height: 2em;
+}
+
+/*	SMALL BREAKPOINT
+ *	--------------------------------------------- */
+
+@media (max-width: 30em) {
+
+	.meta li {
+		padding-left: 12px;
+	}
+
+	.meta li:before {
+		left: 0;
+	}
+
+}
+
+/*	MEDIUM BREAKPOINT
+ *	--------------------------------------------- */
+
+@media (min-width: 50em) {
+
+	html {
+		border-width: 1.25em;
+	}
+
+	body {
+		margin: 3.5em auto;
+	}
+
+	.meta:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+
+	.criteria,
+	.reference {
+		position: relative;
+		float: left;
+		width: 50%;
+	}
+
+	.criteria {
+		padding-right: 1em;
+	}
+
+	.reference {
+		padding-left: 1em;
+	}
+
+}
+
+/*	LARGE BREAKPOINT
+ *	--------------------------------------------- */
+
+@media (min-width: 75em) {
+
+	/* @TODO: Test viewport-based type on a giant monitor to see where this breaks down */
+	body {
+		font-size: 112.5%;
+	}
+
+}

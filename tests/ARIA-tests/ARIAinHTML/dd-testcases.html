@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>ARIA in HTML - test cases for &lt;dd&gt;</title>
+  <style>
+  body {
+    background: #f7f7f5;
+    color: #333;
+    font: 400 105%/1.4 "Work Sans", sans-serif;
+    margin: 1.5em;
+  }
+
+  .clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  h4 {
+    clear: both;
+  }
+
+  .widgetDemo {
+    border: 1px solid #BBB;
+    background-color: #EEE;
+    width: 20em;
+    min-height: 10em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    float: left;
+  }
+
+  .role-test {
+    border: 2px solid #000 !important;
+    width: 1em;
+    height: 1em;
+    margin: 5px;
+    display: block;
+    border-radius: 7px;
+  }
+
+  section h4 {
+    padding: 0.5em;
+    border-top: 3px solid #630;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  ul.roleSummaryList li {
+    display: inline;
+  }
+
+  a:link,
+  a:visited {
+    border-bottom: 1px solid #2b7a82;
+    color: #2b7a82;
+    text-decoration: none;
+  }
+
+  [role]:focus,
+  [role]:hover {
+    outline: 3px solid #925e00;
+    outline-offset: 2px;
+  }
+
+  .allowed {
+    color: #009933;
+    font-weight: bold;
+  }
+
+  .notAllowed {
+    color: #cc0000;
+    font-weight: bold;
+  }
+
+  .notAllowed strong {
+    font-size: 120%;
+  }
+  </style>
+</head>
+
+<body>
+  
+    <header>
+    <h1>ARIA in HTML - test cases for &lt;dd&gt;</h1>
+    <p>Last updated: 04 May 2018 16:44:01</p>
+         <p>
+      <a href="https://w3c.github.io/html-aria/#">Allowed Roles</a>: <strong>none</strong>
+    </p>
+  
+     
+    </header>
+    <main>
+    <h2>Tests</h2>
+    <section class="clearFix">
+      <h3>Widget roles</h3>
+      <section class="widgetDemo">
+        <h4>role="button" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="button" class="role-test button-test dd-test" id="dd-button-0-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="checkbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="checkbox" class="role-test checkbox-test dd-test" id="dd-checkbox-1-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="gridcell" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="gridcell" class="role-test gridcell-test dd-test" id="dd-gridcell-2-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="link" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="link" class="role-test link-test dd-test" id="dd-link-3-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menuitem" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="menuitem" class="role-test menuitem-test dd-test" id="dd-menuitem-4-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menuitemcheckbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="menuitemcheckbox" class="role-test menuitemcheckbox-test dd-test" id="dd-menuitemcheckbox-5-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menuitemradio" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="menuitemradio" class="role-test menuitemradio-test dd-test" id="dd-menuitemradio-6-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="option" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="option" class="role-test option-test dd-test" id="dd-option-7-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="progressbar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="progressbar" class="role-test progressbar-test dd-test" id="dd-progressbar-8-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="radio" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="radio" class="role-test radio-test dd-test" id="dd-radio-9-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="scrollbar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="scrollbar" class="role-test scrollbar-test dd-test" id="dd-scrollbar-10-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="searchbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="searchbox" class="role-test searchbox-test dd-test" id="dd-searchbox-11-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="separator" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="separator" class="role-test separator-test dd-test" id="dd-separator-12-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="slider" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="slider" class="role-test slider-test dd-test" id="dd-slider-13-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="spinbutton" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="spinbutton" class="role-test spinbutton-test dd-test" id="dd-spinbutton-14-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="switch" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="switch" class="role-test switch-test dd-test" id="dd-switch-15-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tab" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="tab" class="role-test tab-test dd-test" id="dd-tab-16-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tabpanel" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="tabpanel" class="role-test tabpanel-test dd-test" id="dd-tabpanel-17-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="textbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="textbox" class="role-test textbox-test dd-test" id="dd-textbox-18-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="treeitem" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="treeitem" class="role-test treeitem-test dd-test" id="dd-treeitem-19-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Composite roles</h3>
+      <section class="widgetDemo">
+        <h4>role="combobox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="combobox" class="role-test combobox-test dd-test" id="dd-combobox-0-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="grid" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="grid" class="role-test grid-test dd-test" id="dd-grid-1-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="listbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="listbox" class="role-test listbox-test dd-test" id="dd-listbox-2-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menu" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="menu" class="role-test menu-test dd-test" id="dd-menu-3-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menubar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="menubar" class="role-test menubar-test dd-test" id="dd-menubar-4-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="radiogroup" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="radiogroup" class="role-test radiogroup-test dd-test" id="dd-radiogroup-5-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tablist" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="tablist" class="role-test tablist-test dd-test" id="dd-tablist-6-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tree" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="tree" class="role-test tree-test dd-test" id="dd-tree-7-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="treegrid" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="treegrid" class="role-test treegrid-test dd-test" id="dd-treegrid-8-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Document Structure roles</h3>
+      <section class="widgetDemo">
+        <h4>role="application" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="application" class="role-test application-test dd-test" id="dd-application-0-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="article" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="article" class="role-test article-test dd-test" id="dd-article-1-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="cell" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="cell" class="role-test cell-test dd-test" id="dd-cell-2-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="columnheader" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="columnheader" class="role-test columnheader-test dd-test" id="dd-columnheader-3-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="definition" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="definition" class="role-test definition-test dd-test" id="dd-definition-4-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="directory" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="directory" class="role-test directory-test dd-test" id="dd-directory-5-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="document" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="document" class="role-test document-test dd-test" id="dd-document-6-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="feed" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="feed" class="role-test feed-test dd-test" id="dd-feed-7-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="figure" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="figure" class="role-test figure-test dd-test" id="dd-figure-8-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="group" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="group" class="role-test group-test dd-test" id="dd-group-9-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="heading" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="heading" class="role-test heading-test dd-test" id="dd-heading-10-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="img" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="img" class="role-test img-test dd-test" id="dd-img-11-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="list" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="list" class="role-test list-test dd-test" id="dd-list-12-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="listitem" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="listitem" class="role-test listitem-test dd-test" id="dd-listitem-13-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="math" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="math" class="role-test math-test dd-test" id="dd-math-14-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="none" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="none" class="role-test none-test dd-test" id="dd-none-15-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="note" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="note" class="role-test note-test dd-test" id="dd-note-16-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="presentation" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="presentation" class="role-test presentation-test dd-test" id="dd-presentation-17-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="row" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="row" class="role-test row-test dd-test" id="dd-row-18-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="rowgroup" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="rowgroup" class="role-test rowgroup-test dd-test" id="dd-rowgroup-19-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="rowheader" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="rowheader" class="role-test rowheader-test dd-test" id="dd-rowheader-20-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="separator" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="separator" class="role-test separator-test dd-test" id="dd-separator-21-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="table" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="table" class="role-test table-test dd-test" id="dd-table-22-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="term" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="term" class="role-test term-test dd-test" id="dd-term-23-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="toolbar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="toolbar" class="role-test toolbar-test dd-test" id="dd-toolbar-24-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tooltip" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="tooltip" class="role-test tooltip-test dd-test" id="dd-tooltip-25-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Landmark roles</h3>
+      <section class="widgetDemo">
+        <h4>role="banner" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="banner" class="role-test banner-test dd-test" id="dd-banner-0-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="complementary" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="complementary" class="role-test complementary-test dd-test" id="dd-complementary-1-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="contentinfo" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="contentinfo" class="role-test contentinfo-test dd-test" id="dd-contentinfo-2-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="form" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="form" class="role-test form-test dd-test" id="dd-form-3-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="main" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="main" class="role-test main-test dd-test" id="dd-main-4-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="navigation" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="navigation" class="role-test navigation-test dd-test" id="dd-navigation-5-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="region" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="region" class="role-test region-test dd-test" id="dd-region-6-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="search" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="search" class="role-test search-test dd-test" id="dd-search-7-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Live region roles</h3>
+      <section class="widgetDemo">
+        <h4>role="alert" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="alert" class="role-test alert-test dd-test" id="dd-alert-0-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="log" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="log" class="role-test log-test dd-test" id="dd-log-1-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="marquee" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="marquee" class="role-test marquee-test dd-test" id="dd-marquee-2-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="status" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="status" class="role-test status-test dd-test" id="dd-status-3-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="timer" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="timer" class="role-test timer-test dd-test" id="dd-timer-4-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Window region roles</h3>
+      <section class="widgetDemo">
+        <h4>role="alertdialog" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="alertdialog" class="role-test alertdialog-test dd-test" id="dd-alertdialog-0-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="dialog" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <dl><dd role="dialog" class="role-test dialog-test dd-test" id="dd-dialog-1-test" aria-label="acc name" tabindex="0"></dd></dl>
+      </section>
+    </section>
+    
+     </main>
+    <span role="htmlLintNeedsOneErrorForOutput"></span>
+
+
+<form method="POST" action="http://validator.w3.org/nu/" enctype="multipart/form-data" target="_blank" accept-charset="utf-8" wiid="N1"><textarea name="showsource" wiid="C2">yes</textarea><textarea name="showoutline" wiid="C3">yes</textarea><textarea name="content" wiid="C4">&lt;!DOCTYPE
+ html&gt;
+&lt;html lang="en-US"&gt;&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;ARIA in HTML - test cases for 
+&amp;lt;dd&amp;gt;&lt;/title&gt;
+  &lt;style&gt;
+  body {
+    background: #f7f7f5;
+    color: #333;
+    font: 400 105%/1.4 "Work Sans", sans-serif;
+    margin: 1.5em;
+  }
+
+  .clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  h4 {
+    clear: both;
+  }
+
+  .widgetDemo {
+    border: 1px solid #BBB;
+    background-color: #EEE;
+    width: 20em;
+    min-height: 10em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    float: left;
+  }
+
+  .role-test {
+    border: 2px solid #000 !important;
+    width: 1em;
+    height: 1em;
+    margin: 5px;
+    display: block;
+    border-radius: 7px;
+  }
+
+  section h4 {
+    padding: 0.5em;
+    border-top: 3px solid #630;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  ul.roleSummaryList li {
+    display: inline;
+  }
+
+  a:link,
+  a:visited {
+    border-bottom: 1px solid #2b7a82;
+    color: #2b7a82;
+    text-decoration: none;
+  }
+
+  [role]:focus,
+  [role]:hover {
+    outline: 3px solid #925e00;
+    outline-offset: 2px;
+  }
+
+  .allowed {
+    color: #009933;
+    font-weight: bold;
+  }
+
+  .notAllowed {
+    color: #cc0000;
+    font-weight: bold;
+  }
+
+  .notAllowed strong {
+    font-size: 120%;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  
+    &lt;header&gt;
+    &lt;h1&gt;ARIA in HTML - test cases for 
+&amp;lt;dd&amp;gt;&lt;/h1&gt;
+    &lt;p&gt;Last updated: 04 May 2018 16:44:01&lt;/p&gt;
+         &lt;p&gt;
+      &lt;a href="https://w3c.github.io/html-aria/#"&gt;Allowed 
+Roles&lt;/a&gt;: &lt;strong&gt;none&lt;/strong&gt;
+    &lt;/p&gt;
+  
+     
+    &lt;/header&gt;
+    &lt;main&gt;
+    &lt;h2&gt;Tests&lt;/h2&gt;
+    &lt;section class="clearFix"&gt;
+      &lt;h3&gt;Widget roles&lt;/h3&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="button" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="button" class="role-test button-test dd-test" 
+id="dd-button-0-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="checkbox" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="checkbox" class="role-test checkbox-test dd-test" 
+id="dd-checkbox-1-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="gridcell" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="gridcell" class="role-test gridcell-test dd-test" 
+id="dd-gridcell-2-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="link" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="link" class="role-test link-test dd-test" 
+id="dd-link-3-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="menuitem" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="menuitem" class="role-test menuitem-test dd-test" 
+id="dd-menuitem-4-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="menuitemcheckbox" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="menuitemcheckbox" class="role-test 
+menuitemcheckbox-test dd-test" id="dd-menuitemcheckbox-5-test" 
+aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="menuitemradio" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="menuitemradio" class="role-test menuitemradio-test 
+dd-test" id="dd-menuitemradio-6-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="option" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="option" class="role-test option-test dd-test" 
+id="dd-option-7-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="progressbar" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="progressbar" class="role-test progressbar-test 
+dd-test" id="dd-progressbar-8-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="radio" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="radio" class="role-test radio-test dd-test" 
+id="dd-radio-9-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="scrollbar" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="scrollbar" class="role-test scrollbar-test dd-test"
+ id="dd-scrollbar-10-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="searchbox" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="searchbox" class="role-test searchbox-test dd-test"
+ id="dd-searchbox-11-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="separator" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="separator" class="role-test separator-test dd-test"
+ id="dd-separator-12-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="slider" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="slider" class="role-test slider-test dd-test" 
+id="dd-slider-13-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="spinbutton" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="spinbutton" class="role-test spinbutton-test 
+dd-test" id="dd-spinbutton-14-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="switch" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="switch" class="role-test switch-test dd-test" 
+id="dd-switch-15-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="tab" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="tab" class="role-test tab-test dd-test" 
+id="dd-tab-16-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="tabpanel" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="tabpanel" class="role-test tabpanel-test dd-test" 
+id="dd-tabpanel-17-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="textbox" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="textbox" class="role-test textbox-test dd-test" 
+id="dd-textbox-18-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="treeitem" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="treeitem" class="role-test treeitem-test dd-test" 
+id="dd-treeitem-19-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+    
+        &lt;section class="clearFix"&gt;
+      &lt;h3&gt;Composite roles&lt;/h3&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="combobox" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="combobox" class="role-test combobox-test dd-test" 
+id="dd-combobox-0-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="grid" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="grid" class="role-test grid-test dd-test" 
+id="dd-grid-1-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="listbox" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="listbox" class="role-test listbox-test dd-test" 
+id="dd-listbox-2-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="menu" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="menu" class="role-test menu-test dd-test" 
+id="dd-menu-3-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="menubar" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="menubar" class="role-test menubar-test dd-test" 
+id="dd-menubar-4-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="radiogroup" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="radiogroup" class="role-test radiogroup-test 
+dd-test" id="dd-radiogroup-5-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="tablist" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="tablist" class="role-test tablist-test dd-test" 
+id="dd-tablist-6-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="tree" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="tree" class="role-test tree-test dd-test" 
+id="dd-tree-7-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="treegrid" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="treegrid" class="role-test treegrid-test dd-test" 
+id="dd-treegrid-8-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+    
+        &lt;section class="clearFix"&gt;
+      &lt;h3&gt;Document Structure roles&lt;/h3&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="application" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="application" class="role-test application-test 
+dd-test" id="dd-application-0-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="article" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="article" class="role-test article-test dd-test" 
+id="dd-article-1-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="cell" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="cell" class="role-test cell-test dd-test" 
+id="dd-cell-2-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="columnheader" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="columnheader" class="role-test columnheader-test 
+dd-test" id="dd-columnheader-3-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="definition" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="definition" class="role-test definition-test 
+dd-test" id="dd-definition-4-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="directory" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="directory" class="role-test directory-test dd-test"
+ id="dd-directory-5-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="document" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="document" class="role-test document-test dd-test" 
+id="dd-document-6-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="feed" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="feed" class="role-test feed-test dd-test" 
+id="dd-feed-7-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="figure" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="figure" class="role-test figure-test dd-test" 
+id="dd-figure-8-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="group" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="group" class="role-test group-test dd-test" 
+id="dd-group-9-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="heading" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="heading" class="role-test heading-test dd-test" 
+id="dd-heading-10-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="img" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="img" class="role-test img-test dd-test" 
+id="dd-img-11-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="list" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="list" class="role-test list-test dd-test" 
+id="dd-list-12-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="listitem" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="listitem" class="role-test listitem-test dd-test" 
+id="dd-listitem-13-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="math" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="math" class="role-test math-test dd-test" 
+id="dd-math-14-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="none" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="none" class="role-test none-test dd-test" 
+id="dd-none-15-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="note" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="note" class="role-test note-test dd-test" 
+id="dd-note-16-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="presentation" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="presentation" class="role-test presentation-test 
+dd-test" id="dd-presentation-17-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="row" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="row" class="role-test row-test dd-test" 
+id="dd-row-18-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="rowgroup" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="rowgroup" class="role-test rowgroup-test dd-test" 
+id="dd-rowgroup-19-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="rowheader" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="rowheader" class="role-test rowheader-test dd-test"
+ id="dd-rowheader-20-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="separator" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="separator" class="role-test separator-test dd-test"
+ id="dd-separator-21-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="table" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="table" class="role-test table-test dd-test" 
+id="dd-table-22-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="term" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="term" class="role-test term-test dd-test" 
+id="dd-term-23-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="toolbar" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="toolbar" class="role-test toolbar-test dd-test" 
+id="dd-toolbar-24-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="tooltip" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="tooltip" class="role-test tooltip-test dd-test" 
+id="dd-tooltip-25-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+    
+        &lt;section class="clearFix"&gt;
+      &lt;h3&gt;Landmark roles&lt;/h3&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="banner" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="banner" class="role-test banner-test dd-test" 
+id="dd-banner-0-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="complementary" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="complementary" class="role-test complementary-test 
+dd-test" id="dd-complementary-1-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="contentinfo" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="contentinfo" class="role-test contentinfo-test 
+dd-test" id="dd-contentinfo-2-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="form" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="form" class="role-test form-test dd-test" 
+id="dd-form-3-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="main" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="main" class="role-test main-test dd-test" 
+id="dd-main-4-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="navigation" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="navigation" class="role-test navigation-test 
+dd-test" id="dd-navigation-5-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="region" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="region" class="role-test region-test dd-test" 
+id="dd-region-6-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="search" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="search" class="role-test search-test dd-test" 
+id="dd-search-7-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+    
+        &lt;section class="clearFix"&gt;
+      &lt;h3&gt;Live region roles&lt;/h3&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="alert" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="alert" class="role-test alert-test dd-test" 
+id="dd-alert-0-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="log" (          &lt;span class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="log" class="role-test log-test dd-test" 
+id="dd-log-1-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="marquee" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="marquee" class="role-test marquee-test dd-test" 
+id="dd-marquee-2-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="status" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="status" class="role-test status-test dd-test" 
+id="dd-status-3-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="timer" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="timer" class="role-test timer-test dd-test" 
+id="dd-timer-4-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+    
+        &lt;section class="clearFix"&gt;
+      &lt;h3&gt;Window region roles&lt;/h3&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="alertdialog" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="alertdialog" class="role-test alertdialog-test 
+dd-test" id="dd-alertdialog-0-test" aria-label="acc name" 
+tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+      &lt;section class="widgetDemo"&gt;
+        &lt;h4&gt;role="dialog" (          &lt;span 
+class="notAllowed"&gt;
+            &lt;strong&gt;Not&lt;/strong&gt; Allowed
+          &lt;/span&gt;
+          )
+          
+        &lt;/h4&gt;
+        &lt;dd role="dialog" class="role-test dialog-test dd-test" 
+id="dd-dialog-1-test" aria-label="acc name" tabindex="0"&gt;&lt;/dd&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+    
+     &lt;/main&gt;
+    &lt;span role="htmlLintNeedsOneErrorForOutput"&gt;&lt;/span&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;</textarea></form></body></html>
