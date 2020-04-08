@@ -27,12 +27,12 @@ p{
 <body translate="no">
 
   <h1>text spacing bookmarklet</h1>
-  <p>Last updated: 10/10/2018</p>
+  <p>Last updated 26th of March 2020. Now works on content inside same-origin first level <code>iframe</code>s - i.e. it doesn't then work if there's an <code>iframe</code> inside another <code>iframe</code>. <b>Thanks to Patrick H. Lauke</b></p>
 
 <p>Quick and dirty testing of <a href="https://www.w3.org/TR/WCAG21/#text-spacing">WCAG 2.1 Success Criterion 1.4.12 Text Spacing</a>.
 
 </p><p>Experimental:<strong>use at own risk!</strong>
-</p><p>Bookmarklet: <a href="javascript:(function(){document.querySelector(%27body%27).classList.add(%27text-spacing%27);%20var%20style%20=%20document.createElement(%27style%27),%20styleContent%20=%20document.createTextNode(%27.text-spacing%20*%20{%20line-height:%201.5%20!important;%20letter-spacing:%200.12em%20!important;%20word-spacing:%200.16em%20!important;%20}%20.text-spacing%20p{%20margin-bottom:%202em%20!important;%20}%20%27);%20style.appendChild(styleContent%20);%20var%20caput%20=%20document.getElementsByTagName(%27head%27);%20caput[0].appendChild(style);%20})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
+</p><p>Bookmarklet: <a href="javascript:(function(){ var style = document.createElement(%27style%27), styleContent = document.createTextNode(%27* { line-height: 1.5 !important; letter-spacing: 0.12em !important; word-spacing: 0.16em !important; } p{ margin-bottom: 2em !important; } %27); style.appendChild(styleContent ); document.getElementsByTagName(%27head%27)[0].appendChild(style); var iframes = document.querySelectorAll(%27iframe%27);for (var i=0; i<iframes.length; i++) {try{iframes[i].contentWindow.document.getElementsByTagName(%27head%27)[0].appendChild(style); } catch(error) { console.log(%27Bookmarklet error: %27+error)}}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
   
 </p><p><a href="https://codepen.io/stevef/pen/YLMqbo">Edit this</a> on codepen
   
