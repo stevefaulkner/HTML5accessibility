@@ -11,7 +11,7 @@
 	<header>
 		<div class="branding">
 			<h1>HTML5 Accessibility</h1>
-			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, March 2020</p>
+			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, April 2020</p>
 		</div>
 
 		<nav>
@@ -29,9 +29,9 @@
 		<section id="results" aria-label="HTML5 Accessibillity browser support scores">
 			<ul class="test-results">
 				<li class="chrome high">
-					<h3 class="browser">Chrome 62</h3>
+					<h3 class="browser">Chrome 81</h3>
 					<p class="platform">on Windows 10</p>
-					<p class="result">92%</p>
+					<p class="result">?</p>
 				</li>
 				<li class="edge high">
 					<h3 class="browser">Edge 80</h3>
@@ -39,9 +39,9 @@
 					<p class="result">100%</p>
 				</li>
 				<li class="firefox high">
-					<h3 class="browser">Firefox 58.0b9</h3>
+					<h3 class="browser">Firefox 76</h3>
 					<p class="platform">on Windows 10</p>
-					<p class="result">89%</p>
+					<p class="result">?</p>
 				</li>
 				<li class="ie low">
 					<h3 class="browser">Internet Explorer 11</h3>
@@ -49,9 +49,9 @@
 					<p class="result">56%</p>
 				</li>
 				<li class="safari high">
-					<h3 class="browser">Safari 11.0.3</h3>
-					<p class="platform">on OS High Sierra</p>
-					<p class="result">98%</p>
+					<h3 class="browser">Safari 13</h3>
+					<p class="platform">on Mac OS</p>
+					<p class="result">?</p>
 				</li>
 			</ul>
 		</section>
@@ -448,7 +448,7 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 						</tr>
 						<tr>
@@ -463,7 +463,7 @@
 							<td>Mapped</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="no"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=982125">no</a></td>
+							<td class="yes">yes</td>
 							<td class="no"><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7350313/">no</a></td>
 							<td class="yes">yes</td>
 						</tr>
@@ -539,7 +539,7 @@
 						<tr>
 							<th scope="row" rowspan="4"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/audio.html"><code>audio</code></a></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
 							<td class="yes">yes</td>
@@ -555,7 +555,7 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial"><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=756837">partial</a></td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
@@ -572,7 +572,7 @@
 						<tr>
 							<th scope="row" rowspan="4"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/video.html"><code>video</code></a></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
 							<td class="yes">yes</td>
@@ -588,7 +588,7 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial"><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=756837">partial</a></td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
@@ -841,7 +841,7 @@
 							<td>Accessibly supported</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">not implemented</td>
+							<td class="partial">partial</td>
 							<td class="n-a">not implemented</td>
 							<td class="n-a">not implemented</td>
 						</tr>
@@ -849,7 +849,7 @@
 							<td>Feature implemented</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="no">no</td>
+							<td class="yes">yes</td>
 							<td class="no">no</td>
 							<td class="no">no</td>
 						</tr>
@@ -857,7 +857,7 @@
 							<td>Mapped</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">n/a</td>
+							<td class="partial">partial</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -865,7 +865,7 @@
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">n/a</td>
+							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629078">partial</a></td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -873,7 +873,7 @@
 							<td>Keyboard</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">n/a</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -964,7 +964,7 @@
 							<td>Accessibly supported</td>
 							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td class="n-a">not implemented</td>
+							<td class="partial">partial</td>
 							<td class="n-a">not implemented</td>
 							<td class="n-a">not implemented</td>
 						</tr>
@@ -972,7 +972,7 @@
 							<td>Feature implemented</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="no">no</td>
+							<td class="yes">yes</td>
 							<td class="no">no</td>
 							<td class="no"><a href="https://bugs.webkit.org/show_bug.cgi?id=88026">no</a></td>
 						</tr>
@@ -980,7 +980,7 @@
 							<td>Mapped</td>
 							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td class="n-a">n/a</td>
+							<td class="partial">partial</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -988,7 +988,7 @@
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">n/a</td>
+							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629078">partial</a></td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -1337,7 +1337,7 @@
 							<td class="n-a">n/a</td>
 							<td class="yes">yes</td>
 						</tr>
-						<tr>
+						<!--<tr>
 							<th scope="row" rowspan="4"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/menu-toolbar.html"><code>toolbar</code></a> menu</th>
 							<td>Accessibly supported</td>
 							<td class="n-a">not implemented</td>
@@ -1435,7 +1435,7 @@
 							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
-						</tr>
+						</tr> -->
 						<tr>
 							<th scope="row" rowspan="4"><a href="https://codepen.io/stevef/debug/dPxgZq"><code>dialog</code></a></th>
 							<td>Accessibly supported</td>
