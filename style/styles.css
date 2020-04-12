@@ -584,11 +584,6 @@ body .edge {
 	background-image: url("../images/firefox.png");
 }
 
-th.firefox {
-	background-image: url("../images/firefox-simplified.svg");
-
-}
-
 .ie {
 	background-image: url("../images/ie.svg");
 }
