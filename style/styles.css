@@ -428,6 +428,10 @@ nav a {
 	line-height: 1.5;
 }
 
+.platform {
+	margin-top: 4px;
+}
+
 .result {
 	display: inline-block;
 
@@ -494,7 +498,7 @@ nav a {
 	.test-results li {
 		float: left;
 		width: calc(50% - 6px);
-		height: 308px;
+		height: 332px;
 		margin: 0 0 12px 0;
 		padding-top: 122px;
 
