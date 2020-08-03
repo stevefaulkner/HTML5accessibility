@@ -11,7 +11,7 @@
 	<header>
 		<div class="branding">
 			<h1>HTML5 Accessibility</h1>
-			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, April 2020</p>
+			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, August 2020</p>
 		</div>
 
 		<nav>
@@ -29,9 +29,9 @@
 		<section id="results" aria-label="HTML5 Accessibillity browser support scores">
 			<ul class="test-results">
 				<li class="chrome high">
-					<h3 class="browser">Chrome 81</h3>
+					<h3 class="browser">Chrome 84</h3>
 					<p class="platform">on Windows 10</p>
-					<p class="result">?</p>
+					<p class="result">98.5%</p>
 				</li>
 				<li class="edge high">
 					<h3 class="browser">Edge 80</h3>
@@ -39,9 +39,9 @@
 					<p class="result">100%</p>
 				</li>
 				<li class="firefox high">
-					<h3 class="browser">Firefox 76</h3>
+					<h3 class="browser">Firefox 80</h3>
 					<p class="platform">on Windows 10</p>
-					<p class="result">92.5%</p>
+					<p class="result">94%</p>
 				</li>
 				<li class="ie low">
 					<h3 class="browser">Internet Explorer 11</h3>
@@ -51,13 +51,13 @@
 				<li class="safari high">
 					<h3 class="browser">Safari 13</h3>
 					<p class="platform">on Mac OS</p>
-					<p class="result">?</p>
+					<p class="result">97%</p>
 				</li>
 			</ul>
 		</section>
 
 		<section id="overview" aria-label="overview">
-			<p>This site tests which new HTML5 features are accessibly supported by major browsers. This includes if
+			<p>This site tests which newish HTML5 features are accessibly supported by major browsers. This includes if
 				they are keyboard accessible, mapped to the platform accessibility APIs, and if any accessibility related features are
 				supported. An accessibly supported feature means it is usable by people who rely on assistive technology, without developers
 				having to supplement with ARIA or other additional workarounds. Read <a href="https://developer.paciellogroup.com/blog/2016/08/what-does-accessibility-supported-mean/">What does acessibility supported mean</a> for a comprehensive understanding of how to interpret these findings.</p>
@@ -841,7 +841,7 @@
 							<td>Accessibly supported</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
 							<td class="n-a">not implemented</td>
 						</tr>
@@ -857,7 +857,7 @@
 							<td>Mapped</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629078#c3">partial</a></td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -865,7 +865,7 @@
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629078">partial</a></td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -921,7 +921,7 @@
 						<tr>
 							<th scope="row" rowspan="5"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-week.html"><code>week</code></a> input</th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
 							<td class="n-a">not implemented</td>
@@ -937,7 +937,7 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
@@ -962,9 +962,9 @@
 						<tr>
 							<th scope="row" rowspan="5"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/input-time.html"><code>time</code></a> input</th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
 							<td class="n-a">not implemented</td>
 						</tr>
@@ -978,9 +978,9 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629078#c3">partial</a></td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -988,7 +988,7 @@
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1629078">partial</a></td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="n-a">n/a</td>
 						</tr>
@@ -1097,7 +1097,7 @@
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
 							<td class="n-a">not implemented</td>
-							<td class="n-a">not implemented</td>
+							<td class="no">no</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
@@ -1113,7 +1113,7 @@
 							<td class="yes">yes</td>
 							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559767">partial</a></td>
 							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Name/Description</td>
@@ -1121,7 +1121,7 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
+							<td class="partial">partial</td>
 						</tr>
 						<tr>
 							<td>Keyboard</td>
@@ -1129,16 +1129,16 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
+							<td class="no">no</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="4"><code><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/datalist.html">datalist</a></code></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="partial">partial</td>
-							<td class="n-a">not implemented</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
@@ -1150,11 +1150,11 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="no"><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=282005">no</a></td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="partial">partial</td>
-							<td class="n-a">n/a</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Keyboard</td>
@@ -1162,12 +1162,12 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">n/a</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="4"><code><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/output.html">output</a></code></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
@@ -1191,11 +1191,11 @@
 						</tr>
 						<tr>
 							<td>Name/Description</td>
-							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td>&nbsp;</td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="4"><code><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/progress.html">progress</a></code></th>
@@ -1235,9 +1235,9 @@
 							<td>Accessibly supported</td>
 							<td class="partial">partial</td>
 							<td class="yes">yes</td>
-							<td class="no">no</td>
-							<td class="n-a">not implemented</td>
 							<td class="partial">partial</td>
+							<td class="n-a">not implemented</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
@@ -1249,19 +1249,19 @@
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial"><a href="https://github.com/w3c/html-aam/issues/2">partial</a></td>
+							<td class="partial"><a href="https://github.com/w3c/html-aam/issues/2#issuecomment-667731242">partial</a></td>
 							<td class="yes">yes</td>
 							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559770">partial</a></td>
 							<td class="n-a">n/a</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Name/Description</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<th scope="row" rowspan="4"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html"><code>details</code></a></th>
