@@ -63,8 +63,8 @@ li + li {
 }
 
 a:hover {
-	border-bottom: 2px solid;
-	color: #1e565c;
+	color: #f8642c;
+
 }
 
 a:active {
