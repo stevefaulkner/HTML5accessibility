@@ -27,12 +27,13 @@ p{
 <body translate="no">
 
   <h1>text spacing bookmarklet</h1>
-  <p>Last updated 26th of March 2020. Now works on content inside same-origin first level <code>iframe</code>s - i.e. it doesn't then work if there's an <code>iframe</code> inside another <code>iframe</code>. <b>Thanks to Patrick H. Lauke</b></p>
+  <p>Last updated 18th May 2021. Now toggles on/off (first time you run it, it adds the styles ... second time, it removes them again) <b>Thanks to Patrick H. Lauke</b></p>
+  <p>updated 26th of March 2020. Now works on content inside same-origin first level <code>iframe</code>s - i.e. it doesn't then work if there's an <code>iframe</code> inside another <code>iframe</code>. <b>Thanks to Patrick H. Lauke</b></p>
 
 <p>Quick and dirty testing of <a href="https://www.w3.org/TR/WCAG21/#text-spacing">WCAG 2.1 Success Criterion 1.4.12 Text Spacing</a>.
 
 </p><p>Experimental:<strong>use at own risk!</strong>
-</p><p>Bookmarklet: <a href="javascript:(function(){ var style = document.createElement(%27style%27), styleContent = document.createTextNode(%27* { line-height: 1.5 !important; letter-spacing: 0.12em !important; word-spacing: 0.16em !important; } p{ margin-bottom: 2em !important; } %27); style.appendChild(styleContent ); document.getElementsByTagName(%27head%27)[0].appendChild(style); var iframes = document.querySelectorAll(%27iframe%27);for (var i=0; i<iframes.length; i++) {try{var styleInIframe = style.cloneNode(true);iframes[i].contentWindow.document.getElementsByTagName(%27head%27)[0].appendChild(styleInIframe); } catch(error) { console.log(%27Bookmarklet error: %27+error)}}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
+</p><p>Bookmarklet: <a href="javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0,l=f.length;if(el){el.remove(); if(l){for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementById(id).remove();}catch(e){console.log(e)}}}}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));d.getElementsByTagName('head')[0].appendChild(s);for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));}catch(e){console.log(e)}}}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
   
 </p><p><a href="https://codepen.io/stevef/pen/YLMqbo">Edit this</a> on codepen
   
