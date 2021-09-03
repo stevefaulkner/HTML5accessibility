@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>ARIA in HTML - test cases for &lt;svg&gt;</title>
+  <style>
+  body {
+    background: #f7f7f5;
+    color: #333;
+    font: 400 105%/1.4 "Work Sans", sans-serif;
+    margin: 1.5em;
+  }
+
+  .clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  h4 {
+    clear: both;
+  }
+
+  .widgetDemo {
+    border: 1px solid #BBB;
+    background-color: #EEE;
+    width: 20em;
+    min-height: 10em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    float: left;
+  }
+
+  .role-test {
+    border: 2px solid #000 !important;
+    width: 1em;
+    height: 1em;
+    margin: 5px;
+    display: block;
+    border-radius: 7px;
+  }
+
+  section h4 {
+    padding: 0.5em;
+    border-top: 3px solid #630;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  ul.roleSummaryList li {
+    display: inline;
+  }
+
+  a:link,
+  a:visited {
+    border-bottom: 1px solid #2b7a82;
+    color: #2b7a82;
+    text-decoration: none;
+  }
+
+  [role]:focus,
+  [role]:hover {
+    outline: 3px solid #925e00;
+    outline-offset: 2px;
+  }
+
+  .allowed {
+    color: #009933;
+    font-weight: bold;
+  }
+
+  .notAllowed {
+    color: #cc0000;
+    font-weight: bold;
+  }
+
+  .notAllowed strong {
+    font-size: 120%;
+  }
+  </style>
+</head>
+
+<body>
+  
+    <header>
+    <h1>ARIA in HTML - test cases for &lt;svg&gt;</h1>
+    <p>Last updated: 02 July 2018 20:16:48</p>
+     
+    <p>
+      <a href="https://w3c.github.io/html-aria/#svg">Allowed Roles</a>:</p>
+    <ul class="roleSummaryList">
+      <li>
+        <a href="https://w3c.github.io/html-aria/#index-aria-application">application</a>
+         , 
+      </li>
+      <li>
+        <a href="https://w3c.github.io/html-aria/#index-aria-document">document</a>
+         , 
+      </li>
+      <li>
+        <a href="https://w3c.github.io/html-aria/#index-aria-img">img</a>
+        
+      </li>
+    </ul>
+ 
+    </header>
+    <main>
+    <h2>Tests</h2>
+    <section class="clearFix">
+      <h3>Widget roles</h3>
+      <section class="widgetDemo">
+        <h4>role="button" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="button" class="role-test button-test svg-test" id="svg-button-0-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="checkbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="checkbox" class="role-test checkbox-test svg-test" id="svg-checkbox-1-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="gridcell" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="gridcell" class="role-test gridcell-test svg-test" id="svg-gridcell-2-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="link" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="link" class="role-test link-test svg-test" id="svg-link-3-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menuitem" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="menuitem" class="role-test menuitem-test svg-test" id="svg-menuitem-4-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menuitemcheckbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="menuitemcheckbox" class="role-test menuitemcheckbox-test svg-test" id="svg-menuitemcheckbox-5-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menuitemradio" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="menuitemradio" class="role-test menuitemradio-test svg-test" id="svg-menuitemradio-6-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="option" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="option" class="role-test option-test svg-test" id="svg-option-7-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="progressbar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="progressbar" class="role-test progressbar-test svg-test" id="svg-progressbar-8-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="radio" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="radio" class="role-test radio-test svg-test" id="svg-radio-9-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="scrollbar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="scrollbar" class="role-test scrollbar-test svg-test" id="svg-scrollbar-10-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="searchbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="searchbox" class="role-test searchbox-test svg-test" id="svg-searchbox-11-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="separator" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="separator" class="role-test separator-test svg-test" id="svg-separator-12-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="slider" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="slider" class="role-test slider-test svg-test" id="svg-slider-13-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="spinbutton" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="spinbutton" class="role-test spinbutton-test svg-test" id="svg-spinbutton-14-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="switch" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="switch" class="role-test switch-test svg-test" id="svg-switch-15-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tab" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="tab" class="role-test tab-test svg-test" id="svg-tab-16-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tabpanel" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="tabpanel" class="role-test tabpanel-test svg-test" id="svg-tabpanel-17-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="textbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="textbox" class="role-test textbox-test svg-test" id="svg-textbox-18-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="treeitem" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="treeitem" class="role-test treeitem-test svg-test" id="svg-treeitem-19-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Composite roles</h3>
+      <section class="widgetDemo">
+        <h4>role="combobox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="combobox" class="role-test combobox-test svg-test" id="svg-combobox-0-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="grid" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="grid" class="role-test grid-test svg-test" id="svg-grid-1-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="listbox" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="listbox" class="role-test listbox-test svg-test" id="svg-listbox-2-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menu" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="menu" class="role-test menu-test svg-test" id="svg-menu-3-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="menubar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="menubar" class="role-test menubar-test svg-test" id="svg-menubar-4-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="radiogroup" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="radiogroup" class="role-test radiogroup-test svg-test" id="svg-radiogroup-5-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tablist" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="tablist" class="role-test tablist-test svg-test" id="svg-tablist-6-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tree" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="tree" class="role-test tree-test svg-test" id="svg-tree-7-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="treegrid" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="treegrid" class="role-test treegrid-test svg-test" id="svg-treegrid-8-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Document Structure roles</h3>
+      <section class="widgetDemo">
+        <h4>role="application" (
+          <span class="allowed">Allowed</span>
+)
+          
+        </h4>
+        <svg role="application" class="role-test application-test svg-test" id="svg-application-0-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="article" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="article" class="role-test article-test svg-test" id="svg-article-1-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="cell" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="cell" class="role-test cell-test svg-test" id="svg-cell-2-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="columnheader" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="columnheader" class="role-test columnheader-test svg-test" id="svg-columnheader-3-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="definition" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="definition" class="role-test definition-test svg-test" id="svg-definition-4-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="directory" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="directory" class="role-test directory-test svg-test" id="svg-directory-5-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="document" (
+          <span class="allowed">Allowed</span>
+)
+          
+        </h4>
+        <svg role="document" class="role-test document-test svg-test" id="svg-document-6-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="feed" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="feed" class="role-test feed-test svg-test" id="svg-feed-7-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="figure" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="figure" class="role-test figure-test svg-test" id="svg-figure-8-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="group" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="group" class="role-test group-test svg-test" id="svg-group-9-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="heading" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="heading" class="role-test heading-test svg-test" id="svg-heading-10-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="img" (
+          <span class="allowed">Allowed</span>
+)
+          
+        </h4>
+        <svg role="img" class="role-test img-test svg-test" id="svg-img-11-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="list" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="list" class="role-test list-test svg-test" id="svg-list-12-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="listitem" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="listitem" class="role-test listitem-test svg-test" id="svg-listitem-13-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="math" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="math" class="role-test math-test svg-test" id="svg-math-14-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="none" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="none" class="role-test none-test svg-test" id="svg-none-15-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="note" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="note" class="role-test note-test svg-test" id="svg-note-16-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="presentation" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="presentation" class="role-test presentation-test svg-test" id="svg-presentation-17-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="row" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="row" class="role-test row-test svg-test" id="svg-row-18-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="rowgroup" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="rowgroup" class="role-test rowgroup-test svg-test" id="svg-rowgroup-19-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="rowheader" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="rowheader" class="role-test rowheader-test svg-test" id="svg-rowheader-20-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="separator" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="separator" class="role-test separator-test svg-test" id="svg-separator-21-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="table" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="table" class="role-test table-test svg-test" id="svg-table-22-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="term" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="term" class="role-test term-test svg-test" id="svg-term-23-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="toolbar" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="toolbar" class="role-test toolbar-test svg-test" id="svg-toolbar-24-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="tooltip" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="tooltip" class="role-test tooltip-test svg-test" id="svg-tooltip-25-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Landmark roles</h3>
+      <section class="widgetDemo">
+        <h4>role="banner" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="banner" class="role-test banner-test svg-test" id="svg-banner-0-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="complementary" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="complementary" class="role-test complementary-test svg-test" id="svg-complementary-1-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="contentinfo" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="contentinfo" class="role-test contentinfo-test svg-test" id="svg-contentinfo-2-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="form" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="form" class="role-test form-test svg-test" id="svg-form-3-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="main" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="main" class="role-test main-test svg-test" id="svg-main-4-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="navigation" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="navigation" class="role-test navigation-test svg-test" id="svg-navigation-5-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="region" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="region" class="role-test region-test svg-test" id="svg-region-6-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="search" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="search" class="role-test search-test svg-test" id="svg-search-7-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Live region roles</h3>
+      <section class="widgetDemo">
+        <h4>role="alert" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="alert" class="role-test alert-test svg-test" id="svg-alert-0-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="log" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="log" class="role-test log-test svg-test" id="svg-log-1-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="marquee" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="marquee" class="role-test marquee-test svg-test" id="svg-marquee-2-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="status" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="status" class="role-test status-test svg-test" id="svg-status-3-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="timer" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="timer" class="role-test timer-test svg-test" id="svg-timer-4-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+    </section>
+    
+        <section class="clearFix">
+      <h3>Window region roles</h3>
+      <section class="widgetDemo">
+        <h4>role="alertdialog" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="alertdialog" class="role-test alertdialog-test svg-test" id="svg-alertdialog-0-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+      <section class="widgetDemo">
+        <h4>role="dialog" (          <span class="notAllowed">
+            <strong>Not</strong> Allowed
+          </span>
+          )
+          
+        </h4>
+        <svg role="dialog" class="role-test dialog-test svg-test" id="svg-dialog-1-test" aria-label="acc name" tabindex="0"></svg>
+      </section>
+    </section>
+    
+     </main>
+    <span role="htmlLintNeedsOneErrorForOutput"></span>
+
+
+</body></html>
