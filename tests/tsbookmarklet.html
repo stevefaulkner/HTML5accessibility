@@ -27,13 +27,14 @@ p{
 <body translate="no">
 
   <h1>text spacing bookmarklet</h1>
-  <p>Last updated 18th May 2021. Now toggles on/off (first time you run it, it adds the styles ... second time, it removes them again) <b>Thanks to Patrick H. Lauke</b></p>
+  <p>Last updated 3rd September 2021. Now recursively traverses through the Shadow DOM. <b>Thanks to Steven A. Hoffing</b></p>
+  <p>updated 18th May 2021. Now toggles on/off (first time you run it, it adds the styles ... second time, it removes them again) <b>Thanks to Patrick H. Lauke</b></p>
   <p>updated 26th of March 2020. Now works on content inside same-origin first level <code>iframe</code>s - i.e. it doesn't then work if there's an <code>iframe</code> inside another <code>iframe</code>. <b>Thanks to Patrick H. Lauke</b></p>
 
 <p>Quick and dirty testing of <a href="https://www.w3.org/TR/WCAG21/#text-spacing">WCAG 2.1 Success Criterion 1.4.12 Text Spacing</a>.
 
 </p><p>Experimental:<strong>use at own risk!</strong>
-</p><p>Bookmarklet: <a href="javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0,l=f.length;if(el){el.remove(); if(l){for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementById(id).remove();}catch(e){console.log(e)}}}}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));d.getElementsByTagName('head')[0].appendChild(s);for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));}catch(e){console.log(e)}}}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
+</p><p>Bookmarklet: <a href="javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0,l=f.length;if(el){function removeFromShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.getElementById(id).remove();removeFromShadows(el.shadowRoot);}}}el.remove();if(l){for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementById(id).remove();removeFromShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}}removeFromShadows(d);}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));function applyToShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.appendChild(s.cloneNode(true));applyToShadows(el.shadowRoot);}}}d.getElementsByTagName('head')[0].appendChild(s);for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));applyToShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}applyToShadows(d);}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
   
 </p><p><a href="https://codepen.io/stevef/pen/YLMqbo">Edit this</a> on codepen
   
