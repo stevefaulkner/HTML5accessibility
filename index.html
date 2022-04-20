@@ -11,7 +11,7 @@
 	<header>
 		<div class="branding">
 			<h1>HTML5 Accessibility</h1>
-			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, August 2020</p>
+			<p class="subtitle">Get the current accessibility support status of HTML5 features across major browsers. <em>Editor’s draft</em>, April 2022</p>
 		</div>
 
 		<nav>
@@ -29,9 +29,9 @@
 		<section id="results" aria-label="HTML5 Accessibillity browser support scores">
 			<ul class="test-results">
 				<li class="chrome high">
-					<h3 class="browser">Chrome 84</h3>
+					<h3 class="browser">Chrome 100</h3>
 					<p class="platform">on Windows 10</p>
-					<p class="result">98.5%</p>
+					<p class="result">98.7%</p>
 				</li>
 				<li class="edge high">
 					<h3 class="browser">Edge 80</h3>
@@ -39,9 +39,9 @@
 					<p class="result">100%</p>
 				</li>
 				<li class="firefox high">
-					<h3 class="browser">Firefox 80</h3>
+					<h3 class="browser">Firefox 100.0b7</h3>
 					<p class="platform">on Windows 10</p>
-					<p class="result">94%</p>
+					<p class="result">98.5%</p>
 				</li>
 				<li class="ie low">
 					<h3 class="browser">Internet Explorer 11</h3>
@@ -49,9 +49,9 @@
 					<p class="result">56%</p>
 				</li>
 				<li class="safari high">
-					<h3 class="browser">Safari 13</h3>
+					<h3 class="browser">Safari 15.4</h3>
 					<p class="platform">on Mac OS</p>
-					<p class="result">97%</p>
+					<p class="result">95.5%</p>
 				</li>
 			</ul>
 		</section>
@@ -60,7 +60,7 @@
 			<p>This site tests which newish HTML5 features are accessibly supported by major browsers. This includes if
 				they are keyboard accessible, mapped to the platform accessibility APIs, and if any accessibility related features are
 				supported. An accessibly supported feature means it is usable by people who rely on assistive technology, without developers
-				having to supplement with ARIA or other additional workarounds. Read <a href="https://developer.paciellogroup.com/blog/2016/08/what-does-accessibility-supported-mean/">What does acessibility supported mean</a> for a comprehensive understanding of how to interpret these findings.</p>
+				having to supplement with ARIA or other additional workarounds. Read <a href="https://www.tpgi.com/what-does-accessibility-supported-mean/">What does acessibility supported mean</a> for a comprehensive understanding of how to interpret these findings.</p>
 
 				<aside class="sponsor">
                     <p><a href="https://html5accessibility.com/stuff/">HTML Accessibility Blog</a>: Scratching the Accessibility API itch
@@ -544,7 +544,7 @@
 							<td>Accessibly supported</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 						</tr>
@@ -577,7 +577,7 @@
 							<td>Accessibly supported</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 						</tr>
@@ -1236,9 +1236,9 @@
 						<tr>
 							<th scope="row" rowspan="4"><a href="https://thepaciellogroup.github.io/AT-browser-tests/test-files/meter.html"><code>meter</code></a></th>
 							<td>Accessibly supported</td>
-							<td class="partial">partial</td>
+							<td class="partial">yes</td>
 							<td class="yes">yes</td>
-							<td class="partial">partial</td>
+							<td class="yes">yes</td>
 							<td class="n-a">not implemented</td>
 							<td class="yes">yes</td>
 						</tr>
@@ -1247,14 +1247,14 @@
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="no"><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/meterelement/">no</a></td>
+							<td class="no">no</td>
 							<td class="yes">yes</td>
 						</tr>
 						<tr>
 							<td>Mapped</td>
-							<td class="partial"><a href="https://github.com/w3c/html-aam/issues/2#issuecomment-667731242">partial</a></td>
 							<td class="yes">yes</td>
-							<td class="partial"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559770">partial</a></td>
+							<td class="yes">yes</td>
+							<td class="yes">yes</td>
 							<td class="n-a">n/a</td>
 							<td class="yes">yes</td>
 						</tr>
@@ -1440,37 +1440,37 @@
 							<td class="n-a">n/a</td>
 						</tr> -->
 						<tr>
-							<th scope="row" rowspan="4"><a href="https://codepen.io/stevef/debug/dPxgZq"><code>dialog</code></a></th>
+							<th scope="row" rowspan="4"><a href="https://cdpn.io/pen/debug/vYEoOK"><code>dialog</code></a></th>
 							<td>Accessibly supported</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
-							<td class="n-a">not implemented</td>
-							<td class="n-a">not implemented</td>
-							<td class="n-a">not implemented</td>
+							<td class="yes">yes</td>
+							<td class="n-a"></td>
+							<td class="partial">partial</td>
 						</tr>
 						<tr>
 							<td>Feature implemented</td>
 							<td class="yes">yes</td>
 							<td class="yes">yes</td>
+							<td class="no">yes</td>
 							<td class="no">no</td>
-							<td class="no"><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/dialogelementformodals/">no</a></td>
-							<td class="no">no</td>
+							<td class="no">yes</td>
 						</tr>
 						<tr>
 							<td>Mapped</td>
 							<td class="yes">yes</td>
 							<td class="n-a">yes</td>
+							<td class="n-a">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
+							<td class="no">no</td>
 						</tr>
 						<tr>
 							<td>Keyboard</td>
 							<td class="yes">yes</td>
 							<td class="n-a">yes</td>
+							<td class="n-a">yes</td>
 							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
-							<td class="n-a">n/a</td>
+							<td class="n-a">yes</td>
 						</tr>
 					</tbody>
 				</table>
