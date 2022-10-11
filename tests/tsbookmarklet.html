@@ -3,10 +3,10 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
   <meta charset="UTF-8">
- 
+
   <title>text spacing bookmarklet</title>
- 
-  
+
+
   <link rel="stylesheet prefetch" href="tsbookmarklet_files/styles.css">
 
       <style>
@@ -21,27 +21,28 @@ p{
  margin-bottom: 2em !important;
 } */
     </style>
-  
+
   </head>
 
 <body translate="no">
 
   <h1>text spacing bookmarklet</h1>
-  <p>Last updated 3rd September 2021. Now recursively traverses through the Shadow DOM. <b>Thanks to Steven A. Hoffing</b></p>
+  <p>Last updated 11th October 2022. It now handles iframes located within in a Shadow DOM. <b>Thanks to Elliot Nahman</b></p>
+  <p>updated 3rd September 2021. Now recursively traverses through the Shadow DOM. <b>Thanks to Steven A. Hoffing</b></p>
   <p>updated 18th May 2021. Now toggles on/off (first time you run it, it adds the styles ... second time, it removes them again) <b>Thanks to Patrick H. Lauke</b></p>
   <p>updated 26th of March 2020. Now works on content inside same-origin first level <code>iframe</code>s - i.e. it doesn't then work if there's an <code>iframe</code> inside another <code>iframe</code>. <b>Thanks to Patrick H. Lauke</b></p>
 
 <p>Quick and dirty testing of <a href="https://www.w3.org/TR/WCAG21/#text-spacing">WCAG 2.1 Success Criterion 1.4.12 Text Spacing</a>.
 
 </p><p>Experimental:<strong>use at own risk!</strong>
-</p><p>Bookmarklet: <a href="javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0,l=f.length;if(el){function removeFromShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.getElementById(id).remove();removeFromShadows(el.shadowRoot);}}}el.remove();if(l){for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementById(id).remove();removeFromShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}}removeFromShadows(d);}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));function applyToShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.appendChild(s.cloneNode(true));applyToShadows(el.shadowRoot);}}}d.getElementsByTagName('head')[0].appendChild(s);for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));applyToShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}applyToShadows(d);}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
-  
+</p><p>Bookmarklet: <a href="javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0;if(el){function removeFromShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.getElementById(id).remove();const frames = el.shadowRoot.querySelectorAll('iframe');removeFromIFrames(frames);removeFromShadows(el.shadowRoot);}}} function removeFromIFrames(frames){for(i=0;i<frames.length;i++){try{frames[i].contentWindow.document.getElementById(id).remove();removeFromShadows(frames[i].contentWindow.document);}catch(e){console.log(e)}}}el.remove();removeFromIFrames(f);removeFromShadows(d);}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));function applyToShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.appendChild(s.cloneNode(true));const frames = el.shadowRoot.querySelectorAll('iframe');applyToIFrames(frames);applyToShadows(el.shadowRoot);}}} function applyToIFrames(frames){for(i=0;i<frames.length;i++){try{frames[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));applyToShadows(frames[i].contentWindow.document);}catch(e){console.log(e)}}}d.getElementsByTagName('head')[0].appendChild(s);applyToIFrames(f);applyToShadows(d);}})();">Text Spacing</a> (drag to bookmarklets bar or right click and save as bookmark)
+
 </p><p><a href="https://codepen.io/stevef/pen/YLMqbo">Edit this</a> on codepen
-  
-  
-  
-  
-  
+
+
+
+
+
 
 
 
